@@ -12,6 +12,10 @@
 #import "CleanSelectionCell.h"
 #import "CleanSectionModel.h"
 #import "CleanOrderCell.h"
+#import "CleanServiceCheckViewController.h"
+#import "CleanService.h"
+#import "CleanServiceViewModel.h"
+#import "OrderSelection.h"
 @interface CleanServiceTableViewController ()
 
 @property (nonatomic) NSInteger selection;
@@ -30,11 +34,12 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 5;
+    return [self.cleanViewModel.sections count];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     CleanSectionModel *model=self.cleanViewModel.sections[section];
-    if ([model.selected boolValue]) {
+    
+    if ([model.selected boolValue]&&[model.selections count]) {
         return [model.selections count]+2;
     }
     
@@ -56,11 +61,11 @@
         
         
         return cell;
-    }else if(indexPath.section<5&&indexPath.row<[model.selections count]+1){
+    }else if(indexPath.row<[model.selections count]+1){
         CleanSelectionCell *cell=[tableView dequeueReusableCellWithIdentifier:@"CleanSelectionCell"];
+        cell.orderSelection=[model.selections objectAtIndex:indexPath.row-1];
         
-        
-        cell.lbTitle.text= [model.selections objectAtIndex:indexPath.row-1];
+        cell.lbTitle.text= cell.orderSelection.name;
         return cell;
     }else if(indexPath.row>=[model.selections count]+1){
         CleanOrderCell *cell=[tableView dequeueReusableCellWithIdentifier:@"CleanOrderCell"];
@@ -69,6 +74,11 @@
     
     return nil;
     
+}
+- (IBAction)dismiss:(id)sender {
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;{
     
@@ -80,11 +90,53 @@
     }
     
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ServiceModel *model=[self.cleanViewModel.service.serviceModels objectAtIndex:indexPath.section];
+   
+    if (indexPath.row==0) {
+        
+        if (model.type==cleanServiceModelTypeStar) {
+            CleanServiceCheckViewController *checkVC=[self.storyboard instantiateViewControllerWithIdentifier:@"CleanServiceCheck"];
+            
+            CleanServiceViewModel *viewModel=[CleanServiceViewModel serviceViewModelWithModel:model];
+            checkVC.serviceViewModel=viewModel;
+            [self.navigationController pushViewController:checkVC animated:YES];
+            
+        }
+        
+    }else if(indexPath.row<[model.PackSelections count]+1){
+        CleanSelectionCell *cell=(CleanSelectionCell*)[tableView cellForRowAtIndexPath:indexPath];
+        BOOL choosed=[cell.orderSelection.choosed boolValue];
+        cell.orderSelection.choosed =@(!choosed);
+    }
+}
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end

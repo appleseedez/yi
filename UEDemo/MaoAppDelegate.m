@@ -7,12 +7,12 @@
 //
 
 #import "MaoAppDelegate.h"
-
+#import "CleanService.h"
 @implementation MaoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [[CleanService defaultService] loadServiceModels];
     return YES;
 }
 							

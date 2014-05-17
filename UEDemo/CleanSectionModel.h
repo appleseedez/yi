@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CleanService.h"
+@interface CleanSectionModel : NSObject
 
-@interface CleanSectionModel : NSObject<NSCopying>
-
-+(instancetype)loadWith:(NSInteger)starService;
 @property (nonatomic) NSArray *selections; //section中得可选项目
 @property (nonatomic) NSString *title;     //section的标题
 @property (nonatomic) NSNumber *selected; // 检测是否被选中
-
+@property (nonatomic,weak) ServiceModel *model;
++(instancetype)SectionWithModel:(ServiceModel*)model;
 @end

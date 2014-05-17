@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1C252A5AB11C49A4A9C5FF2D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8ED06023F44C2B84DE8664 /* libPods.a */; };
+		4799EF9A192735D100863423 /* CleanServiceCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EF99192735D100863423 /* CleanServiceCheckViewController.m */; };
+		4799EFA01927386700863423 /* CleanService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EF9F1927386700863423 /* CleanService.m */; };
+		4799EFA41927397600863423 /* ServiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EFA31927397600863423 /* ServiceModel.m */; };
+		4799EFAA1927527100863423 /* CleanServiceViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EFA91927527100863423 /* CleanServiceViewModel.m */; };
+		4799EFAD192755CC00863423 /* CheckViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EFAC192755CC00863423 /* CheckViewCell.m */; };
+		4799EFB01927607300863423 /* CleanServiceOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EFAF1927607300863423 /* CleanServiceOrder.m */; };
+		4799EFB31927608400863423 /* OrderSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EFB21927608400863423 /* OrderSelection.m */; };
 		479C52A11923854A00CCF9F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479C52A01923854A00CCF9F4 /* Foundation.framework */; };
 		479C52A31923854A00CCF9F4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479C52A21923854A00CCF9F4 /* CoreGraphics.framework */; };
 		479C52A51923854A00CCF9F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479C52A41923854A00CCF9F4 /* UIKit.framework */; };
@@ -41,6 +48,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4799EF98192735D100863423 /* CleanServiceCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanServiceCheckViewController.h; sourceTree = "<group>"; };
+		4799EF99192735D100863423 /* CleanServiceCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanServiceCheckViewController.m; sourceTree = "<group>"; };
+		4799EF9E1927386700863423 /* CleanService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanService.h; sourceTree = "<group>"; };
+		4799EF9F1927386700863423 /* CleanService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanService.m; sourceTree = "<group>"; };
+		4799EFA21927397600863423 /* ServiceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceModel.h; sourceTree = "<group>"; };
+		4799EFA31927397600863423 /* ServiceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceModel.m; sourceTree = "<group>"; };
+		4799EFA81927527100863423 /* CleanServiceViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanServiceViewModel.h; sourceTree = "<group>"; };
+		4799EFA91927527100863423 /* CleanServiceViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanServiceViewModel.m; sourceTree = "<group>"; };
+		4799EFAB192755CC00863423 /* CheckViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckViewCell.h; sourceTree = "<group>"; };
+		4799EFAC192755CC00863423 /* CheckViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckViewCell.m; sourceTree = "<group>"; };
+		4799EFAE1927607300863423 /* CleanServiceOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanServiceOrder.h; sourceTree = "<group>"; };
+		4799EFAF1927607300863423 /* CleanServiceOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanServiceOrder.m; sourceTree = "<group>"; };
+		4799EFB11927608400863423 /* OrderSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSelection.h; sourceTree = "<group>"; };
+		4799EFB21927608400863423 /* OrderSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSelection.m; sourceTree = "<group>"; };
 		479C529D1923854A00CCF9F4 /* UEDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UEDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		479C52A01923854A00CCF9F4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		479C52A21923854A00CCF9F4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -101,6 +122,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4799EF9B192737DE00863423 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				479C52D5192399E500CCF9F4 /* CleanServiceTableViewController.h */,
+				479C52D6192399E500CCF9F4 /* CleanServiceTableViewController.m */,
+				4799EF98192735D100863423 /* CleanServiceCheckViewController.h */,
+				4799EF99192735D100863423 /* CleanServiceCheckViewController.m */,
+				4799EF9C1927381400863423 /* viewModels */,
+				479F24901924DD9C006B4080 /* cells */,
+			);
+			name = viewControllers;
+			sourceTree = "<group>";
+		};
+		4799EF9C1927381400863423 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				479F24941924DE9B006B4080 /* CleanViewModel.h */,
+				479F24951924DE9B006B4080 /* CleanViewModel.m */,
+				479F249A1924DED2006B4080 /* CleanSectionModel.h */,
+				479F249B1924DED2006B4080 /* CleanSectionModel.m */,
+				4799EFA81927527100863423 /* CleanServiceViewModel.h */,
+				4799EFA91927527100863423 /* CleanServiceViewModel.m */,
+			);
+			name = viewModels;
+			sourceTree = "<group>";
+		};
+		4799EF9D1927383A00863423 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				4799EF9E1927386700863423 /* CleanService.h */,
+				4799EF9F1927386700863423 /* CleanService.m */,
+				4799EFA11927396000863423 /* models */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
+		4799EFA11927396000863423 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				4799EFA21927397600863423 /* ServiceModel.h */,
+				4799EFA31927397600863423 /* ServiceModel.m */,
+				4799EFAE1927607300863423 /* CleanServiceOrder.h */,
+				4799EFAF1927607300863423 /* CleanServiceOrder.m */,
+				4799EFB11927608400863423 /* OrderSelection.h */,
+				4799EFB21927608400863423 /* OrderSelection.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
 		479C52941923854A00CCF9F4 = {
 			isa = PBXGroup;
 			children = (
@@ -142,13 +212,6 @@
 				479C52B51923854A00CCF9F4 /* MaoViewController.h */,
 				479C52B61923854A00CCF9F4 /* MaoViewController.m */,
 				479F24891924CDC3006B4080 /* clean */,
-				479C52D5192399E500CCF9F4 /* CleanServiceTableViewController.h */,
-				479C52D6192399E500CCF9F4 /* CleanServiceTableViewController.m */,
-				479F24941924DE9B006B4080 /* CleanViewModel.h */,
-				479F24951924DE9B006B4080 /* CleanViewModel.m */,
-				479F249A1924DED2006B4080 /* CleanSectionModel.h */,
-				479F249B1924DED2006B4080 /* CleanSectionModel.m */,
-				479F24901924DD9C006B4080 /* cells */,
 				479C52B81923854A00CCF9F4 /* Images.xcassets */,
 				479C52A71923854A00CCF9F4 /* Supporting Files */,
 			);
@@ -187,6 +250,8 @@
 		479F24891924CDC3006B4080 /* clean */ = {
 			isa = PBXGroup;
 			children = (
+				4799EF9D1927383A00863423 /* services */,
+				4799EF9B192737DE00863423 /* viewControllers */,
 			);
 			name = clean;
 			sourceTree = "<group>";
@@ -200,6 +265,8 @@
 				479F24921924DDBF006B4080 /* CleanSelectionCell.m */,
 				479F249D1924F0FC006B4080 /* CleanOrderCell.h */,
 				479F249E1924F0FC006B4080 /* CleanOrderCell.m */,
+				4799EFAB192755CC00863423 /* CheckViewCell.h */,
+				4799EFAC192755CC00863423 /* CheckViewCell.m */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -338,14 +405,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				479C52B11923854A00CCF9F4 /* MaoAppDelegate.m in Sources */,
+				4799EF9A192735D100863423 /* CleanServiceCheckViewController.m in Sources */,
 				479F24931924DDBF006B4080 /* CleanSelectionCell.m in Sources */,
+				4799EFAD192755CC00863423 /* CheckViewCell.m in Sources */,
+				4799EFB01927607300863423 /* CleanServiceOrder.m in Sources */,
 				479F248C1924CF10006B4080 /* CleanTableViewCell.m in Sources */,
 				479C52D7192399E500CCF9F4 /* CleanServiceTableViewController.m in Sources */,
 				479F24961924DE9B006B4080 /* CleanViewModel.m in Sources */,
+				4799EFAA1927527100863423 /* CleanServiceViewModel.m in Sources */,
+				4799EFA01927386700863423 /* CleanService.m in Sources */,
 				479C52AD1923854A00CCF9F4 /* main.m in Sources */,
 				479C52B71923854A00CCF9F4 /* MaoViewController.m in Sources */,
 				479F249F1924F0FC006B4080 /* CleanOrderCell.m in Sources */,
+				4799EFB31927608400863423 /* OrderSelection.m in Sources */,
 				479F249C1924DED2006B4080 /* CleanSectionModel.m in Sources */,
+				4799EFA41927397600863423 /* ServiceModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

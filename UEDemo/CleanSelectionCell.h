@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "OrderSelection.h"
 @interface CleanSelectionCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
+@property (weak,nonatomic) OrderSelection *orderSelection;
+@property (weak, nonatomic) IBOutlet UIImageView *imgChoosed;
 
 @end

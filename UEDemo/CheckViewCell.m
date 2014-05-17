@@ -1,14 +1,14 @@
 //
-//  CleanSelectionCell.m
+//  CheckViewCell.m
 //  UEDemo
 //
-//  Created by nsc on 14-5-15.
+//  Created by nsc on 14-5-17.
 //  Copyright (c) 2014年 reactiveCocoa. All rights reserved.
 //
 
-#import "CleanSelectionCell.h"
+#import "CheckViewCell.h"
 
-@implementation CleanSelectionCell
+@implementation CheckViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -23,11 +23,11 @@
 {
     __weak id weakSelf=self;
     [RACObserve(self, orderSelection.choosed) subscribeNext:^(NSNumber *x) {
-        __strong CleanSelectionCell *strongSelf=weakSelf;
+        __strong CheckViewCell *strongSelf=weakSelf;
         if ([x boolValue]) {
-            strongSelf.imgChoosed.image=[UIImage imageNamed:@"selection_choosed"];
+            strongSelf.imgCheckBox.image=[UIImage imageNamed:@"selection_choosed"];
         }else{
-            strongSelf.imgChoosed.image=[UIImage imageNamed:@"selection_unchoosed"];
+            strongSelf.imgCheckBox.image=[UIImage imageNamed:@"selection_unchoosed"];
         }
         
     }];

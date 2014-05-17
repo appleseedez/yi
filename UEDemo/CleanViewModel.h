@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class CleanService;
 @interface CleanViewModel : NSObject 
-@property (nonatomic,strong) NSMutableArray *sections;
+@property (nonatomic,strong) NSArray *sections;
+@property (nonatomic,weak)   CleanService *service;
 @end

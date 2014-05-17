@@ -8,18 +8,26 @@
 
 #import "CleanViewModel.h"
 #import "CleanSectionModel.h"
+#import "CleanService.h"
 @implementation CleanViewModel
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        self.sections=[NSMutableArray new];
-        for (int i=1; i<=5; i++) {
-            CleanSectionModel *model=[CleanSectionModel loadWith:i];
-            [self.sections addObject:model];
-            }
-       
+        self.service=[CleanService defaultService];
+        __weak id weakSelf=self;
+         [RACObserve(self, service.serviceModels) subscribeNext:^(NSArray *x) {
+            __strong CleanViewModel *strongSelf=weakSelf;
+             NSMutableArray *arr=[NSMutableArray new];
+             for (ServiceModel *model in x ) {
+                 
+                 CleanSectionModel *section=[CleanSectionModel SectionWithModel:model];
+                 [arr addObject:section];
+             }
+             strongSelf.sections=[arr copy];
+         }];
+        
     }
     return self;
 }
