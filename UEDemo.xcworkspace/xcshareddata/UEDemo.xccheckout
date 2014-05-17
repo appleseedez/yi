@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D696E8EC-6195-4887-B8D7-C0D4DE251C91</string>
+	<key>IDESourceControlProjectName</key>
+	<string>UEDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C990595E-DA75-4F47-8623-A4125DFCBC75</key>
+		<string>https://github.com/appleseedez/yi</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>UEDemo.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C990595E-DA75-4F47-8623-A4125DFCBC75</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/appleseedez/yi</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C990595E-DA75-4F47-8623-A4125DFCBC75</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C990595E-DA75-4F47-8623-A4125DFCBC75</string>
+			<key>IDESourceControlWCCName</key>
+			<string>yi</string>
+		</dict>
+	</array>
+</dict>
+</plist>
