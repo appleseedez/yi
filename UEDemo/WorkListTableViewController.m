@@ -10,6 +10,7 @@
 #import "WorkerListViewModel.h"
 #import "WorkCell.h"
 #import "Worker.h"
+#import "WorkerOrderViewController.h"
 @interface WorkListTableViewController ()
 
 @end
@@ -51,7 +52,7 @@
     WorkCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WorkCell"];
     
     Worker *worker=[self.listViewModel.workerList objectAtIndex:indexPath.row];
-    
+    cell.worker=worker;
     cell.lbName.text=worker.name;
     cell.lbPrice.text=worker.prices;
     cell.lbSkills.text=[worker skillsString];
@@ -59,44 +60,23 @@
     return cell;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    WorkCell *cell=(WorkCell*)[tableView cellForRowAtIndexPath:indexPath];
+    
+    BOOL selected=[cell.worker.selected boolValue];
+    cell.worker.selected=@(!selected);
+    
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (IBAction)dismiss:(id)sender {
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
+- (IBAction)pushOrder:(id)sender {
+    WorkerOrderViewController *orderVC=[self.storyboard instantiateViewControllerWithIdentifier:@"WorkerOrder"];
+    orderVC.listViewModel=self.listViewModel;
+    [self.navigationController pushViewController:orderVC animated:YES];
 }
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation

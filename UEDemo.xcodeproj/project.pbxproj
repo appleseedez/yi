@@ -13,6 +13,7 @@
 		4712E07119289F2800DEA3AD /* WorkListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4712E07019289F2800DEA3AD /* WorkListTableViewController.m */; };
 		4712E07519289FC300DEA3AD /* WorkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4712E07419289FC300DEA3AD /* WorkCell.m */; };
 		4712E0781928A0C500DEA3AD /* WorkerListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4712E0771928A0C500DEA3AD /* WorkerListViewModel.m */; };
+		4712E07C1928BD6500DEA3AD /* WorkerOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4712E07B1928BD6500DEA3AD /* WorkerOrderViewController.m */; };
 		4799EF9A192735D100863423 /* CleanServiceCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EF99192735D100863423 /* CleanServiceCheckViewController.m */; };
 		4799EFA01927386700863423 /* CleanService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EF9F1927386700863423 /* CleanService.m */; };
 		4799EFA41927397600863423 /* ServiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EFA31927397600863423 /* ServiceModel.m */; };
@@ -63,6 +64,8 @@
 		4712E07419289FC300DEA3AD /* WorkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkCell.m; sourceTree = "<group>"; };
 		4712E0761928A0C500DEA3AD /* WorkerListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerListViewModel.h; sourceTree = "<group>"; };
 		4712E0771928A0C500DEA3AD /* WorkerListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerListViewModel.m; sourceTree = "<group>"; };
+		4712E07A1928BD6500DEA3AD /* WorkerOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerOrderViewController.h; sourceTree = "<group>"; };
+		4712E07B1928BD6500DEA3AD /* WorkerOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerOrderViewController.m; sourceTree = "<group>"; };
 		4799EF98192735D100863423 /* CleanServiceCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanServiceCheckViewController.h; sourceTree = "<group>"; };
 		4799EF99192735D100863423 /* CleanServiceCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanServiceCheckViewController.m; sourceTree = "<group>"; };
 		4799EF9E1927386700863423 /* CleanService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanService.h; sourceTree = "<group>"; };
@@ -172,6 +175,8 @@
 				4712E07219289FA700DEA3AD /* cells */,
 				4712E06F19289F2800DEA3AD /* WorkListTableViewController.h */,
 				4712E07019289F2800DEA3AD /* WorkListTableViewController.m */,
+				4712E07A1928BD6500DEA3AD /* WorkerOrderViewController.h */,
+				4712E07B1928BD6500DEA3AD /* WorkerOrderViewController.m */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -484,6 +489,7 @@
 				4799EFAD192755CC00863423 /* CheckViewCell.m in Sources */,
 				4799EFB01927607300863423 /* CleanServiceOrder.m in Sources */,
 				479F248C1924CF10006B4080 /* CleanTableViewCell.m in Sources */,
+				4712E07C1928BD6500DEA3AD /* WorkerOrderViewController.m in Sources */,
 				479C52D7192399E500CCF9F4 /* CleanServiceTableViewController.m in Sources */,
 				4712E06D19289E5B00DEA3AD /* Worker.m in Sources */,
 				479F24961924DE9B006B4080 /* CleanViewModel.m in Sources */,

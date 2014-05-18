@@ -7,7 +7,7 @@
 //
 
 #import "WorkCell.h"
-
+#import "Worker.h"
 @implementation WorkCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -21,14 +21,21 @@
 
 - (void)awakeFromNib
 {
-    // Initialization code
+    __weak id weakSelf=self;
+      [RACObserve(self, worker.selected) subscribeNext:^(NSNumber *x) {
+          __strong WorkCell *strongSelf=weakSelf;
+          if ([x boolValue]) {
+              strongSelf.imgSelected.image=[UIImage imageNamed:@"selection_choosed"];
+          }else{
+              strongSelf.imgSelected.image=[UIImage imageNamed:@"selection_unchoosed"];
+          }
+      }];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    
 }
 
 @end

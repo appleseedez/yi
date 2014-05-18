@@ -14,5 +14,6 @@
 @property  (nonatomic) NSArray  *skills;
 @property  (nonatomic) NSString *prices;
 @property  (nonatomic) NSString *headerImageUrl;
+@property  (nonatomic) NSNumber *selected; //bool 是否选中
 -(NSString*)skillsString;
 @end
