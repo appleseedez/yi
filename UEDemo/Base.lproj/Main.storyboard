@@ -43,6 +43,9 @@
                                 <state key="normal" title="钟点工">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="PP2-aG-4eO" kind="modal" modalTransitionStyle="crossDissolve" id="EjS-In-N1J"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" id="aXc-oh-jHx">
                                 <rect key="frame" x="9" y="248" width="136" height="154"/>
@@ -85,7 +88,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rud-NK-LsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-453" y="-617"/>
+            <point key="canvasLocation" x="-461" y="-618"/>
         </scene>
         <!--Clean Service Table View Controller - 保洁服务-->
         <scene sceneID="mkb-a6-yJT">
@@ -197,7 +200,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jKj-vp-B69" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-685" y="-564"/>
+            <point key="canvasLocation" x="-794" y="-618"/>
         </scene>
         <!--Clean Service Check View Controller - 保洁服务预约单-->
         <scene sceneID="PsH-vn-NPX">
@@ -302,11 +305,93 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLd-0d-Gjc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-58" y="-324"/>
+            <point key="canvasLocation" x="-127" y="-618"/>
+        </scene>
+        <!--Work List Table View Controller - 钟点工列表-->
+        <scene sceneID="9Lh-AI-q8S">
+            <objects>
+                <tableViewController id="Whl-fa-b3i" customClass="WorkListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="62" sectionHeaderHeight="22" sectionFooterHeight="22" id="Xs8-R4-NAV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WorkCell" rowHeight="62" id="1S2-DY-Hmw" customClass="WorkCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="62"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1S2-DY-Hmw" id="ziN-OU-6xq">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="S9B-Ff-jAB">
+                                            <rect key="frame" x="9" y="5" width="21" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" id="KLC-Ym-kkt">
+                                            <rect key="frame" x="33" y="4" width="47" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张无忌" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x30-73-upW">
+                                            <rect key="frame" x="88" y="4" width="79" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="扫地 做饭 打水 看孩子 遛狗" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BR9-S4-sOY">
+                                            <rect key="frame" x="88" y="20" width="129" height="41"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥ 30——50" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m0g-71-PjG">
+                                            <rect key="frame" x="206" y="5" width="105" height="56"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgHeader" destination="KLC-Ym-kkt" id="Ydo-5k-xEx"/>
+                                    <outlet property="imgSelected" destination="S9B-Ff-jAB" id="aL3-rp-3Um"/>
+                                    <outlet property="lbName" destination="x30-73-upW" id="gBp-Gi-a7s"/>
+                                    <outlet property="lbPrice" destination="m0g-71-PjG" id="iXu-oA-2fL"/>
+                                    <outlet property="lbSkills" destination="BR9-S4-sOY" id="EcJ-aO-77Z"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Whl-fa-b3i" id="PLH-l7-L5c"/>
+                            <outlet property="delegate" destination="Whl-fa-b3i" id="TAG-yd-0te"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="钟点工列表" id="C1a-Gx-z2y"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6hH-iW-ZUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52" y="121"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lJU-5q-0AJ">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="PP2-aG-4eO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Lz-oy-9J3">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Whl-fa-b3i" kind="relationship" relationship="rootViewController" id="geM-ux-Deh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dHq-xK-ixa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-420" y="121"/>
         </scene>
     </scenes>
     <resources>
         <image name="btn_main" width="102" height="102"/>
+        <image name="header" width="102" height="102"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
