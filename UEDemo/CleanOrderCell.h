@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CleanSectionModel.h"
+
+@protocol CleanCellPushDelegate <NSObject>
+
+-(void) pushSubVCWithModel:(ServiceModel*)model;
+
+@end
 
 @interface CleanOrderCell : UITableViewCell
-
+@property (nonatomic,weak) CleanSectionModel *sectionModel;
+@property (nonatomic,weak) UIViewController <CleanCellPushDelegate> *contextVC;
 @end

@@ -13,4 +13,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnSelected;
 @property (weak, nonatomic)  CleanSectionModel *sectionModel;
 @property (weak, nonatomic) UITableView *tableView;
+@property (weak, nonatomic) UIViewController *contextVC;
 @end

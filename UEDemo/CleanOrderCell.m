@@ -23,6 +23,9 @@
 {
     // Initialization code
 }
+- (IBAction)pushOrder:(id)sender {
+    [self.contextVC pushSubVCWithModel:self.sectionModel.model];
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {

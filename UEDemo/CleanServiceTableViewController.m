@@ -56,7 +56,7 @@
      CleanTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"CleanServiceCell"];
         cell.tableView=tableView;
         cell.lbTitle.text=model.title;
-        
+        cell.contextVC=self;
         cell.sectionModel=model;
         
         
@@ -69,6 +69,8 @@
         return cell;
     }else if(indexPath.row>=[model.selections count]+1){
         CleanOrderCell *cell=[tableView dequeueReusableCellWithIdentifier:@"CleanOrderCell"];
+        cell.sectionModel=model;
+        cell.contextVC=self;
         return cell;
     }
     
@@ -95,19 +97,22 @@
    
     if (indexPath.row==0) {
         
-        if (model.type==cleanServiceModelTypeStar) {
-            CleanServiceCheckViewController *checkVC=[self.storyboard instantiateViewControllerWithIdentifier:@"CleanServiceCheck"];
-            
-            CleanServiceViewModel *viewModel=[CleanServiceViewModel serviceViewModelWithModel:model];
-            checkVC.serviceViewModel=viewModel;
-            [self.navigationController pushViewController:checkVC animated:YES];
-            
-        }
+        [self pushSubVCWithModel:model];
         
     }else if(indexPath.row<[model.PackSelections count]+1){
         CleanSelectionCell *cell=(CleanSelectionCell*)[tableView cellForRowAtIndexPath:indexPath];
         BOOL choosed=[cell.orderSelection.choosed boolValue];
         cell.orderSelection.choosed =@(!choosed);
+    }
+}
+-(void) pushSubVCWithModel:(ServiceModel*)model{
+    if (model.type==cleanServiceModelTypeStar) {
+        CleanServiceCheckViewController *checkVC=[self.storyboard instantiateViewControllerWithIdentifier:@"CleanServiceCheck"];
+        
+        CleanServiceViewModel *viewModel=[CleanServiceViewModel serviceViewModelWithModel:model];
+        checkVC.serviceViewModel=viewModel;
+        [self.navigationController pushViewController:checkVC animated:YES];
+        
     }
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
