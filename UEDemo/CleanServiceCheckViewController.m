@@ -26,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self chooseChanged];
     self.lbTitle.text=[NSString stringWithFormat:@"您选择了%@",self.serviceViewModel.title];
     // Do any additional setup after loading the view.
 }

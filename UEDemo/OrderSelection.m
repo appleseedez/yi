@@ -27,4 +27,22 @@
     sel.subSelections=subSelections;
     return sel;
 }
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        __weak id weakSelf=self;
+         [RACObserve(self, choosed) subscribeNext:^(NSNumber  *x) {
+             __strong OrderSelection *strongSelf=weakSelf;
+             __weak NSNumber *weakChoosed=x;
+                 if ([strongSelf.subSelections count]) {
+                     for (OrderSelection *s in strongSelf.subSelections) {
+                         s.choosed=weakChoosed;
+                     }
+                 
+             }
+         }];
+    }
+    return self;
+}
 @end
