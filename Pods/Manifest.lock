@@ -1,4 +1,44 @@
 PODS:
+  - Kiwi/ARC (2.2.4)
+  - Kiwi/NonARC (2.2.4)
+  - Kiwi/XCTest (2.2.4):
+    - Kiwi/ARC
+    - Kiwi/NonARC
+  - libextobjc (0.4):
+    - libextobjc/EXTADT
+    - libextobjc/EXTConcreteProtocol
+    - libextobjc/EXTKeyPathCoding
+    - libextobjc/EXTNil
+    - libextobjc/EXTSafeCategory
+    - libextobjc/EXTScope
+    - libextobjc/EXTSelectorChecking
+    - libextobjc/EXTSynthesize
+    - libextobjc/NSInvocation+EXT
+    - libextobjc/NSMethodSignature+EXT
+    - libextobjc/RuntimeExtensions
+    - libextobjc/UmbrellaHeader
+  - libextobjc/EXTADT (0.4):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTConcreteProtocol (0.4):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTKeyPathCoding (0.4):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTNil (0.4):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSafeCategory (0.4):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTScope (0.4):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSelectorChecking (0.4):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSynthesize (0.4):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/NSInvocation+EXT (0.4):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/NSMethodSignature+EXT (0.4):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/RuntimeExtensions (0.4)
+  - libextobjc/UmbrellaHeader (0.4)
   - ReactiveCocoa (2.3):
     - ReactiveCocoa/UI
   - ReactiveCocoa/Core (2.3):
@@ -6,11 +46,20 @@ PODS:
   - ReactiveCocoa/no-arc (2.3)
   - ReactiveCocoa/UI (2.3):
     - ReactiveCocoa/Core
+  - ZXingObjC (3.0.1):
+    - ZXingObjC/All
+  - ZXingObjC/All (3.0.1)
 
 DEPENDENCIES:
+  - Kiwi/XCTest
+  - libextobjc
   - ReactiveCocoa
+  - ZXingObjC
 
 SPEC CHECKSUMS:
+  Kiwi: d60d7498b640a16f58b01925fc3c8d7c4d809f66
+  libextobjc: 2c9fc8226f0f38e562587f65172f93f0c9b4a47a
   ReactiveCocoa: dde7b11a14954edf789e7343b2c32e595caabd01
+  ZXingObjC: 67d88ac35105840d63fed764db83e06fd7c6093e
 
 COCOAPODS: 0.32.1

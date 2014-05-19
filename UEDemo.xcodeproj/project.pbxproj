@@ -41,6 +41,9 @@
 		479F24961924DE9B006B4080 /* CleanViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F24951924DE9B006B4080 /* CleanViewModel.m */; };
 		479F249C1924DED2006B4080 /* CleanSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F249B1924DED2006B4080 /* CleanSectionModel.m */; };
 		479F249F1924F0FC006B4080 /* CleanOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F249E1924F0FC006B4080 /* CleanOrderCell.m */; };
+		A7F1E28D0B7D4754A105B27E /* libPods-UEDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D90DFF26E784D1EBDFF1FFC /* libPods-UEDemoTests.a */; };
+		BABBA8231929721600D05A18 /* MaoHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBA8221929721600D05A18 /* MaoHouseViewController.m */; };
+		BABBA8261929731B00D05A18 /* MaoQRToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBA8251929731B00D05A18 /* MaoQRToolViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,7 +114,13 @@
 		479F249B1924DED2006B4080 /* CleanSectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanSectionModel.m; sourceTree = "<group>"; };
 		479F249D1924F0FC006B4080 /* CleanOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanOrderCell.h; sourceTree = "<group>"; };
 		479F249E1924F0FC006B4080 /* CleanOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanOrderCell.m; sourceTree = "<group>"; };
+		48516C29FF3B4C918CAD8634 /* Pods-UEDemoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UEDemoTests.xcconfig"; path = "Pods/Pods-UEDemoTests.xcconfig"; sourceTree = "<group>"; };
 		5A8ED06023F44C2B84DE8664 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D90DFF26E784D1EBDFF1FFC /* libPods-UEDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UEDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BABBA8211929721600D05A18 /* MaoHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaoHouseViewController.h; sourceTree = "<group>"; };
+		BABBA8221929721600D05A18 /* MaoHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaoHouseViewController.m; sourceTree = "<group>"; };
+		BABBA8241929731B00D05A18 /* MaoQRToolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaoQRToolViewController.h; sourceTree = "<group>"; };
+		BABBA8251929731B00D05A18 /* MaoQRToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaoQRToolViewController.m; sourceTree = "<group>"; };
 		FEDC39BAF92F455097BE2022 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +143,7 @@
 				479C52C01923854A00CCF9F4 /* XCTest.framework in Frameworks */,
 				479C52C21923854A00CCF9F4 /* UIKit.framework in Frameworks */,
 				479C52C11923854A00CCF9F4 /* Foundation.framework in Frameworks */,
+				A7F1E28D0B7D4754A105B27E /* libPods-UEDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +266,7 @@
 				479C529F1923854A00CCF9F4 /* Frameworks */,
 				479C529E1923854A00CCF9F4 /* Products */,
 				FEDC39BAF92F455097BE2022 /* Pods.xcconfig */,
+				48516C29FF3B4C918CAD8634 /* Pods-UEDemoTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -276,6 +287,7 @@
 				479C52A41923854A00CCF9F4 /* UIKit.framework */,
 				479C52BF1923854A00CCF9F4 /* XCTest.framework */,
 				5A8ED06023F44C2B84DE8664 /* libPods.a */,
+				7D90DFF26E784D1EBDFF1FFC /* libPods-UEDemoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -283,6 +295,8 @@
 		479C52A61923854A00CCF9F4 /* UEDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BABBA820192971DB00D05A18 /* house */,
+				BA6EFCBB19296CCB00B94CC1 /* QRTool */,
 				479C52AF1923854A00CCF9F4 /* MaoAppDelegate.h */,
 				479C52B01923854A00CCF9F4 /* MaoAppDelegate.m */,
 				479C52B21923854A00CCF9F4 /* Main.storyboard */,
@@ -349,6 +363,24 @@
 			name = cells;
 			sourceTree = "<group>";
 		};
+		BA6EFCBB19296CCB00B94CC1 /* QRTool */ = {
+			isa = PBXGroup;
+			children = (
+				BABBA8241929731B00D05A18 /* MaoQRToolViewController.h */,
+				BABBA8251929731B00D05A18 /* MaoQRToolViewController.m */,
+			);
+			name = QRTool;
+			sourceTree = "<group>";
+		};
+		BABBA820192971DB00D05A18 /* house */ = {
+			isa = PBXGroup;
+			children = (
+				BABBA8211929721600D05A18 /* MaoHouseViewController.h */,
+				BABBA8221929721600D05A18 /* MaoHouseViewController.m */,
+			);
+			name = house;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -375,9 +407,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 479C52D21923854A00CCF9F4 /* Build configuration list for PBXNativeTarget "UEDemoTests" */;
 			buildPhases = (
+				BF6BB36E6AAB41689ACB4793 /* Check Pods Manifest.lock */,
 				479C52BA1923854A00CCF9F4 /* Sources */,
 				479C52BB1923854A00CCF9F4 /* Frameworks */,
 				479C52BC1923854A00CCF9F4 /* Resources */,
+				AA1F585E28294C1EA3C5461C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -460,6 +494,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AA1F585E28294C1EA3C5461C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-UEDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF6BB36E6AAB41689ACB4793 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		D0CDE85B3BE54C148383FA57 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -497,7 +561,9 @@
 				4799EFAA1927527100863423 /* CleanServiceViewModel.m in Sources */,
 				4799EFA01927386700863423 /* CleanService.m in Sources */,
 				4712E07519289FC300DEA3AD /* WorkCell.m in Sources */,
+				BABBA8231929721600D05A18 /* MaoHouseViewController.m in Sources */,
 				479C52AD1923854A00CCF9F4 /* main.m in Sources */,
+				BABBA8261929731B00D05A18 /* MaoQRToolViewController.m in Sources */,
 				479C52B71923854A00CCF9F4 /* MaoViewController.m in Sources */,
 				479F249F1924F0FC006B4080 /* CleanOrderCell.m in Sources */,
 				4712E06819289DAC00DEA3AD /* TimeWorkerService.m in Sources */,
@@ -653,6 +719,7 @@
 		};
 		479C52D31923854A00CCF9F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48516C29FF3B4C918CAD8634 /* Pods-UEDemoTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UEDemo.app/UEDemo";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -675,6 +742,7 @@
 		};
 		479C52D41923854A00CCF9F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48516C29FF3B4C918CAD8634 /* Pods-UEDemoTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UEDemo.app/UEDemo";
 				FRAMEWORK_SEARCH_PATHS = (
