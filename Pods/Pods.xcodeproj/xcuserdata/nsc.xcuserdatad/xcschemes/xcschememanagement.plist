@@ -8,11 +8,35 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-UEDemoTests-Kiwi.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Pods-UEDemoTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-ZXingObjC.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Pods-libextobjc.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -22,7 +46,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1D23F3F076DF40CF924CE2ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2428F61B6B7D4A1CAC8D04B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>65E360513BBD4CADB70524D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7E7DF1233BF046708851CC78</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8C4149036741498FB3E3C8AD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D2B702C5335443A9999A4E09</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E10FC81CD25D40C9B02BCE67</key>
 		<dict>
 			<key>primary</key>
 			<true/>
