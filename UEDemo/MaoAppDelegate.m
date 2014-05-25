@@ -13,9 +13,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[CleanService defaultService] loadServiceModels];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeToRootView) name:@"loginSucces" object:nil];
     return YES;
 }
-							
+-(void)changeToRootView{
+    UIStoryboard *main=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *rootVC=[main instantiateInitialViewController];
+    CATransition *animation=[CATransition animation];
+    animation.type=@"push";
+    animation.duration=0.5;
+    animation.subtype=@"fromRight";
+    [self.window setRootViewController:rootVC];
+    [self.window.layer addAnimation:animation forKey:@"login"];
+    
+}
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

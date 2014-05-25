@@ -51,6 +51,10 @@
 		47A3C4431931F14900EE44EF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A3C4421931F14900EE44EF /* Login.storyboard */; };
 		47A3C4461931F25100EE44EF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C4451931F25100EE44EF /* RegisterViewController.m */; };
 		47A3C4491931F46400EE44EF /* RegPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C4481931F46400EE44EF /* RegPasswordViewController.m */; };
+		47A3C44D1931F62000EE44EF /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C44C1931F62000EE44EF /* NSString+MD5.m */; };
+		47A3C4511931F69900EE44EF /* HTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C4501931F69900EE44EF /* HTTPService.m */; };
+		47A3C45619320B7600EE44EF /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C45519320B7600EE44EF /* BaseViewModel.m */; };
+		47A3C45919320BE300EE44EF /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C45819320BE300EE44EF /* LoginViewModel.m */; };
 		A7F1E28D0B7D4754A105B27E /* libPods-UEDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D90DFF26E784D1EBDFF1FFC /* libPods-UEDemoTests.a */; };
 		BABBA8231929721600D05A18 /* MaoHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBA8221929721600D05A18 /* MaoHouseViewController.m */; };
 		BABBA8261929731B00D05A18 /* MaoQRToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBA8251929731B00D05A18 /* MaoQRToolViewController.m */; };
@@ -143,6 +147,14 @@
 		47A3C4451931F25100EE44EF /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		47A3C4471931F46400EE44EF /* RegPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegPasswordViewController.h; sourceTree = "<group>"; };
 		47A3C4481931F46400EE44EF /* RegPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegPasswordViewController.m; sourceTree = "<group>"; };
+		47A3C44B1931F62000EE44EF /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		47A3C44C1931F62000EE44EF /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		47A3C44F1931F69900EE44EF /* HTTPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPService.h; sourceTree = "<group>"; };
+		47A3C4501931F69900EE44EF /* HTTPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPService.m; sourceTree = "<group>"; };
+		47A3C45419320B7600EE44EF /* BaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewModel.h; sourceTree = "<group>"; };
+		47A3C45519320B7600EE44EF /* BaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewModel.m; sourceTree = "<group>"; };
+		47A3C45719320BE300EE44EF /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		47A3C45819320BE300EE44EF /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		48516C29FF3B4C918CAD8634 /* Pods-UEDemoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UEDemoTests.xcconfig"; path = "Pods/Pods-UEDemoTests.xcconfig"; sourceTree = "<group>"; };
 		5A8ED06023F44C2B84DE8664 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D90DFF26E784D1EBDFF1FFC /* libPods-UEDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UEDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -324,6 +336,7 @@
 		479C52A61923854A00CCF9F4 /* UEDemo */ = {
 			isa = PBXGroup;
 			children = (
+				47A3C44E1931F66F00EE44EF /* appServices */,
 				47A3C43E1931F11B00EE44EF /* loginAndRegister */,
 				479EE52E193081960030F462 /* dryCleaning */,
 				BABBA820192971DB00D05A18 /* house */,
@@ -333,6 +346,7 @@
 				479C52B21923854A00CCF9F4 /* Main.storyboard */,
 				479C52B51923854A00CCF9F4 /* MaoViewController.h */,
 				479C52B61923854A00CCF9F4 /* MaoViewController.m */,
+				47A3C44A1931F5FF00EE44EF /* tools */,
 				4712E06519289D7900DEA3AD /* timeWorker */,
 				479F24891924CDC3006B4080 /* clean */,
 				479C52B81923854A00CCF9F4 /* Images.xcassets */,
@@ -440,15 +454,53 @@
 		47A3C43E1931F11B00EE44EF /* loginAndRegister */ = {
 			isa = PBXGroup;
 			children = (
+				47A3C45319320B2700EE44EF /* viewModels */,
+				47A3C45219320B0C00EE44EF /* viewControllers */,
+				47A3C4421931F14900EE44EF /* Login.storyboard */,
+			);
+			name = loginAndRegister;
+			sourceTree = "<group>";
+		};
+		47A3C44A1931F5FF00EE44EF /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				47A3C44B1931F62000EE44EF /* NSString+MD5.h */,
+				47A3C44C1931F62000EE44EF /* NSString+MD5.m */,
+			);
+			name = tools;
+			sourceTree = "<group>";
+		};
+		47A3C44E1931F66F00EE44EF /* appServices */ = {
+			isa = PBXGroup;
+			children = (
+				47A3C44F1931F69900EE44EF /* HTTPService.h */,
+				47A3C4501931F69900EE44EF /* HTTPService.m */,
+				47A3C45419320B7600EE44EF /* BaseViewModel.h */,
+				47A3C45519320B7600EE44EF /* BaseViewModel.m */,
+			);
+			name = appServices;
+			sourceTree = "<group>";
+		};
+		47A3C45219320B0C00EE44EF /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				47A3C43F1931F13D00EE44EF /* LoginViewController.h */,
 				47A3C4401931F13D00EE44EF /* LoginViewController.m */,
 				47A3C4441931F25100EE44EF /* RegisterViewController.h */,
 				47A3C4451931F25100EE44EF /* RegisterViewController.m */,
 				47A3C4471931F46400EE44EF /* RegPasswordViewController.h */,
 				47A3C4481931F46400EE44EF /* RegPasswordViewController.m */,
-				47A3C4421931F14900EE44EF /* Login.storyboard */,
 			);
-			name = loginAndRegister;
+			name = viewControllers;
+			sourceTree = "<group>";
+		};
+		47A3C45319320B2700EE44EF /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				47A3C45719320BE300EE44EF /* LoginViewModel.h */,
+				47A3C45819320BE300EE44EF /* LoginViewModel.m */,
+			);
+			name = viewModels;
 			sourceTree = "<group>";
 		};
 		BA6EFCBB19296CCB00B94CC1 /* QRTool */ = {
@@ -639,14 +691,17 @@
 				479EE5311930826B0030F462 /* DryCleaningListViewController.m in Sources */,
 				4712E0781928A0C500DEA3AD /* WorkerListViewModel.m in Sources */,
 				4799EF9A192735D100863423 /* CleanServiceCheckViewController.m in Sources */,
+				47A3C44D1931F62000EE44EF /* NSString+MD5.m in Sources */,
 				479F24931924DDBF006B4080 /* CleanSelectionCell.m in Sources */,
 				4799EFAD192755CC00863423 /* CheckViewCell.m in Sources */,
 				4799EFB01927607300863423 /* CleanServiceOrder.m in Sources */,
 				479F248C1924CF10006B4080 /* CleanTableViewCell.m in Sources */,
 				4712E07C1928BD6500DEA3AD /* WorkerOrderViewController.m in Sources */,
 				479C52D7192399E500CCF9F4 /* CleanServiceTableViewController.m in Sources */,
+				47A3C45919320BE300EE44EF /* LoginViewModel.m in Sources */,
 				4712E06D19289E5B00DEA3AD /* Worker.m in Sources */,
 				479F24961924DE9B006B4080 /* CleanViewModel.m in Sources */,
+				47A3C45619320B7600EE44EF /* BaseViewModel.m in Sources */,
 				4712E07119289F2800DEA3AD /* WorkListTableViewController.m in Sources */,
 				4799EFAA1927527100863423 /* CleanServiceViewModel.m in Sources */,
 				47A3C4491931F46400EE44EF /* RegPasswordViewController.m in Sources */,
@@ -660,6 +715,7 @@
 				479C52B71923854A00CCF9F4 /* MaoViewController.m in Sources */,
 				479F249F1924F0FC006B4080 /* CleanOrderCell.m in Sources */,
 				47A3C4461931F25100EE44EF /* RegisterViewController.m in Sources */,
+				47A3C4511931F69900EE44EF /* HTTPService.m in Sources */,
 				479EE53A193088010030F462 /* DryCleaningService.m in Sources */,
 				47A3C43D1931A14C00EE44EF /* DryOrderCell.m in Sources */,
 				4712E06819289DAC00DEA3AD /* TimeWorkerService.m in Sources */,
