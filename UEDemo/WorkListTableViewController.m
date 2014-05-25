@@ -23,6 +23,7 @@
     [super viewDidLoad];
     self.listViewModel=[[WorkerListViewModel alloc]init];
     [self.listViewModel loadWorkerList];
+    
     [[RACObserve(self, listViewModel.workerList) map:^id(id value) {
         [self.tableView reloadData];
         

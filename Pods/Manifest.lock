@@ -57,9 +57,9 @@ DEPENDENCIES:
   - ZXingObjC
 
 SPEC CHECKSUMS:
-  Kiwi: d60d7498b640a16f58b01925fc3c8d7c4d809f66
-  libextobjc: 2c9fc8226f0f38e562587f65172f93f0c9b4a47a
-  ReactiveCocoa: dde7b11a14954edf789e7343b2c32e595caabd01
-  ZXingObjC: 67d88ac35105840d63fed764db83e06fd7c6093e
+  Kiwi: c73667f2b84cbf36f1a3830267c5a4ae8dcbd8ba
+  libextobjc: ba42e4111f433273a886cd54f0ddaddb7f62f82f
+  ReactiveCocoa: 2066583826c17dde8e90c41e489f682048cc57c9
+  ZXingObjC: e21ba2d24fdb226d4c6c8484aa901c0381bdf633
 
 COCOAPODS: 0.32.1

@@ -36,11 +36,21 @@
 		479C52CA1923854A00CCF9F4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 479C52C81923854A00CCF9F4 /* InfoPlist.strings */; };
 		479C52CC1923854A00CCF9F4 /* UEDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C52CB1923854A00CCF9F4 /* UEDemoTests.m */; };
 		479C52D7192399E500CCF9F4 /* CleanServiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C52D6192399E500CCF9F4 /* CleanServiceTableViewController.m */; };
+		479EE5311930826B0030F462 /* DryCleaningListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479EE5301930826B0030F462 /* DryCleaningListViewController.m */; };
+		479EE535193084FB0030F462 /* DryCleaningCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479EE534193084FB0030F462 /* DryCleaningCell.m */; };
+		479EE53A193088010030F462 /* DryCleaningService.m in Sources */ = {isa = PBXBuildFile; fileRef = 479EE539193088010030F462 /* DryCleaningService.m */; };
+		479EE53D1930A0C80030F462 /* DryCleaningViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479EE53C1930A0C80030F462 /* DryCleaningViewModel.m */; };
 		479F248C1924CF10006B4080 /* CleanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F248B1924CF10006B4080 /* CleanTableViewCell.m */; };
 		479F24931924DDBF006B4080 /* CleanSelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F24921924DDBF006B4080 /* CleanSelectionCell.m */; };
 		479F24961924DE9B006B4080 /* CleanViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F24951924DE9B006B4080 /* CleanViewModel.m */; };
 		479F249C1924DED2006B4080 /* CleanSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F249B1924DED2006B4080 /* CleanSectionModel.m */; };
 		479F249F1924F0FC006B4080 /* CleanOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F249E1924F0FC006B4080 /* CleanOrderCell.m */; };
+		47A3C43A19319F0D00EE44EF /* DryCleaningOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C43919319F0D00EE44EF /* DryCleaningOrderViewController.m */; };
+		47A3C43D1931A14C00EE44EF /* DryOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C43C1931A14C00EE44EF /* DryOrderCell.m */; };
+		47A3C4411931F13D00EE44EF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C4401931F13D00EE44EF /* LoginViewController.m */; };
+		47A3C4431931F14900EE44EF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A3C4421931F14900EE44EF /* Login.storyboard */; };
+		47A3C4461931F25100EE44EF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C4451931F25100EE44EF /* RegisterViewController.m */; };
+		47A3C4491931F46400EE44EF /* RegPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C4481931F46400EE44EF /* RegPasswordViewController.m */; };
 		A7F1E28D0B7D4754A105B27E /* libPods-UEDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D90DFF26E784D1EBDFF1FFC /* libPods-UEDemoTests.a */; };
 		BABBA8231929721600D05A18 /* MaoHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBA8221929721600D05A18 /* MaoHouseViewController.m */; };
 		BABBA8261929731B00D05A18 /* MaoQRToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBA8251929731B00D05A18 /* MaoQRToolViewController.m */; };
@@ -104,6 +114,14 @@
 		479C52CB1923854A00CCF9F4 /* UEDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UEDemoTests.m; sourceTree = "<group>"; };
 		479C52D5192399E500CCF9F4 /* CleanServiceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanServiceTableViewController.h; sourceTree = "<group>"; };
 		479C52D6192399E500CCF9F4 /* CleanServiceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanServiceTableViewController.m; sourceTree = "<group>"; };
+		479EE52F1930826B0030F462 /* DryCleaningListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryCleaningListViewController.h; sourceTree = "<group>"; };
+		479EE5301930826B0030F462 /* DryCleaningListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DryCleaningListViewController.m; sourceTree = "<group>"; };
+		479EE533193084FB0030F462 /* DryCleaningCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryCleaningCell.h; sourceTree = "<group>"; };
+		479EE534193084FB0030F462 /* DryCleaningCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DryCleaningCell.m; sourceTree = "<group>"; };
+		479EE538193088010030F462 /* DryCleaningService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryCleaningService.h; sourceTree = "<group>"; };
+		479EE539193088010030F462 /* DryCleaningService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DryCleaningService.m; sourceTree = "<group>"; };
+		479EE53B1930A0C80030F462 /* DryCleaningViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryCleaningViewModel.h; sourceTree = "<group>"; };
+		479EE53C1930A0C80030F462 /* DryCleaningViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DryCleaningViewModel.m; sourceTree = "<group>"; };
 		479F248A1924CF10006B4080 /* CleanTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanTableViewCell.h; sourceTree = "<group>"; };
 		479F248B1924CF10006B4080 /* CleanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanTableViewCell.m; sourceTree = "<group>"; };
 		479F24911924DDBF006B4080 /* CleanSelectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanSelectionCell.h; sourceTree = "<group>"; };
@@ -114,6 +132,17 @@
 		479F249B1924DED2006B4080 /* CleanSectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanSectionModel.m; sourceTree = "<group>"; };
 		479F249D1924F0FC006B4080 /* CleanOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanOrderCell.h; sourceTree = "<group>"; };
 		479F249E1924F0FC006B4080 /* CleanOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanOrderCell.m; sourceTree = "<group>"; };
+		47A3C43819319F0D00EE44EF /* DryCleaningOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryCleaningOrderViewController.h; sourceTree = "<group>"; };
+		47A3C43919319F0D00EE44EF /* DryCleaningOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DryCleaningOrderViewController.m; sourceTree = "<group>"; };
+		47A3C43B1931A14C00EE44EF /* DryOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryOrderCell.h; sourceTree = "<group>"; };
+		47A3C43C1931A14C00EE44EF /* DryOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DryOrderCell.m; sourceTree = "<group>"; };
+		47A3C43F1931F13D00EE44EF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		47A3C4401931F13D00EE44EF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		47A3C4421931F14900EE44EF /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		47A3C4441931F25100EE44EF /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		47A3C4451931F25100EE44EF /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		47A3C4471931F46400EE44EF /* RegPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegPasswordViewController.h; sourceTree = "<group>"; };
+		47A3C4481931F46400EE44EF /* RegPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegPasswordViewController.m; sourceTree = "<group>"; };
 		48516C29FF3B4C918CAD8634 /* Pods-UEDemoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UEDemoTests.xcconfig"; path = "Pods/Pods-UEDemoTests.xcconfig"; sourceTree = "<group>"; };
 		5A8ED06023F44C2B84DE8664 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D90DFF26E784D1EBDFF1FFC /* libPods-UEDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UEDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -295,6 +324,8 @@
 		479C52A61923854A00CCF9F4 /* UEDemo */ = {
 			isa = PBXGroup;
 			children = (
+				47A3C43E1931F11B00EE44EF /* loginAndRegister */,
+				479EE52E193081960030F462 /* dryCleaning */,
 				BABBA820192971DB00D05A18 /* house */,
 				BA6EFCBB19296CCB00B94CC1 /* QRTool */,
 				479C52AF1923854A00CCF9F4 /* MaoAppDelegate.h */,
@@ -339,6 +370,49 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		479EE52E193081960030F462 /* dryCleaning */ = {
+			isa = PBXGroup;
+			children = (
+				479EE537193087E10030F462 /* services */,
+				479EE536193087CF0030F462 /* viewControllers */,
+			);
+			name = dryCleaning;
+			sourceTree = "<group>";
+		};
+		479EE532193084D90030F462 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				479EE533193084FB0030F462 /* DryCleaningCell.h */,
+				479EE534193084FB0030F462 /* DryCleaningCell.m */,
+				47A3C43B1931A14C00EE44EF /* DryOrderCell.h */,
+				47A3C43C1931A14C00EE44EF /* DryOrderCell.m */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
+		479EE536193087CF0030F462 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				479EE52F1930826B0030F462 /* DryCleaningListViewController.h */,
+				479EE5301930826B0030F462 /* DryCleaningListViewController.m */,
+				47A3C43819319F0D00EE44EF /* DryCleaningOrderViewController.h */,
+				47A3C43919319F0D00EE44EF /* DryCleaningOrderViewController.m */,
+				479EE532193084D90030F462 /* cells */,
+			);
+			name = viewControllers;
+			sourceTree = "<group>";
+		};
+		479EE537193087E10030F462 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				479EE538193088010030F462 /* DryCleaningService.h */,
+				479EE539193088010030F462 /* DryCleaningService.m */,
+				479EE53B1930A0C80030F462 /* DryCleaningViewModel.h */,
+				479EE53C1930A0C80030F462 /* DryCleaningViewModel.m */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
 		479F24891924CDC3006B4080 /* clean */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +435,20 @@
 				4799EFAC192755CC00863423 /* CheckViewCell.m */,
 			);
 			name = cells;
+			sourceTree = "<group>";
+		};
+		47A3C43E1931F11B00EE44EF /* loginAndRegister */ = {
+			isa = PBXGroup;
+			children = (
+				47A3C43F1931F13D00EE44EF /* LoginViewController.h */,
+				47A3C4401931F13D00EE44EF /* LoginViewController.m */,
+				47A3C4441931F25100EE44EF /* RegisterViewController.h */,
+				47A3C4451931F25100EE44EF /* RegisterViewController.m */,
+				47A3C4471931F46400EE44EF /* RegPasswordViewController.h */,
+				47A3C4481931F46400EE44EF /* RegPasswordViewController.m */,
+				47A3C4421931F14900EE44EF /* Login.storyboard */,
+			);
+			name = loginAndRegister;
 			sourceTree = "<group>";
 		};
 		BA6EFCBB19296CCB00B94CC1 /* QRTool */ = {
@@ -463,6 +551,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				479C52B91923854A00CCF9F4 /* Images.xcassets in Resources */,
+				47A3C4431931F14900EE44EF /* Login.storyboard in Resources */,
 				479C52AB1923854A00CCF9F4 /* InfoPlist.strings in Resources */,
 				479C52B41923854A00CCF9F4 /* Main.storyboard in Resources */,
 			);
@@ -547,6 +636,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				479C52B11923854A00CCF9F4 /* MaoAppDelegate.m in Sources */,
+				479EE5311930826B0030F462 /* DryCleaningListViewController.m in Sources */,
 				4712E0781928A0C500DEA3AD /* WorkerListViewModel.m in Sources */,
 				4799EF9A192735D100863423 /* CleanServiceCheckViewController.m in Sources */,
 				479F24931924DDBF006B4080 /* CleanSelectionCell.m in Sources */,
@@ -559,17 +649,25 @@
 				479F24961924DE9B006B4080 /* CleanViewModel.m in Sources */,
 				4712E07119289F2800DEA3AD /* WorkListTableViewController.m in Sources */,
 				4799EFAA1927527100863423 /* CleanServiceViewModel.m in Sources */,
+				47A3C4491931F46400EE44EF /* RegPasswordViewController.m in Sources */,
 				4799EFA01927386700863423 /* CleanService.m in Sources */,
 				4712E07519289FC300DEA3AD /* WorkCell.m in Sources */,
 				BABBA8231929721600D05A18 /* MaoHouseViewController.m in Sources */,
+				479EE53D1930A0C80030F462 /* DryCleaningViewModel.m in Sources */,
 				479C52AD1923854A00CCF9F4 /* main.m in Sources */,
 				BABBA8261929731B00D05A18 /* MaoQRToolViewController.m in Sources */,
+				47A3C43A19319F0D00EE44EF /* DryCleaningOrderViewController.m in Sources */,
 				479C52B71923854A00CCF9F4 /* MaoViewController.m in Sources */,
 				479F249F1924F0FC006B4080 /* CleanOrderCell.m in Sources */,
+				47A3C4461931F25100EE44EF /* RegisterViewController.m in Sources */,
+				479EE53A193088010030F462 /* DryCleaningService.m in Sources */,
+				47A3C43D1931A14C00EE44EF /* DryOrderCell.m in Sources */,
 				4712E06819289DAC00DEA3AD /* TimeWorkerService.m in Sources */,
 				4799EFB31927608400863423 /* OrderSelection.m in Sources */,
 				479F249C1924DED2006B4080 /* CleanSectionModel.m in Sources */,
+				479EE535193084FB0030F462 /* DryCleaningCell.m in Sources */,
 				4799EFA41927397600863423 /* ServiceModel.m in Sources */,
+				47A3C4411931F13D00EE44EF /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
