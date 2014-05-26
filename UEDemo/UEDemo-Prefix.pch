@@ -19,3 +19,4 @@
     #import <MBProgressHUD.h>
 #endif
 #define ACCOUNT_SERVER @"192.168.122.1:8080"
+#define TEST 1

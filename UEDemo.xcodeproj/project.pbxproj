@@ -36,6 +36,9 @@
 		479C52CA1923854A00CCF9F4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 479C52C81923854A00CCF9F4 /* InfoPlist.strings */; };
 		479C52CC1923854A00CCF9F4 /* UEDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C52CB1923854A00CCF9F4 /* UEDemoTests.m */; };
 		479C52D7192399E500CCF9F4 /* CleanServiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C52D6192399E500CCF9F4 /* CleanServiceTableViewController.m */; };
+		479C56601932D0C50086380C /* HostInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C565F1932D0C50086380C /* HostInfomation.m */; };
+		479C56631932D5600086380C /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C56621932D5600086380C /* AppService.m */; };
+		479C56651932D6670086380C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479C56641932D6670086380C /* MapKit.framework */; };
 		479EE5311930826B0030F462 /* DryCleaningListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479EE5301930826B0030F462 /* DryCleaningListViewController.m */; };
 		479EE535193084FB0030F462 /* DryCleaningCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479EE534193084FB0030F462 /* DryCleaningCell.m */; };
 		479EE53A193088010030F462 /* DryCleaningService.m in Sources */ = {isa = PBXBuildFile; fileRef = 479EE539193088010030F462 /* DryCleaningService.m */; };
@@ -118,6 +121,11 @@
 		479C52CB1923854A00CCF9F4 /* UEDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UEDemoTests.m; sourceTree = "<group>"; };
 		479C52D5192399E500CCF9F4 /* CleanServiceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanServiceTableViewController.h; sourceTree = "<group>"; };
 		479C52D6192399E500CCF9F4 /* CleanServiceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanServiceTableViewController.m; sourceTree = "<group>"; };
+		479C565E1932D0C50086380C /* HostInfomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostInfomation.h; sourceTree = "<group>"; };
+		479C565F1932D0C50086380C /* HostInfomation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostInfomation.m; sourceTree = "<group>"; };
+		479C56611932D5600086380C /* AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppService.h; sourceTree = "<group>"; };
+		479C56621932D5600086380C /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
+		479C56641932D6670086380C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		479EE52F1930826B0030F462 /* DryCleaningListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryCleaningListViewController.h; sourceTree = "<group>"; };
 		479EE5301930826B0030F462 /* DryCleaningListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DryCleaningListViewController.m; sourceTree = "<group>"; };
 		479EE533193084FB0030F462 /* DryCleaningCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryCleaningCell.h; sourceTree = "<group>"; };
@@ -170,6 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479C56651932D6670086380C /* MapKit.framework in Frameworks */,
 				479C52A31923854A00CCF9F4 /* CoreGraphics.framework in Frameworks */,
 				479C52A51923854A00CCF9F4 /* UIKit.framework in Frameworks */,
 				479C52A11923854A00CCF9F4 /* Foundation.framework in Frameworks */,
@@ -323,6 +332,7 @@
 		479C529F1923854A00CCF9F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				479C56641932D6670086380C /* MapKit.framework */,
 				479C52A01923854A00CCF9F4 /* Foundation.framework */,
 				479C52A21923854A00CCF9F4 /* CoreGraphics.framework */,
 				479C52A41923854A00CCF9F4 /* UIKit.framework */,
@@ -475,8 +485,12 @@
 			children = (
 				47A3C44F1931F69900EE44EF /* HTTPService.h */,
 				47A3C4501931F69900EE44EF /* HTTPService.m */,
+				479C56611932D5600086380C /* AppService.h */,
+				479C56621932D5600086380C /* AppService.m */,
 				47A3C45419320B7600EE44EF /* BaseViewModel.h */,
 				47A3C45519320B7600EE44EF /* BaseViewModel.m */,
+				479C565E1932D0C50086380C /* HostInfomation.h */,
+				479C565F1932D0C50086380C /* HostInfomation.m */,
 			);
 			name = appServices;
 			sourceTree = "<group>";
@@ -688,6 +702,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				479C52B11923854A00CCF9F4 /* MaoAppDelegate.m in Sources */,
+				479C56601932D0C50086380C /* HostInfomation.m in Sources */,
 				479EE5311930826B0030F462 /* DryCleaningListViewController.m in Sources */,
 				4712E0781928A0C500DEA3AD /* WorkerListViewModel.m in Sources */,
 				4799EF9A192735D100863423 /* CleanServiceCheckViewController.m in Sources */,
@@ -713,6 +728,7 @@
 				BABBA8261929731B00D05A18 /* MaoQRToolViewController.m in Sources */,
 				47A3C43A19319F0D00EE44EF /* DryCleaningOrderViewController.m in Sources */,
 				479C52B71923854A00CCF9F4 /* MaoViewController.m in Sources */,
+				479C56631932D5600086380C /* AppService.m in Sources */,
 				479F249F1924F0FC006B4080 /* CleanOrderCell.m in Sources */,
 				47A3C4461931F25100EE44EF /* RegisterViewController.m in Sources */,
 				47A3C4511931F69900EE44EF /* HTTPService.m in Sources */,

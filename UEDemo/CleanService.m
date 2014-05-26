@@ -23,6 +23,8 @@ static CleanService *instance=nil;
     }
 }
 -(void)loadServiceModels{
+        
+#if TEST
     ServiceModel *star1=[ServiceModel new];
     star1.title=@"一星服务";
     NSArray *nameArr1= @[@"一星打包选项1",@"一星打包选项2",@"一星打包选项3"];
@@ -117,7 +119,7 @@ static CleanService *instance=nil;
     order.title=@"我要定制";
     order.type=cleanServiceModelTypeOrder;
     self.serviceModels = @[star1,star2,star3,watch,order];
-    
+ #endif
 }
 
 

@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 reactiveCocoa. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseViewModel.h"
 #import "ServiceModel.h"
-@interface CleanService : NSObject
+@interface CleanService : BaseViewModel
 +(instancetype)defaultService;
 /*
   清洁服务包含的服务选项
