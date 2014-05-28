@@ -17,5 +17,5 @@
 /*
    从服务器加载这些选项
  */
--(void) loadServiceModels;
+-(void)loadStarServices;
 @end

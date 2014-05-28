@@ -40,17 +40,17 @@
 }
 
 -(void)choose:(NSNotification*)notification{
+    
     if (notification.object==self) {
         BOOL selected=[self.sectionModel.selected boolValue];
         self.sectionModel.selected=@(!selected);
     }else{
         self.sectionModel.selected=@(NO);
+        
     }
+    [self.tableView reloadData];
+       //
     
-        CATransition *animation=[CATransition animation];
-      //animation.type=@"moveIn";
-        [self.tableView reloadData];
-    [self.tableView.layer addAnimation:animation forKey:@""];
     
 }
 - (void)dealloc

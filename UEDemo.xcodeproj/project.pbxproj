@@ -14,6 +14,7 @@
 		4712E07519289FC300DEA3AD /* WorkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4712E07419289FC300DEA3AD /* WorkCell.m */; };
 		4712E0781928A0C500DEA3AD /* WorkerListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4712E0771928A0C500DEA3AD /* WorkerListViewModel.m */; };
 		4712E07C1928BD6500DEA3AD /* WorkerOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4712E07B1928BD6500DEA3AD /* WorkerOrderViewController.m */; };
+		47596C251933578400C8139D /* RegViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47596C241933578400C8139D /* RegViewModel.m */; };
 		4799EF9A192735D100863423 /* CleanServiceCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EF99192735D100863423 /* CleanServiceCheckViewController.m */; };
 		4799EFA01927386700863423 /* CleanService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EF9F1927386700863423 /* CleanService.m */; };
 		4799EFA41927397600863423 /* ServiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EFA31927397600863423 /* ServiceModel.m */; };
@@ -86,6 +87,8 @@
 		4712E0771928A0C500DEA3AD /* WorkerListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerListViewModel.m; sourceTree = "<group>"; };
 		4712E07A1928BD6500DEA3AD /* WorkerOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerOrderViewController.h; sourceTree = "<group>"; };
 		4712E07B1928BD6500DEA3AD /* WorkerOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerOrderViewController.m; sourceTree = "<group>"; };
+		47596C231933578400C8139D /* RegViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegViewModel.h; sourceTree = "<group>"; };
+		47596C241933578400C8139D /* RegViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegViewModel.m; sourceTree = "<group>"; };
 		4799EF98192735D100863423 /* CleanServiceCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanServiceCheckViewController.h; sourceTree = "<group>"; };
 		4799EF99192735D100863423 /* CleanServiceCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanServiceCheckViewController.m; sourceTree = "<group>"; };
 		4799EF9E1927386700863423 /* CleanService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanService.h; sourceTree = "<group>"; };
@@ -513,6 +516,8 @@
 			children = (
 				47A3C45719320BE300EE44EF /* LoginViewModel.h */,
 				47A3C45819320BE300EE44EF /* LoginViewModel.m */,
+				47596C231933578400C8139D /* RegViewModel.h */,
+				47596C241933578400C8139D /* RegViewModel.m */,
 			);
 			name = viewModels;
 			sourceTree = "<group>";
@@ -728,6 +733,7 @@
 				BABBA8261929731B00D05A18 /* MaoQRToolViewController.m in Sources */,
 				47A3C43A19319F0D00EE44EF /* DryCleaningOrderViewController.m in Sources */,
 				479C52B71923854A00CCF9F4 /* MaoViewController.m in Sources */,
+				47596C251933578400C8139D /* RegViewModel.m in Sources */,
 				479C56631932D5600086380C /* AppService.m in Sources */,
 				479F249F1924F0FC006B4080 /* CleanOrderCell.m in Sources */,
 				47A3C4461931F25100EE44EF /* RegisterViewController.m in Sources */,

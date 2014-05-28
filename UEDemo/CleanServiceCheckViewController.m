@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self chooseChanged];
+    
     self.lbTitle.text=[NSString stringWithFormat:@"您选择了%@",self.serviceViewModel.title];
     // Do any additional setup after loading the view.
 }
@@ -46,19 +46,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    CheckViewCell *cell=(CheckViewCell*)[tableView cellForRowAtIndexPath:indexPath];
-    BOOL choosed=[cell.orderSelection.choosed boolValue];
-    cell.orderSelection.choosed=@(!choosed);
-    [self chooseChanged];
+   
 }
--(void)chooseChanged{
-    float price=0;
-    for (OrderSelection *s in self.serviceViewModel.selections) {
-        if ([s.choosed boolValue]) {
-             price=price+[s.price floatValue];
-        }
-       
-    }
-    self.lbPrice.text=[NSString stringWithFormat:@"%.2f",price];
-}
+
 @end

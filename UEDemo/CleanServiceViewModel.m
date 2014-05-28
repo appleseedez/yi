@@ -11,7 +11,7 @@
 @implementation CleanServiceViewModel
 +(instancetype)serviceViewModelWithModel:(ServiceModel*)model{
     CleanServiceViewModel *viewModel=[CleanServiceViewModel new];
-    viewModel.selections = model.detaiSelections;
+    viewModel.selections = model.PackSelections;
     viewModel.title=model.title;
     return viewModel;
     

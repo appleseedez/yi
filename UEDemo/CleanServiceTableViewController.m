@@ -51,6 +51,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CleanSectionModel *model=self.cleanViewModel.sections [indexPath.section];
+    if (model.indexPaths==nil) {
+        model.indexPaths=[NSMutableArray new];
+        [model.indexPaths addObject:indexPath];
+    }else{
+        NSIndexPath *oindex=model.indexPaths[0];
+        if (oindex.section==indexPath.section && oindex.row!=indexPath.row) {
+            [model.indexPaths addObject:indexPath];
+        }
+    }
     
     if (indexPath.row==0){
      CleanTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"CleanServiceCell"];
@@ -99,10 +108,6 @@
         
         [self pushSubVCWithModel:model];
         
-    }else if(indexPath.row<[model.PackSelections count]+1){
-        CleanSelectionCell *cell=(CleanSelectionCell*)[tableView cellForRowAtIndexPath:indexPath];
-        BOOL choosed=[cell.orderSelection.choosed boolValue];
-        cell.orderSelection.choosed =@(!choosed);
     }
 }
 -(void) pushSubVCWithModel:(ServiceModel*)model{

@@ -12,7 +12,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[CleanService defaultService] loadServiceModels];
+    [[CleanService defaultService] loadStarServices];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeToRootView) name:@"loginSucces" object:nil];
     return YES;

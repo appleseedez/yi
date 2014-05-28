@@ -21,16 +21,7 @@
 
 - (void)awakeFromNib
 {
-    __weak id weakSelf=self;
-    [RACObserve(self, orderSelection.choosed) subscribeNext:^(NSNumber *x) {
-        __strong CheckViewCell *strongSelf=weakSelf;
-        if ([x boolValue]) {
-            strongSelf.imgCheckBox.image=[UIImage imageNamed:@"selection_choosed"];
-        }else{
-            strongSelf.imgCheckBox.image=[UIImage imageNamed:@"selection_unchoosed"];
-        }
-        
-    }];
+  
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

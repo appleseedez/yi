@@ -14,5 +14,6 @@
 @property (nonatomic) NSString *title;     //section的标题
 @property (nonatomic) NSNumber *selected; // 检测是否被选中
 @property (nonatomic,weak) ServiceModel *model;
+@property (nonatomic) NSMutableArray *indexPaths;
 +(instancetype)SectionWithModel:(ServiceModel*)model;
 @end

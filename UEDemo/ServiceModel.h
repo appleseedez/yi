@@ -15,6 +15,6 @@ NS_ENUM(NSInteger, cleanServiceModelType){
 @interface ServiceModel : NSObject
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSArray  *PackSelections; //打包选项
-@property (nonatomic) NSArray  *detaiSelections; //细节选项
+
 @property (nonatomic) NSInteger type;    //model类型
 @end

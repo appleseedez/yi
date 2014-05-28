@@ -7,33 +7,36 @@
 //
 
 #import "RegisterViewController.h"
-
+#import "RegViewModel.h"
 @interface RegisterViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *txtPhone;
+@property (weak, nonatomic) IBOutlet UITextField *txtCode;
+@property (weak, nonatomic) IBOutlet UIButton *btnSendMes;
+@property (weak, nonatomic) IBOutlet UIButton *btnNext;
 
 @end
 
 @implementation RegisterViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   [[ RACObserve(self, regViewModel.messageSended) map:^id(NSNumber *value) {
+       if ([value boolValue]) {
+           self.btnNext.enabled=YES;
+           self.txtCode.enabled=YES;
+       }else{
+           self.btnNext.enabled=NO;
+           self.txtCode.enabled=NO;
+       }
+       return value;
+    }]subscribeNext:^(id x) {}];
+    
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 /*
 #pragma mark - Navigation

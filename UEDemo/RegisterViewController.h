@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class RegViewModel;
 @interface RegisterViewController : UIViewController
-
+@property (nonatomic) RegViewModel *regViewModel;
 @end
