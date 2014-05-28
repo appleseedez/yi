@@ -40,15 +40,39 @@
 }
 
 -(void)choose:(NSNotification*)notification{
-    
-    if (notification.object==self) {
-        BOOL selected=[self.sectionModel.selected boolValue];
-        self.sectionModel.selected=@(!selected);
-    }else{
-        self.sectionModel.selected=@(NO);
+    NSMutableArray *arr=[NSMutableArray new];
+    NSIndexPath *indepath=self.sectionModel.indexPaths[0];
+    for (int i=0; i<[self.sectionModel.selections count]+1 ;i++) {
+        NSIndexPath *p=[NSIndexPath indexPathForRow:i+1 inSection:indepath.section];
+        
+        [arr addObject:p];
         
     }
-    [self.tableView reloadData];
+    if (notification.object==self) {
+        
+        BOOL selected=[self.sectionModel.selected boolValue];
+        self.sectionModel.selected=@(!selected);
+        if (!selected) {
+           
+            [self.tableView beginUpdates];
+            [self.tableView insertRowsAtIndexPaths:arr withRowAnimation:UITableViewRowAnimationTop];
+            
+            [self.tableView endUpdates];
+        }else{
+            [self.tableView deleteRowsAtIndexPaths:arr withRowAnimation:UITableViewRowAnimationBottom];
+        }
+        
+    }else{
+        BOOL selected=[self.sectionModel.selected boolValue];
+        self.sectionModel.selected=@(NO);
+        if (selected) {
+            [self.tableView beginUpdates];
+            [self.tableView deleteRowsAtIndexPaths:arr withRowAnimation:UITableViewRowAnimationBottom];
+            [self.tableView endUpdates];
+        }
+        
+    }
+    
        //
     
     
