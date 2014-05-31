@@ -49,6 +49,9 @@
 		479F24961924DE9B006B4080 /* CleanViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F24951924DE9B006B4080 /* CleanViewModel.m */; };
 		479F249C1924DED2006B4080 /* CleanSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F249B1924DED2006B4080 /* CleanSectionModel.m */; };
 		479F249F1924F0FC006B4080 /* CleanOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F249E1924F0FC006B4080 /* CleanOrderCell.m */; };
+		47A03C1B1939CEE70019E469 /* UIImage+ColorAtPixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A03C1A1939CEE70019E469 /* UIImage+ColorAtPixel.m */; };
+		47A03C1E1939CEEF0019E469 /* OBShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A03C1D1939CEEF0019E469 /* OBShapedButton.m */; };
+		47A03C201939EB290019E469 /* 银杏叶虚化大背景.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47A03C1F1939EB290019E469 /* 银杏叶虚化大背景.jpg */; };
 		47A3C43A19319F0D00EE44EF /* DryCleaningOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C43919319F0D00EE44EF /* DryCleaningOrderViewController.m */; };
 		47A3C43D1931A14C00EE44EF /* DryOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C43C1931A14C00EE44EF /* DryOrderCell.m */; };
 		47A3C4411931F13D00EE44EF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C4401931F13D00EE44EF /* LoginViewController.m */; };
@@ -147,6 +150,11 @@
 		479F249B1924DED2006B4080 /* CleanSectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanSectionModel.m; sourceTree = "<group>"; };
 		479F249D1924F0FC006B4080 /* CleanOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanOrderCell.h; sourceTree = "<group>"; };
 		479F249E1924F0FC006B4080 /* CleanOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanOrderCell.m; sourceTree = "<group>"; };
+		47A03C191939CEE70019E469 /* UIImage+ColorAtPixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorAtPixel.h"; sourceTree = "<group>"; };
+		47A03C1A1939CEE70019E469 /* UIImage+ColorAtPixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorAtPixel.m"; sourceTree = "<group>"; };
+		47A03C1C1939CEEF0019E469 /* OBShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBShapedButton.h; sourceTree = "<group>"; };
+		47A03C1D1939CEEF0019E469 /* OBShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBShapedButton.m; sourceTree = "<group>"; };
+		47A03C1F1939EB290019E469 /* 银杏叶虚化大背景.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "银杏叶虚化大背景.jpg"; sourceTree = "<group>"; };
 		47A3C43819319F0D00EE44EF /* DryCleaningOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryCleaningOrderViewController.h; sourceTree = "<group>"; };
 		47A3C43919319F0D00EE44EF /* DryCleaningOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DryCleaningOrderViewController.m; sourceTree = "<group>"; };
 		47A3C43B1931A14C00EE44EF /* DryOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryOrderCell.h; sourceTree = "<group>"; };
@@ -349,6 +357,7 @@
 		479C52A61923854A00CCF9F4 /* UEDemo */ = {
 			isa = PBXGroup;
 			children = (
+				47A03C181939CED00019E469 /* pictures */,
 				47A3C44E1931F66F00EE44EF /* appServices */,
 				47A3C43E1931F11B00EE44EF /* loginAndRegister */,
 				479EE52E193081960030F462 /* dryCleaning */,
@@ -371,6 +380,7 @@
 		479C52A71923854A00CCF9F4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				47A03C1F1939EB290019E469 /* 银杏叶虚化大背景.jpg */,
 				479C52A81923854A00CCF9F4 /* UEDemo-Info.plist */,
 				479C52A91923854A00CCF9F4 /* InfoPlist.strings */,
 				479C52AC1923854A00CCF9F4 /* main.m */,
@@ -462,6 +472,17 @@
 				4799EFAC192755CC00863423 /* CheckViewCell.m */,
 			);
 			name = cells;
+			sourceTree = "<group>";
+		};
+		47A03C181939CED00019E469 /* pictures */ = {
+			isa = PBXGroup;
+			children = (
+				47A03C1C1939CEEF0019E469 /* OBShapedButton.h */,
+				47A03C1D1939CEEF0019E469 /* OBShapedButton.m */,
+				47A03C191939CEE70019E469 /* UIImage+ColorAtPixel.h */,
+				47A03C1A1939CEE70019E469 /* UIImage+ColorAtPixel.m */,
+			);
+			name = pictures;
 			sourceTree = "<group>";
 		};
 		47A3C43E1931F11B00EE44EF /* loginAndRegister */ = {
@@ -625,6 +646,7 @@
 				47A3C4431931F14900EE44EF /* Login.storyboard in Resources */,
 				479C52AB1923854A00CCF9F4 /* InfoPlist.strings in Resources */,
 				479C52B41923854A00CCF9F4 /* Main.storyboard in Resources */,
+				47A03C201939EB290019E469 /* 银杏叶虚化大背景.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,11 +735,13 @@
 				4799EF9A192735D100863423 /* CleanServiceCheckViewController.m in Sources */,
 				47A3C44D1931F62000EE44EF /* NSString+MD5.m in Sources */,
 				479F24931924DDBF006B4080 /* CleanSelectionCell.m in Sources */,
+				47A03C1E1939CEEF0019E469 /* OBShapedButton.m in Sources */,
 				4799EFAD192755CC00863423 /* CheckViewCell.m in Sources */,
 				4799EFB01927607300863423 /* CleanServiceOrder.m in Sources */,
 				479F248C1924CF10006B4080 /* CleanTableViewCell.m in Sources */,
 				4712E07C1928BD6500DEA3AD /* WorkerOrderViewController.m in Sources */,
 				479C52D7192399E500CCF9F4 /* CleanServiceTableViewController.m in Sources */,
+				47A03C1B1939CEE70019E469 /* UIImage+ColorAtPixel.m in Sources */,
 				47A3C45919320BE300EE44EF /* LoginViewModel.m in Sources */,
 				4712E06D19289E5B00DEA3AD /* Worker.m in Sources */,
 				479F24961924DE9B006B4080 /* CleanViewModel.m in Sources */,
