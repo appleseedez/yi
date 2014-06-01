@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 @class RegViewModel;
-@interface RegisterViewController : UIViewController
+@interface RegisterViewController : UIViewController<UITextFieldDelegate>
 @property (nonatomic) RegViewModel *regViewModel;
 @end

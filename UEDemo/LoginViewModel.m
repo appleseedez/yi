@@ -9,9 +9,11 @@
 #import "LoginViewModel.h"
 #import "NSString+MD5.h"
 #import "MaoAppDelegate.h"
+
 @implementation LoginViewModel
 
 -(void)login:(NSString*)user password:(NSString*)password{
+    
     NSDictionary *parameters=@{@"phone":user,@"password":[password md5]};
     NSString *url=[NSString stringWithFormat:@"%@/eclean/login.json",ACCOUNT_SERVER];
     

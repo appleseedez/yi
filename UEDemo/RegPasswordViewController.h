@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface RegPasswordViewController : UIViewController
-
+@class RegViewModel;
+@interface RegPasswordViewController : UIViewController <UITextFieldDelegate>
+@property (nonatomic,weak) RegViewModel *regViewModel;
+ 
 @end

@@ -9,5 +9,5 @@
 #import "BaseViewModel.h"
 
 @interface LoginViewModel : BaseViewModel
-
+-(void)login:(NSString*)user password:(NSString*)password;
 @end

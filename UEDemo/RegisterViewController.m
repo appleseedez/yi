@@ -8,11 +8,12 @@
 
 #import "RegisterViewController.h"
 #import "RegViewModel.h"
+#import "RegPasswordViewController.h"
 @interface RegisterViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *txtPhone;
-@property (weak, nonatomic) IBOutlet UITextField *txtCode;
-@property (weak, nonatomic) IBOutlet UIButton *btnSendMes;
-@property (weak, nonatomic) IBOutlet UIButton *btnNext;
+
+
+
 
 @end
 
@@ -23,21 +24,69 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.regViewModel =[[RegViewModel alloc]init];
+    //监听HUD
+    [[ RACObserve(self, regViewModel.busy) map:^id(NSNumber *value) {
+        if ([value boolValue]) {
+            MBProgressHUD *hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            hud.labelText=@"请稍后";
+            
+        }else{
+            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        }
+        
+        
+        return value;
+    }]subscribeNext:^(id x) {}];
    [[ RACObserve(self, regViewModel.messageSended) map:^id(NSNumber *value) {
        if ([value boolValue]) {
-           self.btnNext.enabled=YES;
-           self.txtCode.enabled=YES;
-       }else{
-           self.btnNext.enabled=NO;
-           self.txtCode.enabled=NO;
+           
+        RegPasswordViewController *passVC=   [self.storyboard instantiateViewControllerWithIdentifier:@"regPassword"];
+           passVC.regViewModel=self.regViewModel;
+           [self.navigationController pushViewController:passVC animated:YES];
+        }else{
+           
        }
        return value;
     }]subscribeNext:^(id x) {}];
     
     // Do any additional setup after loading the view.
 }
-
-
+- (IBAction)dismiss:(id)sender {
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
+- (IBAction)sendMessage:(id)sender {
+    
+    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"请输入正确的手机号码" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    
+    if (self.txtPhone.text.length!=11) {
+        [alert show];
+        return ;
+    }
+    NSRange range;
+    range.length=1;
+    range.location=0;
+    NSString *first=[self.txtPhone.text substringWithRange:range];
+    if ([first intValue]!=1) {
+        [alert show];
+        return;
+    }
+    [self.regViewModel getCode:self.txtPhone.text];
+}
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+   
+    
+    if (textField.text.length+string.length>11) {
+        return NO;
+    }
+    return YES;
+}
 /*
 #pragma mark - Navigation
 
