@@ -18,4 +18,9 @@
    从服务器加载这些选项
  */
 -(void)loadStarServices;
+
+//所有保洁服务
+@property (nonatomic) NSArray *serviceOrderSelections;
+
+-(void)loadServiceOrderSelections;
 @end

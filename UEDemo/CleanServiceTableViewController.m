@@ -16,6 +16,7 @@
 #import "CleanService.h"
 #import "CleanServiceViewModel.h"
 #import "OrderSelection.h"
+#import "CleanDetailCheckTableViewController.h"
 @interface CleanServiceTableViewController ()
 
 @property (nonatomic) NSInteger selection;
@@ -118,6 +119,9 @@
         checkVC.serviceViewModel=viewModel;
         [self.navigationController pushViewController:checkVC animated:YES];
         
+    }else if (model.type==cleanServiceModelTypeOrder){
+        CleanDetailCheckTableViewController *detailVC=[self.storyboard instantiateViewControllerWithIdentifier:@"CleanDetailServiceCheck"];
+        [self.navigationController pushViewController:detailVC animated:YES];
     }
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

@@ -17,4 +17,5 @@
 @property (nonatomic) NSNumber *ID;    //选项唯一标识
 
 +(instancetype)selectionWithName:(NSString*)name price:(NSString*)price ID:(NSNumber*)ID suSelections:(NSArray*)subSelections;
++(instancetype)selectionsWithDictionary:(NSDictionary*)dic;
 @end

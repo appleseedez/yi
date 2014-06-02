@@ -40,6 +40,10 @@
 		479C56601932D0C50086380C /* HostInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C565F1932D0C50086380C /* HostInfomation.m */; };
 		479C56631932D5600086380C /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C56621932D5600086380C /* AppService.m */; };
 		479C56651932D6670086380C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479C56641932D6670086380C /* MapKit.framework */; };
+		479E1F90193C7C8E0062A15D /* CleanDetailCheckTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F8F193C7C8E0062A15D /* CleanDetailCheckTableViewController.m */; };
+		479E1F93193C7F6F0062A15D /* CleanDetailCheckModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F92193C7F6F0062A15D /* CleanDetailCheckModel.m */; };
+		479E1F96193C80580062A15D /* DetailCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F95193C80580062A15D /* DetailCheckCell.m */; };
+		479E1F99193C82110062A15D /* CleanDetailCheckViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F98193C82110062A15D /* CleanDetailCheckViewModel.m */; };
 		479EE5311930826B0030F462 /* DryCleaningListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479EE5301930826B0030F462 /* DryCleaningListViewController.m */; };
 		479EE535193084FB0030F462 /* DryCleaningCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479EE534193084FB0030F462 /* DryCleaningCell.m */; };
 		479EE53A193088010030F462 /* DryCleaningService.m in Sources */ = {isa = PBXBuildFile; fileRef = 479EE539193088010030F462 /* DryCleaningService.m */; };
@@ -132,6 +136,14 @@
 		479C56611932D5600086380C /* AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppService.h; sourceTree = "<group>"; };
 		479C56621932D5600086380C /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
 		479C56641932D6670086380C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		479E1F8E193C7C8E0062A15D /* CleanDetailCheckTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanDetailCheckTableViewController.h; sourceTree = "<group>"; };
+		479E1F8F193C7C8E0062A15D /* CleanDetailCheckTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanDetailCheckTableViewController.m; sourceTree = "<group>"; };
+		479E1F91193C7F6F0062A15D /* CleanDetailCheckModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanDetailCheckModel.h; sourceTree = "<group>"; };
+		479E1F92193C7F6F0062A15D /* CleanDetailCheckModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanDetailCheckModel.m; sourceTree = "<group>"; };
+		479E1F94193C80580062A15D /* DetailCheckCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCheckCell.h; sourceTree = "<group>"; };
+		479E1F95193C80580062A15D /* DetailCheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCheckCell.m; sourceTree = "<group>"; };
+		479E1F97193C82110062A15D /* CleanDetailCheckViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanDetailCheckViewModel.h; sourceTree = "<group>"; };
+		479E1F98193C82110062A15D /* CleanDetailCheckViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanDetailCheckViewModel.m; sourceTree = "<group>"; };
 		479EE52F1930826B0030F462 /* DryCleaningListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryCleaningListViewController.h; sourceTree = "<group>"; };
 		479EE5301930826B0030F462 /* DryCleaningListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DryCleaningListViewController.m; sourceTree = "<group>"; };
 		479EE533193084FB0030F462 /* DryCleaningCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryCleaningCell.h; sourceTree = "<group>"; };
@@ -277,6 +289,8 @@
 				479C52D6192399E500CCF9F4 /* CleanServiceTableViewController.m */,
 				4799EF98192735D100863423 /* CleanServiceCheckViewController.h */,
 				4799EF99192735D100863423 /* CleanServiceCheckViewController.m */,
+				479E1F8E193C7C8E0062A15D /* CleanDetailCheckTableViewController.h */,
+				479E1F8F193C7C8E0062A15D /* CleanDetailCheckTableViewController.m */,
 				4799EF9C1927381400863423 /* viewModels */,
 				479F24901924DD9C006B4080 /* cells */,
 			);
@@ -292,6 +306,10 @@
 				479F249B1924DED2006B4080 /* CleanSectionModel.m */,
 				4799EFA81927527100863423 /* CleanServiceViewModel.h */,
 				4799EFA91927527100863423 /* CleanServiceViewModel.m */,
+				479E1F97193C82110062A15D /* CleanDetailCheckViewModel.h */,
+				479E1F98193C82110062A15D /* CleanDetailCheckViewModel.m */,
+				479E1F91193C7F6F0062A15D /* CleanDetailCheckModel.h */,
+				479E1F92193C7F6F0062A15D /* CleanDetailCheckModel.m */,
 			);
 			name = viewModels;
 			sourceTree = "<group>";
@@ -470,6 +488,8 @@
 				479F249E1924F0FC006B4080 /* CleanOrderCell.m */,
 				4799EFAB192755CC00863423 /* CheckViewCell.h */,
 				4799EFAC192755CC00863423 /* CheckViewCell.m */,
+				479E1F94193C80580062A15D /* DetailCheckCell.h */,
+				479E1F95193C80580062A15D /* DetailCheckCell.m */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -764,12 +784,16 @@
 				47A3C4511931F69900EE44EF /* HTTPService.m in Sources */,
 				479EE53A193088010030F462 /* DryCleaningService.m in Sources */,
 				47A3C43D1931A14C00EE44EF /* DryOrderCell.m in Sources */,
+				479E1F90193C7C8E0062A15D /* CleanDetailCheckTableViewController.m in Sources */,
+				479E1F96193C80580062A15D /* DetailCheckCell.m in Sources */,
+				479E1F99193C82110062A15D /* CleanDetailCheckViewModel.m in Sources */,
 				4712E06819289DAC00DEA3AD /* TimeWorkerService.m in Sources */,
 				4799EFB31927608400863423 /* OrderSelection.m in Sources */,
 				479F249C1924DED2006B4080 /* CleanSectionModel.m in Sources */,
 				479EE535193084FB0030F462 /* DryCleaningCell.m in Sources */,
 				4799EFA41927397600863423 /* ServiceModel.m in Sources */,
 				47A3C4411931F13D00EE44EF /* LoginViewController.m in Sources */,
+				479E1F93193C7F6F0062A15D /* CleanDetailCheckModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

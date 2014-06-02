@@ -16,6 +16,16 @@
     
     return sel;
 }
++(instancetype)selectionsWithDictionary:(NSDictionary*)dic{
+    OrderSelection *selection=[OrderSelection new];
+    
+    selection.name=[dic objectForKey:@"name"];
+    selection.ID=[dic objectForKey:@"id"];
+    selection.price=[dic objectForKey:@"price"];
+    
+    
+    return selection;
+}
 - (instancetype)init
 {
     self = [super init];
