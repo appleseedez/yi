@@ -34,7 +34,7 @@
             [self responseError:x];
             return ;
         }
-        NSString *status=[x valueForKeyPath:@"head.status"];
+        id status=[x valueForKeyPath:@"head.status"];
         if (status) {
             if ([status intValue]==0) {
                 
@@ -55,7 +55,7 @@
     }];
     
     
-    return nil;
+    return response;
 }
 -(void)requestError:(NSError*)error{
     UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"网络异常" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
@@ -63,6 +63,11 @@
 }
 -(void)responseError:(NSDictionary*)response{
     NSLog(@"返回类型不是字典:%@",response);
+    if ([response isKindOfClass:[NSData class]]) {
+         NSString *s=[[NSString alloc]initWithData:(NSData*)response encoding:NSUTF8StringEncoding];
+        NSLog(@"%@",s);
+    }
+   
     UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"服务器返回类型错误" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
     [alert show];
 }

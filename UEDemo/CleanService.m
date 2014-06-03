@@ -52,7 +52,7 @@ static CleanService *instance=nil;
 //加载星级服务
 -(void)loadStarServices{
     NSString *url=[NSString stringWithFormat:@"%@/eclean/loadServicePackages.json",ACCOUNT_SERVER];
-   
+     
     [[[self httpRequestWithURL:url andParameters:@{} method:@"get"] map:^id(NSArray *value) {
       NSMutableArray *models=[NSMutableArray new];
         for (int i=0; i<[value count]; i++) {
