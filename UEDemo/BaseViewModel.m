@@ -58,6 +58,7 @@
     return response;
 }
 -(void)requestError:(NSError*)error{
+    NSLog(@"请求错误:%@",error);
     UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"网络异常" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
     [alert show];
 }

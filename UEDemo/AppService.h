@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "HostInfomation.h"
-
-@interface AppService : NSObject
+#import "BaseViewModel.h"
+@interface AppService : BaseViewModel
 +(instancetype)defaultService;
 @property (nonatomic) HostInfomation *hostInfomation;
+-(void)getStore:(NSString*)storeID;
 @end

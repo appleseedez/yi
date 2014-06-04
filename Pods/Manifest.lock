@@ -59,12 +59,12 @@ PODS:
   - libextobjc/RuntimeExtensions (0.4)
   - libextobjc/UmbrellaHeader (0.4)
   - MBProgressHUD (0.8)
-  - ReactiveCocoa (2.3):
+  - ReactiveCocoa (2.3.1):
     - ReactiveCocoa/UI
-  - ReactiveCocoa/Core (2.3):
+  - ReactiveCocoa/Core (2.3.1):
     - ReactiveCocoa/no-arc
-  - ReactiveCocoa/no-arc (2.3)
-  - ReactiveCocoa/UI (2.3):
+  - ReactiveCocoa/no-arc (2.3.1)
+  - ReactiveCocoa/UI (2.3.1):
     - ReactiveCocoa/Core
   - ZXingObjC (3.0.1):
     - ZXingObjC/All
@@ -83,7 +83,7 @@ SPEC CHECKSUMS:
   Kiwi: c73667f2b84cbf36f1a3830267c5a4ae8dcbd8ba
   libextobjc: ba42e4111f433273a886cd54f0ddaddb7f62f82f
   MBProgressHUD: c356980b0cd097f19acec959b49dca5eb8ec31be
-  ReactiveCocoa: 2066583826c17dde8e90c41e489f682048cc57c9
+  ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
   ZXingObjC: e21ba2d24fdb226d4c6c8484aa901c0381bdf633
 
 COCOAPODS: 0.32.1

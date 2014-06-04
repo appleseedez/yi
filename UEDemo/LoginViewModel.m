@@ -14,7 +14,7 @@
 
 -(void)login:(NSString*)user password:(NSString*)password{
     
-    NSDictionary *parameters=@{@"phone":user,@"password":[password md5]};
+    NSDictionary *parameters=@{@"username":user,@"password":[password md5]};
     NSString *url=[NSString stringWithFormat:@"%@/eclean/login.json",ACCOUNT_SERVER];
     
     [[self  httpRequestWithURL:url andParameters:parameters method:@"post"]subscribeNext:^(NSDictionary *x) {

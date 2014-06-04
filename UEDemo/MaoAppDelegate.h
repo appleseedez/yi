@@ -12,4 +12,5 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSDictionary *hostUser;
+@property (strong, nonatomic) NSDictionary *currStore;
 @end

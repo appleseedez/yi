@@ -51,10 +51,41 @@ static HTTPService *instance=nil;
 }
 -(RACSignal*)getRequestWithUrl:(NSString*)url andParameters:(NSDictionary*)parameters{
     
+//    @property (copy) NSString *scheme; // Attempting to set the scheme with an invalid scheme string will cause an exception.
+//    @property (copy) NSString *user;
+//    @property (copy) NSString *password;
+//    @property (copy) NSString *host;
+//    @property (copy) NSNumber *port; // Attempting to set a negative port number will cause an exception.
+//    @property (copy) NSString *path;
+//    @property (copy) NSString *query;
+//    @property (copy) NSString *fragment;
+//    
+    
+    NSMutableURLRequest *request=[[NSMutableURLRequest alloc]init];
+   
+    
+    
+    [request setHTTPMethod:@"GET"];
+    [request setValue:@"application/json;charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    
     NSDictionary *head=@{@"signalType":@(0),@"status":@(0),@"sessionToken":[self getSessionToken]};
     
     NSDictionary *requestParameters=@{@"head":head,@"body":parameters};
-    NSURLRequest *request=[[AFJSONRequestSerializer serializer] requestWithMethod:@"get" URLString:url parameters:requestParameters error:nil];
+    
+    NSData *httpBody=[NSJSONSerialization dataWithJSONObject:requestParameters options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *query=[[NSString alloc] initWithData:httpBody encoding:NSUTF8StringEncoding];
+    NSString *qurl=[NSString stringWithFormat:@"%@?head=1",url];
+     NSURL *surl=[NSURL URLWithString:qurl];
+    [request setURL:surl];
+    NSLog(@"scheme:%@",surl.scheme);
+    NSLog(@"user:%@",surl.user);
+    NSLog(@"password:%@",surl.password);
+    NSLog(@"port:%@",surl.port);
+    NSLog(@"path:%@",surl.path);
+    NSLog(@"query:%@",surl.query);
+    NSLog(@"fragment:%@",surl.fragment);
     return [self signalWithRequest:request];
 }
 -(RACSignal*)signalWithRequest:(NSURLRequest*)request{
