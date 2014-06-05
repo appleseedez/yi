@@ -18,4 +18,5 @@
 
 +(instancetype)selectionWithName:(NSString*)name price:(NSString*)price ID:(NSNumber*)ID suSelections:(NSArray*)subSelections;
 +(instancetype)selectionsWithDictionary:(NSDictionary*)dic;
+-(NSDictionary*)toDictionary;
 @end

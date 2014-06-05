@@ -8,6 +8,7 @@
 
 #import "MaoAppDelegate.h"
 #import "CleanService.h"
+#import "AppService.h"
 @implementation MaoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -26,6 +27,7 @@
     animation.subtype=@"fromRight";
     [self.window setRootViewController:rootVC];
     [self.window.layer addAnimation:animation forKey:@"login"];
+    [[AppService defaultService] getStore];
     
 }
 - (void)applicationWillResignActive:(UIApplication *)application

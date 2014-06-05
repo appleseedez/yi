@@ -40,6 +40,7 @@
 		479C56601932D0C50086380C /* HostInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C565F1932D0C50086380C /* HostInfomation.m */; };
 		479C56631932D5600086380C /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C56621932D5600086380C /* AppService.m */; };
 		479C56651932D6670086380C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479C56641932D6670086380C /* MapKit.framework */; };
+		479C88CD1940A3EC006657F8 /* CleanOrderSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C88CC1940A3EC006657F8 /* CleanOrderSuccessViewController.m */; };
 		479E1F90193C7C8E0062A15D /* CleanDetailCheckTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F8F193C7C8E0062A15D /* CleanDetailCheckTableViewController.m */; };
 		479E1F93193C7F6F0062A15D /* CleanDetailCheckModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F92193C7F6F0062A15D /* CleanDetailCheckModel.m */; };
 		479E1F96193C80580062A15D /* DetailCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F95193C80580062A15D /* DetailCheckCell.m */; };
@@ -66,6 +67,8 @@
 		47A3C4511931F69900EE44EF /* HTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C4501931F69900EE44EF /* HTTPService.m */; };
 		47A3C45619320B7600EE44EF /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C45519320B7600EE44EF /* BaseViewModel.m */; };
 		47A3C45919320BE300EE44EF /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C45819320BE300EE44EF /* LoginViewModel.m */; };
+		47F0CCE9193F5EE700702053 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F0CCE8193F5EE700702053 /* Order.m */; };
+		47F0CCEC193F681E00702053 /* OrderService.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F0CCEB193F681E00702053 /* OrderService.m */; };
 		A7F1E28D0B7D4754A105B27E /* libPods-UEDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D90DFF26E784D1EBDFF1FFC /* libPods-UEDemoTests.a */; };
 		BABBA8231929721600D05A18 /* MaoHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBA8221929721600D05A18 /* MaoHouseViewController.m */; };
 		BABBA8261929731B00D05A18 /* MaoQRToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBA8251929731B00D05A18 /* MaoQRToolViewController.m */; };
@@ -136,6 +139,8 @@
 		479C56611932D5600086380C /* AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppService.h; sourceTree = "<group>"; };
 		479C56621932D5600086380C /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
 		479C56641932D6670086380C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		479C88CB1940A3EC006657F8 /* CleanOrderSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanOrderSuccessViewController.h; sourceTree = "<group>"; };
+		479C88CC1940A3EC006657F8 /* CleanOrderSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanOrderSuccessViewController.m; sourceTree = "<group>"; };
 		479E1F8E193C7C8E0062A15D /* CleanDetailCheckTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanDetailCheckTableViewController.h; sourceTree = "<group>"; };
 		479E1F8F193C7C8E0062A15D /* CleanDetailCheckTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanDetailCheckTableViewController.m; sourceTree = "<group>"; };
 		479E1F91193C7F6F0062A15D /* CleanDetailCheckModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanDetailCheckModel.h; sourceTree = "<group>"; };
@@ -186,6 +191,10 @@
 		47A3C45519320B7600EE44EF /* BaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewModel.m; sourceTree = "<group>"; };
 		47A3C45719320BE300EE44EF /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		47A3C45819320BE300EE44EF /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		47F0CCE7193F5EE700702053 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		47F0CCE8193F5EE700702053 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
+		47F0CCEA193F681E00702053 /* OrderService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderService.h; sourceTree = "<group>"; };
+		47F0CCEB193F681E00702053 /* OrderService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderService.m; sourceTree = "<group>"; };
 		48516C29FF3B4C918CAD8634 /* Pods-UEDemoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UEDemoTests.xcconfig"; path = "Pods/Pods-UEDemoTests.xcconfig"; sourceTree = "<group>"; };
 		5A8ED06023F44C2B84DE8664 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D90DFF26E784D1EBDFF1FFC /* libPods-UEDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UEDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -291,6 +300,8 @@
 				4799EF99192735D100863423 /* CleanServiceCheckViewController.m */,
 				479E1F8E193C7C8E0062A15D /* CleanDetailCheckTableViewController.h */,
 				479E1F8F193C7C8E0062A15D /* CleanDetailCheckTableViewController.m */,
+				479C88CB1940A3EC006657F8 /* CleanOrderSuccessViewController.h */,
+				479C88CC1940A3EC006657F8 /* CleanOrderSuccessViewController.m */,
 				4799EF9C1927381400863423 /* viewModels */,
 				479F24901924DD9C006B4080 /* cells */,
 			);
@@ -375,6 +386,7 @@
 		479C52A61923854A00CCF9F4 /* UEDemo */ = {
 			isa = PBXGroup;
 			children = (
+				47F0CCE6193F5E6E00702053 /* orders */,
 				47A03C181939CED00019E469 /* pictures */,
 				47A3C44E1931F66F00EE44EF /* appServices */,
 				47A3C43E1931F11B00EE44EF /* loginAndRegister */,
@@ -561,6 +573,17 @@
 				47596C241933578400C8139D /* RegViewModel.m */,
 			);
 			name = viewModels;
+			sourceTree = "<group>";
+		};
+		47F0CCE6193F5E6E00702053 /* orders */ = {
+			isa = PBXGroup;
+			children = (
+				47F0CCE7193F5EE700702053 /* Order.h */,
+				47F0CCE8193F5EE700702053 /* Order.m */,
+				47F0CCEA193F681E00702053 /* OrderService.h */,
+				47F0CCEB193F681E00702053 /* OrderService.m */,
+			);
+			name = orders;
 			sourceTree = "<group>";
 		};
 		BA6EFCBB19296CCB00B94CC1 /* QRTool */ = {
@@ -754,6 +777,7 @@
 				4712E0781928A0C500DEA3AD /* WorkerListViewModel.m in Sources */,
 				4799EF9A192735D100863423 /* CleanServiceCheckViewController.m in Sources */,
 				47A3C44D1931F62000EE44EF /* NSString+MD5.m in Sources */,
+				47F0CCEC193F681E00702053 /* OrderService.m in Sources */,
 				479F24931924DDBF006B4080 /* CleanSelectionCell.m in Sources */,
 				47A03C1E1939CEEF0019E469 /* OBShapedButton.m in Sources */,
 				4799EFAD192755CC00863423 /* CheckViewCell.m in Sources */,
@@ -781,9 +805,11 @@
 				479C56631932D5600086380C /* AppService.m in Sources */,
 				479F249F1924F0FC006B4080 /* CleanOrderCell.m in Sources */,
 				47A3C4461931F25100EE44EF /* RegisterViewController.m in Sources */,
+				47F0CCE9193F5EE700702053 /* Order.m in Sources */,
 				47A3C4511931F69900EE44EF /* HTTPService.m in Sources */,
 				479EE53A193088010030F462 /* DryCleaningService.m in Sources */,
 				47A3C43D1931A14C00EE44EF /* DryOrderCell.m in Sources */,
+				479C88CD1940A3EC006657F8 /* CleanOrderSuccessViewController.m in Sources */,
 				479E1F90193C7C8E0062A15D /* CleanDetailCheckTableViewController.m in Sources */,
 				479E1F96193C80580062A15D /* DetailCheckCell.m in Sources */,
 				479E1F99193C82110062A15D /* CleanDetailCheckViewModel.m in Sources */,

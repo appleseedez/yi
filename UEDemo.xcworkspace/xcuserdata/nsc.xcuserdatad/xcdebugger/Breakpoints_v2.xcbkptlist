@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UEDemo/BaseViewModel.m"
-            timestampString = "423578833.093233"
+            filePath = "UEDemo/CleanService.m"
+            timestampString = "423526530.907068"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "-responseFail:"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "-loadStarServices"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UEDemo/CleanService.m"
-            timestampString = "423526530.907068"
+            filePath = "UEDemo/CleanServiceViewModel.m"
+            timestampString = "423667184.76808"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "-loadStarServices"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "-subOrders"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

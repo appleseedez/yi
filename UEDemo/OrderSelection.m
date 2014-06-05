@@ -26,6 +26,11 @@
     
     return selection;
 }
+-(NSDictionary*)toDictionary{
+    NSDictionary *dic=@{@"itemid":self.ID,
+                        @"name":self.name};
+    return dic;
+}
 - (instancetype)init
 {
     self = [super init];

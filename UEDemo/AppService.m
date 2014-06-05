@@ -31,7 +31,7 @@ static AppService *instance=nil;
     self.hostInfomation.coordinatex=[NSString stringWithFormat:@"%g",locationManager.location.coordinate.latitude];
     self.hostInfomation.coordinatey=[NSString stringWithFormat:@"%g",locationManager.location.coordinate.longitude];
 }
--(void)getStore:(NSString*)storeID{
+-(void)getStore{
     NSDictionary *store= [[NSUserDefaults standardUserDefaults] objectForKey:@"store"];
     if (!store) {
         store=@{

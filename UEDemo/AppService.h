@@ -12,5 +12,5 @@
 @interface AppService : BaseViewModel
 +(instancetype)defaultService;
 @property (nonatomic) HostInfomation *hostInfomation;
--(void)getStore:(NSString*)storeID;
+-(void)getStore;
 @end

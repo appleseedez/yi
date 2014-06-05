@@ -61,31 +61,48 @@ static HTTPService *instance=nil;
 //    @property (copy) NSString *fragment;
 //    
     
-    NSMutableURLRequest *request=[[NSMutableURLRequest alloc]init];
+    
+//   
+//    
+//    
+//    [request setHTTPMethod:@"GET"];
+//    [request setValue:@"application/json;charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+//    
+//    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+//    
+//    NSDictionary *head=@{@"signalType":@(0),@"status":@(0),@"sessionToken":[self getSessionToken]};
+//    
+//    NSDictionary *requestParameters=@{@"head":head,@"body":parameters};
+//    
+//    NSData *httpBody=[NSJSONSerialization dataWithJSONObject:requestParameters options:NSJSONWritingPrettyPrinted error:nil];
+//    NSString *query=[[NSString alloc] initWithData:httpBody encoding:NSUTF8StringEncoding];
+//    NSString *qurl=[NSString stringWithFormat:@"%@?head=1",url];
+//     NSURL *surl=[NSURL URLWithString:qurl];
+//    [request setURL:surl];
+//    NSLog(@"scheme:%@",surl.scheme);
+//    NSLog(@"user:%@",surl.user);
+//    NSLog(@"password:%@",surl.password);
+//    NSLog(@"port:%@",surl.port);
+//    NSLog(@"path:%@",surl.path);
+//    NSLog(@"query:%@",surl.query);
+//    NSLog(@"fragment:%@",surl.fragment);
    
-    
-    
-    [request setHTTPMethod:@"GET"];
-    [request setValue:@"application/json;charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-    
-    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    
-    NSDictionary *head=@{@"signalType":@(0),@"status":@(0),@"sessionToken":[self getSessionToken]};
+        NSDictionary *head=@{@"signalType":@(0),@"status":@(0),@"sessionToken":[self getSessionToken]};
     
     NSDictionary *requestParameters=@{@"head":head,@"body":parameters};
     
-    NSData *httpBody=[NSJSONSerialization dataWithJSONObject:requestParameters options:NSJSONWritingPrettyPrinted error:nil];
-    NSString *query=[[NSString alloc] initWithData:httpBody encoding:NSUTF8StringEncoding];
-    NSString *qurl=[NSString stringWithFormat:@"%@?head=1",url];
-     NSURL *surl=[NSURL URLWithString:qurl];
-    [request setURL:surl];
-    NSLog(@"scheme:%@",surl.scheme);
-    NSLog(@"user:%@",surl.user);
-    NSLog(@"password:%@",surl.password);
-    NSLog(@"port:%@",surl.port);
-    NSLog(@"path:%@",surl.path);
-    NSLog(@"query:%@",surl.query);
-    NSLog(@"fragment:%@",surl.fragment);
+    NSError *error=nil;
+    NSData *data=[NSJSONSerialization dataWithJSONObject:head options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *s=[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    NSURLRequest *request= [[AFJSONRequestSerializer serializer] requestWithMethod:@"GET" URLString:url parameters:@{@"head":data} error:&error];
+    
+    NSMutableURLRequest *mRequest=[request mutableCopy];
+    NSLog(@"%@",request.URL);
+    if (error) {
+        NSLog(@"%@",error);
+    }
+    
+    
     return [self signalWithRequest:request];
 }
 -(RACSignal*)signalWithRequest:(NSURLRequest*)request{

@@ -22,12 +22,20 @@
 - (IBAction)pop:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+- (IBAction)subOrder:(id)sender {
+    [self.serviceViewModel subOrders];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     self.lbTitle.text=[NSString stringWithFormat:@"您选择了%@",self.serviceViewModel.title];
+    
+    [self.serviceViewModel.orderSuccess subscribeCompleted:^{
+        UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CleanOrderSuccess"];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
     // Do any additional setup after loading the view.
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

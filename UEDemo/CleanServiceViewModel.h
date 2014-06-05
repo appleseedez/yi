@@ -6,10 +6,12 @@
 //  Copyright (c) 2014年 reactiveCocoa. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseViewModel.h"
 #import "ServiceModel.h"
-@interface CleanServiceViewModel : NSObject
+@interface CleanServiceViewModel : BaseViewModel
 +(instancetype)serviceViewModelWithModel:(ServiceModel*)model;
+@property (nonatomic) RACSignal *orderSuccess;
+-(void)subOrders;
 @property (nonatomic) NSArray *selections;
 @property (nonatomic) NSString *title;
 @end

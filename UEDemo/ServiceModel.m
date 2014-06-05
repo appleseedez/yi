@@ -19,7 +19,7 @@
     for (NSString *s in arrdes) {
         OrderSelection *o=[OrderSelection new];
         o.name=s;
-        
+        o.ID=[dic objectForKey:@"id"];
         [arrOrder addObject:o];
     }
     model.PackSelections=[arrOrder copy];
