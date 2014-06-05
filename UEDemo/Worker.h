@@ -21,5 +21,7 @@
 @property  (nonatomic) NSString *age;
 @property  (nonatomic) NSString *lowprice;
 @property  (nonatomic) NSString *avatar;
+@property  (nonatomic) NSString *strSkills;
+@property  (nonatomic) NSNumber *workeyears;
 -(NSString*)skillsString;
 @end

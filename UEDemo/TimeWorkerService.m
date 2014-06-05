@@ -23,6 +23,8 @@ static TimeWorkerService *instance;
     }
 }
 -(RACSignal*)loadWorkers{
+    
+#if TEST
     RACSignal *signal=[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         Worker *worker1=[Worker new];
         worker1.name=@"张无忌";
@@ -55,6 +57,7 @@ static TimeWorkerService *instance;
         [subscriber sendCompleted];
         return nil;
     }];
+#endif
     return signal;
 }
 @end
