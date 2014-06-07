@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 @class LoginViewModel;
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController <UITextFieldDelegate>
 @property (nonatomic,strong) LoginViewModel *loginViewModel;
 @end

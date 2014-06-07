@@ -18,10 +18,12 @@
     
 }
 -(void)subOrders{
-    Order *o =[Order new];
+    Order *o =[[Order alloc]init];
+    
     o.servicetype=@"bj";
     NSMutableArray *services=[NSMutableArray new];
     for (OrderSelection *os in self.selections) {
+        
         [services addObject:[os toDictionary]];
     }
     o.services=[services copy];

@@ -15,6 +15,11 @@
 		4712E0781928A0C500DEA3AD /* WorkerListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4712E0771928A0C500DEA3AD /* WorkerListViewModel.m */; };
 		4712E07C1928BD6500DEA3AD /* WorkerOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4712E07B1928BD6500DEA3AD /* WorkerOrderViewController.m */; };
 		47596C251933578400C8139D /* RegViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47596C241933578400C8139D /* RegViewModel.m */; };
+		479495C719433B56009901F9 /* MyCentreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479495C619433B56009901F9 /* MyCentreTableViewController.m */; };
+		479495CB19433BB1009901F9 /* MyCenterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479495CA19433BB1009901F9 /* MyCenterViewModel.m */; };
+		479495CF19434770009901F9 /* MyCenterOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479495CE19434770009901F9 /* MyCenterOrderCell.m */; };
+		479495D2194347AA009901F9 /* OrderStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 479495D1194347AA009901F9 /* OrderStatusView.m */; };
+		479495D4194347E4009901F9 /* statusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479495D3194347E4009901F9 /* statusView.xib */; };
 		4799EF9A192735D100863423 /* CleanServiceCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EF99192735D100863423 /* CleanServiceCheckViewController.m */; };
 		4799EFA01927386700863423 /* CleanService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EF9F1927386700863423 /* CleanService.m */; };
 		4799EFA41927397600863423 /* ServiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EFA31927397600863423 /* ServiceModel.m */; };
@@ -45,6 +50,7 @@
 		479E1F93193C7F6F0062A15D /* CleanDetailCheckModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F92193C7F6F0062A15D /* CleanDetailCheckModel.m */; };
 		479E1F96193C80580062A15D /* DetailCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F95193C80580062A15D /* DetailCheckCell.m */; };
 		479E1F99193C82110062A15D /* CleanDetailCheckViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F98193C82110062A15D /* CleanDetailCheckViewModel.m */; };
+		479E77301943A450005130FE /* LoginInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E772F1943A450005130FE /* LoginInputTextField.m */; };
 		479EE5311930826B0030F462 /* DryCleaningListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479EE5301930826B0030F462 /* DryCleaningListViewController.m */; };
 		479EE535193084FB0030F462 /* DryCleaningCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479EE534193084FB0030F462 /* DryCleaningCell.m */; };
 		479EE53A193088010030F462 /* DryCleaningService.m in Sources */ = {isa = PBXBuildFile; fileRef = 479EE539193088010030F462 /* DryCleaningService.m */; };
@@ -99,6 +105,15 @@
 		4712E07B1928BD6500DEA3AD /* WorkerOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerOrderViewController.m; sourceTree = "<group>"; };
 		47596C231933578400C8139D /* RegViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegViewModel.h; sourceTree = "<group>"; };
 		47596C241933578400C8139D /* RegViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegViewModel.m; sourceTree = "<group>"; };
+		479495C519433B56009901F9 /* MyCentreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCentreTableViewController.h; sourceTree = "<group>"; };
+		479495C619433B56009901F9 /* MyCentreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCentreTableViewController.m; sourceTree = "<group>"; };
+		479495C919433BB1009901F9 /* MyCenterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterViewModel.h; sourceTree = "<group>"; };
+		479495CA19433BB1009901F9 /* MyCenterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterViewModel.m; sourceTree = "<group>"; };
+		479495CD19434770009901F9 /* MyCenterOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterOrderCell.h; sourceTree = "<group>"; };
+		479495CE19434770009901F9 /* MyCenterOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterOrderCell.m; sourceTree = "<group>"; };
+		479495D0194347AA009901F9 /* OrderStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderStatusView.h; sourceTree = "<group>"; };
+		479495D1194347AA009901F9 /* OrderStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderStatusView.m; sourceTree = "<group>"; };
+		479495D3194347E4009901F9 /* statusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = statusView.xib; sourceTree = "<group>"; };
 		4799EF98192735D100863423 /* CleanServiceCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanServiceCheckViewController.h; sourceTree = "<group>"; };
 		4799EF99192735D100863423 /* CleanServiceCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanServiceCheckViewController.m; sourceTree = "<group>"; };
 		4799EF9E1927386700863423 /* CleanService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanService.h; sourceTree = "<group>"; };
@@ -149,6 +164,8 @@
 		479E1F95193C80580062A15D /* DetailCheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCheckCell.m; sourceTree = "<group>"; };
 		479E1F97193C82110062A15D /* CleanDetailCheckViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanDetailCheckViewModel.h; sourceTree = "<group>"; };
 		479E1F98193C82110062A15D /* CleanDetailCheckViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanDetailCheckViewModel.m; sourceTree = "<group>"; };
+		479E772E1943A450005130FE /* LoginInputTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginInputTextField.h; sourceTree = "<group>"; };
+		479E772F1943A450005130FE /* LoginInputTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInputTextField.m; sourceTree = "<group>"; };
 		479EE52F1930826B0030F462 /* DryCleaningListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryCleaningListViewController.h; sourceTree = "<group>"; };
 		479EE5301930826B0030F462 /* DryCleaningListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DryCleaningListViewController.m; sourceTree = "<group>"; };
 		479EE533193084FB0030F462 /* DryCleaningCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryCleaningCell.h; sourceTree = "<group>"; };
@@ -291,6 +308,38 @@
 			name = viewModels;
 			sourceTree = "<group>";
 		};
+		479495C419433B2C009901F9 /* myCentre */ = {
+			isa = PBXGroup;
+			children = (
+				479495C819433B8E009901F9 /* viewModels */,
+				479495C519433B56009901F9 /* MyCentreTableViewController.h */,
+				479495C619433B56009901F9 /* MyCentreTableViewController.m */,
+				479495CC19434742009901F9 /* cells */,
+			);
+			name = myCentre;
+			sourceTree = "<group>";
+		};
+		479495C819433B8E009901F9 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				479495C919433BB1009901F9 /* MyCenterViewModel.h */,
+				479495CA19433BB1009901F9 /* MyCenterViewModel.m */,
+			);
+			name = viewModels;
+			sourceTree = "<group>";
+		};
+		479495CC19434742009901F9 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				479495CD19434770009901F9 /* MyCenterOrderCell.h */,
+				479495CE19434770009901F9 /* MyCenterOrderCell.m */,
+				479495D0194347AA009901F9 /* OrderStatusView.h */,
+				479495D1194347AA009901F9 /* OrderStatusView.m */,
+				479495D3194347E4009901F9 /* statusView.xib */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
 		4799EF9B192737DE00863423 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +435,7 @@
 		479C52A61923854A00CCF9F4 /* UEDemo */ = {
 			isa = PBXGroup;
 			children = (
+				479495C419433B2C009901F9 /* myCentre */,
 				47F0CCE6193F5E6E00702053 /* orders */,
 				47A03C181939CED00019E469 /* pictures */,
 				47A3C44E1931F66F00EE44EF /* appServices */,
@@ -435,6 +485,15 @@
 				479C52C81923854A00CCF9F4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		479E772D1943A414005130FE /* customViews */ = {
+			isa = PBXGroup;
+			children = (
+				479E772E1943A450005130FE /* LoginInputTextField.h */,
+				479E772F1943A450005130FE /* LoginInputTextField.m */,
+			);
+			name = customViews;
 			sourceTree = "<group>";
 		};
 		479EE52E193081960030F462 /* dryCleaning */ = {
@@ -520,6 +579,7 @@
 		47A3C43E1931F11B00EE44EF /* loginAndRegister */ = {
 			isa = PBXGroup;
 			children = (
+				479E772D1943A414005130FE /* customViews */,
 				47A3C45319320B2700EE44EF /* viewModels */,
 				47A3C45219320B0C00EE44EF /* viewControllers */,
 				47A3C4421931F14900EE44EF /* Login.storyboard */,
@@ -689,6 +749,7 @@
 				47A3C4431931F14900EE44EF /* Login.storyboard in Resources */,
 				479C52AB1923854A00CCF9F4 /* InfoPlist.strings in Resources */,
 				479C52B41923854A00CCF9F4 /* Main.storyboard in Resources */,
+				479495D4194347E4009901F9 /* statusView.xib in Resources */,
 				47A03C201939EB290019E469 /* 银杏叶虚化大背景.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -776,11 +837,13 @@
 				479EE5311930826B0030F462 /* DryCleaningListViewController.m in Sources */,
 				4712E0781928A0C500DEA3AD /* WorkerListViewModel.m in Sources */,
 				4799EF9A192735D100863423 /* CleanServiceCheckViewController.m in Sources */,
+				479495CB19433BB1009901F9 /* MyCenterViewModel.m in Sources */,
 				47A3C44D1931F62000EE44EF /* NSString+MD5.m in Sources */,
 				47F0CCEC193F681E00702053 /* OrderService.m in Sources */,
 				479F24931924DDBF006B4080 /* CleanSelectionCell.m in Sources */,
 				47A03C1E1939CEEF0019E469 /* OBShapedButton.m in Sources */,
 				4799EFAD192755CC00863423 /* CheckViewCell.m in Sources */,
+				479495C719433B56009901F9 /* MyCentreTableViewController.m in Sources */,
 				4799EFB01927607300863423 /* CleanServiceOrder.m in Sources */,
 				479F248C1924CF10006B4080 /* CleanTableViewCell.m in Sources */,
 				4712E07C1928BD6500DEA3AD /* WorkerOrderViewController.m in Sources */,
@@ -790,6 +853,7 @@
 				4712E06D19289E5B00DEA3AD /* Worker.m in Sources */,
 				479F24961924DE9B006B4080 /* CleanViewModel.m in Sources */,
 				47A3C45619320B7600EE44EF /* BaseViewModel.m in Sources */,
+				479495CF19434770009901F9 /* MyCenterOrderCell.m in Sources */,
 				4712E07119289F2800DEA3AD /* WorkListTableViewController.m in Sources */,
 				4799EFAA1927527100863423 /* CleanServiceViewModel.m in Sources */,
 				47A3C4491931F46400EE44EF /* RegPasswordViewController.m in Sources */,
@@ -798,6 +862,7 @@
 				BABBA8231929721600D05A18 /* MaoHouseViewController.m in Sources */,
 				479EE53D1930A0C80030F462 /* DryCleaningViewModel.m in Sources */,
 				479C52AD1923854A00CCF9F4 /* main.m in Sources */,
+				479E77301943A450005130FE /* LoginInputTextField.m in Sources */,
 				BABBA8261929731B00D05A18 /* MaoQRToolViewController.m in Sources */,
 				47A3C43A19319F0D00EE44EF /* DryCleaningOrderViewController.m in Sources */,
 				479C52B71923854A00CCF9F4 /* MaoViewController.m in Sources */,
@@ -817,6 +882,7 @@
 				4799EFB31927608400863423 /* OrderSelection.m in Sources */,
 				479F249C1924DED2006B4080 /* CleanSectionModel.m in Sources */,
 				479EE535193084FB0030F462 /* DryCleaningCell.m in Sources */,
+				479495D2194347AA009901F9 /* OrderStatusView.m in Sources */,
 				4799EFA41927397600863423 /* ServiceModel.m in Sources */,
 				47A3C4411931F13D00EE44EF /* LoginViewController.m in Sources */,
 				479E1F93193C7F6F0062A15D /* CleanDetailCheckModel.m in Sources */,

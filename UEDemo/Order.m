@@ -7,15 +7,13 @@
 //
 
 #import "Order.h"
-
+#import "MaoAppDelegate.h"
 @implementation Order
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
-        self.hostUser=delegate.hostUser;
-        self.currStore=delegate.currStore;
+        
         
         self.storeid=self.currStore[@"id"];
         self.storename=self.currStore[@"name"];
@@ -40,5 +38,19 @@
                         @"services":self.services};
     
     return dic;
+}
+-(NSDictionary*)currStore{
+    if (_currStore==nil) {
+        MaoAppDelegate *de=[UIApplication sharedApplication].delegate;
+        _currStore=de.currStore;
+    }
+    return _currStore;
+}
+-(NSDictionary*)hostUser{
+    if (_hostUser==nil) {
+         MaoAppDelegate *de=[UIApplication sharedApplication].delegate;
+        _hostUser=de.hostUser;
+    }
+    return _hostUser;
 }
 @end
