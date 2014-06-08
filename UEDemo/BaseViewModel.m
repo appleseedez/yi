@@ -23,7 +23,7 @@
     self.busy=@(YES);
   
         
-    signal=[self.httpService getRequestWithUrl:url andParameters:parameters];
+    signal=[self.httpService jsonPostRequestWithUrl:url andParameters:parameters];
         
     
     [signal subscribeNext:^(NSDictionary *x) {
