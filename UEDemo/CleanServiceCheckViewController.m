@@ -32,9 +32,16 @@
     
     self.lbTitle.text=[NSString stringWithFormat:@"您选择了%@",self.serviceViewModel.title];
     
-    [self.serviceViewModel.orderSuccess subscribeCompleted:^{
-        UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CleanOrderSuccess"];
-        [self.navigationController pushViewController:vc animated:YES];
+    [[RACObserve(self, serviceViewModel.orderSuccess) map:^id(NSNumber *value) {
+        if ([value boolValue]) {
+            UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CleanOrderSuccess"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        return value;
+    }]subscribeNext:^(id x) {
+        
+    } completed:^{
+        
     }];
     // Do any additional setup after loading the view.
 }

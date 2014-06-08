@@ -22,6 +22,19 @@
 {
     [super viewDidLoad];
     [self loadSelectedWorkerView];
+    
+    [[RACObserve(self, listViewModel.orderSuccess) map:^id(NSNumber *value) {
+        if ([value boolValue]) {
+            UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CleanOrderSuccess"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        
+        return value;
+    }]subscribeNext:^(id x) {}];
+    
+}
+- (IBAction)subWorkerOrder:(id)sender {
+    [self.listViewModel subWorkerOrder];
 }
 -(void)loadSelectedWorkerView{
     NSMutableArray *selected=[NSMutableArray new];
@@ -37,7 +50,7 @@
     float imgHeight=40;
     float imgwidth=40;
     for (Worker *worker in selected) {
-        int i=[selected indexOfObject:worker];
+        NSUInteger i=[selected indexOfObject:worker];
         float x=width*(i%4) +startX;
         float y=height*(i/4)+startY;
         UIImageView *headerImage=[[UIImageView alloc]init];

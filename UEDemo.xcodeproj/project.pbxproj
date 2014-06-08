@@ -50,7 +50,6 @@
 		479E1F93193C7F6F0062A15D /* CleanDetailCheckModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F92193C7F6F0062A15D /* CleanDetailCheckModel.m */; };
 		479E1F96193C80580062A15D /* DetailCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F95193C80580062A15D /* DetailCheckCell.m */; };
 		479E1F99193C82110062A15D /* CleanDetailCheckViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F98193C82110062A15D /* CleanDetailCheckViewModel.m */; };
-		479E77301943A450005130FE /* LoginInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E772F1943A450005130FE /* LoginInputTextField.m */; };
 		479EE5311930826B0030F462 /* DryCleaningListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479EE5301930826B0030F462 /* DryCleaningListViewController.m */; };
 		479EE535193084FB0030F462 /* DryCleaningCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479EE534193084FB0030F462 /* DryCleaningCell.m */; };
 		479EE53A193088010030F462 /* DryCleaningService.m in Sources */ = {isa = PBXBuildFile; fileRef = 479EE539193088010030F462 /* DryCleaningService.m */; };
@@ -60,12 +59,13 @@
 		479F24961924DE9B006B4080 /* CleanViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F24951924DE9B006B4080 /* CleanViewModel.m */; };
 		479F249C1924DED2006B4080 /* CleanSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F249B1924DED2006B4080 /* CleanSectionModel.m */; };
 		479F249F1924F0FC006B4080 /* CleanOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F249E1924F0FC006B4080 /* CleanOrderCell.m */; };
+		479F444F1944249100FEDE2D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F444E1944249100FEDE2D /* LoginViewController.m */; };
+		479F4451194424A000FEDE2D /* LoginInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F4450194424A000FEDE2D /* LoginInputTextField.m */; };
 		47A03C1B1939CEE70019E469 /* UIImage+ColorAtPixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A03C1A1939CEE70019E469 /* UIImage+ColorAtPixel.m */; };
 		47A03C1E1939CEEF0019E469 /* OBShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A03C1D1939CEEF0019E469 /* OBShapedButton.m */; };
 		47A03C201939EB290019E469 /* 银杏叶虚化大背景.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47A03C1F1939EB290019E469 /* 银杏叶虚化大背景.jpg */; };
 		47A3C43A19319F0D00EE44EF /* DryCleaningOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C43919319F0D00EE44EF /* DryCleaningOrderViewController.m */; };
 		47A3C43D1931A14C00EE44EF /* DryOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C43C1931A14C00EE44EF /* DryOrderCell.m */; };
-		47A3C4411931F13D00EE44EF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C4401931F13D00EE44EF /* LoginViewController.m */; };
 		47A3C4431931F14900EE44EF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A3C4421931F14900EE44EF /* Login.storyboard */; };
 		47A3C4461931F25100EE44EF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C4451931F25100EE44EF /* RegisterViewController.m */; };
 		47A3C4491931F46400EE44EF /* RegPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C4481931F46400EE44EF /* RegPasswordViewController.m */; };
@@ -165,7 +165,6 @@
 		479E1F97193C82110062A15D /* CleanDetailCheckViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanDetailCheckViewModel.h; sourceTree = "<group>"; };
 		479E1F98193C82110062A15D /* CleanDetailCheckViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanDetailCheckViewModel.m; sourceTree = "<group>"; };
 		479E772E1943A450005130FE /* LoginInputTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginInputTextField.h; sourceTree = "<group>"; };
-		479E772F1943A450005130FE /* LoginInputTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInputTextField.m; sourceTree = "<group>"; };
 		479EE52F1930826B0030F462 /* DryCleaningListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryCleaningListViewController.h; sourceTree = "<group>"; };
 		479EE5301930826B0030F462 /* DryCleaningListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DryCleaningListViewController.m; sourceTree = "<group>"; };
 		479EE533193084FB0030F462 /* DryCleaningCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryCleaningCell.h; sourceTree = "<group>"; };
@@ -184,6 +183,8 @@
 		479F249B1924DED2006B4080 /* CleanSectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanSectionModel.m; sourceTree = "<group>"; };
 		479F249D1924F0FC006B4080 /* CleanOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanOrderCell.h; sourceTree = "<group>"; };
 		479F249E1924F0FC006B4080 /* CleanOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanOrderCell.m; sourceTree = "<group>"; };
+		479F444E1944249100FEDE2D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		479F4450194424A000FEDE2D /* LoginInputTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInputTextField.m; sourceTree = "<group>"; };
 		47A03C191939CEE70019E469 /* UIImage+ColorAtPixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorAtPixel.h"; sourceTree = "<group>"; };
 		47A03C1A1939CEE70019E469 /* UIImage+ColorAtPixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorAtPixel.m"; sourceTree = "<group>"; };
 		47A03C1C1939CEEF0019E469 /* OBShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBShapedButton.h; sourceTree = "<group>"; };
@@ -194,7 +195,6 @@
 		47A3C43B1931A14C00EE44EF /* DryOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryOrderCell.h; sourceTree = "<group>"; };
 		47A3C43C1931A14C00EE44EF /* DryOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DryOrderCell.m; sourceTree = "<group>"; };
 		47A3C43F1931F13D00EE44EF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		47A3C4401931F13D00EE44EF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		47A3C4421931F14900EE44EF /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		47A3C4441931F25100EE44EF /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		47A3C4451931F25100EE44EF /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
@@ -490,8 +490,8 @@
 		479E772D1943A414005130FE /* customViews */ = {
 			isa = PBXGroup;
 			children = (
+				479F4450194424A000FEDE2D /* LoginInputTextField.m */,
 				479E772E1943A450005130FE /* LoginInputTextField.h */,
-				479E772F1943A450005130FE /* LoginInputTextField.m */,
 			);
 			name = customViews;
 			sourceTree = "<group>";
@@ -615,7 +615,7 @@
 			isa = PBXGroup;
 			children = (
 				47A3C43F1931F13D00EE44EF /* LoginViewController.h */,
-				47A3C4401931F13D00EE44EF /* LoginViewController.m */,
+				479F444E1944249100FEDE2D /* LoginViewController.m */,
 				47A3C4441931F25100EE44EF /* RegisterViewController.h */,
 				47A3C4451931F25100EE44EF /* RegisterViewController.m */,
 				47A3C4471931F46400EE44EF /* RegPasswordViewController.h */,
@@ -858,11 +858,12 @@
 				4799EFAA1927527100863423 /* CleanServiceViewModel.m in Sources */,
 				47A3C4491931F46400EE44EF /* RegPasswordViewController.m in Sources */,
 				4799EFA01927386700863423 /* CleanService.m in Sources */,
+				479F444F1944249100FEDE2D /* LoginViewController.m in Sources */,
 				4712E07519289FC300DEA3AD /* WorkCell.m in Sources */,
 				BABBA8231929721600D05A18 /* MaoHouseViewController.m in Sources */,
 				479EE53D1930A0C80030F462 /* DryCleaningViewModel.m in Sources */,
+				479F4451194424A000FEDE2D /* LoginInputTextField.m in Sources */,
 				479C52AD1923854A00CCF9F4 /* main.m in Sources */,
-				479E77301943A450005130FE /* LoginInputTextField.m in Sources */,
 				BABBA8261929731B00D05A18 /* MaoQRToolViewController.m in Sources */,
 				47A3C43A19319F0D00EE44EF /* DryCleaningOrderViewController.m in Sources */,
 				479C52B71923854A00CCF9F4 /* MaoViewController.m in Sources */,
@@ -884,7 +885,6 @@
 				479EE535193084FB0030F462 /* DryCleaningCell.m in Sources */,
 				479495D2194347AA009901F9 /* OrderStatusView.m in Sources */,
 				4799EFA41927397600863423 /* ServiceModel.m in Sources */,
-				47A3C4411931F13D00EE44EF /* LoginViewController.m in Sources */,
 				479E1F93193C7F6F0062A15D /* CleanDetailCheckModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1011,6 +1011,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UEDemo/UEDemo-Prefix.pch";
 				INFOPLIST_FILE = "UEDemo/UEDemo-Info.plist";
@@ -1025,6 +1026,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UEDemo/UEDemo-Prefix.pch";
 				INFOPLIST_FILE = "UEDemo/UEDemo-Info.plist";

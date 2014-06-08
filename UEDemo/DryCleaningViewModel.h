@@ -6,9 +6,11 @@
 //  Copyright (c) 2014年 reactiveCocoa. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseViewModel.h"
 @class DryCleaningService;
-@interface DryCleaningViewModel : NSObject
+@interface DryCleaningViewModel : BaseViewModel
 @property (nonatomic) NSArray *drySourceData;
 @property (nonatomic,weak) DryCleaningService *service;
+@property (nonatomic)  NSNumber *orderSuccess;
+-(void)subDryOrder;
 @end

@@ -6,9 +6,11 @@
 //  Copyright (c) 2014年 reactiveCocoa. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseViewModel.h"
 
-@interface WorkerListViewModel : NSObject
+@interface WorkerListViewModel : BaseViewModel
 @property (nonatomic) NSArray *workerList;
+@property (nonatomic) NSNumber *orderSuccess;
 -(void)loadWorkerList;
+-(void)subWorkerOrder;
 @end

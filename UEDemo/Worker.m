@@ -10,7 +10,7 @@
 
 @implementation Worker
 -(NSString*)skillsString{
-    if (self.skills) {
+    if (self.strSkills) {
         return self.strSkills;
     }
     NSString *s=@"技能:";
@@ -21,7 +21,7 @@
     return s;
 }
 
--(Worker*)workerWithDictionary:(NSDictionary*)dic{
++(Worker*)workerWithDictionary:(NSDictionary*)dic{
     Worker *w=[Worker new];
     w.workID=dic[@"id"];
     w.name=dic[@"name"];
@@ -30,5 +30,9 @@
     w.strSkills=dic[@"skills"];
     
     return w;
+}
+-(NSDictionary*)toDictionary{
+    NSDictionary *d=@{@"itemid":self.workID,@"name":self.name};
+    return d;
 }
 @end

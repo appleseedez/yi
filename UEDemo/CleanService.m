@@ -23,6 +23,20 @@ static CleanService *instance=nil;
     }
 }
 -(void)loadServiceOrderSelections{
+    
+    
+#if TEST
+    NSMutableArray *arrSel=[NSMutableArray new];
+    NSArray *names=@[@"扫地",@"擦地",@"叠被",@"遛狗",@"清洁冰箱",@"擦桌子",@"还有啥？"];
+    for (NSString *s in names) {
+        OrderSelection *o=[OrderSelection new];
+        o.name=s;
+        o.price=@"20";
+        o.ID=@(2);
+        [arrSel addObject:o];
+    }
+    self.serviceOrderSelections=[arrSel copy];
+#else
     NSString *url=[NSString stringWithFormat:@"%@/eclean/loadCleanServices.json",ACCOUNT_SERVER];
     
     [[[self httpRequestWithURL:url andParameters:@{} method:@"get"] map:^id(NSArray *value) {
@@ -32,49 +46,15 @@ static CleanService *instance=nil;
             OrderSelection *s=[OrderSelection selectionsWithDictionary:d];
             [selections addObject:s];
         }
-               self.serviceOrderSelections=[selections copy];
+        self.serviceOrderSelections=[selections copy];
         
         return value;
     }]subscribeNext:^(id x) {}];
-    
-#if TEST
-    NSMutableArray *arrSel=[NSMutableArray new];
-    NSArray *names=@[@"扫地",@"擦地",@"叠被",@"遛狗",@"清洁冰箱",@"擦桌子",@"还有啥？"];
-    for (NSString *s in names) {
-        OrderSelection *o=[OrderSelection new];
-        o.name=s;
-        [arrSel addObject:o];
-    }
-    self.serviceOrderSelections=[arrSel copy];
-    
 #endif
 }
 //加载星级服务
 -(void)loadStarServices{
-    NSString *url=[NSString stringWithFormat:@"%@/eclean/loadServicePackages.json",ACCOUNT_SERVER];
-     
-    [[[self httpRequestWithURL:url andParameters:@{} method:@"get"] map:^id(NSArray *value) {
-      NSMutableArray *models=[NSMutableArray new];
-        for (int i=0; i<[value count]; i++) {
-            NSDictionary *d=[value objectAtIndex:i];
-            ServiceModel *model=[ServiceModel modelWithDictionary:d];
-            [models addObject:model];
-        }
-        ServiceModel *watch=[ServiceModel new];
-        watch.title=@"观看流程";
-        watch.type=cleanServiceModelTypeWatch;
-        [models addObject:watch];
-        
-        ServiceModel *order=[ServiceModel new];
-        order.title=@"我要定制";
-        order.type=cleanServiceModelTypeOrder;
-        [models addObject:order];
-        
-        self.serviceModels=[models copy];
-        
-        return value;
-    }]subscribeNext:^(id x) {}];
-#if TEST
+   #if TEST
     ServiceModel *star1=[ServiceModel new];
     star1.title=@"一星服务";
     NSArray *nameArr1= @[@"一星打包选项1",@"一星打包选项2",@"一星打包选项3"];
@@ -136,6 +116,31 @@ static CleanService *instance=nil;
     order.title=@"我要定制";
     order.type=cleanServiceModelTypeOrder;
     self.serviceModels = @[star1,star2,star3,watch,order];
+#else
+    NSString *url=[NSString stringWithFormat:@"%@/eclean/loadServicePackages.json",ACCOUNT_SERVER];
+    
+    [[[self httpRequestWithURL:url andParameters:@{} method:@"get"] map:^id(NSArray *value) {
+        NSMutableArray *models=[NSMutableArray new];
+        for (int i=0; i<[value count]; i++) {
+            NSDictionary *d=[value objectAtIndex:i];
+            ServiceModel *model=[ServiceModel modelWithDictionary:d];
+            [models addObject:model];
+        }
+        ServiceModel *watch=[ServiceModel new];
+        watch.title=@"观看流程";
+        watch.type=cleanServiceModelTypeWatch;
+        [models addObject:watch];
+        
+        ServiceModel *order=[ServiceModel new];
+        order.title=@"我要定制";
+        order.type=cleanServiceModelTypeOrder;
+        [models addObject:order];
+        
+        self.serviceModels=[models copy];
+        
+        return value;
+    }]subscribeNext:^(id x) {}];
+
  #endif
 }
 

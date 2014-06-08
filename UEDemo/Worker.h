@@ -23,5 +23,8 @@
 @property  (nonatomic) NSString *avatar;
 @property  (nonatomic) NSString *strSkills;
 @property  (nonatomic) NSNumber *workeyears;
+
 -(NSString*)skillsString;
++(Worker*)workerWithDictionary:(NSDictionary*)dic;
+-(NSDictionary*)toDictionary;
 @end

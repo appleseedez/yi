@@ -7,28 +7,29 @@
 //
 
 #import "CleanOrderSuccessViewController.h"
-
+#import "MaoAppDelegate.h"
 @interface CleanOrderSuccessViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *lbMes;
 
 @end
 
 @implementation CleanOrderSuccessViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    MaoAppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    NSString *phone=[delegate.hostUser objectForKey:@"username"];
+    self.lbMes.text=[NSString stringWithFormat:@"预约单已经发送\n稍后客服人员会通过\n%@\n联系您",phone];
+    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
     // Do any additional setup after loading the view.
 }
-
+-(void)dismiss{
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

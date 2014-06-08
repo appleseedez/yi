@@ -10,6 +10,9 @@
 #import "CleanService.h"
 #import "OrderSelection.h"
 #import "CleanDetailCheckModel.h"
+#import "Order.h"
+#import "OrderSelection.h"
+#import "CleanDetailCheckModel.h"
 @implementation CleanDetailCheckViewModel
 - (instancetype)init
 {
@@ -33,4 +36,29 @@
     }
     return self;
 }
+-(void)subDetailOrders{
+    Order *o =[[Order alloc]init];
+    
+    o.servicetype=@"bj";
+    NSMutableArray *services=[NSMutableArray new];
+    for (CleanDetailCheckModel *dk in self.detaileChecks) {
+        if ([dk.choosed boolValue]) {
+              [services addObject:[dk.selection toDictionary]];
+        }
+      
+    }
+    if ([services count]==0) {
+        [[[UIAlertView alloc]initWithTitle:@"请选择服务项目" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil]show];
+        return;
+    }
+    o.services=[services copy];
+    NSString *url=[NSString stringWithFormat:@"%@/eclean/createCleanAppointment.json",ACCOUNT_SERVER];
+    
+    
+    [[self httpRequestWithURL:url andParameters:[o toDictionary] method:@"post"] subscribeNext:^(id x) {
+        self.orderSuccess=@(YES);
+        self.orderSuccess=@(NO);
+    }];
+}
+
 @end

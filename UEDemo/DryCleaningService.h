@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 reactiveCocoa. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseViewModel.h"
 
-@interface DryCleaningService : NSObject
+@interface DryCleaningService : BaseViewModel
 +(instancetype)defaultService;
 @property (nonatomic) NSArray *clothesServices;
 -(void)loadServices;

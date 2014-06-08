@@ -31,8 +31,17 @@
         return value;
     }]subscribeNext:^(id x) {}];
     
-    
+    [[RACObserve(self, detailViewModel.orderSuccess) map:^id(id value) {
+        if ([value boolValue]) {
+            UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CleanOrderSuccess"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        return value;
+    }]subscribeNext:^(id x) {}];
     // Do any additional setup after loading the view.
+}
+- (IBAction)subDetailOrders:(id)sender {
+    [self.detailViewModel subDetailOrders];
 }
 -(void)dismiss{
     [self.navigationController popViewControllerAnimated:YES];

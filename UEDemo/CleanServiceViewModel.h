@@ -10,7 +10,7 @@
 #import "ServiceModel.h"
 @interface CleanServiceViewModel : BaseViewModel
 +(instancetype)serviceViewModelWithModel:(ServiceModel*)model;
-@property (nonatomic) RACSignal *orderSuccess;
+@property (nonatomic) NSNumber *orderSuccess;
 -(void)subOrders;
 @property (nonatomic) NSArray *selections;
 @property (nonatomic) NSString *title;

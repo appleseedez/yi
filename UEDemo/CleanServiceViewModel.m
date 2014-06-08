@@ -28,14 +28,11 @@
     }
     o.services=[services copy];
     NSString *url=[NSString stringWithFormat:@"%@/eclean/createCleanAppointment.json",ACCOUNT_SERVER];
-    RACSubject *orderSuccess=nil;
-    if (!self.orderSuccess) {
-        orderSuccess=[RACSubject subject];
-        self.orderSuccess =orderSuccess;
-    }
+   
     
     [[self httpRequestWithURL:url andParameters:[o toDictionary] method:@"post"] subscribeNext:^(id x) {
-        [orderSuccess sendCompleted];
+        self.orderSuccess=@(YES);
+        self.orderSuccess=@(NO);
     }];
 }
 @end

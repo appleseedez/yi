@@ -24,9 +24,19 @@ static DryCleaningService *instance=nil;
     }
 }
 -(void)loadServices{
+#if TEST
     self.clothesServices=[self requestServices];
+#else
+    NSString *url=[NSString stringWithFormat:@"%@/eclean/loadDryCleanServices.json",ACCOUNT_SERVER];
+    NSDictionary *patameters=@{@"start": @(0),@"limit":@(500)};
+    [[self httpRequestWithURL:url andParameters:patameters method:@"get"]subscribeNext:^(NSArray *x) {
+        self.clothesServices=x;
+    }];
+#endif
 }
 -(NSArray*)requestServices{
+    
+
     NSDictionary *c1=@{ @"id":@"1",
                         @"type":@"gx",
                         @"name":@"毛衣",
@@ -118,5 +128,6 @@ static DryCleaningService *instance=nil;
     
     
     return @[c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11];
+
 }
 @end

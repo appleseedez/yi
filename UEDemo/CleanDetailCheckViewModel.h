@@ -11,4 +11,6 @@
 @interface CleanDetailCheckViewModel : BaseViewModel
 @property  (nonatomic)  NSMutableArray *detaileChecks;
 @property  (nonatomic,weak) CleanService *cleanService;
+@property  (nonatomic,strong) NSNumber  *orderSuccess;
+-(void)subDetailOrders;
 @end

@@ -13,8 +13,11 @@
 @implementation LoginViewModel
 
 -(void)login:(NSString*)user password:(NSString*)password{
-    
+#if TEST
+     NSDictionary *parameters=@{@"username":@"13688494410",@"password":@"123456"};
+#else
     NSDictionary *parameters=@{@"username":user,@"password":[password md5]};
+#endif
     NSString *url=[NSString stringWithFormat:@"%@/eclean/login.json",ACCOUNT_SERVER];
     
     [[self  httpRequestWithURL:url andParameters:parameters method:@"post"]subscribeNext:^(NSDictionary *x) {

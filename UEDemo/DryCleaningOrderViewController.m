@@ -16,6 +16,9 @@
 @implementation DryCleaningOrderViewController
 
 
+- (IBAction)subDryOrders:(id)sender {
+    [self.dryViewModel subDryOrder];
+}
 
 - (void)viewDidLoad
 {
@@ -30,6 +33,14 @@
         }
         
     }
+    [[RACObserve(self, dryViewModel.orderSuccess) map:^id(id value) {
+        if ([value boolValue]) {
+            UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CleanOrderSuccess"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        return value;
+    }]subscribeNext:^(id x) {}];
+    
     // Do any additional setup after loading the view.
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

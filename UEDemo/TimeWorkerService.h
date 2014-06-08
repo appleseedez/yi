@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 reactiveCocoa. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseViewModel.h"
 
-@interface TimeWorkerService : NSObject
+@interface TimeWorkerService : BaseViewModel
 +(instancetype)defaultService;
 -(RACSignal*)loadWorkers;
 

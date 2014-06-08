@@ -20,8 +20,9 @@
         self.userid=self.hostUser[@"userid"];
         self.name=self.hostUser[@"nickname"];
         self.address=self.hostUser[@"address"];
-        self.phone=self.hostUser[@"phone"];
+        self.phone=self.hostUser[@"username"];
         self.source=@"IOS";
+        self.allPrice=@(0);
     }
     return self;
 }
