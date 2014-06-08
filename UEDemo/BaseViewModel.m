@@ -21,13 +21,10 @@
     RACSignal *signal=nil;
     RACSubject *response=[RACSubject subject];
     self.busy=@(YES);
-    if ([method isEqualToString:@"get"]) {
+  
         
-        signal=[self.httpService getRequestWithUrl:url andParameters:parameters];
+    signal=[self.httpService getRequestWithUrl:url andParameters:parameters];
         
-    }else if ([method isEqualToString:@"post"]){
-        signal=[self.httpService jsonPostRequestWithUrl:url andParameters:parameters];
-    }
     
     [signal subscribeNext:^(NSDictionary *x) {
         if (![x isKindOfClass:[NSDictionary class]]) {
