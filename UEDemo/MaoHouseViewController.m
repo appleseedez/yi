@@ -7,7 +7,7 @@
 //
 
 #import "MaoHouseViewController.h"
-
+#import "AppService.h"
 @interface MaoHouseViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *btnScan;
 @property (weak, nonatomic) IBOutlet UIButton *btnCall;
@@ -23,6 +23,9 @@
     [super viewDidLoad];
     [self.btnBack addTarget:self action:@selector(dismissPage:) forControlEvents:UIControlEventTouchUpInside];
     [self setUI];
+    [[UIApplication sharedApplication] setApplicationSupportsShakeToEdit:YES];
+    
+    [self becomeFirstResponder];
 }
 -(void)setUI{
     self.btnBack.clipsToBounds=YES;
@@ -39,5 +42,38 @@
     [self.btnScan.layer setBorderColor:[UIColor blackColor].CGColor];
     [self.btnScan.layer setBorderWidth:1];
     [self.btnScan.layer setCornerRadius:5];
+}
+- (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+
+{
+    NSLog(@"有媳妇的都抱稳了 我要开始摇了！！！");
+    
+}
+
+
+
+- (void) motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event
+
+{
+    NSLog(@"我勒个去 没摇出来 进入要饭模式！！！");
+    //摇动取消
+    
+}
+
+
+
+- (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+
+{
+    
+    //摇动结束
+     NSLog(@"摇出来了！！！进入装B模式！！！");
+    if (event.subtype == UIEventSubtypeMotionShake) {
+        
+        [AppService defaultService].showStoreSetting=@(YES);
+
+        
+    }
+    
 }
 @end

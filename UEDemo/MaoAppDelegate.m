@@ -28,7 +28,7 @@
     [self.window setRootViewController:rootVC];
     [self.window.layer addAnimation:animation forKey:@"login"];
     [[AppService defaultService] getStore];
-    [[AppService defaultService] performSelector:@selector(setShowStoreSetting:) withObject:@(YES) afterDelay:1];
+   // [[AppService defaultService] performSelector:@selector(setShowStoreSetting:) withObject:@(YES) afterDelay:1];
     
 }
 - (void)applicationWillResignActive:(UIApplication *)application
