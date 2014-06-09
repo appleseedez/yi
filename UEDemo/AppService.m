@@ -9,6 +9,7 @@
 #import "AppService.h"
 #import <MapKit/MapKit.h>
 #import "MaoAppDelegate.h"
+#import "StoreListViewController.h"
 @implementation AppService
 static AppService *instance=nil;
 +(instancetype)defaultService{
@@ -28,8 +29,8 @@ static AppService *instance=nil;
     locationManager.desiredAccuracy=kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
     locationManager.distanceFilter=1000.0f;
-    self.hostInfomation.coordinatex=[NSString stringWithFormat:@"%g",locationManager.location.coordinate.latitude];
-    self.hostInfomation.coordinatey=[NSString stringWithFormat:@"%g",locationManager.location.coordinate.longitude];
+    self.hostInfomation.coordinatex=@(locationManager.location.coordinate.latitude);
+    self.hostInfomation.coordinatey=@(locationManager.location.coordinate.longitude);
 }
 - (instancetype)init
 {
@@ -41,7 +42,8 @@ static AppService *instance=nil;
                  [self.storeSettingWindow setRootViewController:[searchStory instantiateInitialViewController]];
                  
                  [self.storeSettingWindow makeKeyAndVisible];
-                 
+                 //[self getLocation];
+                 [self loadStoreList];
                  
              }else{
                  MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
@@ -50,6 +52,13 @@ static AppService *instance=nil;
              
              return value;
          }]subscribeNext:^(id x) {}];
+//        [[RACObserve(self, showStoreSetting) map:^id(NSNumber *value) {
+//            if ([value boolValue]) {
+//                UIStoryboard *searchStory=[UIStoryboard storyboardWithName:@"search" bundle:nil];
+//                [self.storeSettingWindow setRootViewController:[searchStory instantiateViewControllerWithIdentifier:@"storeList"]];
+//                }
+//            return value;
+//        }]subscribeNext:^(id x) {}];
     }
     return self;
 }
@@ -59,6 +68,26 @@ static AppService *instance=nil;
         _storeSettingWindow.frame=[UIScreen mainScreen].bounds;
     }
     return _storeSettingWindow;
+}
+-(void)loadStoreList{
+    self.storeListLoaded=@(NO);
+    NSString *url=[NSString stringWithFormat:@"%@/eclean/loadRecentStores.json",ACCOUNT_SERVER];
+    NSDictionary *parameters=@{@"coordinatex":self.hostInfomation.coordinatex,@"coordinatey":self.hostInfomation.coordinatey};
+    [[[self httpRequestWithURL:url andParameters:parameters method:nil] map:^id(NSArray *value) {
+        NSArray *storeList=[self reOrderStoreList:value];
+        self.storeListLoaded=@(YES);
+        self.storeListLoaded=@(NO);
+        UIStoryboard *searchStory=[UIStoryboard storyboardWithName:@"search" bundle:nil];
+        StoreListViewController *vc=[searchStory instantiateViewControllerWithIdentifier:@"storeList"];
+        vc.storeList=storeList;
+         [self.storeSettingWindow setRootViewController:vc];
+        return value;
+    }]subscribeNext:^(id x) {}];
+    
+    
+}
+-(NSArray*)reOrderStoreList:(NSArray*)storeList{
+    return storeList;
 }
 -(void)getStore{
     NSDictionary *store= [[NSUserDefaults standardUserDefaults] objectForKey:@"store"];

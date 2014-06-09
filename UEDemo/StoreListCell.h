@@ -1,0 +1,17 @@
+//
+//  StoreListCell.h
+//  UEDemo
+//
+//  Created by nsc on 14-6-9.
+//  Copyright (c) 2014年 reactiveCocoa. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface StoreListCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *lbName;
+@property (weak, nonatomic) IBOutlet UILabel *lbAddress;
+@property (nonatomic)    NSDictionary *store;
+@property (nonatomic)    NSNumber  *choosed;
+-(void)setWithStore:(NSDictionary*)store;
+@end

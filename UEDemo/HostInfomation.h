@@ -14,6 +14,6 @@
 @property (nonatomic) NSString *phone;
 @property (nonatomic) NSString *nickname;
 @property (nonatomic) NSString *address;
-@property (nonatomic) NSString *coordinatex;
-@property (nonatomic) NSString *coordinatey;
+@property (nonatomic) NSNumber *coordinatex;
+@property (nonatomic) NSNumber *coordinatey;
 @end
