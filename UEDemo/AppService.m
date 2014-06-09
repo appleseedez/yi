@@ -72,7 +72,17 @@ static AppService *instance=nil;
 -(void)loadStoreList{
     self.storeListLoaded=@(NO);
     NSString *url=[NSString stringWithFormat:@"%@/eclean/loadRecentStores.json",ACCOUNT_SERVER];
-    NSDictionary *parameters=@{@"coordinatex":self.hostInfomation.coordinatex,@"coordinatey":self.hostInfomation.coordinatey};
+    
+    NSNumber *coordinatex=self.hostInfomation.coordinatex;
+    NSNumber *coordinatey=self.hostInfomation.coordinatey;
+    if (coordinatex==nil) {
+        coordinatex=@(0);
+        
+    }
+    if (coordinatey==nil) {
+        coordinatey=@(0);
+    }
+    NSDictionary *parameters=@{@"coordinatex":coordinatex,@"coordinatey":coordinatey};
     [[[self httpRequestWithURL:url andParameters:parameters method:nil] map:^id(NSArray *value) {
         NSArray *storeList=[self reOrderStoreList:value];
         self.storeListLoaded=@(YES);

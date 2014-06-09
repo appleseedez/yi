@@ -24,8 +24,16 @@
     // Initialization code
 }
 -(void)setWithStore:(NSDictionary*)store{
-    self.lbName.text=[store objectForKey:@"name"];
-    self.lbName.text=[store objectForKey:@"address"];
+    NSString *name=[store objectForKey:@"name"];
+    NSString *address=[store objectForKey:@"address"];
+    if ([name isEqual:[NSNull null]]) {
+         name=@"";
+    }
+    if ([address isEqual:[NSNull null]]) {
+        address=@"";
+    }
+    self.lbName.text=name;
+    self.lbAddress.text=address;
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
