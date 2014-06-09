@@ -12,5 +12,8 @@
 @interface AppService : BaseViewModel
 +(instancetype)defaultService;
 @property (nonatomic) HostInfomation *hostInfomation;
+@property (nonatomic) UIWindow *storeSettingWindow;
+@property (nonatomic) NSNumber *showStoreSetting;
+@property (nonatomic) NSNumber *storeListLoaded;
 -(void)getStore;
 @end

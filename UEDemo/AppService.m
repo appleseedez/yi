@@ -31,6 +31,35 @@ static AppService *instance=nil;
     self.hostInfomation.coordinatex=[NSString stringWithFormat:@"%g",locationManager.location.coordinate.latitude];
     self.hostInfomation.coordinatey=[NSString stringWithFormat:@"%g",locationManager.location.coordinate.longitude];
 }
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+         [[RACObserve(self, showStoreSetting) map:^id(NSNumber *value) {
+             if ([value boolValue]) {
+                 UIStoryboard *searchStory=[UIStoryboard storyboardWithName:@"search" bundle:nil];
+                 [self.storeSettingWindow setRootViewController:[searchStory instantiateInitialViewController]];
+                 
+                 [self.storeSettingWindow makeKeyAndVisible];
+                 
+                 
+             }else{
+                 MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
+                 [delegate.window makeKeyAndVisible];
+             }
+             
+             return value;
+         }]subscribeNext:^(id x) {}];
+    }
+    return self;
+}
+-(UIWindow*)storeSettingWindow{
+    if (_storeSettingWindow==nil) {
+        _storeSettingWindow=[[UIWindow alloc]init];
+        _storeSettingWindow.frame=[UIScreen mainScreen].bounds;
+    }
+    return _storeSettingWindow;
+}
 -(void)getStore{
     NSDictionary *store= [[NSUserDefaults standardUserDefaults] objectForKey:@"store"];
     if (!store) {

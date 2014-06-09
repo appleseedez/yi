@@ -64,6 +64,9 @@
 		47A03C1B1939CEE70019E469 /* UIImage+ColorAtPixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A03C1A1939CEE70019E469 /* UIImage+ColorAtPixel.m */; };
 		47A03C1E1939CEEF0019E469 /* OBShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A03C1D1939CEEF0019E469 /* OBShapedButton.m */; };
 		47A03C201939EB290019E469 /* 银杏叶虚化大背景.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47A03C1F1939EB290019E469 /* 银杏叶虚化大背景.jpg */; };
+		47A07E2C1945E90900A9813F /* SearchingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A07E2B1945E90900A9813F /* SearchingViewController.m */; };
+		47A07E2E1945EB5300A9813F /* search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A07E2D1945EB5300A9813F /* search.storyboard */; };
+		47A07E301945F23B00A9813F /* search.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47A07E2F1945F23B00A9813F /* search.xcassets */; };
 		47A3C43A19319F0D00EE44EF /* DryCleaningOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C43919319F0D00EE44EF /* DryCleaningOrderViewController.m */; };
 		47A3C43D1931A14C00EE44EF /* DryOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C43C1931A14C00EE44EF /* DryOrderCell.m */; };
 		47A3C4431931F14900EE44EF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A3C4421931F14900EE44EF /* Login.storyboard */; };
@@ -190,6 +193,10 @@
 		47A03C1C1939CEEF0019E469 /* OBShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBShapedButton.h; sourceTree = "<group>"; };
 		47A03C1D1939CEEF0019E469 /* OBShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBShapedButton.m; sourceTree = "<group>"; };
 		47A03C1F1939EB290019E469 /* 银杏叶虚化大背景.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "银杏叶虚化大背景.jpg"; sourceTree = "<group>"; };
+		47A07E2A1945E90900A9813F /* SearchingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchingViewController.h; sourceTree = "<group>"; };
+		47A07E2B1945E90900A9813F /* SearchingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchingViewController.m; sourceTree = "<group>"; };
+		47A07E2D1945EB5300A9813F /* search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = search.storyboard; sourceTree = "<group>"; };
+		47A07E2F1945F23B00A9813F /* search.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = search.xcassets; sourceTree = "<group>"; };
 		47A3C43819319F0D00EE44EF /* DryCleaningOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryCleaningOrderViewController.h; sourceTree = "<group>"; };
 		47A3C43919319F0D00EE44EF /* DryCleaningOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DryCleaningOrderViewController.m; sourceTree = "<group>"; };
 		47A3C43B1931A14C00EE44EF /* DryOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryOrderCell.h; sourceTree = "<group>"; };
@@ -435,6 +442,7 @@
 		479C52A61923854A00CCF9F4 /* UEDemo */ = {
 			isa = PBXGroup;
 			children = (
+				47A07E291945E3CF00A9813F /* search */,
 				479495C419433B2C009901F9 /* myCentre */,
 				47F0CCE6193F5E6E00702053 /* orders */,
 				47A03C181939CED00019E469 /* pictures */,
@@ -574,6 +582,17 @@
 				47A03C1A1939CEE70019E469 /* UIImage+ColorAtPixel.m */,
 			);
 			name = pictures;
+			sourceTree = "<group>";
+		};
+		47A07E291945E3CF00A9813F /* search */ = {
+			isa = PBXGroup;
+			children = (
+				47A07E2A1945E90900A9813F /* SearchingViewController.h */,
+				47A07E2B1945E90900A9813F /* SearchingViewController.m */,
+				47A07E2D1945EB5300A9813F /* search.storyboard */,
+				47A07E2F1945F23B00A9813F /* search.xcassets */,
+			);
+			name = search;
 			sourceTree = "<group>";
 		};
 		47A3C43E1931F11B00EE44EF /* loginAndRegister */ = {
@@ -746,7 +765,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				479C52B91923854A00CCF9F4 /* Images.xcassets in Resources */,
+				47A07E301945F23B00A9813F /* search.xcassets in Resources */,
 				47A3C4431931F14900EE44EF /* Login.storyboard in Resources */,
+				47A07E2E1945EB5300A9813F /* search.storyboard in Resources */,
 				479C52AB1923854A00CCF9F4 /* InfoPlist.strings in Resources */,
 				479C52B41923854A00CCF9F4 /* Main.storyboard in Resources */,
 				479495D4194347E4009901F9 /* statusView.xib in Resources */,
@@ -875,6 +896,7 @@
 				47A3C4511931F69900EE44EF /* HTTPService.m in Sources */,
 				479EE53A193088010030F462 /* DryCleaningService.m in Sources */,
 				47A3C43D1931A14C00EE44EF /* DryOrderCell.m in Sources */,
+				47A07E2C1945E90900A9813F /* SearchingViewController.m in Sources */,
 				479C88CD1940A3EC006657F8 /* CleanOrderSuccessViewController.m in Sources */,
 				479E1F90193C7C8E0062A15D /* CleanDetailCheckTableViewController.m in Sources */,
 				479E1F96193C80580062A15D /* DetailCheckCell.m in Sources */,
