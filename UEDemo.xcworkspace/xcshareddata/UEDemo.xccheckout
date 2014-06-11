@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>5F659282-7CA8-4ADF-BC43-E0281673B9A7</string>
+	<string>F7CC5E71-1ABB-412F-AF3B-2580715A2099</string>
 	<key>IDESourceControlProjectName</key>
 	<string>UEDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>846BA543-F93F-42B5-8BF3-96F093BEE10B</key>
-		<string>https://github.com/appleseedez/yi</string>
+		<key>2F1E0CA8-921B-434E-871C-F3C32DB298C4</key>
+		<string>https://github.com/appleseedez/yi.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>UEDemo.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>846BA543-F93F-42B5-8BF3-96F093BEE10B</key>
+		<key>2F1E0CA8-921B-434E-871C-F3C32DB298C4</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/appleseedez/yi</string>
+	<string>https://github.com/appleseedez/yi.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>846BA543-F93F-42B5-8BF3-96F093BEE10B</string>
+	<string>2F1E0CA8-921B-434E-871C-F3C32DB298C4</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>846BA543-F93F-42B5-8BF3-96F093BEE10B</string>
+			<string>2F1E0CA8-921B-434E-871C-F3C32DB298C4</string>
 			<key>IDESourceControlWCCName</key>
 			<string>yi</string>
 		</dict>
