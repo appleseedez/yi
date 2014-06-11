@@ -11,6 +11,7 @@
 #import "Worker.h"
 @interface WorkerOrderViewController ()
 @property (weak, nonatomic) IBOutlet UIView *selectedWorkerView;
+@property (weak, nonatomic) IBOutlet UIButton *btnSend;
 
 @end
 
@@ -22,7 +23,8 @@
 {
     [super viewDidLoad];
     [self loadSelectedWorkerView];
-    
+    [self.btnSend.layer setBorderColor:[UIColor whiteColor].CGColor];
+    [self.btnSend.layer setBorderWidth:1];
     [[RACObserve(self, listViewModel.orderSuccess) map:^id(NSNumber *value) {
         if ([value boolValue]) {
             UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CleanOrderSuccess"];
@@ -36,6 +38,9 @@
 - (IBAction)subWorkerOrder:(id)sender {
     [self.listViewModel subWorkerOrder];
 }
+- (IBAction)pop:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 -(void)loadSelectedWorkerView{
     NSMutableArray *selected=[NSMutableArray new];
     for (Worker *worker in self.listViewModel.workerList) {
@@ -43,9 +48,9 @@
             [selected addObject:worker];
         }
     }
-    float startX=10;
+    float startX=30;
     float startY=10;
-    float height=60;
+    float height=80;
     float width=60;
     float imgHeight=40;
     float imgwidth=40;
@@ -56,13 +61,18 @@
         UIImageView *headerImage=[[UIImageView alloc]init];
         headerImage.frame=CGRectMake(x, y, imgwidth, imgHeight);
         headerImage.image=[UIImage imageNamed:@"header"];
+        [headerImage.layer setCornerRadius:imgHeight/2.0];
+        [headerImage setClipsToBounds:YES];
         [self.selectedWorkerView addSubview:headerImage];
         UILabel *lbname=[[UILabel alloc]init];
         lbname.text=worker.name;
-        lbname.frame=CGRectMake(x, y+imgHeight, imgwidth, 15);
-        [lbname setTextColor:[UIColor blackColor]];
-        [lbname setFont:[UIFont fontWithName:@"HeiTi SC" size:11]];
-        [lbname setTextAlignment:NSTextAlignmentCenter];
+        [lbname setTextColor:[UIColor whiteColor]];
+        lbname.frame=CGRectMake(x, y+imgHeight+10, imgwidth+20, 15);
+        [lbname setFont:[UIFont fontWithName:@"Helvetica Neue" size:14]];
+        
+        //[lbname setTextColor:[UIColor blackColor]];
+        //[lbname setFont:[UIFont fontWithName:@"HeiTi SC" size:11]];
+        //[lbname setTextAlignment:NSTextAlignmentCenter];
         [self.selectedWorkerView addSubview:lbname];
         
     }

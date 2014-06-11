@@ -77,6 +77,8 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self setUI];
+    self.txtPassword.text=@"123456";
+    self.txtPhone.text=@"132321245213";
   self.loginViewModel = [[LoginViewModel alloc] init];
   //监听HUD
    [[ RACObserve(self, loginViewModel.busy) map:^id(NSNumber *value) {

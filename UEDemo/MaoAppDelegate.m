@@ -31,6 +31,7 @@
     if (self.currStore==nil) {
         [AppService defaultService].showStoreSetting=@(YES);
     }
+    
    //
     
 }

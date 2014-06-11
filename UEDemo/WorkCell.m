@@ -21,13 +21,17 @@
 
 - (void)awakeFromNib
 {
+    self.imgHeader.clipsToBounds=YES;
+    [self.imgHeader.layer setCornerRadius:self.imgHeader.frame.size.height/2.0];
     __weak id weakSelf=self;
       [RACObserve(self, worker.selected) subscribeNext:^(NSNumber *x) {
           __strong WorkCell *strongSelf=weakSelf;
           if ([x boolValue]) {
-              strongSelf.imgSelected.image=[UIImage imageNamed:@"selection_choosed"];
+              self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"worker_cell_back_normal"]] ;
+              strongSelf.imgSelected.image=[UIImage imageNamed:@"tableview_checked"];
           }else{
-              strongSelf.imgSelected.image=[UIImage imageNamed:@"selection_unchoosed"];
+              self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"worker_cell_back_selected"]] ;
+              strongSelf.imgSelected.image=[UIImage imageNamed:@"tableview_unchecked"];
           }
       }];
 }

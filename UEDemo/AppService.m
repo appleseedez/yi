@@ -27,10 +27,26 @@ static AppService *instance=nil;
 -(void) getLocation{
     CLLocationManager *locationManager=[[CLLocationManager alloc]init];
     locationManager.desiredAccuracy=kCLLocationAccuracyBest;
+    locationManager.delegate=self;
+     locationManager.distanceFilter=1000.0f;
     [locationManager startUpdatingLocation];
-    locationManager.distanceFilter=1000.0f;
     self.hostInfomation.coordinatex=@(locationManager.location.coordinate.latitude);
     self.hostInfomation.coordinatey=@(locationManager.location.coordinate.longitude);
+    
+}
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    // 获取经纬度
+    NSLog(@"纬度:%f",newLocation.coordinate.latitude);
+    NSLog(@"经度:%f",newLocation.coordinate.longitude);
+    // 停止位置更新
+    self.hostInfomation.coordinatex=@(manager.location.coordinate.latitude);
+    self.hostInfomation.coordinatey=@(manager.location.coordinate.longitude);
+    [manager stopUpdatingLocation];
+}
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"error:%@",error);
 }
 - (instancetype)init
 {
@@ -42,7 +58,7 @@ static AppService *instance=nil;
                  [self.storeSettingWindow setRootViewController:[searchStory instantiateInitialViewController]];
                  
                  [self.storeSettingWindow makeKeyAndVisible];
-                 //[self getLocation];
+                 [self getLocation];
                  [self loadStoreList];
                  
              }else{
@@ -90,6 +106,7 @@ static AppService *instance=nil;
         UIStoryboard *searchStory=[UIStoryboard storyboardWithName:@"search" bundle:nil];
         StoreListViewController *vc=[searchStory instantiateViewControllerWithIdentifier:@"storeList"];
         vc.storeList=storeList;
+       // UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:vc];
          [self.storeSettingWindow setRootViewController:vc];
         return value;
     }]subscribeNext:^(id x) {}];

@@ -61,6 +61,8 @@
 		479F249F1924F0FC006B4080 /* CleanOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F249E1924F0FC006B4080 /* CleanOrderCell.m */; };
 		479F444F1944249100FEDE2D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F444E1944249100FEDE2D /* LoginViewController.m */; };
 		479F4451194424A000FEDE2D /* LoginInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F4450194424A000FEDE2D /* LoginInputTextField.m */; };
+		479FED7E19472E4400D7C483 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479FED7D19472E4400D7C483 /* CoreLocation.framework */; };
+		47A037C71948878400DA9171 /* CustomAlertWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A037C61948878400DA9171 /* CustomAlertWindow.m */; };
 		47A03C1B1939CEE70019E469 /* UIImage+ColorAtPixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A03C1A1939CEE70019E469 /* UIImage+ColorAtPixel.m */; };
 		47A03C1E1939CEEF0019E469 /* OBShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A03C1D1939CEEF0019E469 /* OBShapedButton.m */; };
 		47A03C201939EB290019E469 /* 银杏叶虚化大背景.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47A03C1F1939EB290019E469 /* 银杏叶虚化大背景.jpg */; };
@@ -190,6 +192,9 @@
 		479F249E1924F0FC006B4080 /* CleanOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanOrderCell.m; sourceTree = "<group>"; };
 		479F444E1944249100FEDE2D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		479F4450194424A000FEDE2D /* LoginInputTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInputTextField.m; sourceTree = "<group>"; };
+		479FED7D19472E4400D7C483 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		47A037C51948878400DA9171 /* CustomAlertWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertWindow.h; sourceTree = "<group>"; };
+		47A037C61948878400DA9171 /* CustomAlertWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAlertWindow.m; sourceTree = "<group>"; };
 		47A03C191939CEE70019E469 /* UIImage+ColorAtPixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorAtPixel.h"; sourceTree = "<group>"; };
 		47A03C1A1939CEE70019E469 /* UIImage+ColorAtPixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorAtPixel.m"; sourceTree = "<group>"; };
 		47A03C1C1939CEEF0019E469 /* OBShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBShapedButton.h; sourceTree = "<group>"; };
@@ -240,6 +245,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479FED7E19472E4400D7C483 /* CoreLocation.framework in Frameworks */,
 				479C56651932D6670086380C /* MapKit.framework in Frameworks */,
 				479C52A31923854A00CCF9F4 /* CoreGraphics.framework in Frameworks */,
 				479C52A51923854A00CCF9F4 /* UIKit.framework in Frameworks */,
@@ -434,6 +440,7 @@
 		479C529F1923854A00CCF9F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				479FED7D19472E4400D7C483 /* CoreLocation.framework */,
 				479C56641932D6670086380C /* MapKit.framework */,
 				479C52A01923854A00CCF9F4 /* Foundation.framework */,
 				479C52A21923854A00CCF9F4 /* CoreGraphics.framework */,
@@ -632,6 +639,8 @@
 				47A3C4501931F69900EE44EF /* HTTPService.m */,
 				479C56611932D5600086380C /* AppService.h */,
 				479C56621932D5600086380C /* AppService.m */,
+				47A037C51948878400DA9171 /* CustomAlertWindow.h */,
+				47A037C61948878400DA9171 /* CustomAlertWindow.m */,
 				47A3C45419320B7600EE44EF /* BaseViewModel.h */,
 				47A3C45519320B7600EE44EF /* BaseViewModel.m */,
 				479C565E1932D0C50086380C /* HostInfomation.h */,
@@ -896,6 +905,7 @@
 				479EE53D1930A0C80030F462 /* DryCleaningViewModel.m in Sources */,
 				479F4451194424A000FEDE2D /* LoginInputTextField.m in Sources */,
 				479C52AD1923854A00CCF9F4 /* main.m in Sources */,
+				47A037C71948878400DA9171 /* CustomAlertWindow.m in Sources */,
 				BABBA8261929731B00D05A18 /* MaoQRToolViewController.m in Sources */,
 				47A3C43A19319F0D00EE44EF /* DryCleaningOrderViewController.m in Sources */,
 				479C52B71923854A00CCF9F4 /* MaoViewController.m in Sources */,

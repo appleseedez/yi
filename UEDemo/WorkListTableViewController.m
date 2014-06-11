@@ -21,11 +21,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    self.tableView.backgroundView =
+//    [[UIImageView alloc]initWithImage:
+//     [[UIImage imageNamed:@"login_background"] stretchableImageWithLeftCapWidth:0.0
+//                                                                 topCapHeight:5.0]];
+//    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.000 green:0.000 blue:0.000 alpha:1.000];
+//    // 透明度设置为0.3
+//    self.navigationController.navigationBar.alpha = 0.300;
+//    // 设置为半透明
+//    self.navigationController.navigationBar.translucent = YES;
     self.listViewModel=[[WorkerListViewModel alloc]init];
     [self.listViewModel loadWorkerList];
     
     [[RACObserve(self, listViewModel.workerList) map:^id(id value) {
-        [self.tableView reloadData];
+        [self.tableVIew reloadData];
         
         return value;
     }]subscribeNext:^(id x) {
@@ -67,6 +76,9 @@
     BOOL selected=[cell.worker.selected boolValue];
     cell.worker.selected=@(!selected);
     
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 73;
 }
 - (IBAction)dismiss:(id)sender {
     [self.navigationController dismissViewControllerAnimated:YES completion:^{

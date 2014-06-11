@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StoreListViewController : UITableViewController
+@interface StoreListViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic) NSArray *storeList;
 @end
