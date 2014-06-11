@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 @class WorkerListViewModel;
-@interface WorkListTableViewController : UITableViewController
+@interface WorkListTableViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableVIew;
 
 @property  (nonatomic) WorkerListViewModel *listViewModel;
 @end

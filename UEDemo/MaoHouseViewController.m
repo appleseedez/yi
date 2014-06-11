@@ -71,7 +71,7 @@
     if (event.subtype == UIEventSubtypeMotionShake) {
         
         [AppService defaultService].showStoreSetting=@(YES);
-
+        //[[AppService defaultService]getLocation];
         
     }
     

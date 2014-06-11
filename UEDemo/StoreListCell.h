@@ -13,5 +13,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbAddress;
 @property (nonatomic)    NSDictionary *store;
 @property (nonatomic)    NSNumber  *choosed;
+@property (weak, nonatomic) IBOutlet UIButton *btnBack;
+@property (weak, nonatomic) IBOutlet UIImageView *imgChecked;
+
 -(void)setWithStore:(NSDictionary*)store;
 @end

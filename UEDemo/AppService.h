@@ -9,11 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "HostInfomation.h"
 #import "BaseViewModel.h"
-@interface AppService : BaseViewModel
+#import <CoreLocation/CoreLocation.h>
+@interface AppService : BaseViewModel <CLLocationManagerDelegate>
 +(instancetype)defaultService;
 @property (nonatomic) HostInfomation *hostInfomation;
 @property (nonatomic) UIWindow *storeSettingWindow;
 @property (nonatomic) NSNumber *showStoreSetting;
 @property (nonatomic) NSNumber *storeListLoaded;
+@property (nonatomic) NSDictionary *choosdStore;
 -(void)getStore;
+-(void) getLocation;
 @end

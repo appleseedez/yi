@@ -62,6 +62,7 @@ static TimeWorkerService *instance;
         [subscriber sendCompleted];
         return nil;
     }];
+     return signal;
 #else
     NSString *url=[NSString stringWithFormat:@"%@/eclean/loadHourlyWorkers.json",ACCOUNT_SERVER];
     MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
@@ -78,6 +79,6 @@ static TimeWorkerService *instance;
     }];
     return result;
 #endif
-    return signal;
+   
 }
 @end

@@ -8,7 +8,10 @@
 
 #import "StoreListViewController.h"
 #import "StoreListCell.h"
+#import "AppService.h"
 @interface StoreListViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *btnCancel;
 
 @end
 
@@ -19,7 +22,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"login_background"]];
+    self.btnCancel.layer.borderColor=[UIColor whiteColor].CGColor;
     
+    //self.navigationController.navigationBar.tintColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"login_background"]];;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -27,10 +33,8 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)dismiss:(id)sender {
+    [AppService defaultService].showStoreSetting=@(NO);
 }
 
 #pragma mark - Table view data source

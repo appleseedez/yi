@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 @class MyCenterViewModel;
-@interface MyCentreTableViewController : UITableViewController
+@interface MyCentreTableViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 @property  (nonatomic) MyCenterViewModel *centerViewModel;
 @end
