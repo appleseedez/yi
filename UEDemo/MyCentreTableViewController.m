@@ -11,7 +11,7 @@
 #import "MyCenterOrderCell.h"
 #import "OrderStatusView.h"
 @interface MyCentreTableViewController ()
-
+@property (nonatomic,weak) IBOutlet UITableView *tableView;
 @end
 
 @implementation MyCentreTableViewController

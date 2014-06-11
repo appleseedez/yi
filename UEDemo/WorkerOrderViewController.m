@@ -9,10 +9,13 @@
 #import "WorkerOrderViewController.h"
 #import "WorkerListViewModel.h"
 #import "Worker.h"
+#import "CustomAlertWindow.h"
+#import "MaoAppDelegate.h"
 @interface WorkerOrderViewController ()
 @property (weak, nonatomic) IBOutlet UIView *selectedWorkerView;
 @property (weak, nonatomic) IBOutlet UIButton *btnSend;
 
+@property (strong,nonatomic) CustomAlertWindow *alertWindow;
 @end
 
 @implementation WorkerOrderViewController
@@ -27,9 +30,18 @@
     [self.btnSend.layer setBorderWidth:1];
     [[RACObserve(self, listViewModel.orderSuccess) map:^id(NSNumber *value) {
         if ([value boolValue]) {
-            UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CleanOrderSuccess"];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
+            if (self.alertWindow==nil) {
+                MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
+                NSString *userphone=[delegate.hostUser objectForKey:@"username"];
+                NSString *message=[NSString stringWithFormat:@"预约订单已经发送\n稍后客服人员会通过\n%@\n联系您",userphone];
+                
+                CustomAlertWindow *alert=[[CustomAlertWindow alloc]initWithText:message];
+                self.alertWindow=alert;
+
+            }
+            
+            [self.alertWindow setHidden:NO];
+                               }
         
         return value;
     }]subscribeNext:^(id x) {}];

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomAlertWindow : UIWindow
-
+- (instancetype)initWithText:(NSString*)text;
 @end
