@@ -65,16 +65,16 @@
         
     }
     if (notification.object==self) {
-        
-        BOOL selected=[self.sectionModel.selected boolValue];
-        self.sectionModel.selected=@(!selected);
+         BOOL selected=[self.sectionModel.selected boolValue];
+       
         if (!selected) {
            
-            [self.tableView beginUpdates];
-            [self.tableView insertRowsAtIndexPaths:arr withRowAnimation:UITableViewRowAnimationTop];
+            [self.sectionModel performSelector:@selector(setSelected:) withObject:@(!selected) afterDelay:0.1];
+            [self performSelector:@selector(insert:) withObject:arr afterDelay:0.1];
             
-            [self.tableView endUpdates];
         }else{
+            self.sectionModel.selected=@(!selected);
+
             [self.tableView deleteRowsAtIndexPaths:arr withRowAnimation:UITableViewRowAnimationBottom];
                     }
        // [self.tableView reloadData];
@@ -96,6 +96,12 @@
        //
     
     
+}
+-(void)insert:(NSArray*)arr{
+    [self.tableView beginUpdates];
+    [self.tableView insertRowsAtIndexPaths:arr withRowAnimation:UITableViewRowAnimationTop];
+    
+    [self.tableView endUpdates];
 }
 - (void)dealloc
 {
