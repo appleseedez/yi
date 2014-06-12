@@ -1,14 +1,14 @@
 //
-//  CleanOrderCell.m
+//  CleanOrderDetailCell.m
 //  UEDemo
 //
-//  Created by nsc on 14-5-15.
+//  Created by nsc on 14-6-12.
 //  Copyright (c) 2014年 reactiveCocoa. All rights reserved.
 //
 
-#import "CleanOrderCell.h"
+#import "CleanOrderDetailCell.h"
 
-@implementation CleanOrderCell
+@implementation CleanOrderDetailCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -21,12 +21,14 @@
 
 - (void)awakeFromNib
 {
+    self.btnOrder.layer.borderColor=[UIColor whiteColor].CGColor;
+    self.btnOrder.layer.borderWidth=1;
+    [self.btnOrder addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
     // Initialization code
 }
-- (IBAction)pushOrder:(id)sender {
-    [self.contextVC pushSubVCWithModel:self.sectionModel.model];
+-(void)push{
+    [self.controller pushSubVCWithModel:self.model];
 }
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];

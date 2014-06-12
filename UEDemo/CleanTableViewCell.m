@@ -14,9 +14,10 @@
 
 - (void)awakeFromNib
 {
-    
+    self.seperatorView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"login_background"]];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(choose:) name:@"CleanCellSelected" object:nil];
     [self.btnSelected addTarget:self action:@selector(chooseNotify:) forControlEvents:UIControlEventTouchDown];
+    [self.lbTitle setTextColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"login_background"]]];
     __weak id weakSelf=self;
    [[ RACObserve(self, sectionModel.selected)map:^id(NSNumber *value) {
        if ([value boolValue]) {

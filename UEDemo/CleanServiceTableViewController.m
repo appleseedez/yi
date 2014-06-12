@@ -11,12 +11,14 @@
 #import "CleanTableViewCell.h"
 #import "CleanSelectionCell.h"
 #import "CleanSectionModel.h"
-#import "CleanOrderCell.h"
+
 #import "CleanServiceCheckViewController.h"
 #import "CleanService.h"
 #import "CleanServiceViewModel.h"
 #import "OrderSelection.h"
 #import "CleanDetailCheckTableViewController.h"
+#import "CleanWatchCell.h"
+#import "CleanOrderDetailCell.h"
 @interface CleanServiceTableViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -52,7 +54,10 @@
 // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     CleanSectionModel *model=self.cleanViewModel.sections [indexPath.section];
+    if (model.model.type==cleanServiceModelTypeStar) {
+    
     if (model.indexPaths==nil) {
         model.indexPaths=[NSMutableArray new];
         [model.indexPaths addObject:indexPath];
@@ -69,8 +74,19 @@
         cell.lbTitle.text=model.title;
         cell.contextVC=self;
         cell.sectionModel=model;
-        
-        
+        NSString *imageName=nil;
+        if ([model.model.numOfStar isEqualToString:@"1星"]) {
+             imageName=@"clean_star_1";
+        }else if ([model.model.numOfStar isEqualToString:@"2星"]) {
+            imageName=@"clean_star_2";
+        }else if ([model.model.numOfStar isEqualToString:@"3星"]) {
+            imageName=@"clean_star_3";
+        }else if ([model.model.numOfStar isEqualToString:@"4星"]) {
+            imageName=@"clean_star_4";
+        }else if ([model.model.numOfStar isEqualToString:@"5星"]) {
+            imageName=@"clean_star_5";
+        }
+        cell.imgStar.image=[UIImage imageNamed:imageName];
         return cell;
     }else if(indexPath.row<[model.selections count]+1){
         CleanSelectionCell *cell=[tableView dequeueReusableCellWithIdentifier:@"CleanSelectionCell"];
@@ -78,7 +94,19 @@
         
         cell.lbTitle.text= cell.orderSelection.name;
         return cell;
-    }    
+    }
+    }else if (model.model.type==cleanServiceModelTypeWatch){
+        CleanWatchCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cleanWatch"];
+        cell.model=model.model;
+        cell.controller=self;
+        return cell;
+    }else if (model.model.type==cleanServiceModelTypeOrder){
+        
+        CleanOrderDetailCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cleanOrderDetail"];
+        cell.controller=self;
+        cell.model=model.model;
+        return cell;
+    }
     return nil;
     
 }
@@ -88,22 +116,33 @@
     }];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;{
+    ServiceModel *model=[self.cleanViewModel.service.serviceModels objectAtIndex:indexPath.section];
+    if (model.type==cleanServiceModelTypeStar) {
     
     if (indexPath.row==0) {
-        return 44;
+        return 46;
     
     }else {
-        return 39;
+        return 40;
     }
-    
+    }else if (model.type==cleanServiceModelTypeWatch){
+        return 133;
+    }else if (model.type==cleanServiceModelTypeOrder){
+        return 60;
+    }
+    return 44;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     ServiceModel *model=[self.cleanViewModel.service.serviceModels objectAtIndex:indexPath.section];
-   
+    if (model.type==cleanServiceModelTypeStar) {
+     
     if (indexPath.row==0) {
         
         [self pushSubVCWithModel:model];
         
+    }
+    }else{
+        [self pushSubVCWithModel:model];
     }
 }
 -(void) pushSubVCWithModel:(ServiceModel*)model{

@@ -70,7 +70,7 @@ static CleanService *instance=nil;
     }
     star1.PackSelections=orders1;
     star1.type=cleanServiceModelTypeStar;
-    
+    star1.numOfStar=@"1星";
     ServiceModel *star2=[ServiceModel new];
     star2.title=@"二星服务";
     NSArray *nameArr2= @[@"二星打包选项1",@"二星打包选项2",@"二星打包选项3"];
@@ -87,11 +87,11 @@ static CleanService *instance=nil;
     }
     star2.PackSelections=orders2;
     star2.type=cleanServiceModelTypeStar;
-    
+    star2.numOfStar=@"2星";
     ServiceModel *star3=[ServiceModel new];
     star3.title=@"三星服务";
     NSArray *nameArr3= @[@"三星打包选项1",@"三星打包选项2",@"三星打包选项3"];
-    
+    star3.numOfStar=@"3星";
     
     NSMutableArray *orders3=[NSMutableArray new];
     

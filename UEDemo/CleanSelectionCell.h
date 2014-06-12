@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 @property (weak,nonatomic) OrderSelection *orderSelection;
 @property (weak, nonatomic) IBOutlet UIImageView *imgChoosed;
+@property (weak, nonatomic) IBOutlet UIView *seperatorView;
 
 @end

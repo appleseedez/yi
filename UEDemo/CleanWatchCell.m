@@ -1,14 +1,14 @@
 //
-//  CleanSelectionCell.m
+//  CleanWatchCell.m
 //  UEDemo
 //
-//  Created by nsc on 14-5-15.
+//  Created by nsc on 14-6-12.
 //  Copyright (c) 2014年 reactiveCocoa. All rights reserved.
 //
 
-#import "CleanSelectionCell.h"
+#import "CleanWatchCell.h"
 
-@implementation CleanSelectionCell
+@implementation CleanWatchCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -21,9 +21,9 @@
 
 - (void)awakeFromNib
 {
-    self.seperatorView.alpha=0.4;
-    self.imgChoosed.image=[UIImage imageNamed:@"tableview_checked"];
-    self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"clean_star_selection_cell_normal"]];
+    self.btnWatch.layer.borderColor=[UIColor whiteColor].CGColor;
+    self.btnWatch.layer.borderWidth=1;
+    [self.btnWatch addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -32,5 +32,7 @@
 
     // Configure the view for the selected state
 }
-
+-(void)push{
+    [self.controller pushSubVCWithModel:self.model];
+}
 @end

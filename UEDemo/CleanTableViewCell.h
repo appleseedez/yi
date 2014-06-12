@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgStar;
 @property (weak, nonatomic)  CleanSectionModel *sectionModel;
 @property (weak, nonatomic) UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIView *seperatorView;
 @property (weak, nonatomic) UIViewController *contextVC;
 @end
