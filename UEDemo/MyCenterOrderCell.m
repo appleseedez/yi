@@ -21,21 +21,17 @@
 
 - (void)awakeFromNib
 {
-    // Initialization code
+    self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"center_cell_back_normal"]];
 }
--(void)setStatusView:(UIView *)statusView{
-    if (_statusView) {
-        [_statusView removeFromSuperview];
-        _statusView=nil;
-    }
-    _statusView=statusView;
-    _statusView.center=CGPointMake(320-statusView.frame.size.width, self.frame.size.height/2.0);
-    [self.contentView addSubview:statusView];
-}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
+    if (selected) {
+        self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"center_cell_back_high"]];
+    }else{
+        self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"center_cell_back_normal"]];
+    }
     // Configure the view for the selected state
 }
 

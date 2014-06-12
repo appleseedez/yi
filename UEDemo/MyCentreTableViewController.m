@@ -9,7 +9,7 @@
 #import "MyCentreTableViewController.h"
 #import "MyCenterViewModel.h"
 #import "MyCenterOrderCell.h"
-#import "OrderStatusView.h"
+
 @interface MyCentreTableViewController ()
 @property (nonatomic,weak) IBOutlet UITableView *tableView;
 @end
@@ -60,6 +60,7 @@
     NSString *orderType=[order objectForKey:@"ordertype"];
     NSString *title=nil;
     if ([orderType isEqualToString:@"bj"]) {
+        
         title=@"保洁订单";
     }else if ([orderType isEqualToString:@"gx"]){
         title=@"干洗订单";
@@ -68,11 +69,33 @@
     }
     cell.lbTitle.text=title;
     NSInteger status=[[order objectForKey:@"status"] integerValue];
-    [cell setStatusView:[OrderStatusView viewWithStatusType:status]];
+    NSString *statusLogoEndStr=nil;
+    switch (status) {
+        case 0:
+             cell.lbStatus.text=@"未服务";
+             statusLogoEndStr=@"wfw";
+            break;
+        case 1:
+            cell.lbStatus.text=@"服务中";
+            statusLogoEndStr=@"fwz";
+            break;
+        case 2:
+            cell.lbStatus.text=@"待付款";
+            statusLogoEndStr=@"dfk";
+            break;
+        case 3:
+            cell.lbStatus.text=@"已完成";
+            statusLogoEndStr=@"ywc";
+            break;
+            
+        default:
+            break;
+    }
+    cell.imgHeader.image=[UIImage imageNamed:[NSString stringWithFormat:@"center_%@_%@",orderType,statusLogoEndStr]];
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-      return 54;
+      return 75;
 }
 
 /*

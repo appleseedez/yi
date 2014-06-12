@@ -21,7 +21,7 @@
 
 - (void)awakeFromNib
 {
-   
+    self.imgChoosed.image=[UIImage imageNamed:@"tableview_checked"];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

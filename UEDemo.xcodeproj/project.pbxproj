@@ -18,8 +18,6 @@
 		479495C719433B56009901F9 /* MyCentreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479495C619433B56009901F9 /* MyCentreTableViewController.m */; };
 		479495CB19433BB1009901F9 /* MyCenterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479495CA19433BB1009901F9 /* MyCenterViewModel.m */; };
 		479495CF19434770009901F9 /* MyCenterOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479495CE19434770009901F9 /* MyCenterOrderCell.m */; };
-		479495D2194347AA009901F9 /* OrderStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 479495D1194347AA009901F9 /* OrderStatusView.m */; };
-		479495D4194347E4009901F9 /* statusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479495D3194347E4009901F9 /* statusView.xib */; };
 		4799EF9A192735D100863423 /* CleanServiceCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EF99192735D100863423 /* CleanServiceCheckViewController.m */; };
 		4799EFA01927386700863423 /* CleanService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EF9F1927386700863423 /* CleanService.m */; };
 		4799EFA41927397600863423 /* ServiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EFA31927397600863423 /* ServiceModel.m */; };
@@ -118,9 +116,6 @@
 		479495CA19433BB1009901F9 /* MyCenterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterViewModel.m; sourceTree = "<group>"; };
 		479495CD19434770009901F9 /* MyCenterOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterOrderCell.h; sourceTree = "<group>"; };
 		479495CE19434770009901F9 /* MyCenterOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterOrderCell.m; sourceTree = "<group>"; };
-		479495D0194347AA009901F9 /* OrderStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderStatusView.h; sourceTree = "<group>"; };
-		479495D1194347AA009901F9 /* OrderStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderStatusView.m; sourceTree = "<group>"; };
-		479495D3194347E4009901F9 /* statusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = statusView.xib; sourceTree = "<group>"; };
 		4799EF98192735D100863423 /* CleanServiceCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanServiceCheckViewController.h; sourceTree = "<group>"; };
 		4799EF99192735D100863423 /* CleanServiceCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanServiceCheckViewController.m; sourceTree = "<group>"; };
 		4799EF9E1927386700863423 /* CleanService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanService.h; sourceTree = "<group>"; };
@@ -352,9 +347,6 @@
 			children = (
 				479495CD19434770009901F9 /* MyCenterOrderCell.h */,
 				479495CE19434770009901F9 /* MyCenterOrderCell.m */,
-				479495D0194347AA009901F9 /* OrderStatusView.h */,
-				479495D1194347AA009901F9 /* OrderStatusView.m */,
-				479495D3194347E4009901F9 /* statusView.xib */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -789,7 +781,6 @@
 				47A07E2E1945EB5300A9813F /* search.storyboard in Resources */,
 				479C52AB1923854A00CCF9F4 /* InfoPlist.strings in Resources */,
 				479C52B41923854A00CCF9F4 /* Main.storyboard in Resources */,
-				479495D4194347E4009901F9 /* statusView.xib in Resources */,
 				47A03C201939EB290019E469 /* 银杏叶虚化大背景.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -927,7 +918,6 @@
 				4799EFB31927608400863423 /* OrderSelection.m in Sources */,
 				479F249C1924DED2006B4080 /* CleanSectionModel.m in Sources */,
 				479EE535193084FB0030F462 /* DryCleaningCell.m in Sources */,
-				479495D2194347AA009901F9 /* OrderStatusView.m in Sources */,
 				4799EFA41927397600863423 /* ServiceModel.m in Sources */,
 				479E1F93193C7F6F0062A15D /* CleanDetailCheckModel.m in Sources */,
 			);
@@ -1060,6 +1050,7 @@
 				GCC_PREFIX_HEADER = "UEDemo/UEDemo-Prefix.pch";
 				INFOPLIST_FILE = "UEDemo/UEDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1075,6 +1066,7 @@
 				GCC_PREFIX_HEADER = "UEDemo/UEDemo-Prefix.pch";
 				INFOPLIST_FILE = "UEDemo/UEDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

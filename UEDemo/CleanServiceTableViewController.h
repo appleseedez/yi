@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 @class CleanViewModel;
 @protocol CleanCellPushDelegate ;
-@interface CleanServiceTableViewController : UITableViewController <UITableViewDelegate,UITableViewDataSource,CleanCellPushDelegate>
+@interface CleanServiceTableViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,CleanCellPushDelegate>
 @property (nonatomic) CleanViewModel *cleanViewModel;
 @end

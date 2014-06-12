@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomAlertWindow : UIWindow
++(instancetype)showWithText:(NSString*)text;
 - (instancetype)initWithText:(NSString*)text;
+@property (nonatomic) UILabel *textLabel;
 @end

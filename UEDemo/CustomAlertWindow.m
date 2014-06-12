@@ -9,7 +9,23 @@
 #import "CustomAlertWindow.h"
 
 @implementation CustomAlertWindow
-
+static CustomAlertWindow *instance;
++(instancetype)showWithText:(NSString*)text{
+    instance.textLabel.text=text;
+    instance.hidden=NO;
+    return instance;
+}
++ (void)initialize
+{
+    if (self == [CustomAlertWindow class]) {
+        BOOL didInit=NO;
+        if (didInit==NO) {
+             instance=[[CustomAlertWindow alloc]initWithText:@""];
+            didInit=YES;
+        }
+       
+    }
+}
 - (instancetype)initWithText:(NSString*)text;
 {
     self = [super init];
@@ -37,6 +53,7 @@
         textLabel.numberOfLines=0;
         textLabel.backgroundColor=[UIColor clearColor];
         [imgMesBack addSubview:textLabel];
+        self.textLabel=textLabel;
         [self addSubview:imgMesBack];
     }
     return self;

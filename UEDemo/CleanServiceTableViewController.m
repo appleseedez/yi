@@ -18,6 +18,7 @@
 #import "OrderSelection.h"
 #import "CleanDetailCheckTableViewController.h"
 @interface CleanServiceTableViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic) NSInteger selection;
 @end
@@ -41,7 +42,7 @@
     CleanSectionModel *model=self.cleanViewModel.sections[section];
     
     if ([model.selected boolValue]&&[model.selections count]) {
-        return [model.selections count]+2;
+        return [model.selections count]+1;
     }
     
     return 1;
@@ -57,7 +58,7 @@
         [model.indexPaths addObject:indexPath];
     }else{
         NSIndexPath *oindex=model.indexPaths[0];
-        if (oindex.section==indexPath.section && oindex.row!=indexPath.row) {
+        if (oindex.section==indexPath.section &&indexPath.row!=0) {
             [model.indexPaths addObject:indexPath];
         }
     }
@@ -77,13 +78,7 @@
         
         cell.lbTitle.text= cell.orderSelection.name;
         return cell;
-    }else if(indexPath.row>=[model.selections count]+1){
-        CleanOrderCell *cell=[tableView dequeueReusableCellWithIdentifier:@"CleanOrderCell"];
-        cell.sectionModel=model;
-        cell.contextVC=self;
-        return cell;
-    }
-    
+    }    
     return nil;
     
 }
@@ -95,10 +90,10 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;{
     
     if (indexPath.row==0) {
-        return 57;
+        return 44;
     
     }else {
-        return 37;
+        return 39;
     }
     
 }

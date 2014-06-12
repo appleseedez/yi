@@ -11,6 +11,7 @@
 @interface CleanTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 @property (weak, nonatomic) IBOutlet UIButton *btnSelected;
+@property (weak, nonatomic) IBOutlet UIImageView *imgStar;
 @property (weak, nonatomic)  CleanSectionModel *sectionModel;
 @property (weak, nonatomic) UITableView *tableView;
 @property (weak, nonatomic) UIViewController *contextVC;
