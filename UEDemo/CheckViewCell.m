@@ -21,7 +21,7 @@
 
 - (void)awakeFromNib
 {
-  
+  self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"clean_star_selection_cell_normal"]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

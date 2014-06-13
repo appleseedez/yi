@@ -11,8 +11,12 @@
 #import "CleanDetailCheckViewModel.h"
 #import "CleanDetailCheckModel.h"
 #import "CleanService.h"
+#import "MaoAppDelegate.h"
+#import "CustomAlertWindow.h"
 @interface CleanDetailCheckTableViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *btnOrder;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnCall;
 @end
 
 @implementation CleanDetailCheckTableViewController
@@ -22,6 +26,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.btnOrder.layer.borderColor=[UIColor whiteColor].CGColor;
+    self.btnOrder.layer.borderWidth=1;
+    self.btnCall.layer.borderWidth=1;
+    self.btnCall.layer.borderColor=[UIColor whiteColor].CGColor;
+    
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
     self.detailViewModel=[[CleanDetailCheckViewModel alloc]init];
     [[CleanService defaultService] loadServiceOrderSelections];
@@ -33,12 +42,17 @@
     
     [[RACObserve(self, detailViewModel.orderSuccess) map:^id(id value) {
         if ([value boolValue]) {
-            UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CleanOrderSuccess"];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
+            MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
+            NSString *userphone=[delegate.hostUser objectForKey:@"username"];
+            
+            NSString *message=[NSString stringWithFormat:@"预约订单已经发送\n稍后客服人员会通过\n%@\n联系您",userphone];
+            [CustomAlertWindow showWithText:message];        }
         return value;
     }]subscribeNext:^(id x) {}];
     // Do any additional setup after loading the view.
+}
+- (IBAction)pop:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)subDetailOrders:(id)sender {
     [self.detailViewModel subDetailOrders];

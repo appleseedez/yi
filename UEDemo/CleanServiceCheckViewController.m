@@ -9,10 +9,14 @@
 #import "CleanServiceCheckViewController.h"
 #import "CheckViewCell.h"
 #import "OrderSelection.h"
+#import "MaoAppDelegate.h"
+#import "CustomAlertWindow.h"
 @interface CleanServiceCheckViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *lbPrice;
+@property (weak, nonatomic) IBOutlet UIButton *btnOrder;
+@property (weak, nonatomic) IBOutlet UIButton *btnCall;
 
 @end
 
@@ -29,13 +33,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.btnOrder.layer.borderColor=[UIColor whiteColor].CGColor;
+    self.btnOrder.layer.borderWidth=1;
+    self.btnCall.layer.borderWidth=1;
+    self.btnCall.layer.borderColor=[UIColor whiteColor].CGColor;
     self.lbTitle.text=[NSString stringWithFormat:@"您选择了%@",self.serviceViewModel.title];
     
     [[RACObserve(self, serviceViewModel.orderSuccess) map:^id(NSNumber *value) {
         if ([value boolValue]) {
-            UIViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"CleanOrderSuccess"];
-            [self.navigationController pushViewController:vc animated:YES];
+            MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
+            NSString *userphone=[delegate.hostUser objectForKey:@"username"];
+            
+            NSString *message=[NSString stringWithFormat:@"预约订单已经发送\n稍后客服人员会通过\n%@\n联系您",userphone];
+            [CustomAlertWindow showWithText:message];
         }
         return value;
     }]subscribeNext:^(id x) {
@@ -59,7 +69,9 @@
     
     return cell;
 }
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 40;
+}
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
    
 }

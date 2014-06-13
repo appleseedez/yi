@@ -20,9 +20,12 @@
       }]subscribeNext:^(id x) {}];
     [[RACObserve(self, detailModel.choosed) map:^id(NSNumber *value) {
         if ([value boolValue]) {
-            self.imgCheckBox.image=[UIImage imageNamed:@"selection_choosed"];
+            self.imgCheckBox.image=[UIImage imageNamed:@"tableview_checked"];
+            
+            self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"clean_star_selection_cell_selectted"]];
         }else{
-             self.imgCheckBox.image=[UIImage imageNamed:@"selection_unchoosed"];
+             self.imgCheckBox.image=[UIImage imageNamed:@"tableview_unchecked"];
+            self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"clean_star_selection_cell_normal"]];
         }
         
         return value;

@@ -43,7 +43,6 @@
 		479C56601932D0C50086380C /* HostInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C565F1932D0C50086380C /* HostInfomation.m */; };
 		479C56631932D5600086380C /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C56621932D5600086380C /* AppService.m */; };
 		479C56651932D6670086380C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479C56641932D6670086380C /* MapKit.framework */; };
-		479C88CD1940A3EC006657F8 /* CleanOrderSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C88CC1940A3EC006657F8 /* CleanOrderSuccessViewController.m */; };
 		479E1F90193C7C8E0062A15D /* CleanDetailCheckTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F8F193C7C8E0062A15D /* CleanDetailCheckTableViewController.m */; };
 		479E1F93193C7F6F0062A15D /* CleanDetailCheckModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F92193C7F6F0062A15D /* CleanDetailCheckModel.m */; };
 		479E1F96193C80580062A15D /* DetailCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F95193C80580062A15D /* DetailCheckCell.m */; };
@@ -157,8 +156,6 @@
 		479C56611932D5600086380C /* AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppService.h; sourceTree = "<group>"; };
 		479C56621932D5600086380C /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
 		479C56641932D6670086380C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		479C88CB1940A3EC006657F8 /* CleanOrderSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanOrderSuccessViewController.h; sourceTree = "<group>"; };
-		479C88CC1940A3EC006657F8 /* CleanOrderSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanOrderSuccessViewController.m; sourceTree = "<group>"; };
 		479E1F8E193C7C8E0062A15D /* CleanDetailCheckTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanDetailCheckTableViewController.h; sourceTree = "<group>"; };
 		479E1F8F193C7C8E0062A15D /* CleanDetailCheckTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanDetailCheckTableViewController.m; sourceTree = "<group>"; };
 		479E1F91193C7F6F0062A15D /* CleanDetailCheckModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanDetailCheckModel.h; sourceTree = "<group>"; };
@@ -363,8 +360,6 @@
 				4799EF99192735D100863423 /* CleanServiceCheckViewController.m */,
 				479E1F8E193C7C8E0062A15D /* CleanDetailCheckTableViewController.h */,
 				479E1F8F193C7C8E0062A15D /* CleanDetailCheckTableViewController.m */,
-				479C88CB1940A3EC006657F8 /* CleanOrderSuccessViewController.h */,
-				479C88CC1940A3EC006657F8 /* CleanOrderSuccessViewController.m */,
 				4799EF9C1927381400863423 /* viewModels */,
 				479F24901924DD9C006B4080 /* cells */,
 			);
@@ -916,7 +911,6 @@
 				479EE53A193088010030F462 /* DryCleaningService.m in Sources */,
 				47A3C43D1931A14C00EE44EF /* DryOrderCell.m in Sources */,
 				47A07E2C1945E90900A9813F /* SearchingViewController.m in Sources */,
-				479C88CD1940A3EC006657F8 /* CleanOrderSuccessViewController.m in Sources */,
 				479E1F90193C7C8E0062A15D /* CleanDetailCheckTableViewController.m in Sources */,
 				479E1F96193C80580062A15D /* DetailCheckCell.m in Sources */,
 				479E1F99193C82110062A15D /* CleanDetailCheckViewModel.m in Sources */,
