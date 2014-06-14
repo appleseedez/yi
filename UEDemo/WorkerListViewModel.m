@@ -10,6 +10,7 @@
 #import "TimeWorkerService.h"
 #import "Worker.h"
 #import "Order.h"
+#import "CustomAlertWindow.h"
 @implementation WorkerListViewModel
 - (instancetype)init
 {
@@ -37,7 +38,8 @@
         }
     }
     if ([arr count]==0) {
-        [[[UIAlertView alloc]initWithTitle:@"您还没有选择为您服务的人员" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil]show];
+//        [[[UIAlertView alloc]initWithTitle:@"您还没有选择为您服务的人员" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil]show];
+        [CustomAlertWindow showWithText:@"您还没有选择为您服务的人员"];
         return;
     }
     Order *o =[[Order alloc]init];

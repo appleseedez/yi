@@ -13,6 +13,7 @@
 #import "Order.h"
 #import "OrderSelection.h"
 #import "CleanDetailCheckModel.h"
+#import "CustomAlertWindow.h"
 @implementation CleanDetailCheckViewModel
 - (instancetype)init
 {
@@ -48,7 +49,8 @@
       
     }
     if ([services count]==0) {
-        [[[UIAlertView alloc]initWithTitle:@"请选择服务项目" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil]show];
+//        [[[UIAlertView alloc]initWithTitle:@"请选择服务项目" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil]show];
+        [CustomAlertWindow showWithText:@"请选择服务项目"];
         return;
     }
     o.services=[services copy];

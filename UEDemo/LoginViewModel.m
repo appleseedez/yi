@@ -16,8 +16,8 @@
 #if TEST
      NSDictionary *parameters=@{@"username":@"13688494410",@"password":@"123456"};
 #else
-     NSDictionary *parameters=@{@"username":@"13688494410",@"password":@"123456"};
-    //NSDictionary *parameters=@{@"username":user,@"password":[password md5]};
+    // NSDictionary *parameters=@{@"username":@"13688494410",@"password":@"123456"};
+    NSDictionary *parameters=@{@"username":user,@"password":[password md5]};
 #endif
     NSString *url=[NSString stringWithFormat:@"%@/eclean/login.json",ACCOUNT_SERVER];
     

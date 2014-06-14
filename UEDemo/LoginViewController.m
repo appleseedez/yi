@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 #import "LoginViewModel.h"
 #import "LoginInputTextField.h"
-
+#import "CustomAlertWindow.h"
 @interface LoginViewController ()
 @property(weak, nonatomic) IBOutlet LoginInputTextField *txtPhone;
 @property(weak, nonatomic) IBOutlet LoginInputTextField *txtPassword;
@@ -54,20 +54,22 @@
 - (IBAction)login:(id)sender {
   if ([self.txtPhone.text isEqualToString:self.txtPhone.placeHolder] ||
       self.txtPhone.text.length == 0) {
-    [[[UIAlertView alloc] initWithTitle:@"用户名不能为空"
-                                message:nil
-                               delegate:nil
-                      cancelButtonTitle:@"确定"
-                      otherButtonTitles:nil] show];
+//    [[[UIAlertView alloc] initWithTitle:@"用户名不能为空"
+//                                message:nil
+//                               delegate:nil
+//                      cancelButtonTitle:@"确定"
+//                      otherButtonTitles:nil] show];
+      [CustomAlertWindow showWithText:@"用户名不能为空"];
     return;
   }
   if ([self.txtPassword.text isEqualToString:self.txtPassword.placeHolder] ||
       self.txtPassword.text.length == 0) {
-    [[[UIAlertView alloc] initWithTitle:@"密码不能为空"
-                                message:nil
-                               delegate:nil
-                      cancelButtonTitle:@"确定"
-                      otherButtonTitles:nil] show];
+//    [[[UIAlertView alloc] initWithTitle:@"密码不能为空"
+//                                message:nil
+//                               delegate:nil
+//                      cancelButtonTitle:@"确定"
+//                      otherButtonTitles:nil] show];
+      [CustomAlertWindow showWithText:@"密码不能为空"];
 
     return;
   }
@@ -77,8 +79,8 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self setUI];
-    self.txtPassword.text=@"123456";
-    self.txtPhone.text=@"132321245213";
+    self.txtPassword.text=@"111111";
+    self.txtPhone.text=@"13012360815";
   self.loginViewModel = [[LoginViewModel alloc] init];
   //监听HUD
    [[ RACObserve(self, loginViewModel.busy) map:^id(NSNumber *value) {

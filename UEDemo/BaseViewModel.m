@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewModel.h"
-
+#import "CustomAlertWindow.h"
 @implementation BaseViewModel
 - (instancetype)init
 {
@@ -56,8 +56,10 @@
 }
 -(void)requestError:(NSError*)error{
     NSLog(@"请求错误:%@",error);
-    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"网络异常" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
-    [alert show];
+//    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"网络异常" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+//    [alert show];
+    
+    [CustomAlertWindow showWithText:@"网络异常"];
 }
 -(void)responseError:(NSDictionary*)response{
     NSLog(@"返回类型不是字典:%@",response);
@@ -66,12 +68,15 @@
         NSLog(@"%@",s);
     }
    
-    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"服务器返回类型错误" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
-    [alert show];
+//    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"服务器返回类型错误" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+//    [alert show];
+     [CustomAlertWindow showWithText:@"服务器返回类型错误"];
 }
 -(void)responseFail:(NSDictionary*)response{
-    NSString *status=[response valueForKeyPath:@"head.status"];
-    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"请求失败" message:[NSString stringWithFormat:@"异常类型:status=%@",status] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
-    [alert show];
+    NSString *msg=[response valueForKeyPath:@"body.prompt"];
+//    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"请求失败" message:[NSString stringWithFormat:@"异常类型:status=%@",status] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+//    [alert show];
+    
+     [CustomAlertWindow showWithText:[NSString stringWithFormat:@"请求失败\n%@",msg]];
 }
 @end

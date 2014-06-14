@@ -72,7 +72,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4Gs-GU-g9T" kind="modal" id="9wL-A1-FUp"/>
+                                    <segue destination="cqM-t8-c69" kind="modal" id="Pj7-Sq-h4X"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,20 +88,156 @@
             </objects>
             <point key="canvasLocation" x="-472" y="-30"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="b3A-y3-s5G">
+        <!--Reg View Controller-->
+        <scene sceneID="C5U-Ga-mff">
             <objects>
-                <navigationController definesPresentationContext="YES" id="4Gs-GU-g9T" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UKU-ep-M8Y">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
+                <viewController id="cqM-t8-c69" customClass="RegViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0zk-l6-4kh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_background" id="mv6-hh-ScH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view alpha="0.10000000000000001" contentMode="scaleToFill" id="obq-dB-nkW">
+                                <rect key="frame" x="0.0" y="67" width="320" height="501"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Or2-C8-7sk">
+                                <rect key="frame" x="90" y="328" width="140" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="确认">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="registe:" destination="cqM-t8-c69" eventType="touchUpInside" id="R8d-kd-nhl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JMC-1F-0P9">
+                                <rect key="frame" x="218" y="100" width="67" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="获取">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getCode:" destination="cqM-t8-c69" eventType="touchUpInside" id="gh5-Hx-7Y3"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请确认密码" clearsOnBeginEditing="YES" minimumFontSize="17" background="透明输入框" clearButtonMode="always" id="pDO-bC-xbk" customClass="LoginInputTextField">
+                                <rect key="frame" x="35" y="265" width="250" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.45321053830000002" green="0.72733234489999998" blue="0.1137944799" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="cqM-t8-c69" id="n5a-I1-mIO"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请设置密码" clearsOnBeginEditing="YES" minimumFontSize="17" background="透明输入框" clearButtonMode="always" id="ubC-cb-5wJ" customClass="LoginInputTextField">
+                                <rect key="frame" x="35" y="210" width="250" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.45321053830000002" green="0.72733234489999998" blue="0.1137944799" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="cqM-t8-c69" id="FAf-iL-8qP"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入验证码" clearsOnBeginEditing="YES" minimumFontSize="17" background="透明输入框" clearButtonMode="always" id="e2x-fU-5cf" customClass="LoginInputTextField">
+                                <rect key="frame" x="35" y="155" width="250" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.45321053830000002" green="0.72733234489999998" blue="0.1137944799" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="cqM-t8-c69" id="QVH-Va-QNh"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号获取验证码" clearsOnBeginEditing="YES" minimumFontSize="17" background="透明输入框" clearButtonMode="always" id="50k-BE-D1Z" customClass="LoginInputTextField">
+                                <rect key="frame" x="35" y="100" width="175" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.45321053830000002" green="0.72733234489999998" blue="0.1137944799" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="cqM-t8-c69" id="MYx-Yz-grz"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" id="Zcf-LG-1Ib">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="21Y-Ex-jDP">
+                                        <rect key="frame" x="5" y="4" width="68" height="63"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <inset key="contentEdgeInsets" minX="-20" minY="20" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="worker_btn_back">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismiss:" destination="cqM-t8-c69" eventType="touchUpInside" id="HUl-W8-gks"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注册" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pCy-Bt-fzM">
+                                        <rect key="frame" x="91" y="30" width="138" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
                     <connections>
-                        <segue destination="ZfH-hD-cxF" kind="relationship" relationship="rootViewController" id="fOn-0t-YM1"/>
+                        <outlet property="btnGet" destination="JMC-1F-0P9" id="Kll-bg-K2C"/>
+                        <outlet property="btnSub" destination="Or2-C8-7sk" id="azw-OF-XTr"/>
+                        <outlet property="txtCode" destination="e2x-fU-5cf" id="hJe-Od-VGH"/>
+                        <outlet property="txtPassword" destination="ubC-cb-5wJ" id="CID-fW-Apq"/>
+                        <outlet property="txtPhone" destination="50k-BE-D1Z" id="8Wt-6A-haq"/>
+                        <outlet property="txtRePassword" destination="pDO-bC-xbk" id="UuG-28-4he"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Odo-Za-Vds" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fuo-lX-arN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-70" y="-104"/>
+            <point key="canvasLocation" x="-126" y="-30"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="Zjn-eu-mc7">
@@ -148,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfy-Ka-Our" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-15" y="-148"/>
+            <point key="canvasLocation" x="588" y="-150"/>
         </scene>
         <!--Reg Password View Controller-->
         <scene sceneID="fla-Ay-EcL">
@@ -212,10 +348,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QGC-kK-MUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="661" y="-14"/>
+            <point key="canvasLocation" x="717" y="-117"/>
         </scene>
     </scenes>
     <resources>
+        <image name="login_background" width="320" height="480"/>
+        <image name="worker_btn_back" width="22" height="22"/>
         <image name="透明输入框" width="321" height="51"/>
         <image name="银杏叶虚化大背景.jpg" width="642" height="984"/>
     </resources>

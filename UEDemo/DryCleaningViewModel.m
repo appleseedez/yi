@@ -9,6 +9,7 @@
 #import "DryCleaningViewModel.h"
 #import "DryCleaningService.h"
 #import "Order.h"
+#import "CustomAlertWindow.h"
 @implementation DryCleaningViewModel
 - (instancetype)init
 {
@@ -46,7 +47,8 @@
         }
     }
     if ([arr count]==0) {
-        [[[UIAlertView alloc] initWithTitle:@"您还没有选择任何衣服" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil] show];
+//        [[[UIAlertView alloc] initWithTitle:@"您还没有选择任何衣服" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil] show];
+        [CustomAlertWindow showWithText:@"您还没有选择任何衣服"];
         return;
     }
     Order *o=[Order new];

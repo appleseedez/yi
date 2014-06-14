@@ -67,6 +67,7 @@
 		47A07E301945F23B00A9813F /* search.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47A07E2F1945F23B00A9813F /* search.xcassets */; };
 		47A07E33194600DA00A9813F /* StoreListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A07E32194600DA00A9813F /* StoreListViewController.m */; };
 		47A07E361946013800A9813F /* StoreListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A07E351946013800A9813F /* StoreListCell.m */; };
+		47A192DD194C235F0011FAE6 /* RegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A192DC194C235F0011FAE6 /* RegViewController.m */; };
 		47A3C43A19319F0D00EE44EF /* DryCleaningOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C43919319F0D00EE44EF /* DryCleaningOrderViewController.m */; };
 		47A3C43D1931A14C00EE44EF /* DryOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C43C1931A14C00EE44EF /* DryOrderCell.m */; };
 		47A3C4431931F14900EE44EF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A3C4421931F14900EE44EF /* Login.storyboard */; };
@@ -199,6 +200,8 @@
 		47A07E32194600DA00A9813F /* StoreListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreListViewController.m; sourceTree = "<group>"; };
 		47A07E341946013800A9813F /* StoreListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreListCell.h; sourceTree = "<group>"; };
 		47A07E351946013800A9813F /* StoreListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreListCell.m; sourceTree = "<group>"; };
+		47A192DB194C235F0011FAE6 /* RegViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegViewController.h; sourceTree = "<group>"; };
+		47A192DC194C235F0011FAE6 /* RegViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegViewController.m; sourceTree = "<group>"; };
 		47A3C43819319F0D00EE44EF /* DryCleaningOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryCleaningOrderViewController.h; sourceTree = "<group>"; };
 		47A3C43919319F0D00EE44EF /* DryCleaningOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DryCleaningOrderViewController.m; sourceTree = "<group>"; };
 		47A3C43B1931A14C00EE44EF /* DryOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryOrderCell.h; sourceTree = "<group>"; };
@@ -501,8 +504,8 @@
 		479E772D1943A414005130FE /* customViews */ = {
 			isa = PBXGroup;
 			children = (
-				479F4450194424A000FEDE2D /* LoginInputTextField.m */,
 				479E772E1943A450005130FE /* LoginInputTextField.h */,
+				479F4450194424A000FEDE2D /* LoginInputTextField.m */,
 			);
 			name = customViews;
 			sourceTree = "<group>";
@@ -650,6 +653,8 @@
 				47A3C4451931F25100EE44EF /* RegisterViewController.m */,
 				47A3C4471931F46400EE44EF /* RegPasswordViewController.h */,
 				47A3C4481931F46400EE44EF /* RegPasswordViewController.m */,
+				47A192DB194C235F0011FAE6 /* RegViewController.h */,
+				47A192DC194C235F0011FAE6 /* RegViewController.m */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -874,6 +879,7 @@
 				479F24931924DDBF006B4080 /* CleanSelectionCell.m in Sources */,
 				47A03C1E1939CEEF0019E469 /* OBShapedButton.m in Sources */,
 				4799EFAD192755CC00863423 /* CheckViewCell.m in Sources */,
+				47A192DD194C235F0011FAE6 /* RegViewController.m in Sources */,
 				479495C719433B56009901F9 /* MyCentreTableViewController.m in Sources */,
 				4799EFB01927607300863423 /* CleanServiceOrder.m in Sources */,
 				479F248C1924CF10006B4080 /* CleanTableViewCell.m in Sources */,

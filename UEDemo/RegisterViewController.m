@@ -9,6 +9,7 @@
 #import "RegisterViewController.h"
 #import "RegViewModel.h"
 #import "RegPasswordViewController.h"
+#import "CustomAlertWindow.h"
 @interface RegisterViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *txtPhone;
 
@@ -63,10 +64,10 @@
 }
 - (IBAction)sendMessage:(id)sender {
     
-    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"请输入正确的手机号码" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+//    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"请输入正确的手机号码" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
     
     if (self.txtPhone.text.length!=11) {
-        [alert show];
+       [CustomAlertWindow showWithText:@"请输入正确的手机号码"];
         return ;
     }
     NSRange range;
@@ -74,7 +75,7 @@
     range.location=0;
     NSString *first=[self.txtPhone.text substringWithRange:range];
     if ([first intValue]!=1) {
-        [alert show];
+        [CustomAlertWindow showWithText:@"请输入正确的手机号码"];
         return;
     }
     [self.regViewModel getCode:self.txtPhone.text];

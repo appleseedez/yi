@@ -8,7 +8,7 @@
 
 #import "RegPasswordViewController.h"
 #import "RegViewModel.h"
-
+#import "CustomAlertWindow.h"
 @interface RegPasswordViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *txtCode;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
@@ -71,15 +71,19 @@
 }
 - (IBAction)finishReg:(id)sender {
     if (![self.txtPassword.text isEqualToString:self.txtRePassword.text]) {
-        [[[UIAlertView alloc]initWithTitle:@"两次输入密码不一致" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil] show];
+//        [[[UIAlertView alloc]initWithTitle:@"两次输入密码不一致" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil] show];
+    [CustomAlertWindow showWithText:@"两次输入密码不一致"];
         return;
     }
     if (self.txtCode.text.length==0) {
-        [[[UIAlertView alloc]initWithTitle:@"请输入手机验证码" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil] show];
+//        [[[UIAlertView alloc]initWithTitle:@"请输入手机验证码" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil] show];
+        [CustomAlertWindow showWithText:@"请输入手机验证码"];
         return;
     }
     if (self.txtPassword.text.length<6) {
-        [[[UIAlertView alloc]initWithTitle:@"请输入至少大于6位的密码" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil] show];
+//        [[[UIAlertView alloc]initWithTitle:@"请输入至少大于6位的密码" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil] show];
+        
+        [CustomAlertWindow showWithText:@"请输入至少大于6位的密码"];
         return;
     }
     
