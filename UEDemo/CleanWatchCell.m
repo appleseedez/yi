@@ -21,8 +21,7 @@
 
 - (void)awakeFromNib
 {
-    self.btnWatch.layer.borderColor=[UIColor whiteColor].CGColor;
-    self.btnWatch.layer.borderWidth=1;
+    
     [self.btnWatch addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
 }
 

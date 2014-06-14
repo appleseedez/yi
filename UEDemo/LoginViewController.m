@@ -99,8 +99,7 @@
 - (void)setUI {
   [self.txtPhone setUI];
   [self.txtPassword setUI];
-  self.loginButton.layer.borderColor = [UIColor whiteColor].CGColor;
-  self.loginButton.layer.borderWidth = 1.0f;
+  
   self.loginButton.layer.masksToBounds = YES;
   //  self.txtPhone.placeHolder = @"请输入您注册的手机号码";
   //  self.txtPassword.placeHolder = @"请输入登陆密码";

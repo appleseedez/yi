@@ -26,10 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.btnOrder.layer.borderColor=[UIColor whiteColor].CGColor;
-    self.btnOrder.layer.borderWidth=1;
-    self.btnCall.layer.borderWidth=1;
-    self.btnCall.layer.borderColor=[UIColor whiteColor].CGColor;
+   
     
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
     self.detailViewModel=[[CleanDetailCheckViewModel alloc]init];

@@ -120,7 +120,7 @@ static AppService *instance=nil;
     NSDictionary *store= [[NSUserDefaults standardUserDefaults] objectForKey:@"store"];
     if (!store) {
         store=@{
-                @"id": @(1001),
+                @"id": @(21),
                 @"name": @"八里小区店",
                 @"address":@"东一街",
                 @"logo":@"http://picture.com/jd/332/22/101.jpg",

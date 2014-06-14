@@ -52,7 +52,7 @@
     NSDictionary *hostUser=delegate.hostUser;
    // NSDictionary *currStore=delegate.currStore;
     
-    NSDictionary *parameters=@{@"userid":[hostUser objectForKey:@"userid"],@"phone":[hostUser objectForKey:@"phone"]};
+    NSDictionary *parameters=@{@"userid":[hostUser objectForKey:@"userid"],@"phone":[hostUser objectForKey:@"username"]};
     NSString *url=[NSString stringWithFormat:@"%@/eclean/loadOrdersOfUser.json",ACCOUNT_SERVER];
     [[self httpRequestWithURL:url andParameters:parameters method:@"get"] subscribeNext:^(NSArray *x) {
         self.myOrders =x;

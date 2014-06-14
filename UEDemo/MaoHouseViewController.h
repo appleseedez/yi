@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MaoHouseViewController : UITableViewController
+@class HouseViewModel;
+@interface MaoHouseViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 - (IBAction)dismissPage:(UIBarButtonItem *)cancel;
+@property (nonatomic) HouseViewModel *houseViewModel;
+
 @end

@@ -140,10 +140,7 @@
     [self.txtPassword setUI];
     [self.txtRePassword setUI];
     [self.txtPhone setUI];
-    self.btnGet.layer.borderColor=[UIColor whiteColor].CGColor;
-    self.btnGet.layer.borderWidth=1.2;
-    self.btnSub.layer.borderColor=[UIColor whiteColor].CGColor;
-    self.btnSub.layer.borderWidth=1.2;
+    
 }
 
 

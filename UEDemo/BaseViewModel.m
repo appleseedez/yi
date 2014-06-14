@@ -34,9 +34,14 @@
         id status=[x valueForKeyPath:@"head.status"];
         if (status) {
             if ([status intValue]==0) {
+                NSDictionary *body=[x objectForKey:@"body"];
+                if ([body isKindOfClass:[NSDictionary class]]) {
+                    [response sendNext:[self killNull:body]];
+
+                }else{
+                    [response sendNext:body];
+                }
                 
-                [response sendNext:[x objectForKey:@"body"]];
-              
             }else{
                 [self responseFail:x];
             }
@@ -78,5 +83,15 @@
 //    [alert show];
     
      [CustomAlertWindow showWithText:[NSString stringWithFormat:@"请求失败\n%@",msg]];
+}
+-(NSDictionary*)killNull:(NSDictionary*)data{
+    NSMutableDictionary *noNullData=[data mutableCopy];
+    for (NSString *key in [data allKeys] ) {
+        id value=[data objectForKey:key];
+        if ([value isEqual:[NSNull null]]) {
+            [noNullData setObject:@"" forKey:key];
+        }
+    }
+    return noNullData;
 }
 @end

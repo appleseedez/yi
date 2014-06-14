@@ -26,8 +26,7 @@
 {
     [super viewDidLoad];
     [self loadSelectedWorkerView];
-    [self.btnSend.layer setBorderColor:[UIColor whiteColor].CGColor];
-    [self.btnSend.layer setBorderWidth:1];
+   
     [[RACObserve(self, listViewModel.orderSuccess) map:^id(NSNumber *value) {
         if ([value boolValue]) {
             MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;

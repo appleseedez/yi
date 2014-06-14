@@ -33,10 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.btnOrder.layer.borderColor=[UIColor whiteColor].CGColor;
-    self.btnOrder.layer.borderWidth=1;
-    self.btnCall.layer.borderWidth=1;
-    self.btnCall.layer.borderColor=[UIColor whiteColor].CGColor;
+    
     self.lbTitle.text=[NSString stringWithFormat:@"您选择了%@",self.serviceViewModel.title];
     
     [[RACObserve(self, serviceViewModel.orderSuccess) map:^id(NSNumber *value) {

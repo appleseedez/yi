@@ -1,14 +1,14 @@
 //
-//  CleanOrderDetailCell.m
+//  CommetCell.m
 //  UEDemo
 //
-//  Created by nsc on 14-6-12.
+//  Created by nsc on 14-6-14.
 //  Copyright (c) 2014年 reactiveCocoa. All rights reserved.
 //
 
-#import "CleanOrderDetailCell.h"
+#import "CommetCell.h"
 
-@implementation CleanOrderDetailCell
+@implementation CommetCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -21,18 +21,21 @@
 
 - (void)awakeFromNib
 {
-    
-    [self.btnOrder addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
     // Initialization code
 }
--(void)push{
-    [self.controller pushSubVCWithModel:self.model];
-}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
+    if (selected) {
+        self.contentView.backgroundColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0.2];
+    }else{
+        self.contentView.backgroundColor=[UIColor clearColor];
+    }
     // Configure the view for the selected state
 }
-
+-(void)loatCommet:(NSDictionary*)data{
+    self.lbName.text=[data objectForKey:@"adminname"];
+    self.lbCommet.text=[data objectForKey:@"content"];
+}
 @end

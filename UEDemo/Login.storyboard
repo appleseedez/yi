@@ -50,15 +50,16 @@
                                     <outlet property="delegate" destination="0b9-hh-zs1" id="vmA-EP-Cfz"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1EM-oA-JWV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1EM-oA-JWV">
                                 <rect key="frame" x="105" y="292" width="91" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="登    陆">
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="登    陆" backgroundImage="store_back_normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" backgroundImage="store_back_high"/>
                                 <connections>
                                     <action selector="login:" destination="0b9-hh-zs1" eventType="touchUpInside" id="QWw-vq-t1x"/>
                                 </connections>
@@ -105,26 +106,28 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Or2-C8-7sk">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Or2-C8-7sk">
                                 <rect key="frame" x="90" y="328" width="140" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <state key="normal" title="确认">
+                                <state key="normal" title="确认" backgroundImage="clean_watch_normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" backgroundImage="clean_watch_high"/>
                                 <connections>
                                     <action selector="registe:" destination="cqM-t8-c69" eventType="touchUpInside" id="R8d-kd-nhl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JMC-1F-0P9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JMC-1F-0P9">
                                 <rect key="frame" x="218" y="100" width="67" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <state key="normal" title="获取">
+                                <state key="normal" title="获取" backgroundImage="store_back_normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" backgroundImage="store_back_high"/>
                                 <connections>
                                     <action selector="getCode:" destination="cqM-t8-c69" eventType="touchUpInside" id="gh5-Hx-7Y3"/>
                                 </connections>
@@ -352,7 +355,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clean_watch_high" width="290" height="40"/>
+        <image name="clean_watch_normal" width="294" height="44"/>
         <image name="login_background" width="320" height="480"/>
+        <image name="store_back_high" width="70" height="22"/>
+        <image name="store_back_normal" width="74" height="26"/>
         <image name="worker_btn_back" width="22" height="22"/>
         <image name="透明输入框" width="321" height="51"/>
         <image name="银杏叶虚化大背景.jpg" width="642" height="984"/>
