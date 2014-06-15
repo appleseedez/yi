@@ -10,4 +10,5 @@
 
 @interface OrderWaitingServiceViewController : UIViewController
 
+@property (nonatomic) NSDictionary *order;
 @end

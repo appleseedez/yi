@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDictionary (killNull)
-
+-(NSDictionary*)killNull;
 @end

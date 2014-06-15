@@ -10,6 +10,8 @@
 #import "MyCenterViewModel.h"
 #import "MyCenterOrderCell.h"
 #import "MyCenterPersionalSettingController.h"
+#import "OrderWaitingServiceViewController.h"
+#import "NSDictionary+killNull.h"
 @interface MyCentreTableViewController ()
 @property (nonatomic,weak) IBOutlet UITableView *tableView;
 @end
@@ -87,16 +89,20 @@
              statusLogoEndStr=@"wfw";
             break;
         case 1:
-            cell.lbStatus.text=@"服务中";
-            statusLogoEndStr=@"fwz";
+            cell.lbStatus.text=@"未服务";
+            statusLogoEndStr=@"wfw";
             break;
         case 2:
-            cell.lbStatus.text=@"待付款";
-            statusLogoEndStr=@"dfk";
+            cell.lbStatus.text=@"服务中";
+            statusLogoEndStr=@"fwz";
             break;
         case 3:
             cell.lbStatus.text=@"已完成";
             statusLogoEndStr=@"ywc";
+            break;
+        case 4:
+            cell.lbStatus.text=@"已取消";
+            statusLogoEndStr=@"yqx";
             break;
             
         default:
@@ -108,7 +114,50 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
       return 75;
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *order=[self.centerViewModel.myOrders objectAtIndex:indexPath.row];
+    NSString *orderType=[order objectForKey:@"ordertype"];
+    NSString *title=nil;
+    if ([orderType isEqualToString:@"bj"]) {
+        
+        title=@"保洁订单";
+    }else if ([orderType isEqualToString:@"gx"]){
+        title=@"干洗订单";
+    }else if ([orderType isEqualToString:@"zd"]){
+        title=@"钟点工订单";
+    }
+    
+    NSInteger status=[[order objectForKey:@"status"] integerValue];
+    NSString *statusLogoEndStr=nil;
+    switch (status) {
+        case 0:
+           
+            statusLogoEndStr=@"wfw";
+            break;
+        case 1:
+           
+            statusLogoEndStr=@"wfw";
+            break;
+        case 2:
+            
+            statusLogoEndStr=@"fwz";
+            break;
+        case 3:
+           
+            statusLogoEndStr=@"ywc";
+            break;
+        case 4:
+            
+            statusLogoEndStr=@"yqx";
+            break;
+            
+        default:
+            break;
+    }
+    OrderWaitingServiceViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"orderView"];
+    vc.order=[order killNull];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

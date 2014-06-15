@@ -9,5 +9,14 @@
 #import "NSDictionary+killNull.h"
 
 @implementation NSDictionary (killNull)
-
+-(NSDictionary*)killNull{
+    NSMutableDictionary *noNullDic=[self mutableCopy];
+    for (NSString *key in self.allKeys) {
+        id value=[self objectForKey:key];
+        if ([value isEqual:[NSNull null]]) {
+            [noNullDic setObject:@"" forKey:key];
+        }
+    }
+    return [noNullDic copy];
+}
 @end

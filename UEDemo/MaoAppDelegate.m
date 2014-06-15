@@ -9,14 +9,43 @@
 #import "MaoAppDelegate.h"
 #import "CleanService.h"
 #import "AppService.h"
+#import <ShareSDK/ShareSDK.h>
+#import "WXApi.h"
 @implementation MaoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [ShareSDK registerApp:@"3756916947"];
+    
+    //添加新浪微博应用 注册网址 http://open.weibo.com
+    [ShareSDK connectSinaWeiboWithAppKey:@"3756916947"
+                               appSecret:@"de85fc7c9bb81ca7ded59052f00b6c56"
+                             redirectUri:@"http://appgo.cn"];
+
+    [ShareSDK connectWeChatWithAppId:@"wx1dc20211dd51ee2c" wechatCls:[WXApi class]];
+    
+    
+   // [ShareSDK importWeChatClass:[WXApi class]];
+    
+    
     [[CleanService defaultService] loadStarServices];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeToRootView) name:@"loginSucces" object:nil];
     return YES;
+}
+- (BOOL)application:(UIApplication *)application  handleOpenURL:(NSURL *)url
+{
+    return [ShareSDK handleOpenURL:url
+                        wxDelegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [ShareSDK handleOpenURL:url
+                 sourceApplication:sourceApplication
+                        annotation:annotation
+                        wxDelegate:self];
 }
 -(void)changeToRootView{
     UIStoryboard *main=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
