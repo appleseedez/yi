@@ -34,6 +34,7 @@
               strongSelf.imgSelected.image=[UIImage imageNamed:@"tableview_unchecked"];
           }
       }];
+    self.seperatorView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"login_background"]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

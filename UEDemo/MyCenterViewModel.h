@@ -10,5 +10,7 @@
 
 @interface MyCenterViewModel : BaseViewModel
 @property (nonatomic) NSArray *myOrders;
+@property (nonatomic) NSNumber *addressSetted;
+-(void)modifyAddress:(NSString*)address;
 -(void)refreshOrders;
 @end

@@ -15,6 +15,7 @@ static CustomAlertWindow *instance;
     instance.hidden=NO;
     return instance;
 }
+
 + (void)initialize
 {
     if (self == [CustomAlertWindow class]) {
@@ -60,7 +61,10 @@ static CustomAlertWindow *instance;
 }
 -(void)disappear{
     self.hidden=YES;
-    
+    if ([self.cdelegate respondsToSelector:@selector(alertDidDisappear )]) {
+        [self.cdelegate alertDidDisappear];
+    }
+    self.cdelegate=nil;
 }
 /*
 // Only override drawRect: if you perform custom drawing.

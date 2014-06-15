@@ -13,6 +13,7 @@
 #import "WorkerOrderViewController.h"
 @interface WorkListTableViewController ()
 
+
 @end
 
 @implementation WorkListTableViewController
@@ -21,6 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 //    self.tableView.backgroundView =
 //    [[UIImageView alloc]initWithImage:
 //     [[UIImage imageNamed:@"login_background"] stretchableImageWithLeftCapWidth:0.0
@@ -30,6 +32,7 @@
 //    self.navigationController.navigationBar.alpha = 0.300;
 //    // 设置为半透明
 //    self.navigationController.navigationBar.translucent = YES;
+    
     self.listViewModel=[[WorkerListViewModel alloc]init];
     [self.listViewModel loadWorkerList];
     
@@ -78,7 +81,7 @@
     
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 73;
+    return 75;
 }
 - (IBAction)dismiss:(id)sender {
     [self.navigationController dismissViewControllerAnimated:YES completion:^{

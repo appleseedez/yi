@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgHeader;
 @property (weak, nonatomic) IBOutlet UILabel *lbSkills;
 @property (weak, nonatomic) IBOutlet UILabel *lbPrice;
+@property (weak, nonatomic) IBOutlet UIView *seperatorView;
 @property (weak,nonatomic)  Worker *worker;
 @end

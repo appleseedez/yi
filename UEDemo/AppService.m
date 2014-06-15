@@ -113,6 +113,12 @@ static AppService *instance=nil;
     
     
 }
+-(void)changeHostValue:(id)value forKey:(NSString*)key{
+    MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
+    NSMutableDictionary *host=[delegate.hostUser mutableCopy];
+    [host setObject:value forKey:key];
+    delegate.hostUser=[host copy];
+}
 -(NSArray*)reOrderStoreList:(NSArray*)storeList{
     return storeList;
 }

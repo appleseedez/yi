@@ -67,6 +67,7 @@
 		47A07E301945F23B00A9813F /* search.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47A07E2F1945F23B00A9813F /* search.xcassets */; };
 		47A07E33194600DA00A9813F /* StoreListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A07E32194600DA00A9813F /* StoreListViewController.m */; };
 		47A07E361946013800A9813F /* StoreListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A07E351946013800A9813F /* StoreListCell.m */; };
+		47A16461194D622D005CA1EE /* MyCenterPersionalSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A16460194D622C005CA1EE /* MyCenterPersionalSettingController.m */; };
 		47A192DD194C235F0011FAE6 /* RegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A192DC194C235F0011FAE6 /* RegViewController.m */; };
 		47A192E0194C544B0011FAE6 /* HouseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A192DF194C544B0011FAE6 /* HouseViewModel.m */; };
 		47A192E3194C66960011FAE6 /* CommetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A192E2194C66960011FAE6 /* CommetCell.m */; };
@@ -202,6 +203,8 @@
 		47A07E32194600DA00A9813F /* StoreListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreListViewController.m; sourceTree = "<group>"; };
 		47A07E341946013800A9813F /* StoreListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreListCell.h; sourceTree = "<group>"; };
 		47A07E351946013800A9813F /* StoreListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreListCell.m; sourceTree = "<group>"; };
+		47A1645F194D622C005CA1EE /* MyCenterPersionalSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterPersionalSettingController.h; sourceTree = "<group>"; };
+		47A16460194D622C005CA1EE /* MyCenterPersionalSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterPersionalSettingController.m; sourceTree = "<group>"; };
 		47A192DB194C235F0011FAE6 /* RegViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegViewController.h; sourceTree = "<group>"; };
 		47A192DC194C235F0011FAE6 /* RegViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegViewController.m; sourceTree = "<group>"; };
 		47A192DE194C544B0011FAE6 /* HouseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseViewModel.h; sourceTree = "<group>"; };
@@ -337,6 +340,8 @@
 				479495C819433B8E009901F9 /* viewModels */,
 				479495C519433B56009901F9 /* MyCentreTableViewController.h */,
 				479495C619433B56009901F9 /* MyCentreTableViewController.m */,
+				47A1645F194D622C005CA1EE /* MyCenterPersionalSettingController.h */,
+				47A16460194D622C005CA1EE /* MyCenterPersionalSettingController.m */,
 				479495CC19434742009901F9 /* cells */,
 			);
 			name = myCentre;
@@ -902,6 +907,7 @@
 				479F24961924DE9B006B4080 /* CleanViewModel.m in Sources */,
 				47A3C45619320B7600EE44EF /* BaseViewModel.m in Sources */,
 				479495CF19434770009901F9 /* MyCenterOrderCell.m in Sources */,
+				47A16461194D622D005CA1EE /* MyCenterPersionalSettingController.m in Sources */,
 				4712E07119289F2800DEA3AD /* WorkListTableViewController.m in Sources */,
 				4799EFAA1927527100863423 /* CleanServiceViewModel.m in Sources */,
 				47A3C4491931F46400EE44EF /* RegPasswordViewController.m in Sources */,

@@ -19,4 +19,5 @@
 @property (nonatomic) NSDictionary *choosdStore;
 -(void)getStore;
 -(void) getLocation;
+-(void)changeHostValue:(id)value forKey:(NSString*)key;
 @end

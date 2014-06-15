@@ -21,16 +21,16 @@
 
 - (void)awakeFromNib
 {
-    self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"center_cell_back_normal"]];
+    self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"center_cell_back_high"]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
     if (selected) {
-        self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"center_cell_back_high"]];
-    }else{
         self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"center_cell_back_normal"]];
+    }else{
+        self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"center_cell_back_high"]];
     }
     // Configure the view for the selected state
 }

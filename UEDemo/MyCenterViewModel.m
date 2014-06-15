@@ -9,6 +9,7 @@
 #import "MyCenterViewModel.h"
 #import "MaoAppDelegate.h"
 #import "Order.h"
+#import "AppService.h"
 @implementation MyCenterViewModel
 -(void)refreshOrders{
 #if TEST
@@ -52,11 +53,37 @@
     NSDictionary *hostUser=delegate.hostUser;
    // NSDictionary *currStore=delegate.currStore;
     
-    NSDictionary *parameters=@{@"userid":[hostUser objectForKey:@"userid"],@"phone":[hostUser objectForKey:@"username"]};
+    NSDictionary *parameters=@{@"userid":[hostUser objectForKey:@"userid"],@"username":[hostUser objectForKey:@"username"]};
     NSString *url=[NSString stringWithFormat:@"%@/eclean/loadOrdersOfUser.json",ACCOUNT_SERVER];
     [[self httpRequestWithURL:url andParameters:parameters method:@"get"] subscribeNext:^(NSArray *x) {
         self.myOrders =x;
     }];
 #endif
 }
+
+-(void)modifyAddress:(NSString*)address{
+    NSString *url=[NSString stringWithFormat:@"%@/eclean/editUserInfo.json",ACCOUNT_SERVER];
+    __block NSString *blockAddress=[address copy];
+    MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
+    id userid=[delegate.hostUser objectForKey:@"userid"];
+    NSDictionary *parameters=@{@"userid": userid,@"address":address};
+    [[self httpRequestWithURL:url andParameters:parameters method:@"post"]subscribeNext:^(id x) {
+        self.addressSetted=@(YES);
+        self.addressSetted=@(NO);
+        [[AppService defaultService] changeHostValue:blockAddress forKey:@"address"];
+    }];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end

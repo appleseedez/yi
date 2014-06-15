@@ -9,7 +9,7 @@
 #import "MyCentreTableViewController.h"
 #import "MyCenterViewModel.h"
 #import "MyCenterOrderCell.h"
-
+#import "MyCenterPersionalSettingController.h"
 @interface MyCentreTableViewController ()
 @property (nonatomic,weak) IBOutlet UITableView *tableView;
 @end
@@ -28,7 +28,18 @@
        
         return value;
     }]subscribeNext:^(id x) {}];
-    
+    //监听HUD
+    [[ RACObserve(self, centerViewModel.busy) map:^id(NSNumber *value) {
+        if ([value boolValue]) {
+            MBProgressHUD *hud =[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            hud.labelText = @"请稍后";
+            
+        } else {
+            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        }
+        
+        return value;
+    }]subscribeNext:^(id x) {}];
 }
 
 -(IBAction)dismiss:(id)sender{
@@ -136,15 +147,15 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+{       MyCenterPersionalSettingController *vc=segue.destinationViewController;
+     vc.centerViewModel=self.centerViewModel;
+    
 }
-*/
+
 
 @end

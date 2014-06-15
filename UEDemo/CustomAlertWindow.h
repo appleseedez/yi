@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CustomAlertWindowDelegate <NSObject>
+
+-(void)alertDidDisappear;
+
+@end
+
 @interface CustomAlertWindow : UIWindow
 +(instancetype)showWithText:(NSString*)text;
 - (instancetype)initWithText:(NSString*)text;
 @property (nonatomic) UILabel *textLabel;
+@property (nonatomic,weak) id <CustomAlertWindowDelegate> cdelegate;
 @end
