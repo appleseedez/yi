@@ -634,6 +634,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="center_order_center_back" id="aRv-HK-Dc6">
+                                <rect key="frame" x="0.0" y="57" width="320" height="163"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" id="WZp-a5-Po9">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -670,7 +674,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="28" sectionHeaderHeight="30" sectionFooterHeight="30" id="RVB-Tm-CeO">
-                                <rect key="frame" x="0.0" y="65" width="320" height="163"/>
+                                <rect key="frame" x="0.0" y="83" width="320" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -803,11 +807,23 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" id="4Zc-gJ-UK6">
+                                <rect key="frame" x="0.0" y="57" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="Acd-BR-51N">
+                                <rect key="frame" x="0.0" y="186" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="干洗预约单" id="oz0-rl-evu"/>
                     <connections>
+                        <outlet property="footerView" destination="Acd-BR-51N" id="0nc-UD-XOX"/>
+                        <outlet property="headerView" destination="4Zc-gJ-UK6" id="3DH-Z8-LCC"/>
                         <outlet property="lbAddress" destination="CO6-TK-dIy" id="dqE-1O-Z96"/>
                         <outlet property="lbPhone" destination="SYP-Be-u5p" id="9rD-so-cHV"/>
                         <outlet property="lbTime" destination="9uk-wN-BRR" id="wMg-Cf-bjx"/>

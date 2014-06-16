@@ -16,7 +16,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbAddress;
 @property (weak, nonatomic) IBOutlet UILabel *lbPhone;
 @property (weak, nonatomic) IBOutlet UILabel *lbTime;
- 
+@property (weak, nonatomic) IBOutlet UIView *headerView;
+@property (weak, nonatomic) IBOutlet UIView *footerView;
+
 @property (nonatomic) NSMutableArray *orderItems;
 @end
 
@@ -33,15 +35,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setHeader];
+    [self setFooter];
     MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
     self.lbAddress.text=[delegate.hostUser objectForKey:@"address"];
     self.lbPhone.text=[delegate.hostUser objectForKey:@"username"];
     
-    UIImageView *tableBackImage=[[UIImageView alloc]init];
-    tableBackImage.image=[UIImage imageNamed:@"center_order_center_back"];
-    
-    tableBackImage.frame=CGRectMake(0, 0, 320, 163);
-    self.tableView.backgroundView=tableBackImage;
+//    UIImageView *tableBackImage=[[UIImageView alloc]init];
+//    tableBackImage.image=[UIImage imageNamed:@"center_order_center_back"];
+//    
+//    tableBackImage.frame=CGRectMake(0, 0, 320, 163);
+//    self.tableView.backgroundView=tableBackImage;
     
     self.orderItems=[NSMutableArray new];
     
@@ -93,9 +97,8 @@
     NSString *strPrice=[NSString stringWithFormat:@"%.2f",price];
     return strPrice;
 }
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *headerView=[[UIView alloc]init];
-    headerView.frame=CGRectMake(0, 0, 320, 40);
+- (void)setHeader{
+    UIView *headerView=self.headerView;
     UILabel *name=[[UILabel alloc]initWithFrame:CGRectMake(13, 5, 66, 17)];
     [name setFont:[UIFont fontWithName:@"System" size:13]];
     name.text=@"物品";
@@ -115,11 +118,11 @@
     [price setTextAlignment:NSTextAlignmentCenter];
     [headerView addSubview:price];
     headerView.backgroundColor=[UIColor clearColor];
-    return headerView;
+   
 }
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    UIView *footerView=[[UIView alloc]init];
-    footerView.frame=CGRectMake(0, 0, 320, 40);
+- (void)setFooter{
+    UIView *footerView=self.footerView;
+    
     footerView.backgroundColor=[UIColor clearColor];
     UILabel *title=[[UILabel alloc]initWithFrame:CGRectMake(13, 5, 66, 30)];
     title.text=@"总价";
@@ -137,7 +140,7 @@
     tPrice.text=strTotalPrice;
     [footerView addSubview:tPrice];
     tPrice.textColor=[UIColor whiteColor];
-    return footerView;
+   
 }
 /*
 #pragma mark - Navigation
