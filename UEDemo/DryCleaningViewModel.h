@@ -12,5 +12,6 @@
 @property (nonatomic) NSArray *drySourceData;
 @property (nonatomic,weak) DryCleaningService *service;
 @property (nonatomic)  NSNumber *orderSuccess;
+@property (nonatomic) NSNumber *allPrice;
 -(void)subDryOrder;
 @end

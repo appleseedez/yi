@@ -22,7 +22,7 @@
         self.address=self.hostUser[@"address"];
         self.phone=self.hostUser[@"username"];
         self.source=@"IOS";
-        self.allPrice=@(0);
+        //self.allPrice=@(0);
     }
     return self;
 }

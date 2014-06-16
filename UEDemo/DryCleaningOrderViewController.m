@@ -129,6 +129,7 @@
         float price=[[self getPrice:d] floatValue];
         totalPrice=totalPrice+price;
     }
+    self.dryViewModel.allPrice=@(totalPrice);
     title.textColor=[UIColor whiteColor];
     NSString *strTotalPrice=[NSString stringWithFormat:@"%.2f",totalPrice];
     

@@ -42,7 +42,7 @@
             NSDictionary *item=@{@"itemid":[d objectForKey:@"id"],
                                  @"name":[d objectForKey:@"name"],
                                  @"amount":[d objectForKey:@"drynumber"],
-                                @"price":[d objectForKey:@"dryprice"]};
+                                @"price":[d objectForKey:@"price"]};
             [arr addObject:item];
         }
     }
@@ -54,6 +54,7 @@
     Order *o=[Order new];
     o.servicetype=@"gx";
     o.services=[arr copy];
+    o.allPrice=self.allPrice;
     NSString *url=[NSString stringWithFormat:@"%@/eclean/createDryCleanAppointment.json",ACCOUNT_SERVER];
     NSDictionary *parameters=[o toDictionary];
     [[self httpRequestWithURL:url andParameters:parameters method:@"post"]subscribeNext:^(id x) {
