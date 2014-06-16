@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 @class DryCleaningViewModel;
-@interface DryCleaningListViewController : UITableViewController
+@interface DryCleaningListViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic)  DryCleaningViewModel *dryViewModel;
 @end

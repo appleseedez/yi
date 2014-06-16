@@ -23,53 +23,51 @@
 
 
 {
+    self.imgHeader.clipsToBounds=YES;
+    [self.imgHeader.layer setCornerRadius:self.imgHeader.frame.size.height/2.0];
+    self.seporatorView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"login_background"]];
+    
+    self.lbDryNum.layer.borderColor=[UIColor whiteColor].CGColor;
+    self.lbDryNum.layer.borderWidth=1;
+    
+    self.lbPirce.text=@"￥ 0";
+    self.dryNum=@(0);
     //监听 sourceData
      [[RACObserve(self, sourceData) map:^id(NSDictionary *value) {
          self.lbName.text=[value objectForKey:@"name"];
-         self.lbDryPrice.text=[NSString stringWithFormat:@"干洗:%@",[value objectForKey:@"dryprice"]];
-         self.lbIroningPrice.text=[NSString stringWithFormat:@"熨烫:%@",[value objectForKey:@"ironingprice"]];
+         self.lbDryPrice.text=[NSString stringWithFormat:@"￥%@ / 件",[value objectForKey:@"price"]];
+        
          self.dryNum=[value objectForKey:@"drynumber"];
          self.ironNum=[value objectForKey:@"ironingnumber"];
          
          return value;
-     }]subscribeNext:^(id x) {
-         
-     }];
+     }]subscribeNext:^(id x) {}];
     
     
     //监听 干洗数量
     [[RACObserve(self, dryNum) map:^id(NSNumber *value) {
-        //熨烫数量不能超过干洗数量
-        if ([self.ironNum integerValue]>[value integerValue]) {
-            self.ironNum=value;
-            }
+       
         self.lbDryNum.text=[NSString stringWithFormat:@"%@",value];
         if ([value integerValue]>0) {
             self.didSelected=@(YES);
         }else{
             self.didSelected=@(NO);
         }
+        float price=[self.dryNum integerValue]*[[self.sourceData valueForKey:@"price"]  floatValue];
+        
+        self.lbPirce.text= [NSString stringWithFormat:@"￥ %.2f",price];
         [self.sourceData setValue:value forKey:@"drynumber"];
         return value;
-    }]subscribeNext:^(id x) {
-        
-    }];
-    //监听 熨烫数量
-    [[RACObserve(self, ironNum) map:^id(NSNumber *value) {
-        
-        self.lbIronNum.text=[NSString stringWithFormat:@"%@",value];
-        [self.sourceData setValue:value forKey:@"ironingnumber"];
-        return value;
-    }]subscribeNext:^(id x) {
-        
-    }];
+    }]subscribeNext:^(id x) {}];
+    
+  
     //监听 selected
    [[ RACObserve(self, didSelected) map:^id(id value) {
        if ([value boolValue]) {
-           self.imgSelected.image=[UIImage imageNamed:@"selection_choosed"];
+           self.contentView.backgroundColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0.1];
            
        }else{
-           self.imgSelected.image=[UIImage imageNamed:@"selection_unchoosed"];
+           self.contentView.backgroundColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0.2];
        }
        
        
@@ -78,50 +76,43 @@
         
     }];
     
+    //增加手势
+     //左划
+    UISwipeGestureRecognizer *recognizerL = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipeFrom:)];
     
-    //干洗+1
-    [[[self.btnAcDry rac_signalForControlEvents:UIControlEventTouchUpInside] map:^id(id value) {
-        NSInteger acDry= [self.dryNum integerValue];
-        self.dryNum=@(acDry+1);
-        return value;
-    }]subscribeNext:^(id x) {
-        
-    }];
+    [recognizerL setDirection:(UISwipeGestureRecognizerDirectionLeft)];
+    [self.contentView addGestureRecognizer:recognizerL];
+    //右划
+    UISwipeGestureRecognizer *recognizerR = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipeFrom:)];
     
-    [[[self.btnDeDry rac_signalForControlEvents:UIControlEventTouchUpInside] map:^id(id value) {
-            NSInteger acDry= [self.dryNum integerValue];
-           if (acDry>0) {
-               self.dryNum=@(acDry-1);
-           }
-           
-           return value;
-       }]subscribeNext:^(id x) {
-           
-       }];
+    [recognizerR setDirection:(UISwipeGestureRecognizerDirectionRight)];
+    [self.contentView addGestureRecognizer:recognizerR];
     
-    //熨烫
-    [[[self.btnAcIron rac_signalForControlEvents:UIControlEventTouchUpInside] map:^id(id value) {
-        NSInteger acIron= [self.ironNum integerValue];
-        if (acIron <[self.dryNum integerValue]) {
-            self.ironNum=@(acIron+1);
-        }
+    UILongPressGestureRecognizer *longRecignizer=[[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongFrom:)];
+    [self.contentView addGestureRecognizer:longRecignizer];
+    
         
-        return value;
-    }]subscribeNext:^(id x) {
-        
-    }];
-    [[[self.btnDeIron rac_signalForControlEvents:UIControlEventTouchUpInside] map:^id(id value) {
-        NSInteger deIron= [self.ironNum integerValue];
-        if (deIron >0) {
-            self.ironNum=@(deIron-1);
-        }
-        
-        return value;
-    }]subscribeNext:^(id x) {
-        
-    }];
+  
+    
 }
-
+-(void)handleLongFrom:(UISwipeGestureRecognizer *)recognizer{
+    self.dryNum=@(0);
+}
+-(void)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer{
+    
+  if(recognizer.direction==UISwipeGestureRecognizerDirectionLeft) {
+        
+      if ([self.dryNum integerValue]>0) {
+          self.dryNum=@([self.dryNum integerValue]-1);
+      }
+      
+    }
+    
+    if(recognizer.direction==UISwipeGestureRecognizerDirectionRight) {
+        
+        self.dryNum=@([self.dryNum integerValue]+1);
+    }
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
