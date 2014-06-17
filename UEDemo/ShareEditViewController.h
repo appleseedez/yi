@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class StarView;
+@class  ShareViewModel;
 @interface ShareEditViewController : UIViewController<UITextFieldDelegate>
 @property (nonatomic) NSString *shareType;
+@property (nonatomic) StarView *starView;
+@property (nonatomic) ShareViewModel *shareViewModel;
+@property (nonatomic) NSDictionary *order;
 @end

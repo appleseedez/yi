@@ -854,7 +854,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="68" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <inset key="contentEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="contentEdgeInsets" minX="-20" minY="20" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="worker_btn_back">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -873,10 +873,11 @@
                                         <rect key="frame" x="251" y="0.0" width="68" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" image="worker_btn_back">
+                                        <inset key="contentEdgeInsets" minX="20" minY="20" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="center_persional_setting">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <state key="highlighted" image="center_persional_setting_high"/>
                                         <connections>
                                             <segue destination="14t-kQ-yIQ" kind="push" id="SLb-Ur-dyq"/>
                                         </connections>
@@ -1925,6 +1926,7 @@
                     <navigationItem key="navigationItem" title="个人设置" id="JAL-7A-bH9"/>
                     <connections>
                         <outlet property="lbTitle" destination="KD9-4d-9Ui" id="R13-RN-FVG"/>
+                        <outlet property="shareView" destination="LDq-P9-YdF" id="oe1-z8-G1b"/>
                         <outlet property="txtShareContent" destination="fcD-9V-cTw" id="mKZ-zv-ivA"/>
                     </connections>
                 </viewController>
@@ -1940,6 +1942,8 @@
         <image name="center_order_phone" width="12" height="18"/>
         <image name="center_order_time" width="15" height="15"/>
         <image name="center_order_usermessage_back" width="320" height="89"/>
+        <image name="center_persional_setting" width="26" height="26"/>
+        <image name="center_persional_setting_high" width="22" height="22"/>
         <image name="clean_watch_high" width="290" height="40"/>
         <image name="clean_watch_normal" width="294" height="44"/>
         <image name="header" width="102" height="102"/>

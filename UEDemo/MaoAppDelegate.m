@@ -21,7 +21,7 @@
     //添加新浪微博应用 注册网址 http://open.weibo.com
     [ShareSDK connectSinaWeiboWithAppKey:@"3756916947"
                                appSecret:@"de85fc7c9bb81ca7ded59052f00b6c56"
-                             redirectUri:@"http://appgo.cn"];
+                             redirectUri:@"http://www.rongmm.com.cn"];
 
     [ShareSDK connectWeChatWithAppId:@"wx1dc20211dd51ee2c" wechatCls:[WXApi class]];
     

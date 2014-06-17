@@ -12,6 +12,7 @@
 #import "NSDictionary+killNull.h"
 #import "ShareView.h"
 #import "ShareEditViewController.h"
+#import "ShareService.h"
 @interface OrderWaitingServiceViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 @property (weak, nonatomic) IBOutlet UILabel *lbOrderName;
@@ -26,7 +27,7 @@
 
 @implementation OrderWaitingServiceViewController
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-   
+    [self dismissShareView];
 }
 - (IBAction)pop:(id)sender {
     
@@ -36,17 +37,19 @@
     [self showEditView:@"微信朋友圈"];
 }
 - (IBAction)shareWeibo:(id)sender {
-   
+    [[ShareService defautService] shareWithTitle:@"容么么" content:@"" type:@"微博"];
 }
 - (IBAction)shareWeixinHaoyou:(id)sender {
      [self showEditView:@"微信好友"];
 }
 - (IBAction)shareMendian:(id)sender {
+    [self showEditView:@"门店"];
 }
 -(void)showEditView:(NSString*)type{
     [self dismissShareView];
     ShareEditViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"shareEdit"];
     vc.shareType=type;
+    vc.order=self.order;
     [self presentViewController:vc animated:YES completion:^{
         
     }];
@@ -110,7 +113,7 @@
         //评论
         [self.rightBarButton setBackgroundImage:[UIImage imageNamed:@"order_button_commit"] forState:UIControlStateNormal];
         [self.rightBarButton setBackgroundImage:[UIImage imageNamed:@"order_button_commit_high"] forState:UIControlStateHighlighted];
-        
+        [self.rightBarButton setTitle:@"" forState:UIControlStateNormal];
     }
 }
 -(void)loadData{

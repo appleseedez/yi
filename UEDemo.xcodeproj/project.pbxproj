@@ -153,6 +153,8 @@
 		47A192DD194C235F0011FAE6 /* RegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A192DC194C235F0011FAE6 /* RegViewController.m */; };
 		47A192E0194C544B0011FAE6 /* HouseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A192DF194C544B0011FAE6 /* HouseViewModel.m */; };
 		47A192E3194C66960011FAE6 /* CommetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A192E2194C66960011FAE6 /* CommetCell.m */; };
+		47A2752D19507276001B90B9 /* StarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A2752C19507276001B90B9 /* StarView.m */; };
+		47A2753019507965001B90B9 /* ShareViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A2752F19507965001B90B9 /* ShareViewModel.m */; };
 		47A3C43A19319F0D00EE44EF /* DryCleaningOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C43919319F0D00EE44EF /* DryCleaningOrderViewController.m */; };
 		47A3C43D1931A14C00EE44EF /* DryOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C43C1931A14C00EE44EF /* DryOrderCell.m */; };
 		47A3C4431931F14900EE44EF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A3C4421931F14900EE44EF /* Login.storyboard */; };
@@ -385,6 +387,10 @@
 		47A192DF194C544B0011FAE6 /* HouseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseViewModel.m; sourceTree = "<group>"; };
 		47A192E1194C66960011FAE6 /* CommetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommetCell.h; sourceTree = "<group>"; };
 		47A192E2194C66960011FAE6 /* CommetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommetCell.m; sourceTree = "<group>"; };
+		47A2752B19507276001B90B9 /* StarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarView.h; sourceTree = "<group>"; };
+		47A2752C19507276001B90B9 /* StarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarView.m; sourceTree = "<group>"; };
+		47A2752E19507965001B90B9 /* ShareViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewModel.h; sourceTree = "<group>"; };
+		47A2752F19507965001B90B9 /* ShareViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewModel.m; sourceTree = "<group>"; };
 		47A3C43819319F0D00EE44EF /* DryCleaningOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryCleaningOrderViewController.h; sourceTree = "<group>"; };
 		47A3C43919319F0D00EE44EF /* DryCleaningOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DryCleaningOrderViewController.m; sourceTree = "<group>"; };
 		47A3C43B1931A14C00EE44EF /* DryOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DryOrderCell.h; sourceTree = "<group>"; };
@@ -582,6 +588,8 @@
 				47A165AB194DD8A3005CA1EE /* ShareView.xib */,
 				47A165AD194DD98A005CA1EE /* ShareView.h */,
 				47A165AE194DD98A005CA1EE /* ShareView.m */,
+				47A2752B19507276001B90B9 /* StarView.h */,
+				47A2752C19507276001B90B9 /* StarView.m */,
 				479495CC19434742009901F9 /* cells */,
 			);
 			name = myCentre;
@@ -592,6 +600,8 @@
 			children = (
 				479495C919433BB1009901F9 /* MyCenterViewModel.h */,
 				479495CA19433BB1009901F9 /* MyCenterViewModel.m */,
+				47A2752E19507965001B90B9 /* ShareViewModel.h */,
+				47A2752F19507965001B90B9 /* ShareViewModel.m */,
 			);
 			name = viewModels;
 			sourceTree = "<group>";
@@ -1379,6 +1389,7 @@
 				47A165B2194DDFE1005CA1EE /* ShareEditViewController.m in Sources */,
 				479C52B71923854A00CCF9F4 /* MaoViewController.m in Sources */,
 				47596C251933578400C8139D /* RegViewModel.m in Sources */,
+				47A2753019507965001B90B9 /* ShareViewModel.m in Sources */,
 				47A07E33194600DA00A9813F /* StoreListViewController.m in Sources */,
 				47A16464194D7B9C005CA1EE /* OrderWaitingServiceViewController.m in Sources */,
 				47A165AA194DC9D6005CA1EE /* ShareService.m in Sources */,
@@ -1393,6 +1404,7 @@
 				479E1F96193C80580062A15D /* DetailCheckCell.m in Sources */,
 				479E1F99193C82110062A15D /* CleanDetailCheckViewModel.m in Sources */,
 				47A192E0194C544B0011FAE6 /* HouseViewModel.m in Sources */,
+				47A2752D19507276001B90B9 /* StarView.m in Sources */,
 				4712E06819289DAC00DEA3AD /* TimeWorkerService.m in Sources */,
 				4799EFB31927608400863423 /* OrderSelection.m in Sources */,
 				479F249C1924DED2006B4080 /* CleanSectionModel.m in Sources */,
