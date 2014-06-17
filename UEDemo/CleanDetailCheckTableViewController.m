@@ -31,9 +31,10 @@
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
     self.detailViewModel=[[CleanDetailCheckViewModel alloc]init];
     [[CleanService defaultService] loadServiceOrderSelections];
+    __weak id weakSelf=self;
    [[ RACObserve(self, detailViewModel.detaileChecks) map:^id(id value) {
-       
-       [self.tableView reloadData];
+       __strong CleanDetailCheckTableViewController *strongSelf=weakSelf;
+       [strongSelf.tableView reloadData];
         return value;
     }]subscribeNext:^(id x) {}];
     
@@ -78,5 +79,8 @@
    CleanDetailCheckModel *model= [self.detailViewModel.detaileChecks objectAtIndex:indexPath.row];
     BOOL choosed=[model.choosed boolValue];
     model.choosed=@(!choosed);
+}
+-(void)dealloc{
+    NSLog(@"%@ dealloc",self);
 }
 @end

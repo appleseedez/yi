@@ -35,9 +35,11 @@
     
     self.listViewModel=[[WorkerListViewModel alloc]init];
     [self.listViewModel loadWorkerList];
-    
+   __weak id weakSelf=self;
     [[RACObserve(self, listViewModel.workerList) map:^id(id value) {
-        [self.tableVIew reloadData];
+        
+        __strong WorkListTableViewController *strongSelf=weakSelf;
+        [strongSelf.tableVIew reloadData];
         
         return value;
     }]subscribeNext:^(id x) {
@@ -104,5 +106,7 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+-(void)dealloc{
+    NSLog(@"%@ dealloc",self);
+}
 @end

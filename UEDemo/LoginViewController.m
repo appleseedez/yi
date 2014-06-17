@@ -83,13 +83,15 @@
     self.txtPhone.text=@"13012360815";
   self.loginViewModel = [[LoginViewModel alloc] init];
   //监听HUD
+    __weak id weakSelf=self;
    [[ RACObserve(self, loginViewModel.busy) map:^id(NSNumber *value) {
+       __strong LoginViewController *strongSelf=weakSelf;
      if ([value boolValue]) {
-       MBProgressHUD *hud =[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+       MBProgressHUD *hud =[MBProgressHUD showHUDAddedTo:strongSelf.view animated:YES];
        hud.labelText = @"请稍后";
 
      } else {
-       [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+       [MBProgressHUD hideAllHUDsForView:strongSelf.view animated:YES];
      }
 
      return value;
@@ -117,5 +119,7 @@ preparation before navigation
     // Pass the selected object to the new view controller.
 }
 */
-
+-(void)dealloc{
+    NSLog(@"%@ dealloc",self);
+}
 @end

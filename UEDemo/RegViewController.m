@@ -78,22 +78,27 @@
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(conformKeyBoard:) name:UIKeyboardWillChangeFrameNotification object:Nil];
     //监听HUD
+    __weak id weakSelf=self;
     [[ RACObserve(self, regViewModel.busy) map:^id(NSNumber *value) {
+        __strong  RegViewController *strongSelf=weakSelf;
         if ([value boolValue]) {
-            MBProgressHUD *hud =[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+          
+            
+            MBProgressHUD *hud =[MBProgressHUD showHUDAddedTo:strongSelf.view animated:YES];
             hud.labelText = @"请稍后";
             
         } else {
-            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+            [MBProgressHUD hideAllHUDsForView:strongSelf.view animated:YES];
         }
         
         return value;
     }]subscribeNext:^(id x) {}];
     [[RACObserve(self, regViewModel.messageSended) map:^id(NSNumber *value) {
+        __strong  RegViewController *strongSelf=weakSelf;
         if ([value boolValue]) {
-            self.txtCode.userInteractionEnabled=YES;
-            self.txtPassword.userInteractionEnabled=YES;
-            self.txtRePassword.userInteractionEnabled=YES;
+            strongSelf.txtCode.userInteractionEnabled=YES;
+            strongSelf.txtPassword.userInteractionEnabled=YES;
+            strongSelf.txtRePassword.userInteractionEnabled=YES;
             [CustomAlertWindow showWithText:@"短信已经发送至您的手机\n请注意查收"];
         }
         
@@ -143,6 +148,8 @@
     
 }
 
-
+-(void)dealloc{
+    NSLog(@"%@ dealloc",self);
+}
 
 @end

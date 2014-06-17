@@ -27,10 +27,10 @@
       [RACObserve(self, worker.selected) subscribeNext:^(NSNumber *x) {
           __strong WorkCell *strongSelf=weakSelf;
           if ([x boolValue]) {
-              self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"worker_cell_back_normal"]] ;
+              strongSelf.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"worker_cell_back_normal"]] ;
               strongSelf.imgSelected.image=[UIImage imageNamed:@"tableview_checked"];
           }else{
-              self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"worker_cell_back_selected"]] ;
+              strongSelf.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"worker_cell_back_selected"]] ;
               strongSelf.imgSelected.image=[UIImage imageNamed:@"tableview_unchecked"];
           }
       }];

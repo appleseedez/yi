@@ -29,39 +29,29 @@
                                       alpha:1];
   self.textType = @(loginTextTypeNormal);
   [self.layer setBorderWidth:0.3];
-
+    __weak id weakSelf=self;
     [[RACObserve(self, textType) map:^id(NSNumber *value) {
-
+        __strong LoginInputTextField *strongSelf=weakSelf;
       if ([value integerValue] == loginTextTypeNormal) {
-        self.textColor = [UIColor whiteColor];
-        self.backgroundColor = [UIColor clearColor];
-        [self.layer
+        strongSelf.textColor = [UIColor whiteColor];
+        strongSelf.backgroundColor = [UIColor clearColor];
+        [strongSelf.layer
             setBorderColor:
                 [UIColor colorWithPatternImage:[UIImage imageNamed:@"输入边框"]]
                     .CGColor];
-        self.background = [UIImage imageNamed:@"透明输入框"];
+        strongSelf.background = [UIImage imageNamed:@"透明输入框"];
       } else if ([value integerValue] == loginTextTypeError) {
-        self.textColor = errorRed;
-        [self.layer setBorderColor:errorRed.CGColor];
+        strongSelf.textColor = errorRed;
+        [strongSelf.layer setBorderColor:errorRed.CGColor];
       } else if ([value integerValue] == loginTextTypeEdit) {
-        self.textColor = editGray;
-        self.placeHolder = @"";
-        self.backgroundColor = [UIColor whiteColor];
+        strongSelf.textColor = editGray;
+        strongSelf.placeHolder = @"";
+        strongSelf.backgroundColor = [UIColor whiteColor];
       }
 
       return value;
     }]subscribeNext:^(id x) {}];
 
-    [[RACObserve(self, text) map:^id(NSString *value) {
-      //      if (value.length == 0 && self.isFirstResponder == NO) {
-      //        [self performSelector:@selector(setText:)
-      //                   withObject:self.placeHolder
-      //                   afterDelay:0];
-      //      } else {
-      //      }
-
-      return value;
-    }]subscribeNext:^(id x) {}];
   
 }
 

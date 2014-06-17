@@ -72,5 +72,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
    
 }
-
+-(void)dealloc{
+    NSLog(@"%@ dealloc",self);
+}
 @end

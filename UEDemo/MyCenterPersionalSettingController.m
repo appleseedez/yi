@@ -47,23 +47,27 @@
 {
     [super viewDidLoad];
     [self.txtAddress setUI];
+    
+    __weak id weakSelf=self;
     //监听HUD
     [[ RACObserve(self, centerViewModel.busy) map:^id(NSNumber *value) {
+        __strong MyCenterPersionalSettingController *strongSelf=weakSelf;
         if ([value boolValue]) {
-            MBProgressHUD *hud =[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            MBProgressHUD *hud =[MBProgressHUD showHUDAddedTo:strongSelf.view animated:YES];
             hud.labelText = @"请稍后";
             
         } else {
-            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+            [MBProgressHUD hideAllHUDsForView:strongSelf.view animated:YES];
         }
         
         return value;
     }]subscribeNext:^(id x) {}];
     
     [[ RACObserve(self, centerViewModel.addressSetted) map:^id(NSNumber *value) {
+        __strong MyCenterPersionalSettingController *strongSelf=weakSelf;
         if ([value boolValue]) {
          CustomAlertWindow *alert = [CustomAlertWindow showWithText:@"新地址设置成功"];
-            alert.cdelegate=self;
+            alert.cdelegate=strongSelf;
         }
         
         return value;
@@ -76,6 +80,8 @@
     }];
 }
 
-
+-(void)dealloc{
+    NSLog(@"%@ dealloc",self);
+}
 
 @end

@@ -20,12 +20,13 @@
     [self.lbTitle setTextColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"login_background"]]];
     __weak id weakSelf=self;
    [[ RACObserve(self, sectionModel.selected)map:^id(NSNumber *value) {
+       __strong CleanTableViewCell *strongSelf=weakSelf;
        if ([value boolValue]) {
-           self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"clean_starcell_back_selected"]];
-           [self.btnSelected setImage:[UIImage imageNamed:@"clean_star_cell_selected"] forState:UIControlStateNormal];
+           strongSelf.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"clean_starcell_back_selected"]];
+           [strongSelf.btnSelected setImage:[UIImage imageNamed:@"clean_star_cell_selected"] forState:UIControlStateNormal];
        }else{
-           self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"clean_starcell_back_normal"]];
-           [self.btnSelected setImage:[UIImage imageNamed:@"clean_star_cell_normal"] forState:UIControlStateNormal];
+           strongSelf.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"clean_starcell_back_normal"]];
+           [strongSelf.btnSelected setImage:[UIImage imageNamed:@"clean_star_cell_normal"] forState:UIControlStateNormal];
        }
        
        
@@ -35,6 +36,7 @@
     }];
     
     [RACObserve(self, sectionModel.selections) subscribeNext:^(NSArray *x) {
+
         __strong CleanTableViewCell *strongSelf=weakSelf;
         if ([x count]) {
             [strongSelf.btnSelected setHidden:NO];

@@ -13,19 +13,24 @@
 
 - (void)awakeFromNib
 {
+    __weak id weakSelf=self;
+    
       [[RACObserve(self, detailModel.selection) map:^id(OrderSelection *value) {
-          self.lbTitle.text=value.name;
+          __strong DetailCheckCell *strongSelf=weakSelf;
+          strongSelf.lbTitle.text=value.name;
           
           return value;
       }]subscribeNext:^(id x) {}];
+    
     [[RACObserve(self, detailModel.choosed) map:^id(NSNumber *value) {
+         __strong DetailCheckCell *strongSelf=weakSelf;
         if ([value boolValue]) {
-            self.imgCheckBox.image=[UIImage imageNamed:@"tableview_checked"];
+            strongSelf.imgCheckBox.image=[UIImage imageNamed:@"tableview_checked"];
             
-            self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"clean_star_selection_cell_selectted"]];
+            strongSelf.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"clean_star_selection_cell_selectted"]];
         }else{
-             self.imgCheckBox.image=[UIImage imageNamed:@"tableview_unchecked"];
-            self.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"clean_star_selection_cell_normal"]];
+             strongSelf.imgCheckBox.image=[UIImage imageNamed:@"tableview_unchecked"];
+            strongSelf.contentView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"clean_star_selection_cell_normal"]];
         }
         
         return value;

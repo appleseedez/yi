@@ -10,6 +10,7 @@
 #import "AppService.h"
 #import "HouseViewModel.h"
 #import "CommetCell.h"
+#import "NSDictionary+killNull.h"
 @interface MaoHouseViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *btnScan;
 @property (weak, nonatomic) IBOutlet UIView *imgBorderView;
@@ -33,13 +34,15 @@
     [self.houseViewModel loadStore];
     [self.houseViewModel loadCommets];
     //监听HUD
+  __weak   id weakSelf=self;
     [[ RACObserve(self, houseViewModel.busy) map:^id(NSNumber *value) {
+        __strong MaoHouseViewController *strongSelf=weakSelf;
         if ([value boolValue]) {
-            MBProgressHUD *hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            MBProgressHUD *hud=[MBProgressHUD showHUDAddedTo:strongSelf.view animated:YES];
             hud.labelText=@"请稍后";
             
         }else{
-            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+            [MBProgressHUD hideAllHUDsForView:strongSelf.view animated:YES];
         }
         
         
@@ -47,10 +50,10 @@
     }]subscribeNext:^(id x) {}];
     //监听 详细信息
    [[ RACObserve(self, houseViewModel.store) map:^id(NSDictionary *value) {
-       if (value) {
-           self.txtServiceconcept.text=[value objectForKey:@"serviceconcept"];
-           self.txtServicetenets.text=[value objectForKey:@"servicetenets"];
-           self.txtStoreName.text=[value objectForKey:@"name"];
+       __strong MaoHouseViewController *strongSelf=weakSelf;       if (value) {
+           strongSelf.txtServiceconcept.text=[value objectForKey:@"serviceconcept"];
+           strongSelf.txtServicetenets.text=[value objectForKey:@"servicetenets"];
+           strongSelf.txtStoreName.text=[value objectForKey:@"name"];
 
        }
        
@@ -60,8 +63,9 @@
     
     //监听 加载评论
     [[ RACObserve(self, houseViewModel.commets) map:^id(NSDictionary *value) {
+        __strong MaoHouseViewController *strongSelf=weakSelf;
         if (value) {
-            [self.tableView reloadData];
+            [strongSelf.tableView reloadData];
         }
         
         
@@ -101,7 +105,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CommetCell *cell=[tableView dequeueReusableCellWithIdentifier:@"commetCell"];
     NSDictionary *dic=[self.houseViewModel.commets objectAtIndex:indexPath.row];
-    [cell loatCommet:dic];
+    [cell loatCommet:[dic killNull]];
     
     return cell;
 }
@@ -140,5 +144,8 @@
         
     }
     
+}
+-(void)dealloc{
+    NSLog(@"%@ dealloc",self);
 }
 @end

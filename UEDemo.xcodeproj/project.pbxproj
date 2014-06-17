@@ -156,8 +156,6 @@
 		47A3C43A19319F0D00EE44EF /* DryCleaningOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C43919319F0D00EE44EF /* DryCleaningOrderViewController.m */; };
 		47A3C43D1931A14C00EE44EF /* DryOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C43C1931A14C00EE44EF /* DryOrderCell.m */; };
 		47A3C4431931F14900EE44EF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A3C4421931F14900EE44EF /* Login.storyboard */; };
-		47A3C4461931F25100EE44EF /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C4451931F25100EE44EF /* RegisterViewController.m */; };
-		47A3C4491931F46400EE44EF /* RegPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C4481931F46400EE44EF /* RegPasswordViewController.m */; };
 		47A3C44D1931F62000EE44EF /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C44C1931F62000EE44EF /* NSString+MD5.m */; };
 		47A3C4511931F69900EE44EF /* HTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C4501931F69900EE44EF /* HTTPService.m */; };
 		47A3C45619320B7600EE44EF /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3C45519320B7600EE44EF /* BaseViewModel.m */; };
@@ -393,10 +391,6 @@
 		47A3C43C1931A14C00EE44EF /* DryOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DryOrderCell.m; sourceTree = "<group>"; };
 		47A3C43F1931F13D00EE44EF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		47A3C4421931F14900EE44EF /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		47A3C4441931F25100EE44EF /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
-		47A3C4451931F25100EE44EF /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		47A3C4471931F46400EE44EF /* RegPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegPasswordViewController.h; sourceTree = "<group>"; };
-		47A3C4481931F46400EE44EF /* RegPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegPasswordViewController.m; sourceTree = "<group>"; };
 		47A3C44B1931F62000EE44EF /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		47A3C44C1931F62000EE44EF /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		47A3C44F1931F69900EE44EF /* HTTPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPService.h; sourceTree = "<group>"; };
@@ -1104,10 +1098,6 @@
 			children = (
 				47A3C43F1931F13D00EE44EF /* LoginViewController.h */,
 				479F444E1944249100FEDE2D /* LoginViewController.m */,
-				47A3C4441931F25100EE44EF /* RegisterViewController.h */,
-				47A3C4451931F25100EE44EF /* RegisterViewController.m */,
-				47A3C4471931F46400EE44EF /* RegPasswordViewController.h */,
-				47A3C4481931F46400EE44EF /* RegPasswordViewController.m */,
 				47A192DB194C235F0011FAE6 /* RegViewController.h */,
 				47A192DC194C235F0011FAE6 /* RegViewController.m */,
 			);
@@ -1373,7 +1363,6 @@
 				47A16461194D622D005CA1EE /* MyCenterPersionalSettingController.m in Sources */,
 				4712E07119289F2800DEA3AD /* WorkListTableViewController.m in Sources */,
 				4799EFAA1927527100863423 /* CleanServiceViewModel.m in Sources */,
-				47A3C4491931F46400EE44EF /* RegPasswordViewController.m in Sources */,
 				4799EFA01927386700863423 /* CleanService.m in Sources */,
 				479F444F1944249100FEDE2D /* LoginViewController.m in Sources */,
 				47A07E361946013800A9813F /* StoreListCell.m in Sources */,
@@ -1394,7 +1383,6 @@
 				47A16464194D7B9C005CA1EE /* OrderWaitingServiceViewController.m in Sources */,
 				47A165AA194DC9D6005CA1EE /* ShareService.m in Sources */,
 				479C56631932D5600086380C /* AppService.m in Sources */,
-				47A3C4461931F25100EE44EF /* RegisterViewController.m in Sources */,
 				47F0CCE9193F5EE700702053 /* Order.m in Sources */,
 				47AC556A1949DB730052154B /* CleanWatchCell.m in Sources */,
 				47A3C4511931F69900EE44EF /* HTTPService.m in Sources */,

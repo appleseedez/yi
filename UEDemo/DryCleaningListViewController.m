@@ -29,8 +29,11 @@
     [super viewDidLoad];
     
     self.dryViewModel=[[DryCleaningViewModel alloc]init];
+  __weak  id weadSelf=self;
     [[RACObserve(self, dryViewModel.drySourceData) map:^id(id value) {
-        [self.tableView reloadData];
+        
+        __strong DryCleaningListViewController *strongSelf=weadSelf;
+        [strongSelf.tableView reloadData];
         return value;
     }]subscribeNext:^(id x) {}];
         
@@ -72,5 +75,7 @@
     orderVC.dryViewModel=self.dryViewModel;
 }
 
-
+-(void)dealloc{
+    NSLog(@"%@ dealloc",self);
+}
 @end

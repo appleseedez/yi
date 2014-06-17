@@ -22,8 +22,10 @@
 }
 -(void)loadWorkerList{
     RACSignal *RACworkerList=[[TimeWorkerService defaultService] loadWorkers];
+    __weak id weakSelf=self;
        [[RACworkerList map:^id(NSArray *value) {
-           self.workerList=value;
+           __strong WorkerListViewModel* strongSelf=weakSelf;
+           strongSelf.workerList=value;
            return @(YES);
        }] subscribeNext:^(id x) {
            

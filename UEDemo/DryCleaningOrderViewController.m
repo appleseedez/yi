@@ -142,6 +142,9 @@
     tPrice.textColor=[UIColor whiteColor];
    
 }
+-(void)dealloc{
+    NSLog(@"%@ dealloc",self);
+}
 /*
 #pragma mark - Navigation
 

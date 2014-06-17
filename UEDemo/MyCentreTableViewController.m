@@ -25,19 +25,24 @@
     [super viewDidLoad];
     self.centerViewModel=[MyCenterViewModel new];
     [self.centerViewModel refreshOrders];
+    __weak id weakSelf=self;
+    
    [[ RACObserve(self, centerViewModel.myOrders) map:^id(NSArray *value) {
-       [self.tableView reloadData];
+       __strong MyCentreTableViewController *strongSelf=weakSelf;
+       [strongSelf.tableView reloadData];
        
         return value;
     }]subscribeNext:^(id x) {}];
     //监听HUD
     [[ RACObserve(self, centerViewModel.busy) map:^id(NSNumber *value) {
+         __strong MyCentreTableViewController *strongSelf=weakSelf;
         if ([value boolValue]) {
-            MBProgressHUD *hud =[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+           
+            MBProgressHUD *hud =[MBProgressHUD showHUDAddedTo:strongSelf.view animated:YES];
             hud.labelText = @"请稍后";
             
         } else {
-            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+            [MBProgressHUD hideAllHUDsForView:strongSelf.view animated:YES];
         }
         
         return value;
@@ -205,6 +210,8 @@
      vc.centerViewModel=self.centerViewModel;
     
 }
-
+-(void)dealloc{
+    NSLog(@"%@ dealloc",self);
+}
 
 @end

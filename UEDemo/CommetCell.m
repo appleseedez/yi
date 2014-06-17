@@ -35,7 +35,7 @@
     // Configure the view for the selected state
 }
 -(void)loatCommet:(NSDictionary*)data{
-    self.lbName.text=[data objectForKey:@"adminname"];
+    self.lbName.text=[data objectForKey:@"username"];
     self.lbCommet.text=[data objectForKey:@"content"];
 }
 @end

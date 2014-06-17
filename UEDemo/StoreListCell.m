@@ -22,13 +22,15 @@
 - (void)awakeFromNib
 {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cancelOther) name:@"storeListCellChoosed" object:nil];
+    __weak id weakSelf=self;
     [[RACObserve(self, choosed) map:^id(NSNumber *value) {
+        __strong StoreListCell *strongSelf=weakSelf;
         if ([value boolValue]) {
-            [self.btnBack setBackgroundImage:[UIImage imageNamed:@"store_tableview_unselected"] forState:UIControlStateNormal];
-            self.imgChecked.image=[UIImage imageNamed:@"tableview_checked"];
+            [strongSelf.btnBack setBackgroundImage:[UIImage imageNamed:@"store_tableview_unselected"] forState:UIControlStateNormal];
+            strongSelf.imgChecked.image=[UIImage imageNamed:@"tableview_checked"];
         }else{
-            [self.btnBack setBackgroundImage:[UIImage imageNamed:@"store_tableview_selected"] forState:UIControlStateNormal];
-            self.imgChecked.image=[UIImage imageNamed:@"tableview_unchecked"];
+            [strongSelf.btnBack setBackgroundImage:[UIImage imageNamed:@"store_tableview_selected"] forState:UIControlStateNormal];
+            strongSelf.imgChecked.image=[UIImage imageNamed:@"tableview_unchecked"];
         }
         
         
