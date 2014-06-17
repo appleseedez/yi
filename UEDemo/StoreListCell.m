@@ -25,9 +25,11 @@
     __weak id weakSelf=self;
     [[RACObserve(self, choosed) map:^id(NSNumber *value) {
         __strong StoreListCell *strongSelf=weakSelf;
+        [strongSelf.store setValue:strongSelf.choosed forKeyPath:@"choosed"];
         if ([value boolValue]) {
             [strongSelf.btnBack setBackgroundImage:[UIImage imageNamed:@"store_tableview_unselected"] forState:UIControlStateNormal];
             strongSelf.imgChecked.image=[UIImage imageNamed:@"tableview_checked"];
+            strongSelf.contextController.choosedStore=strongSelf.store;
         }else{
             [strongSelf.btnBack setBackgroundImage:[UIImage imageNamed:@"store_tableview_selected"] forState:UIControlStateNormal];
             strongSelf.imgChecked.image=[UIImage imageNamed:@"tableview_unchecked"];
@@ -49,6 +51,7 @@
     }
     self.lbName.text=name;
     self.lbAddress.text=address;
+    self.store=store;
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {

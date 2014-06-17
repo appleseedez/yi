@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbPhone;
 @property (weak, nonatomic) IBOutlet UIImageView *imgLogo;
 @property (weak, nonatomic) IBOutlet UIView *serverListView;
+@property (weak, nonatomic) IBOutlet UIButton *rightBarButton;
 @property (nonatomic)   ShareView *shareView;
 @end
 
@@ -52,7 +53,16 @@
     
 }
 - (IBAction)peyOrShare:(id)sender {
-    [self share];
+    NSInteger status=[[self.order objectForKey:@"status"] integerValue];
+    if (status==3) {
+        [self share];
+    }else if (status<3){
+        [self pay];
+    }
+    
+}
+-(void)pay{
+    
 }
 -(void)share{
 
@@ -85,8 +95,23 @@
     [super viewDidLoad];
     [self loadShareView];
     [self loadData];
-    
+    [self setRightStatusButton];
     // Do any additional setup after loading the view.
+}
+-(void)setRightStatusButton{
+     NSInteger status=[[self.order objectForKey:@"status"] integerValue];
+    if (status<3) {
+        //支付
+        [self.rightBarButton setBackgroundImage:[UIImage imageNamed:@"order_button_blank"] forState:UIControlStateNormal];
+        [self.rightBarButton setBackgroundImage:[UIImage imageNamed:@"order_button_blank_high"] forState:UIControlStateHighlighted];
+        [self.rightBarButton setTitle:@"￥" forState:UIControlStateNormal];
+        [self.rightBarButton setTintColor:[UIColor whiteColor]];
+    }else if (status==3){
+        //评论
+        [self.rightBarButton setBackgroundImage:[UIImage imageNamed:@"order_button_commit"] forState:UIControlStateNormal];
+        [self.rightBarButton setBackgroundImage:[UIImage imageNamed:@"order_button_commit_high"] forState:UIControlStateHighlighted];
+        
+    }
 }
 -(void)loadData{
     NSInteger status=[[self.order objectForKey:@"status"] integerValue];

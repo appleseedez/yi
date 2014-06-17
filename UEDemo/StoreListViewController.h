@@ -10,4 +10,5 @@
 
 @interface StoreListViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic) NSArray *storeList;
+@property (nonatomic) NSDictionary *choosedStore;
 @end

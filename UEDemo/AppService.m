@@ -52,14 +52,16 @@ static AppService *instance=nil;
 {
     self = [super init];
     if (self) {
+        __weak id weakSelf=self;
          [[RACObserve(self, showStoreSetting) map:^id(NSNumber *value) {
+             __strong AppService *strongSelf=weakSelf;
              if ([value boolValue]) {
                  UIStoryboard *searchStory=[UIStoryboard storyboardWithName:@"search" bundle:nil];
-                 [self.storeSettingWindow setRootViewController:[searchStory instantiateInitialViewController]];
+                 [strongSelf.storeSettingWindow setRootViewController:[searchStory instantiateInitialViewController]];
                  
-                 [self.storeSettingWindow makeKeyAndVisible];
-                 [self getLocation];
-                 [self loadStoreList];
+                 [strongSelf.storeSettingWindow makeKeyAndVisible];
+                 [strongSelf getLocation];
+                 [strongSelf loadStoreList];
                  
              }else{
                  MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
@@ -68,13 +70,7 @@ static AppService *instance=nil;
              
              return value;
          }]subscribeNext:^(id x) {}];
-//        [[RACObserve(self, showStoreSetting) map:^id(NSNumber *value) {
-//            if ([value boolValue]) {
-//                UIStoryboard *searchStory=[UIStoryboard storyboardWithName:@"search" bundle:nil];
-//                [self.storeSettingWindow setRootViewController:[searchStory instantiateViewControllerWithIdentifier:@"storeList"]];
-//                }
-//            return value;
-//        }]subscribeNext:^(id x) {}];
+
     }
     return self;
 }
@@ -123,6 +119,14 @@ static AppService *instance=nil;
     return storeList;
 }
 -(void)getStore{
+    
+//       NSNumber *storeid=[[NSUserDefaults standardUserDefaults] objectForKey:@"storeid"];
+//    
+//    if (storeid) {
+//        [self getCurrStore:storeid];
+//    }else{
+//        self.showStoreSetting=@(YES);
+//    }
     NSDictionary *store= [[NSUserDefaults standardUserDefaults] objectForKey:@"store"];
     if (!store) {
         store=@{
@@ -169,5 +173,15 @@ static AppService *instance=nil;
         MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
         delegate.currStore=store;
     }
+}
+-(void)getCurrStore:(NSNumber*)storeid{
+    MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
+    NSString *url=[NSString stringWithFormat:@"%@/eclean/showOneStore.json",ACCOUNT_SERVER];
+    NSDictionary *parameters=@{@"storeid":storeid,@"username":[delegate.hostUser objectForKey:@"username"]};
+    [[self httpRequestWithURL:url andParameters:parameters method:@"post"] subscribeNext:^(NSDictionary *x) {
+        MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
+        delegate.currStore =x;
+        [[NSUserDefaults standardUserDefaults] setObject:[x objectForKey:@"id"] forKey:@"storeid"];
+    }];
 }
 @end

@@ -1085,13 +1085,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3cQ-jZ-Dh1">
-                                        <rect key="frame" x="252" y="8" width="68" height="63"/>
+                                        <rect key="frame" x="281" y="26" width="26" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" image="worker_btn_back">
+                                        <state key="normal" title="￥" backgroundImage="order_button_blank">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <state key="highlighted" backgroundImage="order_button_blank_high"/>
                                         <connections>
                                             <action selector="peyOrShare:" destination="eka-rR-NEd" eventType="touchUpInside" id="38e-yW-eOp"/>
                                         </connections>
@@ -1175,6 +1175,7 @@
                         <outlet property="lbPhone" destination="x3M-Ao-vMn" id="S27-JQ-vlp"/>
                         <outlet property="lbServiceTime" destination="pmw-BQ-CG6" id="zMl-Kk-GiX"/>
                         <outlet property="lbTitle" destination="xDY-WK-iqn" id="rpU-YH-wgR"/>
+                        <outlet property="rightBarButton" destination="3cQ-jZ-Dh1" id="XIH-Pw-Ygn"/>
                         <outlet property="serverListView" destination="HF5-bj-7vt" id="NPn-LN-m2L"/>
                     </connections>
                 </viewController>
@@ -1958,6 +1959,8 @@
         <image name="main_wash_normal" width="165" height="141"/>
         <image name="main_worker_high" width="165" height="141"/>
         <image name="main_worker_normal" width="165" height="141"/>
+        <image name="order_button_blank" width="26" height="26"/>
+        <image name="order_button_blank_high" width="22" height="22"/>
         <image name="store_back_high" width="70" height="22"/>
         <image name="store_back_normal" width="74" height="26"/>
         <image name="tableview_checked" width="22" height="22"/>

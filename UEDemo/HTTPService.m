@@ -7,7 +7,7 @@
 //
 
 #import "HTTPService.h"
-
+#import "MaoAppDelegate.h"
 @implementation HTTPService
 static HTTPService *instance=nil;
 +(HTTPService*)defaultService{
@@ -89,14 +89,14 @@ static HTTPService *instance=nil;
    
         NSDictionary *head=@{@"signalType":@(0),@"status":@(0),@"sessionToken":[self getSessionToken]};
     
-    NSDictionary *requestParameters=@{@"head":head,@"body":parameters};
+   // NSDictionary *requestParameters=@{@"head":head,@"body":parameters};
     
     NSError *error=nil;
     NSData *data=[NSJSONSerialization dataWithJSONObject:head options:NSJSONWritingPrettyPrinted error:nil];
-    NSString *s=[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+   // NSString *s=[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
     NSURLRequest *request= [[AFJSONRequestSerializer serializer] requestWithMethod:@"GET" URLString:url parameters:@{@"head":data} error:&error];
     
-    NSMutableURLRequest *mRequest=[request mutableCopy];
+   // NSMutableURLRequest *mRequest=[request mutableCopy];
     NSLog(@"%@",request.URL);
     if (error) {
         NSLog(@"%@",error);
@@ -117,6 +117,7 @@ static HTTPService *instance=nil;
                     id object=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
                     if (error) {
                         [subscriber sendNext:data];
+                        
                     }else{
                         [subscriber sendNext:object];
                     }
@@ -130,6 +131,11 @@ static HTTPService *instance=nil;
     return signal;
 }
 -(NSString*)getSessionToken{
+//    MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
+//    NSString *sessiontoken=[delegate.hostUser objectForKey:@"sessionToken"];
+//    if ([sessiontoken isEqual:[NSNull null]]||sessiontoken==nil) {
+//         sessiontoken=@"";
+//    }
     return @"";
 }
 @end

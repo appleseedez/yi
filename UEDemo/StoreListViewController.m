@@ -9,6 +9,7 @@
 #import "StoreListViewController.h"
 #import "StoreListCell.h"
 #import "AppService.h"
+#import "MaoAppDelegate.h"
 @interface StoreListViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *btnCancel;
@@ -50,6 +51,14 @@
 
     return [self.storeList count];
 }
+- (IBAction)choose:(id)sender {
+    if (self.choosedStore) {
+       MaoAppDelegate *delegate= [UIApplication sharedApplication].delegate;
+        delegate.currStore=[self.choosedStore copy];
+        [[NSUserDefaults standardUserDefaults] setObject:[delegate.currStore objectForKey:@"id"] forKey:@"storeid"];
+    }
+    [self dismiss:nil];
+}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -57,7 +66,7 @@
     StoreListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"storeListCell"];
     
     [cell setWithStore:[self.storeList objectAtIndex:indexPath.row]];
-    
+    cell.contextController=self;
     return cell;
 }
 

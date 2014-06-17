@@ -28,7 +28,7 @@
 }
 -(NSDictionary*)toDictionary{
     self.allPrice=@(0);
-    NSDictionary *dic=@{@"servicetype" :@"bj" ,
+    NSDictionary *dic=@{@"servicetype" :@"zd" ,
                         @"storeid":self.storeid,
                         @"storename":self.storename,
                         @"allprice":self.allPrice,

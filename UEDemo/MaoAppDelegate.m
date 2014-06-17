@@ -57,9 +57,6 @@
     [self.window setRootViewController:rootVC];
     [self.window.layer addAnimation:animation forKey:@"login"];
     [[AppService defaultService] getStore];
-    if (self.currStore==nil) {
-        [AppService defaultService].showStoreSetting=@(YES);
-    }
     
    //
     
