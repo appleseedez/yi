@@ -40,7 +40,7 @@
 {
     if (url!=nil&&[url.host isEqualToString:@"safepay"]) {
          [self parseResultWithURL:url inApplication:application];
-        return YES;
+              return YES;
     }
     
     return [ShareSDK handleOpenURL:url
@@ -49,6 +49,7 @@
 - (AlixPayResult *)prepareResultFromURL:(NSURL *)url {
     AlixPayResult *result = nil;
     if (url != nil && [url.host isEqualToString:@"safepay"]) {
+        
         NSString *query = [[url query]
                            stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         result = [[AlixPayResult alloc] initWithString:query];

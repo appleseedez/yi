@@ -151,5 +151,11 @@
 -(void)dealloc{
     NSLog(@"%@ dealloc",self);
 }
-
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//    if (self.presentedViewController) {
+//         [self dismissViewControllerAnimated:YES completion:^{
+//             
+//         }];
+//    }
+//}
 @end
