@@ -13,4 +13,5 @@
 @property(nonatomic, weak) IBOutlet UILabel *decodedLabel;
 - (IBAction)navBack:(UIBarButtonItem *)sender;
 - (IBAction)fromPhotoLib:(UIBarButtonItem *)sender;
+@property (nonatomic) NSNumber *scanSuccess;
 @end

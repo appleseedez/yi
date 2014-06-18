@@ -30,7 +30,10 @@
     [self dismissShareView];
 }
 - (IBAction)pop:(id)sender {
-    
+    if (self.navigationController.childViewControllers[0]==self) {
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+        return;
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)shareWeixinPengyouquan:(id)sender {

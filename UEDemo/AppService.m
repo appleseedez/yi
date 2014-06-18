@@ -10,6 +10,8 @@
 #import <MapKit/MapKit.h>
 #import "MaoAppDelegate.h"
 #import "StoreListViewController.h"
+#import "OrderWaitingServiceViewController.h"
+#import "NSDictionary+killNull.h"
 @implementation AppService
 static AppService *instance=nil;
 +(instancetype)defaultService{
@@ -183,5 +185,25 @@ static AppService *instance=nil;
         delegate.currStore =x;
         [[NSUserDefaults standardUserDefaults] setObject:[x objectForKey:@"id"] forKey:@"storeid"];
     }];
+}
+-(void)showScanOrder:(NSString*)text{
+    //d39ae6f6-9927-4254-ae22-628882944481
+    NSString *url=[NSString stringWithFormat:@"%@/eclean/findOrderByNo.json",ACCOUNT_SERVER];
+    NSDictionary *parameters=@{@"orderno": @"d39ae6f6-9927-4254-ae22-628882944481"};
+    [[self httpRequestWithURL:url andParameters:parameters method:@"post"]subscribeNext:^(NSDictionary *x) {
+        UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        OrderWaitingServiceViewController *orderVC=[story instantiateViewControllerWithIdentifier:@"orderView"];
+        UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:orderVC];
+        nav.navigationBarHidden=YES;
+        UIViewController *rootVC=[UIApplication sharedApplication].delegate.window.rootViewController;
+        orderVC.order=[x killNull];
+        [rootVC.presentedViewController dismissViewControllerAnimated:NO completion:^{
+             [rootVC presentViewController:nav animated:YES completion:^{
+                 
+             }];
+        }];
+        
+    }];
+    
 }
 @end

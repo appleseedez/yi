@@ -7,7 +7,7 @@
 //
 
 #import "MaoQRToolViewController.h"
-
+#import "AppService.h"
 @interface MaoQRToolViewController ()
 @property(nonatomic) ZXCapture *capture;
 @end
@@ -46,17 +46,23 @@
 - (void)captureResult:(ZXCapture *)capture result:(ZXResult *)result {
   if (!result)
     return;
-
+    if (![self.scanSuccess boolValue]) {
+         self.scanSuccess = @(YES);
+         NSLog(@"你妹的 扫出来了%@",result.text);
+        [[AppService defaultService] showScanOrder:result.text];
+       
+    }
+   
   // We got a result. Display information about the result onscreen.
-  NSString *formatString = [self barcodeFormatToString:result.barcodeFormat];
-  NSString *display =
-      [NSString stringWithFormat:@"Scanned!\nFormat: %@\nContents:\n%@",
-                                 formatString, result.text];
-  [self.decodedLabel performSelectorOnMainThread:@selector(setText:)
-                                      withObject:display
-                                   waitUntilDone:YES];
-  NSLog(@"code info :%@", formatString);
-  // Vibrate
+//  NSString *formatString = [self barcodeFormatToString:result.barcodeFormat];
+//  NSString *display =
+//      [NSString stringWithFormat:@"Scanned!\nFormat: %@\nContents:\n%@",
+//                                 formatString, result.text];
+//  [self.decodedLabel performSelectorOnMainThread:@selector(setText:)
+//                                      withObject:display
+//                                   waitUntilDone:YES];
+//  NSLog(@"code info :%@", formatString);
+//  // Vibrate
   AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
