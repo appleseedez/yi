@@ -11,6 +11,8 @@
 #import "AppService.h"
 #import <ShareSDK/ShareSDK.h>
 #import "WXApi.h"
+#import "AlixPayResult.h"
+#import "DataVerifier.h"
 @implementation MaoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -36,17 +38,67 @@
 }
 - (BOOL)application:(UIApplication *)application  handleOpenURL:(NSURL *)url
 {
+    if (url!=nil&&[url.host isEqualToString:@"safepay"]) {
+         [self parseResultWithURL:url inApplication:application];
+        return YES;
+    }
+    
     return [ShareSDK handleOpenURL:url
                         wxDelegate:self];
+}
+- (AlixPayResult *)prepareResultFromURL:(NSURL *)url {
+    AlixPayResult *result = nil;
+    if (url != nil && [url.host isEqualToString:@"safepay"]) {
+        NSString *query = [[url query]
+                           stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        result = [[AlixPayResult alloc] initWithString:query];
+    }
+    return result;
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
+    
+    
+    
     return [ShareSDK handleOpenURL:url
                  sourceApplication:sourceApplication
                         annotation:annotation
                         wxDelegate:self];
 }
+- (void)parseResultWithURL:(NSURL *)url
+             inApplication:(UIApplication *)application {
+    AlixPayResult *result = nil;
+    result = [self prepareResultFromURL:url];
+    
+    // 检查结果
+    if (result) {
+        
+        if (result.statusCode == 9000) {
+            /*
+             *用公钥验证签名 严格验证请使用result.resultString与result.signString验签
+             */
+            
+            //交易成功
+            NSString *key = nil;
+            id<DataVerifier> verifier;
+            verifier = CreateRSADataVerifier(key);
+            
+            if ([verifier verifyString:result.resultString
+                              withSign:result.signString]) {
+                //验证签名成功，交易结果无篡改
+            }
+            
+        } else {
+            //交易失败
+        }
+    } else {
+        //失败
+    }
+}
+
+
+
 -(void)changeToRootView{
     UIStoryboard *main=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *rootVC=[main instantiateInitialViewController];

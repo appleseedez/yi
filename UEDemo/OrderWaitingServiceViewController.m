@@ -13,6 +13,7 @@
 #import "ShareView.h"
 #import "ShareEditViewController.h"
 #import "ShareService.h"
+#import "OrderPayViewController.h"
 @interface OrderWaitingServiceViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 @property (weak, nonatomic) IBOutlet UILabel *lbOrderName;
@@ -68,7 +69,9 @@
     
 }
 -(void)pay{
-    
+   OrderPayViewController *payVC= [self.storyboard instantiateViewControllerWithIdentifier:@"orderPay"];
+    payVC.order=self.order;
+    [self.navigationController pushViewController:payVC animated:YES];
 }
 -(void)share{
 

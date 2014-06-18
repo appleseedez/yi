@@ -55,6 +55,22 @@
 		479F24931924DDBF006B4080 /* CleanSelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F24921924DDBF006B4080 /* CleanSelectionCell.m */; };
 		479F24961924DE9B006B4080 /* CleanViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F24951924DE9B006B4080 /* CleanViewModel.m */; };
 		479F249C1924DED2006B4080 /* CleanSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F249B1924DED2006B4080 /* CleanSectionModel.m */; };
+		479F2F9A1951C8AB002758F4 /* AlipayRsaLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 479F2F7A1951C8AB002758F4 /* AlipayRsaLib.a */; };
+		479F2F9B1951C8AB002758F4 /* Alixpay.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 479F2F7C1951C8AB002758F4 /* Alixpay.bundle */; };
+		479F2F9D1951C8AB002758F4 /* AlixPaylib_arc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 479F2F7E1951C8AB002758F4 /* AlixPaylib_arc.a */; };
+		479F2F9E1951C8AB002758F4 /* AlixPayOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F2F801951C8AB002758F4 /* AlixPayOrder.m */; };
+		479F2F9F1951C8AB002758F4 /* AlixPayResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F2F821951C8AB002758F4 /* AlixPayResult.m */; };
+		479F2FA01951C8AB002758F4 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F2F861951C8AB002758F4 /* NSObject+SBJSON.m */; };
+		479F2FA11951C8AB002758F4 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F2F881951C8AB002758F4 /* NSString+SBJSON.m */; };
+		479F2FA21951C8AB002758F4 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F2F8A1951C8AB002758F4 /* SBJSON.m */; };
+		479F2FA31951C8AB002758F4 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F2F8C1951C8AB002758F4 /* SBJsonBase.m */; };
+		479F2FA41951C8AB002758F4 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F2F8E1951C8AB002758F4 /* SBJsonParser.m */; };
+		479F2FA51951C8AB002758F4 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F2F901951C8AB002758F4 /* SBJsonWriter.m */; };
+		479F2FA61951C8AB002758F4 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 479F2F911951C8AB002758F4 /* libcrypto.a */; };
+		479F2FA71951C8AB002758F4 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 479F2F921951C8AB002758F4 /* libssl.a */; };
+		479F2FA81951C8AB002758F4 /* NFProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F2F951951C8AB002758F4 /* NFProduct.m */; };
+		479F2FA91951C8AB002758F4 /* 褰掓。.zip in Resources */ = {isa = PBXBuildFile; fileRef = 479F2F991951C8AB002758F4 /* 褰掓。.zip */; };
+		479F2FAD1951D702002758F4 /* OrderPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F2FAC1951D702002758F4 /* OrderPayViewController.m */; };
 		479F444F1944249100FEDE2D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F444E1944249100FEDE2D /* LoginViewController.m */; };
 		479F4451194424A000FEDE2D /* LoginInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F4450194424A000FEDE2D /* LoginInputTextField.m */; };
 		479FED7E19472E4400D7C483 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479FED7D19472E4400D7C483 /* CoreLocation.framework */; };
@@ -267,6 +283,37 @@
 		479F24951924DE9B006B4080 /* CleanViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanViewModel.m; sourceTree = "<group>"; };
 		479F249A1924DED2006B4080 /* CleanSectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanSectionModel.h; sourceTree = "<group>"; };
 		479F249B1924DED2006B4080 /* CleanSectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanSectionModel.m; sourceTree = "<group>"; };
+		479F2F7A1951C8AB002758F4 /* AlipayRsaLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlipayRsaLib.a; sourceTree = "<group>"; };
+		479F2F7B1951C8AB002758F4 /* AlixLibService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlixLibService.h; sourceTree = "<group>"; };
+		479F2F7C1951C8AB002758F4 /* Alixpay.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Alixpay.bundle; sourceTree = "<group>"; };
+		479F2F7E1951C8AB002758F4 /* AlixPaylib_arc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlixPaylib_arc.a; sourceTree = "<group>"; };
+		479F2F7F1951C8AB002758F4 /* AlixPayOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlixPayOrder.h; sourceTree = "<group>"; };
+		479F2F801951C8AB002758F4 /* AlixPayOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlixPayOrder.m; sourceTree = "<group>"; };
+		479F2F811951C8AB002758F4 /* AlixPayResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlixPayResult.h; sourceTree = "<group>"; };
+		479F2F821951C8AB002758F4 /* AlixPayResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlixPayResult.m; sourceTree = "<group>"; };
+		479F2F841951C8AB002758F4 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		479F2F851951C8AB002758F4 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		479F2F861951C8AB002758F4 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		479F2F871951C8AB002758F4 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		479F2F881951C8AB002758F4 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		479F2F891951C8AB002758F4 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		479F2F8A1951C8AB002758F4 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		479F2F8B1951C8AB002758F4 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		479F2F8C1951C8AB002758F4 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		479F2F8D1951C8AB002758F4 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		479F2F8E1951C8AB002758F4 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		479F2F8F1951C8AB002758F4 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		479F2F901951C8AB002758F4 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		479F2F911951C8AB002758F4 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		479F2F921951C8AB002758F4 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		479F2F941951C8AB002758F4 /* NFProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFProduct.h; sourceTree = "<group>"; };
+		479F2F951951C8AB002758F4 /* NFProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFProduct.m; sourceTree = "<group>"; };
+		479F2F971951C8AB002758F4 /* DataSigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSigner.h; sourceTree = "<group>"; };
+		479F2F981951C8AB002758F4 /* DataVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataVerifier.h; sourceTree = "<group>"; };
+		479F2F991951C8AB002758F4 /* 褰掓。.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "褰掓。.zip"; sourceTree = "<group>"; };
+		479F2FAA1951D6B2002758F4 /* PayConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayConfig.h; sourceTree = "<group>"; };
+		479F2FAB1951D702002758F4 /* OrderPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderPayViewController.h; sourceTree = "<group>"; };
+		479F2FAC1951D702002758F4 /* OrderPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderPayViewController.m; sourceTree = "<group>"; };
 		479F444E1944249100FEDE2D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		479F4450194424A000FEDE2D /* LoginInputTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInputTextField.m; sourceTree = "<group>"; };
 		479FED7D19472E4400D7C483 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -431,6 +478,7 @@
 				47A165A7194DAC39005CA1EE /* libstdc++.dylib in Frameworks */,
 				47A164FD194DA4A2005CA1EE /* QuartzCore.framework in Frameworks */,
 				47A16573194DA72C005CA1EE /* LinkedInConnection.framework in Frameworks */,
+				479F2F9D1951C8AB002758F4 /* AlixPaylib_arc.a in Frameworks */,
 				47A16513194DA635005CA1EE /* MessageUI.framework in Frameworks */,
 				47A16597194DA72C005CA1EE /* libWeChatSDK.a in Frameworks */,
 				47A1658B194DA72C005CA1EE /* GoogleOpenSource.framework in Frameworks */,
@@ -457,6 +505,7 @@
 				47A1657E194DA72C005CA1EE /* SohuWeiboConnection.framework in Frameworks */,
 				47A16580194DA72C005CA1EE /* TencentWeiboConnection.framework in Frameworks */,
 				47A16505194DA4D2005CA1EE /* Security.framework in Frameworks */,
+				479F2FA61951C8AB002758F4 /* libcrypto.a in Frameworks */,
 				47A1657C194DA72C005CA1EE /* SMSConnection.framework in Frameworks */,
 				47A16503194DA4CA005CA1EE /* libz.1.2.5.dylib in Frameworks */,
 				47A1656C194DA72C005CA1EE /* FacebookConnection.framework in Frameworks */,
@@ -488,10 +537,12 @@
 				479C56651932D6670086380C /* MapKit.framework in Frameworks */,
 				47A1658A194DA72C005CA1EE /* ShareSDKCoreService.framework in Frameworks */,
 				47A165A0194DA72C005CA1EE /* ShareSDKiPhoneAppRecommendShareViewUI.framework in Frameworks */,
+				479F2F9A1951C8AB002758F4 /* AlipayRsaLib.a in Frameworks */,
 				479C52A31923854A00CCF9F4 /* CoreGraphics.framework in Frameworks */,
 				479C52A51923854A00CCF9F4 /* UIKit.framework in Frameworks */,
 				47A16593194DA72C005CA1EE /* RennSDK.framework in Frameworks */,
 				47A16577194DA72C005CA1EE /* PrintConnection.framework in Frameworks */,
+				479F2FA71951C8AB002758F4 /* libssl.a in Frameworks */,
 				47A16582194DA72C005CA1EE /* TwitterConnection.framework in Frameworks */,
 				479C52A11923854A00CCF9F4 /* Foundation.framework in Frameworks */,
 				1C252A5AB11C49A4A9C5FF2D /* libPods.a in Frameworks */,
@@ -583,6 +634,8 @@
 				47A16460194D622C005CA1EE /* MyCenterPersionalSettingController.m */,
 				47A16462194D7B9C005CA1EE /* OrderWaitingServiceViewController.h */,
 				47A16463194D7B9C005CA1EE /* OrderWaitingServiceViewController.m */,
+				479F2FAB1951D702002758F4 /* OrderPayViewController.h */,
+				479F2FAC1951D702002758F4 /* OrderPayViewController.m */,
 				47A165B0194DDFE1005CA1EE /* ShareEditViewController.h */,
 				47A165B1194DDFE1005CA1EE /* ShareEditViewController.m */,
 				47A165AB194DD8A3005CA1EE /* ShareView.xib */,
@@ -673,6 +726,7 @@
 		479C52941923854A00CCF9F4 = {
 			isa = PBXGroup;
 			children = (
+				479F2F791951C8AB002758F4 /* alipay */,
 				47A16514194DA72B005CA1EE /* ShareSDK */,
 				479C52A61923854A00CCF9F4 /* UEDemo */,
 				479C52C51923854A00CCF9F4 /* UEDemoTests */,
@@ -751,6 +805,7 @@
 			isa = PBXGroup;
 			children = (
 				47A03C1F1939EB290019E469 /* 银杏叶虚化大背景.jpg */,
+				479F2FAA1951D6B2002758F4 /* PayConfig.h */,
 				479C52A81923854A00CCF9F4 /* UEDemo-Info.plist */,
 				479C52A91923854A00CCF9F4 /* InfoPlist.strings */,
 				479C52AC1923854A00CCF9F4 /* main.m */,
@@ -855,6 +910,65 @@
 				479E1F95193C80580062A15D /* DetailCheckCell.m */,
 			);
 			name = cells;
+			sourceTree = "<group>";
+		};
+		479F2F791951C8AB002758F4 /* alipay */ = {
+			isa = PBXGroup;
+			children = (
+				479F2F7A1951C8AB002758F4 /* AlipayRsaLib.a */,
+				479F2F7B1951C8AB002758F4 /* AlixLibService.h */,
+				479F2F7C1951C8AB002758F4 /* Alixpay.bundle */,
+				479F2F7E1951C8AB002758F4 /* AlixPaylib_arc.a */,
+				479F2F7F1951C8AB002758F4 /* AlixPayOrder.h */,
+				479F2F801951C8AB002758F4 /* AlixPayOrder.m */,
+				479F2F811951C8AB002758F4 /* AlixPayResult.h */,
+				479F2F821951C8AB002758F4 /* AlixPayResult.m */,
+				479F2F831951C8AB002758F4 /* json */,
+				479F2F911951C8AB002758F4 /* libcrypto.a */,
+				479F2F921951C8AB002758F4 /* libssl.a */,
+				479F2F931951C8AB002758F4 /* models */,
+				479F2F961951C8AB002758F4 /* RSA */,
+				479F2F991951C8AB002758F4 /* 褰掓。.zip */,
+			);
+			path = alipay;
+			sourceTree = "<group>";
+		};
+		479F2F831951C8AB002758F4 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				479F2F841951C8AB002758F4 /* JSON.h */,
+				479F2F851951C8AB002758F4 /* NSObject+SBJSON.h */,
+				479F2F861951C8AB002758F4 /* NSObject+SBJSON.m */,
+				479F2F871951C8AB002758F4 /* NSString+SBJSON.h */,
+				479F2F881951C8AB002758F4 /* NSString+SBJSON.m */,
+				479F2F891951C8AB002758F4 /* SBJSON.h */,
+				479F2F8A1951C8AB002758F4 /* SBJSON.m */,
+				479F2F8B1951C8AB002758F4 /* SBJsonBase.h */,
+				479F2F8C1951C8AB002758F4 /* SBJsonBase.m */,
+				479F2F8D1951C8AB002758F4 /* SBJsonParser.h */,
+				479F2F8E1951C8AB002758F4 /* SBJsonParser.m */,
+				479F2F8F1951C8AB002758F4 /* SBJsonWriter.h */,
+				479F2F901951C8AB002758F4 /* SBJsonWriter.m */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		479F2F931951C8AB002758F4 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				479F2F941951C8AB002758F4 /* NFProduct.h */,
+				479F2F951951C8AB002758F4 /* NFProduct.m */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		479F2F961951C8AB002758F4 /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				479F2F971951C8AB002758F4 /* DataSigner.h */,
+				479F2F981951C8AB002758F4 /* DataVerifier.h */,
+			);
+			path = RSA;
 			sourceTree = "<group>";
 		};
 		47A03C181939CED00019E469 /* pictures */ = {
@@ -1245,9 +1359,11 @@
 			files = (
 				47A165A3194DA72C005CA1EE /* ShareSDKiPhoneSimpleShareViewUI.bundle in Resources */,
 				47A16571194DA72C005CA1EE /* InstapaperResource.bundle in Resources */,
+				479F2F9B1951C8AB002758F4 /* Alixpay.bundle in Resources */,
 				479C52B91923854A00CCF9F4 /* Images.xcassets in Resources */,
 				47A16595194DA72C005CA1EE /* WeiboSDK.bundle in Resources */,
 				47A07E301945F23B00A9813F /* search.xcassets in Resources */,
+				479F2FA91951C8AB002758F4 /* 褰掓。.zip in Resources */,
 				47A3C4431931F14900EE44EF /* Login.storyboard in Resources */,
 				47A07E2E1945EB5300A9813F /* search.storyboard in Resources */,
 				47A165AC194DD8A3005CA1EE /* ShareView.xib in Resources */,
@@ -1350,22 +1466,28 @@
 				479EE5311930826B0030F462 /* DryCleaningListViewController.m in Sources */,
 				4712E0781928A0C500DEA3AD /* WorkerListViewModel.m in Sources */,
 				4799EF9A192735D100863423 /* CleanServiceCheckViewController.m in Sources */,
+				479F2F9E1951C8AB002758F4 /* AlixPayOrder.m in Sources */,
 				479495CB19433BB1009901F9 /* MyCenterViewModel.m in Sources */,
 				47A3C44D1931F62000EE44EF /* NSString+MD5.m in Sources */,
 				47A165AF194DD98A005CA1EE /* ShareView.m in Sources */,
 				47F0CCEC193F681E00702053 /* OrderService.m in Sources */,
 				479F24931924DDBF006B4080 /* CleanSelectionCell.m in Sources */,
+				479F2FA41951C8AB002758F4 /* SBJsonParser.m in Sources */,
 				47A03C1E1939CEEF0019E469 /* OBShapedButton.m in Sources */,
 				4799EFAD192755CC00863423 /* CheckViewCell.m in Sources */,
+				479F2FA01951C8AB002758F4 /* NSObject+SBJSON.m in Sources */,
 				47A192DD194C235F0011FAE6 /* RegViewController.m in Sources */,
 				479495C719433B56009901F9 /* MyCentreTableViewController.m in Sources */,
 				4799EFB01927607300863423 /* CleanServiceOrder.m in Sources */,
 				479F248C1924CF10006B4080 /* CleanTableViewCell.m in Sources */,
+				479F2F9F1951C8AB002758F4 /* AlixPayResult.m in Sources */,
 				4712E07C1928BD6500DEA3AD /* WorkerOrderViewController.m in Sources */,
 				47A192E3194C66960011FAE6 /* CommetCell.m in Sources */,
+				479F2FA21951C8AB002758F4 /* SBJSON.m in Sources */,
 				479C52D7192399E500CCF9F4 /* CleanServiceTableViewController.m in Sources */,
 				47A03C1B1939CEE70019E469 /* UIImage+ColorAtPixel.m in Sources */,
 				47A3C45919320BE300EE44EF /* LoginViewModel.m in Sources */,
+				479F2FA31951C8AB002758F4 /* SBJsonBase.m in Sources */,
 				4712E06D19289E5B00DEA3AD /* Worker.m in Sources */,
 				479F24961924DE9B006B4080 /* CleanViewModel.m in Sources */,
 				47A3C45619320B7600EE44EF /* BaseViewModel.m in Sources */,
@@ -1382,9 +1504,12 @@
 				479EE53D1930A0C80030F462 /* DryCleaningViewModel.m in Sources */,
 				479F4451194424A000FEDE2D /* LoginInputTextField.m in Sources */,
 				47AC556D1949DBAD0052154B /* CleanOrderDetailCell.m in Sources */,
+				479F2FA11951C8AB002758F4 /* NSString+SBJSON.m in Sources */,
+				479F2FAD1951D702002758F4 /* OrderPayViewController.m in Sources */,
 				479C52AD1923854A00CCF9F4 /* main.m in Sources */,
 				47A037C71948878400DA9171 /* CustomAlertWindow.m in Sources */,
 				BABBA8261929731B00D05A18 /* MaoQRToolViewController.m in Sources */,
+				479F2FA81951C8AB002758F4 /* NFProduct.m in Sources */,
 				47A3C43A19319F0D00EE44EF /* DryCleaningOrderViewController.m in Sources */,
 				47A165B2194DDFE1005CA1EE /* ShareEditViewController.m in Sources */,
 				479C52B71923854A00CCF9F4 /* MaoViewController.m in Sources */,
@@ -1403,6 +1528,7 @@
 				479E1F90193C7C8E0062A15D /* CleanDetailCheckTableViewController.m in Sources */,
 				479E1F96193C80580062A15D /* DetailCheckCell.m in Sources */,
 				479E1F99193C82110062A15D /* CleanDetailCheckViewModel.m in Sources */,
+				479F2FA51951C8AB002758F4 /* SBJsonWriter.m in Sources */,
 				47A192E0194C544B0011FAE6 /* HouseViewModel.m in Sources */,
 				47A2752D19507276001B90B9 /* StarView.m in Sources */,
 				4712E06819289DAC00DEA3AD /* TimeWorkerService.m in Sources */,
@@ -1567,6 +1693,7 @@
 					"$(PROJECT_DIR)/ShareSDK/Extend/TencentWeiboSDK",
 					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
 					"$(PROJECT_DIR)/ShareSDK/Extend/YiXinSDK",
+					"$(PROJECT_DIR)/alipay",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1604,6 +1731,7 @@
 					"$(PROJECT_DIR)/ShareSDK/Extend/TencentWeiboSDK",
 					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
 					"$(PROJECT_DIR)/ShareSDK/Extend/YiXinSDK",
+					"$(PROJECT_DIR)/alipay",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
