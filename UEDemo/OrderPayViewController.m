@@ -84,7 +84,7 @@
     self.aliPayPubKey=AlipayPubKey;
 }
 - (void)sendOrder{
-    NSString *appScheme = @"alipaydemo";
+    NSString *appScheme = @"rongmeme";
     NSString *orderInfo = [self getOrderInfoFromProduct];
     NSString *signedStr = [self doRsa:orderInfo];
     
