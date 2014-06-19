@@ -20,20 +20,19 @@
     self = [super init];
     if (self) {
         self.cleanService=[CleanService defaultService];
-        [[ RACObserve(self, cleanService.serviceOrderSelections) map:^id(NSArray *value) {
+        __weak id weakSelf=self;
+        [ RACObserve(self, cleanService.serviceOrderSelections) subscribeNext:^(NSArray *value) {
+            __strong CleanDetailCheckViewModel* strongSelf=weakSelf;
             self.detaileChecks=[NSMutableArray new];
             if ([value count]) {
                 for (OrderSelection *o in value) {
                     CleanDetailCheckModel *m=[CleanDetailCheckModel new];
                     m.selection=o;
                     m.choosed=@(NO);
-                    [self.detaileChecks addObject:m];
+                    [strongSelf.detaileChecks addObject:m];
                 }
-            }
-            
-            
-             return value;
-         }]subscribeNext:^(id x) {}];
+
+            }}];
     }
     return self;
 }

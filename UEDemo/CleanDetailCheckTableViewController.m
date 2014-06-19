@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
+    //self.tableView.backgroundColor=[UIColor redColor];
     
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
     self.detailViewModel=[[CleanDetailCheckViewModel alloc]init];
@@ -70,6 +70,7 @@
     DetailCheckCell *cell=[tableView dequeueReusableCellWithIdentifier:@"DetailCheckCell"];
      CleanDetailCheckModel *model=[self.detailViewModel.detaileChecks objectAtIndex:indexPath.row];
     cell.detailModel=model;
+    cell.contentView.backgroundColor =[UIColor redColor];
     
     
     
