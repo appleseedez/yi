@@ -94,4 +94,10 @@
     }
     return noNullData;
 }
+-(void)backToRootVC:(UIViewController*)subVC{
+    MaoRootViewController *rootVC=(MaoRootViewController*)[UIApplication sharedApplication].delegate.window.rootViewController;
+    if ([rootVC isKindOfClass:[MaoRootViewController class]]) {
+        [rootVC changeRootVCWithController:subVC];
+    }
+}
 @end

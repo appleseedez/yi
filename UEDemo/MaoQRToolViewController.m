@@ -8,6 +8,7 @@
 
 #import "MaoQRToolViewController.h"
 #import "AppService.h"
+#import "CustomAlertWindow.h"
 @interface MaoQRToolViewController ()
 @property(nonatomic) ZXCapture *capture;
 @end
@@ -47,12 +48,57 @@
   if (!result)
     return;
     if (![self.scanSuccess boolValue]) {
+        
+        
+        
          self.scanSuccess = @(YES);
          NSLog(@"你妹的 扫出来了%@",result.text);
-        [[AppService defaultService] showScanOrder:result.text];
-       
+        
+        NSURL *url=[NSURL URLWithString:result.text];
+        NSString *query=url.query;
+        NSLog(@"query=%@",query);
+        NSRange range;
+        range.length=7;
+        range.location=0;
+        if (query.length>7) {
+            NSString *key=[query substringWithRange:range];
+            if ([key isEqualToString:@"orderno"]) {
+                range.length=query.length-8;
+                range.location=8;
+                NSString *orderno=[query substringWithRange:range];
+                NSLog(@"orderno:%@",orderno);
+               
+                   //[[AppService defaultService] showScanOrder:orderno];
+              
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+               
+                //self.scanSuccess=@(NO);
+                [self.navigationController popToRootViewControllerAnimated:NO];
+                 
+                     [[AppService defaultService]performSelector:@selector(showScanOrder:) withObject:orderno afterDelay:0];
+                
+                
+               
+            }else{
+              CustomAlertWindow *alert=  [CustomAlertWindow showWithText:@"扫描出错\n请不要扫描订单以外的二维码"];
+                alert.cdelegate=self;
+            }
+        }else{
+            return;
+        }
+        //
+    }else{
+        return;
     }
-   
+}
+
+        
+       
+    
+    
+-(void)alertDidDisappear{
+    self.scanSuccess=@(NO);
+    
   // We got a result. Display information about the result onscreen.
 //  NSString *formatString = [self barcodeFormatToString:result.barcodeFormat];
 //  NSString *display =
@@ -63,8 +109,7 @@
 //                                   waitUntilDone:YES];
 //  NSLog(@"code info :%@", formatString);
 //  // Vibrate
-  AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-}
+ }
 
 #pragma mark - Private Methods
 - (NSString *)barcodeFormatToString:(ZXBarcodeFormat)format {

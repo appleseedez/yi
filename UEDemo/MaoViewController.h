@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MaoRootViewController.h"
 @interface MaoViewController : UIViewController
-
+@property (nonatomic,weak) id  <RootViewControllerChangeSubVCDelegate > rootViewController;
 @end

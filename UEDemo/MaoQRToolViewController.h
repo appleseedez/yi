@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MaoQRToolViewController : UIViewController <ZXCaptureDelegate>
+#import "CustomAlertWindow.h"
+@interface MaoQRToolViewController : UIViewController <ZXCaptureDelegate,CustomAlertWindowDelegate>
 @property(nonatomic, weak) IBOutlet UIView *scannerWin;
 @property(nonatomic, weak) IBOutlet UILabel *decodedLabel;
 - (IBAction)navBack:(UIBarButtonItem *)sender;

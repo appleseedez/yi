@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 reactiveCocoa. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewModel.h"
 @class CleanService;
-@interface CleanViewModel : NSObject 
+@interface CleanViewModel : BaseViewModel
 @property (nonatomic,strong) NSArray *sections;
 @property (nonatomic,weak)   CleanService *service;
 @end

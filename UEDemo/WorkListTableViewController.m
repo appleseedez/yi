@@ -86,9 +86,7 @@
     return 75;
 }
 - (IBAction)dismiss:(id)sender {
-    [self.navigationController dismissViewControllerAnimated:YES completion:^{
-        
-    }];
+    [self.listViewModel backToRootVC:self.navigationController];
 }
 - (IBAction)pushOrder:(id)sender {
     WorkerOrderViewController *orderVC=[self.storyboard instantiateViewControllerWithIdentifier:@"WorkerOrder"];

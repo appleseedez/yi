@@ -14,6 +14,7 @@
 #import "ShareEditViewController.h"
 #import "ShareService.h"
 #import "OrderPayViewController.h"
+#import "MaoRootViewController.h"
 @interface OrderWaitingServiceViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 @property (weak, nonatomic) IBOutlet UILabel *lbOrderName;
@@ -32,7 +33,9 @@
 }
 - (IBAction)pop:(id)sender {
     if (self.navigationController.childViewControllers[0]==self) {
-        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+        MaoRootViewController *roorVC=(MaoRootViewController*)[UIApplication sharedApplication].delegate.window.rootViewController;
+        [roorVC changeRootVCWithController:self.navigationController];
+        
         return;
     }
     [self.navigationController popViewControllerAnimated:YES];

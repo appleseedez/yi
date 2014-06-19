@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="umZ-vg-mQa">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--Mao View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="MaoViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="MaoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="84" width="320" height="264"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="vd0-6M-jAq" customClass="OBShapedButton">
+                                    <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="vd0-6M-jAq" customClass="OBShapedButton">
                                         <rect key="frame" x="36" y="6" width="141" height="165"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -34,10 +34,10 @@
                                         </state>
                                         <state key="highlighted" backgroundImage="main_clean_high"/>
                                         <connections>
-                                            <segue destination="Zvw-4u-7pn" kind="modal" modalTransitionStyle="crossDissolve" id="rDH-WR-T2E"/>
+                                            <action selector="changeChild:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zz7-gq-pqT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="hH4-A7-Kxy" customClass="OBShapedButton">
+                                    <button opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="hH4-A7-Kxy" customClass="OBShapedButton">
                                         <rect key="frame" x="143" y="92" width="141" height="165"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -49,10 +49,10 @@
                                         </state>
                                         <state key="highlighted" backgroundImage="main_order_high"/>
                                         <connections>
-                                            <segue destination="Jg9-gH-TmW" kind="modal" modalTransitionStyle="crossDissolve" id="Nkq-OH-HRY"/>
+                                            <action selector="changeChild:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="e5m-eE-Abk"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="cNW-HP-kvo" customClass="OBShapedButton">
+                                    <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="cNW-HP-kvo" customClass="OBShapedButton">
                                         <rect key="frame" x="120" y="8" width="165" height="141"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -64,10 +64,10 @@
                                         </state>
                                         <state key="highlighted" title="钟点工" backgroundImage="main_worker_high"/>
                                         <connections>
-                                            <segue destination="PP2-aG-4eO" kind="modal" modalTransitionStyle="crossDissolve" id="EjS-In-N1J"/>
+                                            <action selector="changeChild:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vLU-Na-E6m"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="aXc-oh-jHx" customClass="OBShapedButton">
+                                    <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="aXc-oh-jHx" customClass="OBShapedButton">
                                         <rect key="frame" x="35" y="114" width="165" height="141"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -80,10 +80,10 @@
                                         </state>
                                         <state key="highlighted" backgroundImage="main_wash_high"/>
                                         <connections>
-                                            <segue destination="K8l-Io-L5R" kind="modal" modalTransitionStyle="crossDissolve" id="S60-lm-QpA"/>
+                                            <action selector="changeChild:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MCw-6Z-U5u"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="7eK-Pu-pSn" customClass="OBShapedButton">
+                                    <button opaque="NO" tag="1004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="7eK-Pu-pSn" customClass="OBShapedButton">
                                         <rect key="frame" x="122" y="95" width="76" height="76"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -93,7 +93,7 @@
                                         </state>
                                         <state key="highlighted" backgroundImage="main_centre_back_high"/>
                                         <connections>
-                                            <segue destination="3Ft-4r-WkO" kind="modal" modalTransitionStyle="crossDissolve" id="K5a-Ph-6av"/>
+                                            <action selector="changeChild:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="s0H-y6-5LO"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -110,12 +110,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1211" y="-368"/>
+            <point key="canvasLocation" x="-1461" y="-376"/>
+        </scene>
+        <!--Mao Root View Controller-->
+        <scene sceneID="gp0-Cl-Xhf">
+            <objects>
+                <viewController storyboardIdentifier="root" useStoryboardIdentifierAsRestorationIdentifier="YES" id="umZ-vg-mQa" customClass="MaoRootViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RsL-rk-3AV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuP-5r-08D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1823" y="-381"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eY8-v5-mUm">
             <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="Zvw-4u-7pn" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="bjnav" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="Zvw-4u-7pn" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LZY-9s-0iA">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -611,7 +625,7 @@
         <!--Navigation Controller-->
         <scene sceneID="J6b-MT-aVz">
             <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="3Ft-4r-WkO" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="zynav" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="3Ft-4r-WkO" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="enK-oY-lSf"/>
                     <navigationBar key="navigationBar" alpha="0.19999999999999968" contentMode="scaleToFill" id="wfn-Nr-lVi">
                         <autoresizingMask key="autoresizingMask"/>
@@ -624,7 +638,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Xb-mc-4iS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-673" y="-381"/>
+            <point key="canvasLocation" x="-795" y="-426"/>
         </scene>
         <!--Dry Cleaning Order View Controller - 干洗预约单-->
         <scene sceneID="HMX-Xx-V7K">
@@ -1191,7 +1205,7 @@
         <!--Navigation Controller-->
         <scene sceneID="U70-E5-VDq">
             <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="Jg9-gH-TmW" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ddnav" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="Jg9-gH-TmW" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="login_background" id="LaR-Ev-Umf">
                         <autoresizingMask key="autoresizingMask"/>
@@ -1213,7 +1227,7 @@
         <!--Navigation Controller-->
         <scene sceneID="guP-nt-LCh">
             <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="K8l-Io-L5R" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="gxnav" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="K8l-Io-L5R" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ixa-3l-uCO">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1225,7 +1239,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIQ-9S-CkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1151" y="285"/>
+            <point key="canvasLocation" x="-1228" y="255"/>
         </scene>
         <!--Dry Cleaning List View Controller-->
         <scene sceneID="yRH-rK-ZTw">
@@ -1362,7 +1376,7 @@
         <!--Navigation Controller-->
         <scene sceneID="lJU-5q-0AJ">
             <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="PP2-aG-4eO" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="zdnav" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="PP2-aG-4eO" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" alpha="0.29999999999999999" contentMode="scaleToFill" id="3Lz-oy-9J3">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

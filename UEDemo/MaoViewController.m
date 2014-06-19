@@ -26,9 +26,15 @@
   [super viewDidLoad];
     self.panView.center=CGPointMake(self.view.center.x, self.view.center.y-deltaY);
     
+   
+    
   // Do any additional setup after loading the view, typically from a nib.
 }
-
+- (IBAction)changeChild:(id)sender {
+    int index=((UIView*)sender).tag-1000;
+   
+    [self.rootViewController changeSubVCWithIndex:index];
+}
 - (void)paymentResult:(NSString *)resultd {
     //结果处理
     AlixPayResult *result = [[AlixPayResult alloc] initWithString:resultd];

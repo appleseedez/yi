@@ -50,9 +50,7 @@
 }
 
 -(IBAction)dismiss:(id)sender{
-    [self.navigationController dismissViewControllerAnimated:YES completion:^{
-        
-    }];
+    [self.centerViewModel backToRootVC:self.navigationController];
 }
 
 

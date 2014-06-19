@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "HTTPService.h"
+#import "MaoRootViewController.h"
 @interface BaseViewModel : NSObject
 @property (nonatomic,weak) HTTPService *httpService;
 @property (nonatomic)      NSNumber *busy;
 -(RACSignal*)httpRequestWithURL:(NSString*)url andParameters:(NSDictionary*)parameters method:(NSString*)method;
+-(void)backToRootVC:(UIViewController*)subVC;
 @end

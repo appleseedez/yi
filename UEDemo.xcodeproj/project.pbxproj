@@ -25,6 +25,7 @@
 		4799EFAD192755CC00863423 /* CheckViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EFAC192755CC00863423 /* CheckViewCell.m */; };
 		4799EFB01927607300863423 /* CleanServiceOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EFAF1927607300863423 /* CleanServiceOrder.m */; };
 		4799EFB31927608400863423 /* OrderSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799EFB21927608400863423 /* OrderSelection.m */; };
+		479C10FD19528E09007E4A0C /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C10FC19528E09007E4A0C /* AppService.m */; };
 		479C52A11923854A00CCF9F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479C52A01923854A00CCF9F4 /* Foundation.framework */; };
 		479C52A31923854A00CCF9F4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479C52A21923854A00CCF9F4 /* CoreGraphics.framework */; };
 		479C52A51923854A00CCF9F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479C52A41923854A00CCF9F4 /* UIKit.framework */; };
@@ -41,7 +42,6 @@
 		479C52CC1923854A00CCF9F4 /* UEDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C52CB1923854A00CCF9F4 /* UEDemoTests.m */; };
 		479C52D7192399E500CCF9F4 /* CleanServiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C52D6192399E500CCF9F4 /* CleanServiceTableViewController.m */; };
 		479C56601932D0C50086380C /* HostInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C565F1932D0C50086380C /* HostInfomation.m */; };
-		479C56631932D5600086380C /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 479C56621932D5600086380C /* AppService.m */; };
 		479C56651932D6670086380C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479C56641932D6670086380C /* MapKit.framework */; };
 		479E1F90193C7C8E0062A15D /* CleanDetailCheckTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F8F193C7C8E0062A15D /* CleanDetailCheckTableViewController.m */; };
 		479E1F93193C7F6F0062A15D /* CleanDetailCheckModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479E1F92193C7F6F0062A15D /* CleanDetailCheckModel.m */; };
@@ -73,6 +73,7 @@
 		479F2FAD1951D702002758F4 /* OrderPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F2FAC1951D702002758F4 /* OrderPayViewController.m */; };
 		479F444F1944249100FEDE2D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F444E1944249100FEDE2D /* LoginViewController.m */; };
 		479F4451194424A000FEDE2D /* LoginInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F4450194424A000FEDE2D /* LoginInputTextField.m */; };
+		479F69FB1952F9760055D787 /* MaoRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F69FA1952F9760055D787 /* MaoRootViewController.m */; };
 		479FED7E19472E4400D7C483 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479FED7D19472E4400D7C483 /* CoreLocation.framework */; };
 		47A037C71948878400DA9171 /* CustomAlertWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A037C61948878400DA9171 /* CustomAlertWindow.m */; };
 		47A03C1B1939CEE70019E469 /* UIImage+ColorAtPixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A03C1A1939CEE70019E469 /* UIImage+ColorAtPixel.m */; };
@@ -232,6 +233,7 @@
 		4799EFAF1927607300863423 /* CleanServiceOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanServiceOrder.m; sourceTree = "<group>"; };
 		4799EFB11927608400863423 /* OrderSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSelection.h; sourceTree = "<group>"; };
 		4799EFB21927608400863423 /* OrderSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSelection.m; sourceTree = "<group>"; };
+		479C10FC19528E09007E4A0C /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
 		479C529D1923854A00CCF9F4 /* UEDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UEDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		479C52A01923854A00CCF9F4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		479C52A21923854A00CCF9F4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -256,7 +258,6 @@
 		479C565E1932D0C50086380C /* HostInfomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostInfomation.h; sourceTree = "<group>"; };
 		479C565F1932D0C50086380C /* HostInfomation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostInfomation.m; sourceTree = "<group>"; };
 		479C56611932D5600086380C /* AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppService.h; sourceTree = "<group>"; };
-		479C56621932D5600086380C /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
 		479C56641932D6670086380C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		479E1F8E193C7C8E0062A15D /* CleanDetailCheckTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanDetailCheckTableViewController.h; sourceTree = "<group>"; };
 		479E1F8F193C7C8E0062A15D /* CleanDetailCheckTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanDetailCheckTableViewController.m; sourceTree = "<group>"; };
@@ -316,6 +317,8 @@
 		479F2FAC1951D702002758F4 /* OrderPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderPayViewController.m; sourceTree = "<group>"; };
 		479F444E1944249100FEDE2D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		479F4450194424A000FEDE2D /* LoginInputTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInputTextField.m; sourceTree = "<group>"; };
+		479F69F91952F9760055D787 /* MaoRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaoRootViewController.h; sourceTree = "<group>"; };
+		479F69FA1952F9760055D787 /* MaoRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaoRootViewController.m; sourceTree = "<group>"; };
 		479FED7D19472E4400D7C483 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		47A037C51948878400DA9171 /* CustomAlertWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertWindow.h; sourceTree = "<group>"; };
 		47A037C61948878400DA9171 /* CustomAlertWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAlertWindow.m; sourceTree = "<group>"; };
@@ -792,6 +795,8 @@
 				479C52B21923854A00CCF9F4 /* Main.storyboard */,
 				479C52B51923854A00CCF9F4 /* MaoViewController.h */,
 				479C52B61923854A00CCF9F4 /* MaoViewController.m */,
+				479F69F91952F9760055D787 /* MaoRootViewController.h */,
+				479F69FA1952F9760055D787 /* MaoRootViewController.m */,
 				47A3C44A1931F5FF00EE44EF /* tools */,
 				4712E06519289D7900DEA3AD /* timeWorker */,
 				479F24891924CDC3006B4080 /* clean */,
@@ -1204,7 +1209,7 @@
 				47A165A8194DC9D6005CA1EE /* ShareService.h */,
 				47A165A9194DC9D6005CA1EE /* ShareService.m */,
 				479C56611932D5600086380C /* AppService.h */,
-				479C56621932D5600086380C /* AppService.m */,
+				479C10FC19528E09007E4A0C /* AppService.m */,
 				47A037C51948878400DA9171 /* CustomAlertWindow.h */,
 				47A037C61948878400DA9171 /* CustomAlertWindow.m */,
 				47A3C45419320B7600EE44EF /* BaseViewModel.h */,
@@ -1483,6 +1488,7 @@
 				479F2F9F1951C8AB002758F4 /* AlixPayResult.m in Sources */,
 				4712E07C1928BD6500DEA3AD /* WorkerOrderViewController.m in Sources */,
 				47A192E3194C66960011FAE6 /* CommetCell.m in Sources */,
+				479F69FB1952F9760055D787 /* MaoRootViewController.m in Sources */,
 				479F2FA21951C8AB002758F4 /* SBJSON.m in Sources */,
 				479C52D7192399E500CCF9F4 /* CleanServiceTableViewController.m in Sources */,
 				47A03C1B1939CEE70019E469 /* UIImage+ColorAtPixel.m in Sources */,
@@ -1518,7 +1524,6 @@
 				47A07E33194600DA00A9813F /* StoreListViewController.m in Sources */,
 				47A16464194D7B9C005CA1EE /* OrderWaitingServiceViewController.m in Sources */,
 				47A165AA194DC9D6005CA1EE /* ShareService.m in Sources */,
-				479C56631932D5600086380C /* AppService.m in Sources */,
 				47F0CCE9193F5EE700702053 /* Order.m in Sources */,
 				47AC556A1949DB730052154B /* CleanWatchCell.m in Sources */,
 				47A3C4511931F69900EE44EF /* HTTPService.m in Sources */,
@@ -1535,6 +1540,7 @@
 				4799EFB31927608400863423 /* OrderSelection.m in Sources */,
 				479F249C1924DED2006B4080 /* CleanSectionModel.m in Sources */,
 				479EE535193084FB0030F462 /* DryCleaningCell.m in Sources */,
+				479C10FD19528E09007E4A0C /* AppService.m in Sources */,
 				4799EFA41927397600863423 /* ServiceModel.m in Sources */,
 				479E1F93193C7F6F0062A15D /* CleanDetailCheckModel.m in Sources */,
 			);

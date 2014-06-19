@@ -26,7 +26,7 @@
 
 @implementation MaoHouseViewController
 - (void)dismissPage:(UIBarButtonItem *)cancel {
-  [self dismissViewControllerAnimated:YES completion:nil];
+   [self.houseViewModel backToRootVC:self.navigationController];
 }
 -(void)viewDidLoad{
     [super viewDidLoad];
@@ -74,10 +74,21 @@
     
     [self.btnBack addTarget:self action:@selector(dismissPage:) forControlEvents:UIControlEventTouchUpInside];
     [self setUI];
-    [[UIApplication sharedApplication] setApplicationSupportsShakeToEdit:YES];
+    }
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    //[[UIApplication sharedApplication] setApplicationSupportsShakeToEdit:YES];
     
-    [self becomeFirstResponder];
+    //[self becomeFirstResponder];
+
 }
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+     //[[UIApplication sharedApplication] setApplicationSupportsShakeToEdit:NO];
+    //[[UIApplication sharedApplication] setApplicationSupportsShakeToEdit:NO];
+}
+
 -(void)setUI{
 //    self.btnBack.clipsToBounds=YES;
 //    [self.btnBack.layer setBorderColor:[UIColor whiteColor].CGColor];

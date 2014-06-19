@@ -111,9 +111,7 @@
     
 }
 - (IBAction)dismiss:(id)sender {
-    [self.navigationController dismissViewControllerAnimated:YES completion:^{
-        
-    }];
+    [self.cleanViewModel backToRootVC:self.navigationController];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;{
     ServiceModel *model=[self.cleanViewModel.service.serviceModels objectAtIndex:indexPath.section];
