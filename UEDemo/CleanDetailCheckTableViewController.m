@@ -32,9 +32,12 @@
     self.detailViewModel=[[CleanDetailCheckViewModel alloc]init];
     [[CleanService defaultService] loadServiceOrderSelections];
     __weak id weakSelf=self;
-   [[ RACObserve(self, detailViewModel.detaileChecks) map:^id(id value) {
-       __strong CleanDetailCheckTableViewController *strongSelf=weakSelf;
-       [strongSelf.tableView reloadData];
+   [[ RACObserve(self, detailViewModel.detaileChecks) map:^id(NSArray *value) {
+       if ([value count]) {
+           __strong CleanDetailCheckTableViewController *strongSelf=weakSelf;
+           [strongSelf.tableView reloadData];
+       }
+      
         return value;
     }]subscribeNext:^(id x) {}];
     
@@ -70,7 +73,7 @@
     DetailCheckCell *cell=[tableView dequeueReusableCellWithIdentifier:@"DetailCheckCell"];
      CleanDetailCheckModel *model=[self.detailViewModel.detaileChecks objectAtIndex:indexPath.row];
     cell.detailModel=model;
-    cell.contentView.backgroundColor =[UIColor redColor];
+    //cell.contentView.backgroundColor =[UIColor redColor];
     
     
     
@@ -80,6 +83,9 @@
    CleanDetailCheckModel *model= [self.detailViewModel.detaileChecks objectAtIndex:indexPath.row];
     BOOL choosed=[model.choosed boolValue];
     model.choosed=@(!choosed);
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 40;
 }
 -(void)dealloc{
     NSLog(@"%@ dealloc",self);
