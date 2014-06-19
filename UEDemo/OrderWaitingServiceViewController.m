@@ -15,6 +15,7 @@
 #import "ShareService.h"
 #import "OrderPayViewController.h"
 #import "MaoRootViewController.h"
+#import <UIImageView+AFNetworking.h>
 @interface OrderWaitingServiceViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 @property (weak, nonatomic) IBOutlet UILabel *lbOrderName;
@@ -191,6 +192,7 @@
         UIImageView *headerImage=[[UIImageView alloc]init];
         headerImage.frame=CGRectMake(x, y, imgwidth, imgHeight);
         headerImage.image=[UIImage imageNamed:@"header"];
+      
         [headerImage.layer setCornerRadius:imgHeight/2.0];
         [headerImage setClipsToBounds:YES];
         [self.serverListView addSubview:headerImage];

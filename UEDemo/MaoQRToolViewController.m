@@ -10,6 +10,7 @@
 #import "AppService.h"
 #import "CustomAlertWindow.h"
 @interface MaoQRToolViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *btnBack;
 @property(nonatomic) ZXCapture *capture;
 @end
 
@@ -29,6 +30,7 @@
   self.scannerWin.layer.borderColor = [[UIColor lightGrayColor] CGColor];
   [self.view bringSubviewToFront:self.scannerWin];
   [self.view bringSubviewToFront:self.decodedLabel];
+    [self.view bringSubviewToFront:self.btnBack];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -41,6 +43,9 @@
       320 / self.view.frame.size.width, 480 / self.view.frame.size.height);
   self.capture.scanRect =
       CGRectApplyAffineTransform(self.scannerWin.frame, captureSizeTransform);
+}
+- (IBAction)pop:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 #pragma mark - delegate
@@ -74,7 +79,7 @@
                
                 //self.scanSuccess=@(NO);
                 [self.navigationController popToRootViewControllerAnimated:NO];
-                 
+                
                      [[AppService defaultService]performSelector:@selector(showScanOrder:) withObject:orderno afterDelay:0];
                 
                 

@@ -12,11 +12,16 @@
 #import "DataVerifier.h"
 #import "AlixPayResult.h"
 #import "CustomAlertWindow.h"
+#import "MaoAppDelegate.h"
 @interface OrderPayViewController ()
 @property (nonatomic) NSString *partnerID;
 @property (nonatomic) NSString *sellerID;
 @property (nonatomic) NSString *parterPrivateKey;
 @property (nonatomic) NSString *aliPayPubKey;
+@property (weak, nonatomic) IBOutlet UILabel *lbServiceTime;
+@property (weak, nonatomic) IBOutlet UILabel *lbAddress;
+@property (weak, nonatomic) IBOutlet UILabel *lbPhone;
+
 
 @end
 
@@ -31,10 +36,23 @@
 {
     [super viewDidLoad];
     [self getPayInfomation];
-    
+    [self loadData];
     
     
 }
+-(void)loadData{
+  
+    
+   
+    self.lbServiceTime.text=[self.order objectForKey:@"updatetime"];
+    MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
+    self.lbAddress.text=[delegate.hostUser objectForKey:@"address"];
+    self.lbPhone.text=[delegate.hostUser objectForKey:@"username"];
+  
+   
+    
+}
+
 - (IBAction)pay:(id)sender {
     if (!self.partnerID) {
         return;
@@ -71,7 +89,7 @@
     order.productName = ordername;
     order.productDescription = @"随便说说就好 这是文案";
     order.amount = [NSString stringWithFormat:@"%.2f", [[self.order objectForKey:@"allprice"] floatValue]];
-    order.notifyURL = @"http%3A%2F%2Fwww.rongmm.com.cn";
+    order.notifyURL = @"http%3A%2F%2F218.244.130.240:8080/eclean/alipay/noticeEcleanServer.do";
     order.tradeNO = [self.order objectForKey:@"orderno"];
     
     return order.description;
