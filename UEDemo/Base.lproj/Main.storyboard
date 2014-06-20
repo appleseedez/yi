@@ -520,22 +520,36 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_logo_clean" id="FAf-xj-srY">
-                                        <rect key="frame" x="27" y="32" width="45" height="45"/>
+                                    <button opaque="NO" tag="1201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="988-lV-aD4">
+                                        <rect key="frame" x="42" y="33" width="45" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_logo_worker" id="AYi-aa-Wax">
-                                        <rect key="frame" x="98" y="32" width="45" height="45"/>
+                                        <state key="normal" backgroundImage="main_logo_clean">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeServicePage:" destination="E4B-I1-xU4" eventType="touchUpInside" id="Mur-CL-F5p"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fUC-YV-169">
+                                        <rect key="frame" x="138" y="31" width="45" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house_item_cancel" highlightedImage="house_item_cancel_high" id="DMU-Yw-eUj">
-                                        <rect key="frame" x="248" y="32" width="45" height="45"/>
+                                        <state key="normal" backgroundImage="main_logo_worker">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeServicePage:" destination="E4B-I1-xU4" eventType="touchUpInside" id="gHK-BZ-uij"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pKS-Lz-7Qa">
+                                        <rect key="frame" x="231" y="31" width="45" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_logo_wash" id="KPx-v3-af3">
-                                        <rect key="frame" x="172" y="32" width="45" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                        <state key="normal" backgroundImage="main_logo_wash">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeServicePage:" destination="E4B-I1-xU4" eventType="touchUpInside" id="7sk-EX-d1K"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.17000000000000001" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -2100,8 +2114,6 @@
         <image name="clean_watch_high" width="290" height="40"/>
         <image name="clean_watch_normal" width="294" height="44"/>
         <image name="header" width="102" height="102"/>
-        <image name="house_item_cancel" width="44" height="44"/>
-        <image name="house_item_cancel_high" width="44" height="44"/>
         <image name="login_background" width="320" height="480"/>
         <image name="main_call_high" width="22" height="22"/>
         <image name="main_call_normal" width="26" height="26"/>

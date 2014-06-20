@@ -26,6 +26,10 @@
 @end
 
 @implementation MaoHouseViewController
+- (IBAction)changeServicePage:(UIButton*)sender {
+    MaoRootViewController *rootVC=(MaoRootViewController*)[UIApplication sharedApplication].delegate.window.rootViewController;
+    [rootVC changeSubVCWithIndex:(sender.tag-1201)];
+}
 - (void)dismissPage:(UIBarButtonItem *)cancel {
    [self.houseViewModel backToRootVC:self.navigationController];
 }
