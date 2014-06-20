@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MaoRootViewController.h"
 @class CleanDetailCheckViewModel;
-@interface CleanDetailCheckTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface CleanDetailCheckTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,RootViewControllerChangeSubVCDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) CleanDetailCheckViewModel *detailViewModel;
 @end

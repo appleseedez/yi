@@ -36,7 +36,7 @@
 {
     [super viewDidLoad];
     [self setHeader];
-    [self setFooter];
+    
     MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
     self.lbAddress.text=[delegate.hostUser objectForKey:@"address"];
     self.lbPhone.text=[delegate.hostUser objectForKey:@"username"];
@@ -56,18 +56,26 @@
         }
         
     }
+    [self setFooter];
+    __weak id weakSelf=self;
     [[RACObserve(self, dryViewModel.orderSuccess) map:^id(id value) {
         if ([value boolValue]) {
             MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
             NSString *userphone=[delegate.hostUser objectForKey:@"username"];
             
             NSString *message=[NSString stringWithFormat:@"预约订单已经发送\n稍后客服人员会通过\n%@\n联系您",userphone];
-            [CustomAlertWindow showWithText:message];
+           CustomAlertWindow *alert= [CustomAlertWindow showWithText:message];
+            alert.cdelegate=weakSelf;
         }
         return value;
     }]subscribeNext:^(id x) {}];
     
     // Do any additional setup after loading the view.
+}
+-(void)alertDidDisappear{
+    MaoRootViewController *rooVC=(MaoRootViewController*)[UIApplication sharedApplication].delegate.window.rootViewController;
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    [rooVC changeRootVCWithController:self.navigationController];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [self.orderItems count];

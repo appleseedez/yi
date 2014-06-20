@@ -30,7 +30,7 @@
     MaoRootViewController *rootVC=(MaoRootViewController*)[UIApplication sharedApplication].delegate.window.rootViewController;
     [rootVC changeSubVCWithIndex:(sender.tag-1201)];
 }
-- (void)dismissPage:(UIBarButtonItem *)cancel {
+- (IBAction)dismissPage:(UIButton*)cancel {
    [self.houseViewModel backToRootVC:self.navigationController];
 }
 -(void)viewDidLoad{

@@ -26,19 +26,25 @@
 {
     [super viewDidLoad];
     [self loadSelectedWorkerView];
-   
+    __weak id  weakSelf=self;
     [[RACObserve(self, listViewModel.orderSuccess) map:^id(NSNumber *value) {
         if ([value boolValue]) {
             MaoAppDelegate *delegate=[UIApplication sharedApplication].delegate;
             NSString *userphone=[delegate.hostUser objectForKey:@"username"];
             
              NSString *message=[NSString stringWithFormat:@"预约订单已经发送\n稍后客服人员会通过\n%@\n联系您",userphone];
-            [CustomAlertWindow showWithText:message];
+           CustomAlertWindow *alert= [CustomAlertWindow showWithText:message];
+            alert.cdelegate=weakSelf;
                                }
         
         return value;
     }]subscribeNext:^(id x) {}];
     
+}
+-(void)alertDidDisappear{
+    MaoRootViewController *rooVC=(MaoRootViewController*)[UIApplication sharedApplication].delegate.window.rootViewController;
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    [rooVC changeRootVCWithController:self.navigationController];
 }
 - (IBAction)subWorkerOrder:(id)sender {
     [self.listViewModel subWorkerOrder];
