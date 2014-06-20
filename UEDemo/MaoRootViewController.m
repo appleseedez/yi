@@ -28,6 +28,7 @@ static UIViewController *currViewController=nil;
     [self.view addSubview:maoVC.view];
     currViewController=maoVC;
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showOrder:) name:@"showOrder" object:nil];
+    supportShake=YES;
     // Do any additional setup after loading the view.
 }
 
@@ -50,7 +51,7 @@ static UIViewController *currViewController=nil;
 }
 -(void)changeToChildController:(UIViewController*)subController{
     
-    
+    supportShake=NO;
     
     [self transitionFromViewController:currViewController toViewController:subController duration:0.3 options:UIViewAnimationOptionShowHideTransitionViews animations:^{
     
@@ -60,7 +61,7 @@ static UIViewController *currViewController=nil;
     currViewController=subController;
 }
 -(void)backToRoot:(UIViewController*)subController{
-    supportShake=NO;
+    supportShake=YES;
     
     [self transitionFromViewController:currViewController toViewController:[self.childViewControllers objectAtIndex:5] duration:0.3 options:UIViewAnimationOptionShowHideTransitionViews animations:^{
         
@@ -71,11 +72,7 @@ static UIViewController *currViewController=nil;
 }
 
 -(void)changeSubVCWithIndex:(NSInteger)index{
-    if (index==4) {
-        supportShake =YES;
-    }else{
-        supportShake=NO;
-    }
+   
     UIViewController *subVC=  [self.childViewControllers objectAtIndex:index];
     [self changeToChildController:subVC];
 }

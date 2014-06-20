@@ -11,6 +11,7 @@
 #import "HouseViewModel.h"
 #import "CommetCell.h"
 #import "NSDictionary+killNull.h"
+#import <UIImageView+AFNetworking.h>
 @interface MaoHouseViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *btnScan;
 @property (weak, nonatomic) IBOutlet UIView *imgBorderView;
@@ -54,6 +55,7 @@
            strongSelf.txtServiceconcept.text=[value objectForKey:@"serviceconcept"];
            strongSelf.txtServicetenets.text=[value objectForKey:@"servicetenets"];
            strongSelf.txtStoreName.text=[value objectForKey:@"name"];
+           [strongSelf.imgLogo setImageWithURL:[NSURL URLWithString:[value objectForKey:@"logo"]]];
 
        }
        
