@@ -21,7 +21,11 @@
 
 - (void)awakeFromNib
 {
-    // Initialization code
+    self.starView=[[StarView alloc]init];
+    self.starView.frame=CGRectMake(80, 10, 40, 10);
+    [self.starView loadStars:8];
+    [self.contentView addSubview: self.starView];
+    self.starView.userInteractionEnabled=NO;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -35,7 +39,11 @@
     // Configure the view for the selected state
 }
 -(void)loatCommet:(NSDictionary*)data{
-    self.lbName.text=[data objectForKey:@"username"];
+    NSString *username=[data objectForKey:@"username"];
+    if (!username.length) {
+         username=@"容么么顾客";
+    }
+    self.lbName.text=username;
     self.lbCommet.text=[data objectForKey:@"content"];
 }
 @end

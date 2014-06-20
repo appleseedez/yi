@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "StarView.h"
 @interface CommetCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *lbName;
 @property (weak, nonatomic) IBOutlet UILabel *lbCommet;
+@property (nonatomic)  StarView *starView;
 -(void)loatCommet:(NSDictionary*)data;
 @end

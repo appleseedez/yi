@@ -477,12 +477,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wbu-tk-r9i">
-                                        <rect key="frame" x="264" y="8" width="48" height="71"/>
+                                        <rect key="frame" x="242" y="8" width="68" height="58"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <state key="normal" title="call">
+                                        <state key="normal" image="main_call_normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <state key="highlighted" image="main_call_high"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -519,31 +520,48 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_logo_clean" id="FAf-xj-srY">
+                                        <rect key="frame" x="27" y="32" width="45" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_logo_worker" id="AYi-aa-Wax">
+                                        <rect key="frame" x="98" y="32" width="45" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house_item_cancel" highlightedImage="house_item_cancel_high" id="DMU-Yw-eUj">
+                                        <rect key="frame" x="248" y="32" width="45" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_logo_wash" id="KPx-v3-af3">
+                                        <rect key="frame" x="172" y="32" width="45" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.17000000000000001" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="49" sectionHeaderHeight="1" sectionFooterHeight="1" id="wgR-GN-hLl">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="49" sectionHeaderHeight="1" sectionFooterHeight="1" id="wgR-GN-hLl">
                                 <rect key="frame" x="0.0" y="371" width="320" height="197"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="1" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="commetCell" id="T0M-Uv-h8U" customClass="CommetCell">
                                         <rect key="frame" x="0.0" y="1" width="320" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T0M-Uv-h8U" id="hrB-8p-Qd2">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是名字" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mjm-K8-MBB">
-                                                    <rect key="frame" x="11" y="8" width="51" height="14"/>
+                                                    <rect key="frame" x="11" y="8" width="85" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是内容" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zh3-ld-7rU">
-                                                    <rect key="frame" x="11" y="30" width="289" height="14"/>
+                                                    <rect key="frame" x="11" y="25" width="289" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2082,7 +2100,11 @@
         <image name="clean_watch_high" width="290" height="40"/>
         <image name="clean_watch_normal" width="294" height="44"/>
         <image name="header" width="102" height="102"/>
+        <image name="house_item_cancel" width="44" height="44"/>
+        <image name="house_item_cancel_high" width="44" height="44"/>
         <image name="login_background" width="320" height="480"/>
+        <image name="main_call_high" width="22" height="22"/>
+        <image name="main_call_normal" width="26" height="26"/>
         <image name="main_centre_back_high" width="76" height="76"/>
         <image name="main_centre_back_normal" width="76" height="76"/>
         <image name="main_clean_high" width="141" height="165"/>
