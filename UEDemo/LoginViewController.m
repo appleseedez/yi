@@ -79,8 +79,8 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self setUI];
-    self.txtPassword.text=@"111111";
-    self.txtPhone.text=@"13012360815";
+    //self.txtPassword.text=@"111111";
+    //self.txtPhone.text=@"13012360815";
   self.loginViewModel = [[LoginViewModel alloc] init];
   //监听HUD
     __weak id weakSelf=self;

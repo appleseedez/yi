@@ -41,7 +41,7 @@
 -(void)loatCommet:(NSDictionary*)data{
     NSString *username=[data objectForKey:@"username"];
     if (!username.length) {
-         username=@"容么么顾客";
+         username=@"蓉么么顾客";
     }
     self.lbName.text=username;
     self.lbCommet.text=[data objectForKey:@"content"];

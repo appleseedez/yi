@@ -36,7 +36,7 @@
     [self.shareViewModel subCommets:[self.order objectForKey:@"id"] commet:self.txtShareContent.text level:@([self.starView.score intValue]+1)];
     [self dismissViewControllerAnimated:YES completion:^{
         if ([self.shareType isEqualToString:@"微信朋友圈"]) {
-             [[ShareService defautService] shareWithTitle:@"容么么" content:self.txtShareContent.text type:self.shareType];
+             [[ShareService defautService] shareWithTitle:@"蓉么么" content:self.txtShareContent.text type:self.shareType];
         }
        
     }];

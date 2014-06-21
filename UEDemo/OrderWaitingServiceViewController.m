@@ -45,7 +45,7 @@
     [self showEditView:@"微信朋友圈"];
 }
 - (IBAction)shareWeibo:(id)sender {
-    [[ShareService defautService] shareWithTitle:@"容么么" content:@"" type:@"微博"];
+    [[ShareService defautService] shareWithTitle:@"蓉么么" content:@"" type:@"微博"];
 }
 - (IBAction)shareWeixinHaoyou:(id)sender {
      [self showEditView:@"微信好友"];

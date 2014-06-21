@@ -74,11 +74,11 @@
 - (NSString *)getOrderInfoFromProduct{
     NSString *ordername=nil;
     if ([[self.order objectForKey:@"ordertype"] isEqualToString:@"bj"]) {
-          ordername=@"容么么保洁服务订单";
+          ordername=@"蓉么么保洁服务订单";
     }else if ([[self.order objectForKey:@"ordertype"] isEqualToString:@"gx"]){
-           ordername=@"容么么干洗服务订单";
+           ordername=@"蓉么么干洗服务订单";
     }else if ([[self.order objectForKey:@"ordertype"] isEqualToString:@"zd"]){
-        ordername=@"容么么钟点工服务订单";
+        ordername=@"蓉么么钟点工服务订单";
     }
     
     
