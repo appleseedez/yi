@@ -11,6 +11,7 @@
 #import "CustomAlertWindow.h"
 @interface MaoQRToolViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *btnBack;
+@property (weak, nonatomic) IBOutlet UIView *navView;
 @property(nonatomic) ZXCapture *capture;
 @end
 
@@ -19,6 +20,7 @@
 #pragma mark - life
 - (void)viewDidLoad {
   [super viewDidLoad];
+    UIColor *navGreen=[UIColor colorWithPatternImage:[UIImage imageNamed:@"login_background"]];
   self.capture = [[ZXCapture alloc] init];
   self.capture.camera = self.capture.back;
   self.capture.focusMode = AVCaptureFocusModeContinuousAutoFocus;
@@ -26,11 +28,18 @@
 
   self.capture.layer.frame = self.view.bounds;
   [self.view.layer addSublayer:self.capture.layer];
-  self.scannerWin.layer.borderWidth = .5f;
-  self.scannerWin.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+  self.scannerWin.layer.borderWidth = 1.5f;
+  //self.scannerWin.layer.borderColor = [((UIView*)self.scannerWin.subviews[2]).backgroundColor CGColor];
+    self.scannerWin.layer.borderColor=navGreen.CGColor;
   [self.view bringSubviewToFront:self.scannerWin];
   [self.view bringSubviewToFront:self.decodedLabel];
-    [self.view bringSubviewToFront:self.btnBack];
+    //[self.view bringSubviewToFront:self.btnBack];
+    self.navView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"login_background"]];
+    [self.view bringSubviewToFront:self.navView];
+    for (UIView *v in self.scannerWin.subviews) {
+        v.backgroundColor=navGreen;
+        
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {

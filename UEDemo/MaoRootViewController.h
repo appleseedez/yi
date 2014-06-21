@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol RootViewControllerChangeSubVCDelegate <NSObject>
-
+@optional
 -(void)changeSubVCWithIndex:(NSInteger)index;
 -(void)changeSubVCWithController:(UIViewController*)subVC;
 -(void)changeRootVCWithController:(UIViewController*)subVC;
