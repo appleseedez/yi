@@ -153,71 +153,22 @@ static AppService *instance = nil;
 }
 - (void)getStore {
 
-  //       NSNumber *storeid=[[NSUserDefaults standardUserDefaults]
-  //       objectForKey:@"storeid"];
-  //
-  //    if (storeid) {
-  //        [self getCurrStore:storeid];
-  //    }else{
-  //        self.showStoreSetting=@(YES);
-  //    }
-  NSDictionary *store =
-      [[NSUserDefaults standardUserDefaults] objectForKey:@"store"];
-  if (!store) {
-    store = @{
-      @"id" : @(21),
-      @"name" : @"八里小区店",
-      @"address" : @"东一街",
-      @"logo" : @"http://picture.com/jd/332/22/101.jpg",
-      @"coordinatex" : @(5678),
-      @"coordinatey" : @(345),
-      @"services" : @"保洁，干洗，钟点工",
-      @"introduce" : @"这是一个店",
-      @"servers" : @[
-        @{
-          @"id" : @(12),
-          @"storeid" : @(1), //门店 id
-          @"storename" : @"门店名称",
-          @"name" : @"张小霞",
-          @"sex" : @(0),
-          @"age" : @(25),
-          @"workyears" : @(3),
-          @"skills" : @"洗衣,做饭",
-          @"lowprice" : @(14),
-          @"price" : @(25),
-          @"avatar" : @""
-        },
-        @{
-          @"id" : @(12),
-          @"storeid" : @(1), //门店 id
-          @"storename" : @"门店名称",
-          @"name" : @"田芳",
-          @"sex" : @(0),
-          @"age" : @(25),
-          @"workyears" : @(3),
-          @"skills" : @"洗衣,做饭",
-          @"lowprice" : @(14),
-          @"price" : @(25),
-          @"avatar" : @""
-        }
-      ]
-    };
-
-    MaoAppDelegate *delegate = [UIApplication sharedApplication].delegate;
-    delegate.currStore = store;
-    [[NSUserDefaults standardUserDefaults] setObject:store forKey:@"store"];
-  } else {
-    MaoAppDelegate *delegate = [UIApplication sharedApplication].delegate;
-    delegate.currStore = store;
+    NSNumber *storeid=[[NSUserDefaults standardUserDefaults]
+         objectForKey:@"storeid"];
+  
+      if (storeid) {
+          [self getCurrStore:storeid];
+      }else{
+          self.showStoreSetting=@(YES);
+      }
   }
-}
 - (void)getCurrStore:(NSNumber *)storeid {
-  MaoAppDelegate *delegate = [UIApplication sharedApplication].delegate;
+  //MaoAppDelegate *delegate = [UIApplication sharedApplication].delegate;
   NSString *url = [NSString
       stringWithFormat:@"%@/eclean/showOneStore.json", ACCOUNT_SERVER];
   NSDictionary *parameters = @{
     @"storeid" : storeid,
-    @"username" : [delegate.hostUser objectForKey:@"username"]
+    
   };
   [[self httpRequestWithURL:url andParameters:parameters
                      method:@"post"] subscribeNext:^(NSDictionary *x) {

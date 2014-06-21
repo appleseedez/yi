@@ -13,6 +13,8 @@
 #import "WXApi.h"
 #import "AlixPayResult.h"
 #import "DataVerifier.h"
+#import "CustomAlertWindow.h"
+#import "MaoRootViewController.h"
 @implementation MaoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -41,12 +43,14 @@
 {
     if (url!=nil&&[url.host isEqualToString:@"safepay"]) {
          [self parseResultWithURL:url inApplication:application];
+        
               return YES;
     }
     
     return [ShareSDK handleOpenURL:url
                         wxDelegate:self];
 }
+
 - (AlixPayResult *)prepareResultFromURL:(NSURL *)url {
     AlixPayResult *result = nil;
     if (url != nil && [url.host isEqualToString:@"safepay"]) {
@@ -61,6 +65,12 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     
+    NSLog(@"host:%@",url.host);
+    if (url!=nil&&[url.host isEqualToString:@"safepay"]) {
+        [self parseResultWithURL:url inApplication:application];
+        
+        return YES;
+    }
     
     
     return [ShareSDK handleOpenURL:url
@@ -70,6 +80,7 @@
 }
 - (void)parseResultWithURL:(NSURL *)url
              inApplication:(UIApplication *)application {
+    __weak id weakSelf=self;
     AlixPayResult *result = nil;
     result = [self prepareResultFromURL:url];
     
@@ -89,16 +100,55 @@
             if ([verifier verifyString:result.resultString
                               withSign:result.signString]) {
                 //验证签名成功，交易结果无篡改
+               CustomAlertWindow *alert=  [CustomAlertWindow showWithText:@"恭喜付款成功"];
+                 alert.cdelegate=weakSelf;
             }
             
         } else {
-            //交易失败
+            //交易取消
+           CustomAlertWindow *alert=  [CustomAlertWindow showWithText:@"抱歉付款失败"];
+            alert.cdelegate=weakSelf;
         }
     } else {
+       CustomAlertWindow *alert=   [CustomAlertWindow showWithText:@"交易出错"];
+        
+        alert.cdelegate=weakSelf;
         //失败
     }
 }
-
+-(void)alertDidDisappear{
+    [(MaoRootViewController*)self.window.rootViewController changeRootVCWithController:nil];
+}
+- (void)paymentResult:(NSString *)resultd {
+    //结果处理
+    AlixPayResult *result = [[AlixPayResult alloc] initWithString:resultd];
+    if (result) {
+        
+        if (result.statusCode == 9000) {
+            /*
+             *用公钥验证签名 严格验证请使用result.resultString与result.signString验签
+             */
+            
+            //交易成功
+            NSString *key = AlipayPubKey; //签约帐户后获取到的支付宝公钥
+            id<DataVerifier> verifier;
+            verifier = CreateRSADataVerifier(key);
+            
+            if ([verifier verifyString:result.resultString
+                              withSign:result.signString]) {
+                //验证签名成功，交易结果无篡改
+                
+            }
+        } else {
+            //交易失败
+           
+        }
+    } else {
+       
+        //失败
+    }
+    
+}
 
 
 -(void)changeToRootView{
