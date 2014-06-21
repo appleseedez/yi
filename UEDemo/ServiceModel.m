@@ -23,6 +23,7 @@
         o.ID=[dic objectForKey:@"id"];
         [arrOrder addObject:o];
     }
+    model.allprice=[dic objectForKey:@"price"];
     model.PackSelections=[arrOrder copy];
     
     

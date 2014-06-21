@@ -18,4 +18,5 @@ NS_ENUM(NSInteger, cleanServiceModelType){
 @property (nonatomic) NSNumber *numOfStar;
 @property (nonatomic) NSInteger type;    //model类型
 +(ServiceModel*)modelWithDictionary:(NSDictionary*)dic;
+@property (nonatomic) NSNumber *allprice;
 @end

@@ -14,4 +14,7 @@
 -(void)subOrders;
 @property (nonatomic) NSArray *selections;
 @property (nonatomic) NSString *title;
+@property (nonatomic) NSNumber *allPrice;
+
+@property (nonatomic,weak)  ServiceModel *currServiceModel;
 @end
