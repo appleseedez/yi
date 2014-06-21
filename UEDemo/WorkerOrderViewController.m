@@ -43,7 +43,7 @@
 }
 -(void)alertDidDisappear{
     MaoRootViewController *rooVC=(MaoRootViewController*)[UIApplication sharedApplication].delegate.window.rootViewController;
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:NO];
     [rooVC changeRootVCWithController:self.navigationController];
 }
 - (IBAction)subWorkerOrder:(id)sender {
