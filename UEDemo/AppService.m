@@ -80,6 +80,7 @@ static AppService *instance = nil;
     [[RACObserve(self, showStoreSetting) map:^id(NSNumber *value) {
         __strong AppService *strongSelf = weakSelf;
         if ([value boolValue]) {
+            
           UIStoryboard *searchStory =
               [UIStoryboard storyboardWithName:@"search" bundle:nil];
           [strongSelf.storeSettingWindow
@@ -93,6 +94,7 @@ static AppService *instance = nil;
         } else {
           MaoAppDelegate *delegate = [UIApplication sharedApplication].delegate;
           [delegate.window makeKeyAndVisible];
+            self.storeSettingWindow.hidden=YES;
         }
 
         return value;

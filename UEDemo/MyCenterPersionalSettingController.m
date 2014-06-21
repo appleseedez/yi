@@ -18,7 +18,12 @@
 @end
 
 @implementation MyCenterPersionalSettingController
-
+- (IBAction)logout:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"logout" object:nil userInfo:nil];
+}
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
 - (IBAction)pop:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }

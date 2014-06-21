@@ -34,6 +34,7 @@
     [[CleanService defaultService] loadStarServices];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeToRootView) name:@"loginSucces" object:nil];
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeToLoginView) name:@"logout" object:nil];
     return YES;
 }
 - (BOOL)application:(UIApplication *)application  handleOpenURL:(NSURL *)url
@@ -113,6 +114,18 @@
     
    //
     
+}
+-(void)changeToLoginView{
+    UIStoryboard *login=[UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    UIViewController *loginVC=[login instantiateInitialViewController];
+    CATransition *animation=[CATransition animation];
+    animation.type=@"push";
+    animation.duration=0.5;
+    animation.subtype=@"fromLeft";
+    [self.window setRootViewController:loginVC];
+    [self.window.layer addAnimation:animation forKey:@"login"];
+    self.currStore=nil;
+    self.hostUser=nil;
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {

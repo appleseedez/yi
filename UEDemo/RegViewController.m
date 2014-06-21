@@ -72,10 +72,10 @@
     [super viewDidLoad];
     [self setUI];
     self.regViewModel=[[RegViewModel alloc]init];
-    self.txtCode.userInteractionEnabled=NO;
-    self.txtPassword.userInteractionEnabled=NO;
-    self.txtRePassword.userInteractionEnabled=NO;
-    
+//    self.txtCode.userInteractionEnabled=NO;
+//    self.txtPassword.userInteractionEnabled=NO;
+//    self.txtRePassword.userInteractionEnabled=NO;
+//    
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(conformKeyBoard:) name:UIKeyboardWillChangeFrameNotification object:Nil];
     //监听HUD
     __weak id weakSelf=self;

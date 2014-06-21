@@ -75,15 +75,15 @@
         cell.contextVC=self;
         cell.sectionModel=model;
         NSString *imageName=nil;
-        if ([model.model.numOfStar isEqualToString:@"1星"]) {
+        if ([model.model.numOfStar intValue]==1) {
              imageName=@"clean_star_1";
-        }else if ([model.model.numOfStar isEqualToString:@"2星"]) {
+        }else if ([model.model.numOfStar intValue]==2) {
             imageName=@"clean_star_2";
-        }else if ([model.model.numOfStar isEqualToString:@"3星"]) {
+        }else if ([model.model.numOfStar intValue]==3) {
             imageName=@"clean_star_3";
-        }else if ([model.model.numOfStar isEqualToString:@"4星"]) {
+        }else if ([model.model.numOfStar intValue]==4) {
             imageName=@"clean_star_4";
-        }else if ([model.model.numOfStar isEqualToString:@"5星"]) {
+        }else if ([model.model.numOfStar intValue]==5) {
             imageName=@"clean_star_5";
         }
         cell.imgStar.image=[UIImage imageNamed:imageName];

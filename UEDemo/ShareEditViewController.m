@@ -29,7 +29,9 @@
     LoginInputTextField *txt = (LoginInputTextField *)textField;
     txt.textType = @(loginTextTypeEdit);
 }
-
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
 - (IBAction)finish:(id)sender {
     [self.shareViewModel subCommets:[self.order objectForKey:@"id"] commet:self.txtShareContent.text level:@([self.starView.score intValue]+1)];
     [self dismissViewControllerAnimated:YES completion:^{

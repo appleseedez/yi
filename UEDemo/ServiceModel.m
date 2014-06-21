@@ -16,7 +16,7 @@
     NSString *description=[dic objectForKey:@"description"];
     NSArray *arrdes=[description componentsSeparatedByString:@","];
     NSMutableArray *arrOrder=[NSMutableArray new];
-    model.numOfStar=[dic objectForKey:@"name"];
+    model.numOfStar=[dic objectForKey:@"starlevel"];
     for (NSString *s in arrdes) {
         OrderSelection *o=[OrderSelection new];
         o.name=s;

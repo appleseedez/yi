@@ -36,8 +36,7 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.houseViewModel = [[HouseViewModel alloc]init];
-    [self.houseViewModel loadStore];
-    [self.houseViewModel loadCommets];
+    
     //监听HUD
   __weak   id weakSelf=self;
     [[ RACObserve(self, houseViewModel.busy) map:^id(NSNumber *value) {
@@ -84,6 +83,8 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self.houseViewModel loadStore];
+    [self.houseViewModel loadCommets];
     //[[UIApplication sharedApplication] setApplicationSupportsShakeToEdit:YES];
     
     //[self becomeFirstResponder];
