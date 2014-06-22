@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgLogo;
 @property (weak, nonatomic) IBOutlet UIView *serverListView;
 @property (weak, nonatomic) IBOutlet UIButton *rightBarButton;
+@property (weak, nonatomic) IBOutlet UILabel *lbAllPrice;
 @property (nonatomic)   ShareView *shareView;
 @end
 
@@ -109,7 +110,17 @@
     [self loadShareView];
     [self loadData];
     [self setRightStatusButton];
+    [self loadAllPrice];
     // Do any additional setup after loading the view.
+}
+-(void)loadAllPrice{
+    NSNumber *price=[self.order objectForKey:@"allprice"];
+    if ([price isEqual:[NSNull null]]&&![price isKindOfClass:[NSNumber class] ] ) {
+        self.lbAllPrice.alpha=0;
+    }else{
+        self.lbAllPrice.text=[NSString stringWithFormat:@"￥  %.2f",[price floatValue]];
+        self.lbAllPrice.alpha=1;
+    }
 }
 -(void)setRightStatusButton{
      NSInteger status=[[self.order objectForKey:@"status"] integerValue];

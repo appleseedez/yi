@@ -1240,12 +1240,19 @@
                                 <rect key="frame" x="0.0" y="63" width="320" height="163"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="保洁订单已生成" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JJW-wG-2Dh">
+                                <rect key="frame" x="60" y="176" width="200" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" id="3E0-4k-4Va">
                                 <rect key="frame" x="125" y="96" width="71" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="保洁订单已生成" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VpR-Qg-YS7">
-                                <rect key="frame" x="60" y="181" width="200" height="21"/>
+                                <rect key="frame" x="60" y="205" width="200" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1308,6 +1315,7 @@
                     <connections>
                         <outlet property="imgLogo" destination="3E0-4k-4Va" id="5T1-dn-9ym"/>
                         <outlet property="lbAddress" destination="4pS-eb-v9V" id="fsm-Lj-62G"/>
+                        <outlet property="lbAllPrice" destination="JJW-wG-2Dh" id="UBw-ZA-mgC"/>
                         <outlet property="lbOrderName" destination="VpR-Qg-YS7" id="zaD-DJ-jNE"/>
                         <outlet property="lbPhone" destination="x3M-Ao-vMn" id="S27-JQ-vlp"/>
                         <outlet property="lbServiceTime" destination="pmw-BQ-CG6" id="zMl-Kk-GiX"/>
