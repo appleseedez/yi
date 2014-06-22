@@ -18,7 +18,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您注册的手机号码" clearsOnBeginEditing="YES" minimumFontSize="17" background="透明输入框" clearButtonMode="always" id="gpU-nh-0pJ" customClass="LoginInputTextField">
-                                <rect key="frame" x="37" y="165" width="250" height="42"/>
+                                <rect key="frame" x="35" y="165" width="250" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.45321053832116787" green="0.72733234489051091" blue="0.11379447992700728" alpha="1" colorSpace="calibratedRGB"/>
@@ -35,7 +35,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入登录密码" clearsOnBeginEditing="YES" minimumFontSize="17" background="透明输入框" clearButtonMode="always" id="Wu8-GH-gk8" customClass="LoginInputTextField">
-                                <rect key="frame" x="37" y="226" width="250" height="42"/>
+                                <rect key="frame" x="35" y="226" width="250" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.45409443430656932" green="0.72733234489051091" blue="0.11379447992700721" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,7 +52,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1EM-oA-JWV">
-                                <rect key="frame" x="105" y="292" width="91" height="35"/>
+                                <rect key="frame" x="115" y="294" width="91" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
@@ -66,7 +66,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="G7b-Hb-Ri5">
-                                <rect key="frame" x="110" y="352" width="81" height="30"/>
+                                <rect key="frame" x="120" y="344" width="81" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="没有账号？">
@@ -78,7 +78,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_logo" id="h3g-9M-Cek">
-                                <rect key="frame" x="120" y="56" width="81" height="81"/>
+                                <rect key="frame" x="129" y="74" width="62" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -214,7 +214,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <inset key="contentEdgeInsets" minX="-20" minY="20" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" image="worker_btn_back">
+                                        <state key="normal" image="close">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -251,11 +251,11 @@
     <resources>
         <image name="clean_watch_high" width="290" height="40"/>
         <image name="clean_watch_normal" width="294" height="44"/>
+        <image name="close" width="26" height="26"/>
         <image name="login_background" width="320" height="480"/>
-        <image name="login_logo" width="81" height="81"/>
+        <image name="login_logo" width="62" height="60"/>
         <image name="store_back_high" width="70" height="22"/>
         <image name="store_back_normal" width="74" height="26"/>
-        <image name="worker_btn_back" width="22" height="22"/>
         <image name="透明输入框" width="321" height="51"/>
         <image name="银杏叶虚化大背景.jpg" width="642" height="984"/>
     </resources>

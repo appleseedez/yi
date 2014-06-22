@@ -1329,9 +1329,6 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = reactiveCocoa;
 				TargetAttributes = {
-					479C529C1923854A00CCF9F4 = {
-						DevelopmentTeam = MB56WXZ49W;
-					};
 					479C52BD1923854A00CCF9F4 = {
 						TestTargetID = 479C529C1923854A00CCF9F4;
 					};
