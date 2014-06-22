@@ -80,6 +80,9 @@
     [self.btnBack addTarget:self action:@selector(dismissPage:) forControlEvents:UIControlEventTouchUpInside];
     [self setUI];
     }
+- (IBAction)callStore:(id)sender {
+    [[AppService defaultService]callCurrStrore];
+}
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];

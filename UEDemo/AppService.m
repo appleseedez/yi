@@ -202,4 +202,13 @@ static AppService *instance = nil;
   }];
    
 }
+-(void)callCurrStrore{
+    NSDictionary *store=((MaoAppDelegate*)[UIApplication sharedApplication].delegate).currStore;
+    NSNumber *phone=[store objectForKey:@"phone"];
+   // NSNumber *phone=@(1232321122);
+    if (phone) {
+        NSString *url=[NSString stringWithFormat:@"tel://%@",phone];
+        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:url]];
+    }
+}
 @end

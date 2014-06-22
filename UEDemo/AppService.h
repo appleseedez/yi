@@ -21,4 +21,5 @@
 -(void) getLocation;
 -(void)changeHostValue:(id)value forKey:(NSString*)key;
 -(void)showScanOrder:(NSString*)text;
+-(void)callCurrStrore;
 @end

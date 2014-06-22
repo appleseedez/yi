@@ -21,7 +21,7 @@
         self.name=self.hostUser[@"nickname"];
         self.address=self.hostUser[@"address"];
         self.phone=self.hostUser[@"username"];
-        self.source=@"IOS";
+        self.source=@"app";
         //self.allPrice=@(0);
     }
     return self;

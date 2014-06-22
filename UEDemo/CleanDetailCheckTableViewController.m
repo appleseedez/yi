@@ -13,6 +13,7 @@
 #import "CleanService.h"
 #import "MaoAppDelegate.h"
 #import "CustomAlertWindow.h"
+#import "AppService.h"
 @interface CleanDetailCheckTableViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *btnOrder;
 
@@ -54,6 +55,9 @@
         return value;
     }]subscribeNext:^(id x) {}];
     // Do any additional setup after loading the view.
+}
+- (IBAction)callStore:(id)sender {
+    [[AppService defaultService] callCurrStrore];
 }
 -(void)alertDidDisappear{
     MaoRootViewController *rooVC=(MaoRootViewController*)[UIApplication sharedApplication].delegate.window.rootViewController;

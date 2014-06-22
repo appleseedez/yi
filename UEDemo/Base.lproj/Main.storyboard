@@ -267,6 +267,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted" backgroundImage="clean_watch_high"/>
+                                <connections>
+                                    <action selector="callStore:" destination="PKf-7D-Q7B" eventType="touchUpInside" id="WI6-cg-wGl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -489,6 +492,9 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="highlighted" image="main_call_high"/>
+                                        <connections>
+                                            <action selector="callStore:" destination="E4B-I1-xU4" eventType="touchUpInside" id="8pm-1D-7WD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1958,6 +1964,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted" backgroundImage="clean_watch_high"/>
+                                <connections>
+                                    <action selector="callStore:" destination="fuz-m2-AfY" eventType="touchUpInside" id="jd6-xy-9yq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>

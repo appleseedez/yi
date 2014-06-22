@@ -11,6 +11,7 @@
 #import "OrderSelection.h"
 #import "MaoAppDelegate.h"
 #import "CustomAlertWindow.h"
+#import "AppService.h"
 @interface CleanServiceCheckViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -52,6 +53,9 @@
         
     }];
     // Do any additional setup after loading the view.
+}
+- (IBAction)callStore:(id)sender {
+    [[AppService defaultService] callCurrStrore];
 }
 -(void)alertDidDisappear{
     MaoRootViewController *rooVC=(MaoRootViewController*)[UIApplication sharedApplication].delegate.window.rootViewController;
