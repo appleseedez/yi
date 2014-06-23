@@ -234,7 +234,7 @@
 		4799EFB11927608400863423 /* OrderSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSelection.h; sourceTree = "<group>"; };
 		4799EFB21927608400863423 /* OrderSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSelection.m; sourceTree = "<group>"; };
 		479C10FC19528E09007E4A0C /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
-		479C529D1923854A00CCF9F4 /* UEDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UEDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		479C529D1923854A00CCF9F4 /* rongmm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rongmm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		479C52A01923854A00CCF9F4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		479C52A21923854A00CCF9F4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		479C52A41923854A00CCF9F4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -743,7 +743,7 @@
 		479C529E1923854A00CCF9F4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				479C529D1923854A00CCF9F4 /* UEDemo.app */,
+				479C529D1923854A00CCF9F4 /* rongmm.app */,
 				479C52BE1923854A00CCF9F4 /* UEDemoTests.xctest */,
 			);
 			name = Products;
@@ -1296,7 +1296,7 @@
 			);
 			name = UEDemo;
 			productName = UEDemo;
-			productReference = 479C529D1923854A00CCF9F4 /* UEDemo.app */;
+			productReference = 479C529D1923854A00CCF9F4 /* rongmm.app */;
 			productType = "com.apple.product-type.application";
 		};
 		479C52BD1923854A00CCF9F4 /* UEDemoTests */ = {
@@ -1699,7 +1699,7 @@
 					"$(PROJECT_DIR)/alipay",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = rongmm;
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -1737,7 +1737,7 @@
 					"$(PROJECT_DIR)/alipay",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = rongmm;
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
