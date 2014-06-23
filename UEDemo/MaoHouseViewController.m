@@ -127,7 +127,7 @@
     CommetCell *cell=[tableView dequeueReusableCellWithIdentifier:@"commetCell"];
     NSDictionary *dic=[self.houseViewModel.commets objectAtIndex:indexPath.row];
     [cell loatCommet:[dic killNull]];
-    [cell.starView setScore:[dic objectForKey:@"level"]];
+    [cell.starView setNewScore:[[dic objectForKey:@"level"] intValue]];
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
