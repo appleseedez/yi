@@ -39,14 +39,14 @@ static ShareService *instance;
                                        defaultContent:@"默认分享内容，没内容时显示"
                                                 image:nil
                                                 title:title
-                                                  url:@"http://www.rongmm.com.cn"
+                                                  url:nil
                                           description:@"这是一条测试信息"
                                             mediaType:SSPublishContentMediaTypeNews];
     
     
-    [ShareSDK oneKeyShareContent:nil shareList:@[@(ShareTypeWeixiSession)] authOptions:nil shareOptions:nil statusBarTips:YES result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
-        
-    }];
+//    [ShareSDK oneKeyShareContent:nil shareList:@[@(ShareTypeWeixiSession)] authOptions:nil shareOptions:nil statusBarTips:YES result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
+//        
+//    }];
     [ShareSDK shareContent:publishContent type:shareType authOptions:nil shareOptions:nil statusBarTips:YES result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
         if (state == SSResponseStateSuccess)
         {
