@@ -39,7 +39,7 @@ static ShareService *instance;
                                        defaultContent:@"默认分享内容，没内容时显示"
                                                 image:nil
                                                 title:title
-                                                  url:@"http://www.baidu.com"
+                                                  url:@"http://www.rongmm.com.cn"
                                           description:@"这是一条测试信息"
                                             mediaType:SSPublishContentMediaTypeNews];
     
