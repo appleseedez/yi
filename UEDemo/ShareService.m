@@ -44,9 +44,9 @@ static ShareService *instance;
                                             mediaType:SSPublishContentMediaTypeNews];
     
     
-//    [ShareSDK oneKeyShareContent:nil shareList:@[@(ShareTypeWeixiSession)] authOptions:nil shareOptions:nil statusBarTips:YES result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
-//        
-//    }];
+    [ShareSDK oneKeyShareContent:nil shareList:@[@(ShareTypeWeixiSession)] authOptions:nil shareOptions:nil statusBarTips:YES result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
+        
+    }];
     [ShareSDK shareContent:publishContent type:shareType authOptions:nil shareOptions:nil statusBarTips:YES result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
         if (state == SSResponseStateSuccess)
         {
