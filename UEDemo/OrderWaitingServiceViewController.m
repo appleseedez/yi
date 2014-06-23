@@ -59,6 +59,7 @@
     ShareEditViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"shareEdit"];
     vc.shareType=type;
     vc.order=self.order;
+    vc.presetedNav=self.navigationController;
     [self presentViewController:vc animated:YES completion:^{
         
     }];
@@ -143,11 +144,13 @@
      NSString *orderType=[self.order objectForKey:@"ordertype"];
     NSString *title=nil;
     if ([orderType isEqualToString:@"bj"]) {
-        
+        self.imgLogo.image=[UIImage imageNamed:@"order_logo_bj"];
         title=@"保洁订单";
     }else if ([orderType isEqualToString:@"gx"]){
+        self.imgLogo.image=[UIImage imageNamed:@"order_logo_gx"];
         title=@"干洗订单";
     }else if ([orderType isEqualToString:@"zd"]){
+        self.imgLogo.image=[UIImage imageNamed:@"order_logo_zd"];
         title=@"钟点工订单";
     }
     switch (status) {

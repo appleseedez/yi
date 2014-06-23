@@ -1248,7 +1248,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" id="3E0-4k-4Va">
-                                <rect key="frame" x="125" y="96" width="71" height="66"/>
+                                <rect key="frame" x="121" y="89" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="保洁订单已生成" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VpR-Qg-YS7">
@@ -1432,27 +1432,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fuT-fl-CWg">
-                                                    <rect key="frame" x="13" y="13" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服装种类" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uj6-jA-FpW">
-                                                    <rect key="frame" x="77" y="13" width="112" height="23"/>
+                                                    <rect key="frame" x="20" y="13" width="112" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="干洗: 80" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dr7-S4-9Ju">
-                                                    <rect key="frame" x="77" y="50" width="67" height="13"/>
+                                                    <rect key="frame" x="20" y="44" width="67" height="13"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PT0-dZ-skU">
-                                                    <rect key="frame" x="272" y="24" width="28" height="28"/>
+                                                    <rect key="frame" x="229" y="24" width="28" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1464,17 +1459,35 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </view>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y7Q-ZQ-7h9">
-                                                    <rect key="frame" x="190" y="27" width="64" height="21"/>
+                                                    <rect key="frame" x="122" y="27" width="64" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GwP-88-7za">
+                                                    <rect key="frame" x="185" y="16" width="47" height="47"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="dry_-">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="disabled" image="dry_disable"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jEJ-ee-e3z">
+                                                    <rect key="frame" x="253" y="16" width="47" height="47"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <inset key="contentEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="dry_+">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="imgHeader" destination="fuT-fl-CWg" id="ZXv-fH-E98"/>
+                                            <outlet property="btnAdd" destination="jEJ-ee-e3z" id="WzB-6J-cQp"/>
+                                            <outlet property="btnManus" destination="GwP-88-7za" id="RlF-xu-Kbv"/>
                                             <outlet property="lbDryNum" destination="PT0-dZ-skU" id="Yjj-EG-D32"/>
                                             <outlet property="lbDryPrice" destination="Dr7-S4-9Ju" id="NNX-UI-9sh"/>
                                             <outlet property="lbName" destination="uj6-jA-FpW" id="fDw-ah-BTz"/>
@@ -2141,20 +2154,14 @@
                                 <rect key="frame" x="0.0" y="69" width="320" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您要分享的内容" minimumFontSize="17" id="fcD-9V-cTw" customClass="LoginInputTextField">
-                                        <rect key="frame" x="21" y="33" width="279" height="108"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="这个APP太有意思啦！保洁做的真心不错！" id="ATF-Z4-wMA">
+                                        <rect key="frame" x="21" y="36" width="279" height="104"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <outlet property="delegate" destination="7Jn-Fc-U0B" id="T6f-sp-X2S"/>
-                                        </connections>
-                                    </textField>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                             </view>
@@ -2179,7 +2186,7 @@
                     <connections>
                         <outlet property="lbTitle" destination="KD9-4d-9Ui" id="R13-RN-FVG"/>
                         <outlet property="shareView" destination="LDq-P9-YdF" id="oe1-z8-G1b"/>
-                        <outlet property="txtShareContent" destination="fcD-9V-cTw" id="mKZ-zv-ivA"/>
+                        <outlet property="txtShareContent" destination="ATF-Z4-wMA" id="gEm-9Q-7te"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8R9-Ak-CTG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2200,6 +2207,9 @@
         <image name="center_persional_setting_high" width="22" height="22"/>
         <image name="clean_watch_high" width="290" height="40"/>
         <image name="clean_watch_normal" width="294" height="44"/>
+        <image name="dry_+" width="15" height="15"/>
+        <image name="dry_-" width="15" height="15"/>
+        <image name="dry_disable" width="15" height="15"/>
         <image name="header" width="102" height="102"/>
         <image name="login_background" width="320" height="480"/>
         <image name="main_call_high" width="22" height="22"/>

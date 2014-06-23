@@ -14,4 +14,5 @@
 @property (nonatomic) StarView *starView;
 @property (nonatomic) ShareViewModel *shareViewModel;
 @property (nonatomic) NSDictionary *order;
+@property (nonatomic,weak) UINavigationController *presetedNav;
 @end

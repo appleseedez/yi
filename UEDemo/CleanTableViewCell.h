@@ -16,4 +16,5 @@
 @property (weak, nonatomic) UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *seperatorView;
 @property (weak, nonatomic) UIViewController *contextVC;
+-(void)chooseNotify:(id)sender;
 @end

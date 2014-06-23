@@ -11,24 +11,17 @@
 #import "ShareService.h"
 #import "StarView.h"
 #import "ShareViewModel.h"
+#import "MaoRootViewController.h"
+
 @interface ShareEditViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 @property (weak, nonatomic) IBOutlet UIView *shareView;
-@property (weak, nonatomic) IBOutlet LoginInputTextField *txtShareContent;
+@property (weak, nonatomic) IBOutlet UITextView *txtShareContent;
+
 
 @end
 
 @implementation ShareEditViewController
-- (void)textFieldDidEndEditing:(UITextField *)textField {
-    
-    LoginInputTextField *txt = (LoginInputTextField *)textField;
-    txt.textType = @(loginTextTypeNormal);
-    
-}
-- (void)textFieldDidBeginEditing:(UITextField *)textField {
-    LoginInputTextField *txt = (LoginInputTextField *)textField;
-    txt.textType = @(loginTextTypeEdit);
-}
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
@@ -37,8 +30,12 @@
     [self dismissViewControllerAnimated:YES completion:^{
         if ([self.shareType isEqualToString:@"微信朋友圈"]) {
              [[ShareService defautService] shareWithTitle:@"蓉么么" content:self.txtShareContent.text type:self.shareType];
+        }else{
+            [self.presetedNav popToRootViewControllerAnimated:NO];
+            MaoRootViewController *rootVC=(MaoRootViewController*)[UIApplication sharedApplication].delegate.window.rootViewController;
+            [rootVC changeRootVCWithController:self.presetedNav];
         }
-       
+        
     }];
 }
 - (IBAction)back:(id)sender {
@@ -52,11 +49,11 @@
     [super viewDidLoad];
     self.shareViewModel=[[ShareViewModel alloc]init];
     self.lbTitle.text=self.shareType;
-    [self.txtShareContent setUI];
     self.starView=[[StarView alloc]initWithFrame:CGRectMake(60, 0, 230, 40)];
     [self.starView loadStars:25];
     [self.shareView addSubview:self.starView];
     [self.starView setNewScore:4];
+  
     // Do any additional setup after loading the view.
 }
 

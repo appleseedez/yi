@@ -21,8 +21,9 @@
 #import "CleanOrderDetailCell.h"
 @interface CleanServiceTableViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (nonatomic) NSNumber *didAppear;
 @property (nonatomic) NSInteger selection;
+@property (nonatomic) RACDisposable *showOneStar;
 @end
 
 @implementation CleanServiceTableViewController
@@ -34,9 +35,27 @@
     [super viewDidLoad];
     self.selection=200;
     self.cleanViewModel=[CleanViewModel new];
-   
+   RACSignal *sections= RACObserve(self, cleanViewModel.sections);
+    RACSignal *didAppear=RACObserve(self, didAppear);
+    __weak id weakSelf=self;
+    self.showOneStar=[[RACSignal combineLatest:@[sections,didAppear] reduce:^id(NSArray *sections,NSNumber* didAppear){
+        if ([sections count]&&[didAppear boolValue]) {
+            return @(YES);
+        }
+        return @(NO);
+    }]subscribeNext:^(id x) {
+     __strong   CleanServiceTableViewController *strongSelf=weakSelf;
+        if ([x boolValue]) {
+            [strongSelf performSelector:@selector(openOneStar) withObject:nil afterDelay:0.2];
+            [strongSelf.showOneStar dispose];
+        }
+    }];
+    
 }
-
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    self.didAppear=@(YES);
+}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return [self.cleanViewModel.sections count];
 }
@@ -87,6 +106,7 @@
             imageName=@"clean_star_5";
         }
         cell.imgStar.image=[UIImage imageNamed:imageName];
+        
         return cell;
     }else if(indexPath.row<[model.selections count]+1){
         CleanSelectionCell *cell=[tableView dequeueReusableCellWithIdentifier:@"CleanSelectionCell"];
@@ -109,6 +129,10 @@
     }
     return nil;
     
+}
+-(void)openOneStar{
+    UITableViewCell *onestar=[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
+     [[NSNotificationCenter defaultCenter] postNotificationName:@"CleanCellSelected" object:onestar userInfo:nil];
 }
 - (IBAction)dismiss:(id)sender {
     [self.cleanViewModel backToRootVC:self.navigationController];

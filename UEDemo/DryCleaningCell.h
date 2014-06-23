@@ -14,7 +14,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbName;
 @property (weak, nonatomic) IBOutlet UILabel *lbDryPrice;
 @property (weak, nonatomic) IBOutlet UILabel *lbPirce;
+@property (weak, nonatomic) IBOutlet UIButton *btnAdd;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnManus;
 @property (weak, nonatomic) IBOutlet UILabel *lbDryNum;
 
 

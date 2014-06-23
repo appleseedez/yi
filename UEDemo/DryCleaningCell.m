@@ -29,16 +29,22 @@
     
     self.lbDryNum.layer.borderColor=[UIColor whiteColor].CGColor;
     self.lbDryNum.layer.borderWidth=1;
-    
+ 
     self.lbPirce.text=@"￥ 0";
     self.dryNum=@(0);
+    
+    [self.btnAdd addTarget:self action:@selector(numberAdd) forControlEvents:UIControlEventTouchUpInside];
+    [self.btnManus addTarget:self action:@selector(numberManus) forControlEvents:UIControlEventTouchUpInside];
     //监听 sourceData
+    
+    __weak id weakSelf=self;
      [[RACObserve(self, sourceData) map:^id(NSDictionary *value) {
-         self.lbName.text=[value objectForKey:@"name"];
-         self.lbDryPrice.text=[NSString stringWithFormat:@"￥%@ / 件",[value objectForKey:@"price"]];
+         __strong DryCleaningCell *strongSelf=weakSelf;
+         strongSelf.lbName.text=[value objectForKey:@"name"];
+         strongSelf.lbDryPrice.text=[NSString stringWithFormat:@"￥%@ / 件",[value objectForKey:@"price"]];
         
-         self.dryNum=[value objectForKey:@"drynumber"];
-         self.ironNum=[value objectForKey:@"ironingnumber"];
+         strongSelf.dryNum=[value objectForKey:@"drynumber"];
+         strongSelf.ironNum=[value objectForKey:@"ironingnumber"];
          
          return value;
      }]subscribeNext:^(id x) {}];
@@ -46,28 +52,31 @@
     
     //监听 干洗数量
     [[RACObserve(self, dryNum) map:^id(NSNumber *value) {
-       
-        self.lbDryNum.text=[NSString stringWithFormat:@"%@",value];
+        __strong DryCleaningCell *strongSelf=weakSelf;
+        strongSelf.lbDryNum.text=[NSString stringWithFormat:@"%@",value];
         if ([value integerValue]>0) {
-            self.didSelected=@(YES);
+            strongSelf.didSelected=@(YES);
+            strongSelf.btnManus.enabled=YES;
         }else{
-            self.didSelected=@(NO);
+            strongSelf.didSelected=@(NO);
+            strongSelf.btnManus.enabled=NO;
         }
         float price=[self.dryNum integerValue]*[[self.sourceData valueForKey:@"price"]  floatValue];
         
-        self.lbPirce.text= [NSString stringWithFormat:@"￥ %.2f",price];
-        [self.sourceData setValue:value forKey:@"drynumber"];
+        strongSelf.lbPirce.text= [NSString stringWithFormat:@"￥ %.2f",price];
+        [strongSelf.sourceData setValue:value forKey:@"drynumber"];
         return value;
     }]subscribeNext:^(id x) {}];
     
   
     //监听 selected
    [[ RACObserve(self, didSelected) map:^id(id value) {
+        __strong DryCleaningCell *strongSelf=weakSelf;
        if ([value boolValue]) {
-           self.contentView.backgroundColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0.1];
+           strongSelf.contentView.backgroundColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0.1];
            
        }else{
-           self.contentView.backgroundColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0.2];
+           strongSelf.contentView.backgroundColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0.2];
        }
        
        
@@ -102,15 +111,21 @@
     
   if(recognizer.direction==UISwipeGestureRecognizerDirectionLeft) {
         
-      if ([self.dryNum integerValue]>0) {
-          self.dryNum=@([self.dryNum integerValue]-1);
-      }
+      [self numberManus];
       
     }
     
     if(recognizer.direction==UISwipeGestureRecognizerDirectionRight) {
         
-        self.dryNum=@([self.dryNum integerValue]+1);
+        [self numberAdd];
+    }
+}
+-(void)numberAdd{
+     self.dryNum=@([self.dryNum integerValue]+1);
+}
+-(void)numberManus{
+    if ([self.dryNum integerValue]>0) {
+        self.dryNum=@([self.dryNum integerValue]-1);
     }
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
