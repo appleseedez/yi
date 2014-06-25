@@ -7,7 +7,7 @@
 //
 
 #import "MaoViewController.h"
-#import "OrderPayViewController.h"
+
 #import "AlixPayOrder.h"
 #import "DataSigner.h"
 #import "DataVerifier.h"

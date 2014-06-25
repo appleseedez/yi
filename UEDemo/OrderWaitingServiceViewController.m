@@ -13,7 +13,7 @@
 #import "ShareView.h"
 #import "ShareEditViewController.h"
 #import "ShareService.h"
-#import "OrderPayViewController.h"
+#import "AlixLibService.h"
 #import "MaoRootViewController.h"
 #import "AlixPayResult.h"
 #import "AlixPayOrder.h"
@@ -30,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UIView *serverListView;
 @property (weak, nonatomic) IBOutlet UIButton *rightBarButton;
 @property (weak, nonatomic) IBOutlet UILabel *lbAllPrice;
+@property (weak, nonatomic) IBOutlet UIButton *btnPay;
 @property (nonatomic) NSString *partnerID;
 @property (nonatomic) NSString *sellerID;
 @property (nonatomic) NSString *parterPrivateKey;
@@ -54,7 +55,8 @@
     [self showEditView:@"微信朋友圈"];
 }
 - (IBAction)shareWeibo:(id)sender {
-    [[ShareService defautService] shareWithTitle:@"蓉么么" content:@"" type:@"微博"];
+    [self showEditView:@"微博"];
+
 }
 - (IBAction)shareWeixinHaoyou:(id)sender {
      [self showEditView:@"微信好友"];
@@ -83,8 +85,8 @@
     
 }
 -(void)pay{
-    [self getPayInfomation];
-    [self pay:nil];
+   
+    
 }
 -(void)share{
 
@@ -134,15 +136,19 @@
      NSInteger status=[[self.order objectForKey:@"status"] integerValue];
     if (status<3) {
         //支付
-        [self.rightBarButton setBackgroundImage:[UIImage imageNamed:@"order_button_blank"] forState:UIControlStateNormal];
-        [self.rightBarButton setBackgroundImage:[UIImage imageNamed:@"order_button_blank_high"] forState:UIControlStateHighlighted];
-        [self.rightBarButton setTitle:@"￥" forState:UIControlStateNormal];
-        [self.rightBarButton setTintColor:[UIColor whiteColor]];
+//        [self.rightBarButton setBackgroundImage:[UIImage imageNamed:@"order_button_blank"] forState:UIControlStateNormal];
+//        [self.rightBarButton setBackgroundImage:[UIImage imageNamed:@"order_button_blank_high"] forState:UIControlStateHighlighted];
+//        [self.rightBarButton setTitle:@"￥" forState:UIControlStateNormal];
+//        [self.rightBarButton setTintColor:[UIColor whiteColor]];
+        self.rightBarButton.alpha=0;
+        self.btnPay.alpha=1;
     }else if (status==3){
         //评论
         [self.rightBarButton setBackgroundImage:[UIImage imageNamed:@"order_button_commit"] forState:UIControlStateNormal];
         [self.rightBarButton setBackgroundImage:[UIImage imageNamed:@"order_button_commit_high"] forState:UIControlStateHighlighted];
         [self.rightBarButton setTitle:@"" forState:UIControlStateNormal];
+        self.btnPay.alpha=0;
+        self.rightBarButton.alpha=1;
     }
 }
 -(void)loadData{
@@ -240,6 +246,7 @@
 
 }
 - (IBAction)pay:(id)sender {
+     [self getPayInfomation];
     if (!self.partnerID) {
         return;
     }

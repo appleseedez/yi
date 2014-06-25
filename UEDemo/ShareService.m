@@ -8,6 +8,7 @@
 
 #import "ShareService.h"
 #import <ShareSDK/ShareSDK.h>
+#import "CustomAlertWindow.h"
 @implementation ShareService
 static ShareService *instance;
 +(instancetype)defautService{
@@ -41,22 +42,24 @@ static ShareService *instance;
                                                 title:title
                                                   url:nil
                                           description:@"这是一条测试信息"
-                                            mediaType:SSPublishContentMediaTypeNews];
+                                            mediaType:SSPublishContentMediaTypeText];
     
     
-    [ShareSDK oneKeyShareContent:nil shareList:@[@(ShareTypeWeixiSession)] authOptions:nil shareOptions:nil statusBarTips:YES result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
-        
-    }];
+//    [ShareSDK oneKeyShareContent:nil shareList:@[@(ShareTypeWeixiSession)] authOptions:nil shareOptions:nil statusBarTips:YES result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
+//        
+//    }];
     [ShareSDK shareContent:publishContent type:shareType authOptions:nil shareOptions:nil statusBarTips:YES result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
         if (state == SSResponseStateSuccess)
         {
             NSDictionary *info=[statusInfo sourceData];
             NSLog(@"statusInfo:%@",info);
             NSLog(@"分享成功");
+            [CustomAlertWindow showWithText:@"分享成功"];
         }
         else if (state == SSResponseStateFail)
         {
             NSLog(@"分享失败,错误码:%d,错误描述:%@", [error errorCode], [error errorDescription]);
+             [CustomAlertWindow showWithText:@"分享失败"];
         }
     }];
 }

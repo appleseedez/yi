@@ -70,7 +70,6 @@
 		479F2FA71951C8AB002758F4 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 479F2F921951C8AB002758F4 /* libssl.a */; };
 		479F2FA81951C8AB002758F4 /* NFProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F2F951951C8AB002758F4 /* NFProduct.m */; };
 		479F2FA91951C8AB002758F4 /* 褰掓。.zip in Resources */ = {isa = PBXBuildFile; fileRef = 479F2F991951C8AB002758F4 /* 褰掓。.zip */; };
-		479F2FAD1951D702002758F4 /* OrderPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F2FAC1951D702002758F4 /* OrderPayViewController.m */; };
 		479F444F1944249100FEDE2D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F444E1944249100FEDE2D /* LoginViewController.m */; };
 		479F4451194424A000FEDE2D /* LoginInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F4450194424A000FEDE2D /* LoginInputTextField.m */; };
 		479F69FB1952F9760055D787 /* MaoRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F69FA1952F9760055D787 /* MaoRootViewController.m */; };
@@ -313,8 +312,6 @@
 		479F2F981951C8AB002758F4 /* DataVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataVerifier.h; sourceTree = "<group>"; };
 		479F2F991951C8AB002758F4 /* 褰掓。.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "褰掓。.zip"; sourceTree = "<group>"; };
 		479F2FAA1951D6B2002758F4 /* PayConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayConfig.h; sourceTree = "<group>"; };
-		479F2FAB1951D702002758F4 /* OrderPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderPayViewController.h; sourceTree = "<group>"; };
-		479F2FAC1951D702002758F4 /* OrderPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderPayViewController.m; sourceTree = "<group>"; };
 		479F444E1944249100FEDE2D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		479F4450194424A000FEDE2D /* LoginInputTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInputTextField.m; sourceTree = "<group>"; };
 		479F69F91952F9760055D787 /* MaoRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaoRootViewController.h; sourceTree = "<group>"; };
@@ -637,8 +634,6 @@
 				47A16460194D622C005CA1EE /* MyCenterPersionalSettingController.m */,
 				47A16462194D7B9C005CA1EE /* OrderWaitingServiceViewController.h */,
 				47A16463194D7B9C005CA1EE /* OrderWaitingServiceViewController.m */,
-				479F2FAB1951D702002758F4 /* OrderPayViewController.h */,
-				479F2FAC1951D702002758F4 /* OrderPayViewController.m */,
 				47A165B0194DDFE1005CA1EE /* ShareEditViewController.h */,
 				47A165B1194DDFE1005CA1EE /* ShareEditViewController.m */,
 				47A165AB194DD8A3005CA1EE /* ShareView.xib */,
@@ -1508,7 +1503,6 @@
 				479F4451194424A000FEDE2D /* LoginInputTextField.m in Sources */,
 				47AC556D1949DBAD0052154B /* CleanOrderDetailCell.m in Sources */,
 				479F2FA11951C8AB002758F4 /* NSString+SBJSON.m in Sources */,
-				479F2FAD1951D702002758F4 /* OrderPayViewController.m in Sources */,
 				479C52AD1923854A00CCF9F4 /* main.m in Sources */,
 				47A037C71948878400DA9171 /* CustomAlertWindow.m in Sources */,
 				BABBA8261929731B00D05A18 /* MaoQRToolViewController.m in Sources */,
