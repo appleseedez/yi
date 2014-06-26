@@ -51,6 +51,13 @@
 
     return [self.storeList count];
 }
+- (IBAction)cancel:(id)sender {
+    self.choosedStore=[self.storeList objectAtIndex:0];
+    MaoAppDelegate *delegate= [UIApplication sharedApplication].delegate;
+    delegate.currStore=[self.choosedStore copy];
+    [[NSUserDefaults standardUserDefaults] setObject:[delegate.currStore objectForKey:@"id"] forKey:@"storeid"];
+    [self dismiss:nil];
+}
 - (IBAction)choose:(id)sender {
     if (self.choosedStore) {
        MaoAppDelegate *delegate= [UIApplication sharedApplication].delegate;
@@ -67,9 +74,7 @@
    
     [cell setWithStore:[self.storeList objectAtIndex:indexPath.row]];
     cell.contextController=self;
-    if (indexPath.row==0) {
-        [cell beChoosed];
-    }
+ 
     return cell;
 }
 
