@@ -25,7 +25,7 @@
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"login_background"]];
     self.btnCancel.layer.borderColor=[UIColor whiteColor].CGColor;
-    
+     
     //self.navigationController.navigationBar.tintColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"login_background"]];;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -64,9 +64,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     StoreListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"storeListCell"];
-    
+   
     [cell setWithStore:[self.storeList objectAtIndex:indexPath.row]];
     cell.contextController=self;
+    if (indexPath.row==0) {
+        [cell beChoosed];
+    }
     return cell;
 }
 

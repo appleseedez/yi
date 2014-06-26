@@ -64,6 +64,7 @@
         [CustomAlertWindow showWithText:@"两次输入密码不一致"];
         return;
     }
+    self.regViewModel.phone=self.txtPhone.text;
     [self.regViewModel registerUserPassword:self.txtPassword.text code:self.txtCode.text];
     
 }
@@ -106,13 +107,17 @@
     }] subscribeNext:^(id x) {}];
     
     [[RACObserve(self, regViewModel.regSuccess) map:^id(NSNumber *value) {
-        if ([value boolValue]) {
-            
-            [CustomAlertWindow showWithText:@"恭喜注册成功"];
-        }
+        
         
         return value;
-    }] subscribeNext:^(id x) {}];
+    }] subscribeNext:^(id x) {
+        if ([x boolValue]) {
+            __strong  RegViewController *strongSelf=weakSelf;
+            [strongSelf dismissViewControllerAnimated:YES completion:nil];
+            
+        }
+    
+    }];
     
 }
 - (IBAction)dismiss:(id)sender {

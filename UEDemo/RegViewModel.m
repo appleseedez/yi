@@ -23,10 +23,15 @@
 -(void)registerUserPassword:(NSString*)password code:(NSString*)code{
     NSString *url=[NSString stringWithFormat:@"%@/eclean/registry.json",ACCOUNT_SERVER];
     NSDictionary *parameters=@{@"username":self.phone,@"password":[password md5],@"code":code};
+    __weak id weakSelf=self;
     [[self httpRequestWithURL:url andParameters:parameters method:@"post"] subscribeNext:^(id x) {
-        self.regSuccess=@(YES);
+        
 //        [[[UIAlertView alloc]initWithTitle:@"恭喜注册成功" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil]show];
-        [CustomAlertWindow showWithText:@"恭喜注册成功"];
+       CustomAlertWindow *alert= [CustomAlertWindow showWithText:@"恭喜注册成功"];
+        alert.cdelegate=weakSelf;
     }];
+}
+-(void)alertDidDisappear{
+    self.regSuccess=@(YES);
 }
 @end

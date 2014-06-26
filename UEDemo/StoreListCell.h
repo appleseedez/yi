@@ -17,4 +17,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgChecked;
 @property (weak, nonatomic) StoreListViewController *contextController;
 -(void)setWithStore:(NSDictionary*)store;
+-(void)beChoosed;
 @end

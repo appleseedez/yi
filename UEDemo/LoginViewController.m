@@ -96,6 +96,7 @@
 
      return value;
    }]subscribeNext:^(id x) {}];
+ 
    // Do any additional setup after loading the view.
 }
 - (void)setUI {
