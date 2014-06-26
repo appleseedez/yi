@@ -149,7 +149,18 @@ static AppService *instance = nil;
   delegate.hostUser = [host copy];
 }
 - (NSArray *)reOrderStoreList:(NSArray *)storeList {
-  return storeList;
+    NSDictionary *currStore=((MaoAppDelegate*)[UIApplication sharedApplication].delegate).currStore;
+    if (currStore==nil) {
+        return storeList;
+    }
+    NSMutableArray *arr= [storeList mutableCopy];
+    for (NSDictionary *store in storeList) {
+        if ([[store objectForKey:@"id"]integerValue]==[[currStore objectForKey:@"id"]integerValue]) {
+            [arr removeObject:store];
+            [arr insertObject:store atIndex:0];
+        }
+    }
+  return [arr copy];
 }
 - (void)getStore {
 
