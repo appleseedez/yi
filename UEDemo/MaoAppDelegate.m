@@ -93,7 +93,7 @@
              */
             
             //交易成功
-            NSString *key = nil;
+            NSString *key = AlipayPubKey;
             id<DataVerifier> verifier;
             verifier = CreateRSADataVerifier(key);
             
