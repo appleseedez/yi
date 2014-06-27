@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 @property (weak, nonatomic) IBOutlet UILabel *lbDate;
 @property (weak, nonatomic) IBOutlet UILabel *lbStatus;
+@property (weak, nonatomic) IBOutlet UILabel *lbOrderNo;
 @property  (nonatomic) UIView *statusView;
 @end

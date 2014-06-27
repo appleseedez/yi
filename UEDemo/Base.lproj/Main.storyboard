@@ -857,9 +857,9 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <inset key="contentInset" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
                                         <inset key="scrollIndicatorInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
-                                        <mutableString key="text">1. 豆瓣网仅为用户发布的内容提供存储空间，豆瓣网不对用户发表、转载的内容提供任何形式的保证：不保证内容满足您的要求，不保证豆瓣网的服务不会中断。因网络状况、通讯线路、第三方网站或管理部门的要求等任何原因而导致您不能正常使用豆瓣，豆瓣网不承担任何法律责任。
+                                        <string key="text">1. 豆瓣网仅为用户发布的内容提供存储空间，豆瓣网不对用户发表、转载的内容提供任何形式的保证：不保证内容满足您的要求，不保证豆瓣网的服务不会中断。因网络状况、通讯线路、第三方网站或管理部门的要求等任何原因而导致您不能正常使用豆瓣，豆瓣网不承担任何法律责任。
 
-　　2. 用户在豆瓣网发表的内容（包含但不限于豆瓣网目前各产品功能里的内容）仅表明其个人的立场和观点，并不代表豆瓣网的立场或观点。作为内容的发表者，需自行对所发表内容负责，因所发表内容引发的一切纠纷，由该内容的发表者承担全部法律及连带责任。豆瓣网不承担任何法律及连带责任。</mutableString>
+　　2. 用户在豆瓣网发表的内容（包含但不限于豆瓣网目前各产品功能里的内容）仅表明其个人的立场和观点，并不代表豆瓣网的立场或观点。作为内容的发表者，需自行对所发表内容负责，因所发表内容引发的一切纠纷，由该内容的发表者承担全部法律及连带责任。豆瓣网不承担任何法律及连带责任。</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1022,14 +1022,14 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="钟点工订单" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CfW-w9-aFx">
-                                                    <rect key="frame" x="64" y="16" width="102" height="18"/>
+                                                    <rect key="frame" x="69" y="9" width="161" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2014-6-7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b18-uR-Wt4">
-                                                    <rect key="frame" x="69" y="42" width="102" height="21"/>
+                                                    <rect key="frame" x="69" y="50" width="168" height="13"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1046,6 +1046,13 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="钟点工订单" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bSN-u8-HAX">
+                                                    <rect key="frame" x="69" y="28" width="161" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
@@ -1053,6 +1060,7 @@
                                         <connections>
                                             <outlet property="imgHeader" destination="cTN-re-zWx" id="mIj-xt-Pe1"/>
                                             <outlet property="lbDate" destination="b18-uR-Wt4" id="Ty9-dt-KbN"/>
+                                            <outlet property="lbOrderNo" destination="bSN-u8-HAX" id="NMD-fb-hJ5"/>
                                             <outlet property="lbStatus" destination="rvG-r1-dlV" id="ur0-fA-CaO"/>
                                             <outlet property="lbTitle" destination="CfW-w9-aFx" id="0tz-TJ-DL5"/>
                                         </connections>

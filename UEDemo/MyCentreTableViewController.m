@@ -112,6 +112,8 @@
 		default:
 			break;
 	}
+    cell.lbDate.text=[order objectForKey:@"updatetime"];
+    cell.lbOrderNo.text=[order objectForKey:@"orderno"];
 	cell.imgHeader.image = [UIImage imageNamed:[NSString stringWithFormat:@"center_%@_%@", orderType, statusLogoEndStr]];
 	return cell;
 }
