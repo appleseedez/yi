@@ -32,8 +32,14 @@
     
    // [ShareSDK importWeChatClass:[WXApi class]];
     
+    NSDictionary *hostUser=[[NSUserDefaults standardUserDefaults] objectForKey:@"hostUser"];
+    if (hostUser) {
+        self.hostUser=hostUser;
+        [self changeToRootView];
+    }else{
+        
+    }
     
-    [[CleanService defaultService] loadStarServices];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeToRootView) name:@"loginSucces" object:nil];
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeToLoginView) name:@"logout" object:nil];
@@ -161,7 +167,8 @@
     [self.window setRootViewController:rootVC];
     [self.window.layer addAnimation:animation forKey:@"login"];
     [[AppService defaultService] getStore];
-    
+    [[CleanService defaultService] loadStarServices];
+    [[NSUserDefaults standardUserDefaults] setObject:self.hostUser forKey:@"hostUser"];
    //
     
 }
@@ -176,6 +183,7 @@
     [self.window.layer addAnimation:animation forKey:@"login"];
     self.currStore=nil;
     self.hostUser=nil;
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"hostUser"];
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {

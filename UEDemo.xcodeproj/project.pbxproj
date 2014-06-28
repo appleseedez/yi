@@ -1325,7 +1325,7 @@
 				ORGANIZATIONNAME = reactiveCocoa;
 				TargetAttributes = {
 					479C529C1923854A00CCF9F4 = {
-						DevelopmentTeam = K39UKS654C;
+						DevelopmentTeam = MB56WXZ49W;
 					};
 					479C52BD1923854A00CCF9F4 = {
 						TestTargetID = 479C529C1923854A00CCF9F4;
@@ -1671,8 +1671,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Chengdu LongShengYiJu Cyber Technology Co., Ltd. (K39UKS654C)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Chengdu LongShengYiJu Cyber Technology Co., Ltd. (K39UKS654C)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShareSDK/Connection",
@@ -1697,7 +1697,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = rongmm;
-				PROVISIONING_PROFILE = "26AF928D-5B73-47EF-AF51-55AC3C83F3AD";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1709,8 +1709,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Chengdu LongShengYiJu Cyber Technology Co., Ltd. (K39UKS654C)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Chengdu LongShengYiJu Cyber Technology Co., Ltd. (K39UKS654C)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShareSDK/Connection",
@@ -1735,7 +1735,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = rongmm;
-				PROVISIONING_PROFILE = "26AF928D-5B73-47EF-AF51-55AC3C83F3AD";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
