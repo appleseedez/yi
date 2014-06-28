@@ -857,9 +857,11 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <inset key="contentInset" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
                                         <inset key="scrollIndicatorInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
-                                        <string key="text">1. 豆瓣网仅为用户发布的内容提供存储空间，豆瓣网不对用户发表、转载的内容提供任何形式的保证：不保证内容满足您的要求，不保证豆瓣网的服务不会中断。因网络状况、通讯线路、第三方网站或管理部门的要求等任何原因而导致您不能正常使用豆瓣，豆瓣网不承担任何法律责任。
-
-　　2. 用户在豆瓣网发表的内容（包含但不限于豆瓣网目前各产品功能里的内容）仅表明其个人的立场和观点，并不代表豆瓣网的立场或观点。作为内容的发表者，需自行对所发表内容负责，因所发表内容引发的一切纠纷，由该内容的发表者承担全部法律及连带责任。豆瓣网不承担任何法律及连带责任。</string>
+                                        <string key="text">亲爱的用户：请您选择干洗服务前，务必仔细阅读并透彻理解本声明。如果您选择干洗服务，您的行 为将被视为对本声明全部内容的认可。
+1、我司所提供的干洗服务，是由第三方服务机构提供具体的干洗服务。我司仅负责将您的干洗物品 打包送洗。
+2、在打包的过程中我司工作人员会仔细与您核对送洗物品并当面封存。若送洗物品存在无法洗护的 情况，将由第三方服务机构和您联系并妥善处理。
+3、若存在未确认情况下送洗物品出现损毁，责任将由第三方服务公司全权承担。我司会尽一切努力 与您一道解决问题并仅剩该义务。
+谢谢您的理解和支持！</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
