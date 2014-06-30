@@ -15,6 +15,7 @@
     viewModel.selections = model.PackSelections;
     viewModel.title=model.title;
     viewModel.allPrice=model.allprice;
+    viewModel.numOfStar=model.numOfStar;
     return viewModel;
     
 }
@@ -27,7 +28,7 @@
         
         [services addObject:[os toDictionary]];
     }
-    o.services=@[];
+    o.services=@[@{@"itemid":self.numOfStar,@"name":self.title}];
     o.allPrice=self.allPrice;
     NSString *url=[NSString stringWithFormat:@"%@/eclean/createCleanAppointment.json",ACCOUNT_SERVER];
    
