@@ -27,7 +27,7 @@
         
         [services addObject:[os toDictionary]];
     }
-    o.services=[services copy];
+    o.services=@[];
     o.allPrice=self.allPrice;
     NSString *url=[NSString stringWithFormat:@"%@/eclean/createCleanAppointment.json",ACCOUNT_SERVER];
    
